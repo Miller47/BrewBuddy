@@ -1,0 +1,1630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01842CAAE1BFFD965EDC69A6 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CB9CEA565969A17E8EAA84 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */; };
+		02ED1C8E294151B22EFC3245 /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7ABCE1B648426460DFD19 /* MZAppearance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		062812C713B198D3D799D344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB266D8FCA301D440AFEBE57 /* Foundation.framework */; };
+		0C5D75180E15D7380F9B2B26 /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0169640A1A469B2FEF88D544 /* UIScrollView+TPKeyboardAvoidingAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C8D9952006681E84CAA9F8F /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42209279D727DD8E3CA41057 /* AFSecurityPolicy.m */; };
+		0DAE44B0ECA90C89E9CE993A /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA35BD8D3198098F8D5A1E4 /* UIButton+AFNetworking.m */; };
+		1271953905447B73AFA656D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB266D8FCA301D440AFEBE57 /* Foundation.framework */; };
+		128E056ED15E688D714A6A04 /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC551C14F7B8E339144EEE /* NSInvocation+Copy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		164164495E2FC0D64D9946C3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C37AC20EB4C45F85D3FE02FE /* AFURLSessionManager.m */; };
+		1908DCF6F0C1E639E92002B3 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB15683C484F164D73DA3067 /* AFHTTPRequestOperationManager.m */; };
+		1F7E06793DC1D830EF1E365B /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 738DA4A43DAA48E3738FD1A4 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F95FDE058E508241CE55377 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2FAF060030EBC26F5FD19B /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22EAD17F1EF3592437CB6593 /* Pods-BrewBuddy-AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E41D88F715095E5CCAD652 /* Pods-BrewBuddy-AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		234AB2E7803D4818AE6B0A52 /* MZAppearance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1F67D1AB84A47C6CCB7C1A /* MZAppearance.framework */; };
+		238C28746DD108B87ED6F533 /* Pods-BrewBuddy-AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18A377DDAB046C19F29D41 /* Pods-BrewBuddy-AFNetworking-dummy.m */; };
+		255B795110F4A14E807D4C5E /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B7032283D7ED7F44074626 /* HCSStarRatingView.m */; };
+		25E1C962114F79B5B95F1F67 /* TPKeyboardAvoidingCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = C499A3DDFC2C82D87B0A1F71 /* TPKeyboardAvoidingCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BE53D835EC9A9FE130776A4 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A32619DF41B30F61CFA696C /* AFHTTPRequestOperationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C74E7C3ED946DDA9EB7DC6A /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 080435A8C948A348B631089A /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		303E14D2D459A00EA38C7E66 /* MZFormSheetPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6A40AD806C2509FC00634C /* MZFormSheetPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		305ACB6A1DD9892A34705FC8 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D120C958C7D0A6C61DBDDE4 /* UIRefreshControl+AFNetworking.m */; };
+		343B72589B5F97447DB08698 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 216072B93865C717DCAD36A1 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3828E5A5B53881DE0172925B /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B5A62E7D1990163722D97D /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39387C38A7D3CE6A3290E8F6 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A9DB5797578675EB033F293 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44325B1E63B4ADF031086756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB266D8FCA301D440AFEBE57 /* Foundation.framework */; };
+		471D338418A2EC5637F1451B /* Pods-BrewBuddy-MZAppearance-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69337BBD5DC77A2C672B0D27 /* Pods-BrewBuddy-MZAppearance-dummy.m */; };
+		48663AC7F5D722522A89B344 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B96D01A83C6CCA1E369B7 /* AFURLRequestSerialization.m */; };
+		48BC6D62A010D80801CA8FF8 /* Pods-BrewBuddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C606A9680232EC7E424F516 /* Pods-BrewBuddy-dummy.m */; };
+		4A934C82959CC0FC7259C7D1 /* Pods-BrewBuddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD989CA9AEB13A2C9FB8EF74 /* Pods-BrewBuddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B07DAC927006749D1B2E58C /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AC35D76FC090A7FD32205B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4B3DC8181E567479D6C28099 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292630D4B268C9C5B6C668FB /* Security.framework */; };
+		500385E97886116960C2EE0D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F32515352E5580F243655 /* UIWebView+AFNetworking.m */; };
+		5813ACB3D6F82725CBA5025E /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 270D08C2F046146898E4172A /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EDF443A7C9BF8A73E769EC0 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB45F2E56B84884F103889C /* AFNetworkActivityIndicatorManager.m */; };
+		6061FFA781CC470AAC117831 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 42AA15716C8B6D07774E7988 /* AFURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63016BC48CBF360E9A536DC8 /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C56EEFCBB4415458889E26 /* MZTransition.m */; };
+		634513C451DFD9C363AFA0E9 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 806495BA521A6B492451042B /* TPKeyboardAvoidingTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65C35203E848336EB303B629 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E560709E434AA399AEBFC14 /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D1C7E20BF1D7127E95FFB98 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AEB8032CEA19967C520D78 /* AFURLConnectionOperation.m */; };
+		6DEEA208B646D83E8FFEB428 /* MZFormSheetPresentationControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28280CB018AD81CB29DC3D /* MZFormSheetPresentationControllerSegue.m */; };
+		6F100767AE296E30C2834E71 /* Pods-BrewBuddy-MZAppearance-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E57D0330D934BE9B1B9BF88 /* Pods-BrewBuddy-MZAppearance-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72057753DFAF76E2E7B81510 /* MZFormSheetPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 437949A916B2CA21AD78F3AA /* MZFormSheetPresentationController.m */; };
+		744464FF9CC219159609F778 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC90BDBB50F9AF36EAC6E40 /* CoreGraphics.framework */; };
+		763D3CA48A65DCA61327CCB6 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA9D3B489C5C4F23A1C3E2 /* AFURLResponseSerialization.m */; };
+		7829F5B44DB6CA9DFB58A9D2 /* NSInvocation+Copy.h in Headers */ = {isa = PBXBuildFile; fileRef = D8256B31E05109932D811187 /* NSInvocation+Copy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A08121287FFFE3D51EDF770 /* JGMethodSwizzler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA571CEBDCC594FA354774E /* JGMethodSwizzler.framework */; };
+		7ABFB1EBF0D533229CA78DF3 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A43D75971D3FE4652E0B946 /* UIProgressView+AFNetworking.m */; };
+		7B2E8A39FF0638132C563DDC /* TPKeyboardAvoidingTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F734159A7106C13359CBC6 /* TPKeyboardAvoidingTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E5B8EF06E688BB62E0AABA5 /* MZTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F8DE1CBDF3ED7D008C3C7 /* MZTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FED9494D9327BD678C82714 /* JGMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CE6604A1F503BF0081B0DB /* JGMethodSwizzler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		848B9861D726C4CBCC9600A7 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE05100783B347F66A4FEB6E /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */; };
+		88A364A6F0AA97C9E5048B45 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ED5C641E4C5E64C73A8B07 /* MobileCoreServices.framework */; };
+		8BB9029D164DF3D998ADEF90 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = A832428B05FE953918572395 /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CD71E9A019204136A832D9A /* UIViewController+TargetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D1140446ED3E872B4B657149 /* UIViewController+TargetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		920ED592D77A45A9707EA0C4 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9946AAE516D67725EDD72B6D /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */; };
+		95A5FE348AAE6BC8E7CA8467 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E8EBC7E221445A38A32C0433 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99AD1B0A4AB824A47F8904D0 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A80130A82F66621295DD8 /* UIAlertView+AFNetworking.m */; };
+		9AAD4F172E2F92A3154E3C78 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA0F97CE369A681D282CF7F /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C1C763E9B3C3DEB371C6F36 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A325E28CD99D2E5D9FF79 /* UIImageView+AFNetworking.m */; };
+		9D3CF45E489E4E64BFA8061E /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1450F1151234F7FD2C7C9E25 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FA7D29E3D75F5060F276B20 /* UIAlertView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0EA36D9E24F78577F6779D /* UIAlertView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4BA0376F0012FF62EB34028 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AAE8FC46A6F6111A3DC4CA /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */; };
+		A744E3A2FC1517456B06F75C /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F7F661F5B3C0EFC1E90F93 /* UIViewController+TargetViewController.m */; };
+		A772323988075F150ECA34E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB266D8FCA301D440AFEBE57 /* Foundation.framework */; };
+		AB78842D0A7633521642B0BE /* MZFormSheetPresentationControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E333C84BD726850295149B /* MZFormSheetPresentationControllerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE37481A6361001FF2859F0F /* MZFormSheetPresentationController Swift Example-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 712395C9AD41B21A2CE105B8 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1F0E7584E8155444BB4AAE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB266D8FCA301D440AFEBE57 /* Foundation.framework */; };
+		B43C8A24265D6AF49DD4354C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE67FB797200D472C163004B /* AFHTTPRequestOperation.m */; };
+		B6496CBD097BD2B80DBC0D51 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 672CC89798314907ABE380FD /* TPKeyboardAvoidingCollectionView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B890EF9A63B6E6542F7F8007 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 06419E6CDA825F36D94FA2E7 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B95E04D5111C4992445116D1 /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6657A8DF8C618730B5D8E7 /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9E3821FD587D6DE6645E0C6 /* HCSStarRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 277547ABDD3B21530FA6F539 /* HCSStarRatingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC96B0464923501690FAF45C /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F57FB94EB8F478C5C909FC4F /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C78B784EFC636C0795BB46B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB266D8FCA301D440AFEBE57 /* Foundation.framework */; };
+		C87739939878DDEBEA08A301 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 104582D1B5068A104EA88CBB /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA1A85F640D356F96DADFDFB /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2547DD9349A097815409242C /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D253051882E4058F49D6CB6A /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F79B4FE138FB8069AB9FCA5E /* TPKeyboardAvoidingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D2A836DE58EC5480FB1B849A /* TPKeyboardAvoidingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB5FD99CE22F7D043A7689F /* TPKeyboardAvoidingScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5EDC963F4F32D3F801ADEDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6F2C53944AB7EF08460664 /* SystemConfiguration.framework */; };
+		E07176FE79A6D51C500FA767 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766D1266C236EE153EE78202 /* QuartzCore.framework */; };
+		E41DBE5640A5D3B227E07910 /* MZFormSheetPresentationControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 24185A3C8C85631CE78D2C63 /* MZFormSheetPresentationControllerAnimator.m */; };
+		E5FBD1584E51EE352463A1CD /* MZAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F6C1CA64AC4575F0DCD1186 /* MZAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA9638E33934CA94B8A8D532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766D1266C236EE153EE78202 /* QuartzCore.framework */; };
+		EAFBA6AE32650058BBF53FE5 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 462646719055ACCD62A08900 /* UIActivityIndicatorView+AFNetworking.m */; };
+		EB0FF38A7CCB5ED427BC6B4D /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2271EC8B054436A33486CC /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED3F4F07BA74ABE29F7993C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB266D8FCA301D440AFEBE57 /* Foundation.framework */; };
+		EFE70EC86C9D9C43E338FB3E /* MZFormSheetPresentationControllerSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = BF77D54426974C1DCC78F099 /* MZFormSheetPresentationControllerSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0B0F06DC2DB1797709FDE90 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 488C85ACF37DC39741756D5A /* AFHTTPSessionManager.m */; };
+		F144ADBF3ECA22DBFFB76D99 /* JGMethodSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A87613CFF6F7957AD0DEBC /* JGMethodSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAFA835AF6843B7CDD0BD91B /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF1508E07FCDED3B4AA53F0 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEE4CF338211D6D0AE372A09 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC329403F540EA3C8B9E103 /* AFNetworkReachabilityManager.m */; };
+		FFB8098392AC2830939D136E /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B01DBD77D6EADA3516CAC04 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02F17E9BB3F41C98A6324E3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CFAF0FD2CF3B6D6D631AF9F;
+			remoteInfo = "Pods-BrewBuddy-MZFormSheetPresentationController";
+		};
+		040BC8A0DAC5CE4F3F0B3B18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFF6DC9E67C9D136402EAD0F;
+			remoteInfo = "Pods-BrewBuddy-HCSStarRatingView";
+		};
+		0E48459045F987A161E084C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EDF1FD24B808B3B3B6B375E;
+			remoteInfo = "Pods-BrewBuddy-JGMethodSwizzler";
+		};
+		2F5D4AEF328D2305EAAE6B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EDF1FD24B808B3B3B6B375E;
+			remoteInfo = "Pods-BrewBuddy-JGMethodSwizzler";
+		};
+		554F524F615E0821F0C7A73C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B78DAC238269EA9C33F2901;
+			remoteInfo = "Pods-BrewBuddy-MZAppearance";
+		};
+		813F132F50922F9D6630960F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3B1CE568AFCD3C5E660EA66;
+			remoteInfo = "Pods-BrewBuddy-AFNetworking";
+		};
+		9580798A4E293F764A33F869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8C5FA46A06FCF336E103313;
+			remoteInfo = "Pods-BrewBuddy-TPKeyboardAvoiding";
+		};
+		95A13F9AFAAACF22B2BDDD5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B78DAC238269EA9C33F2901;
+			remoteInfo = "Pods-BrewBuddy-MZAppearance";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0169640A1A469B2FEF88D544 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TPKeyboardAvoidingAdditions.h"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		06419E6CDA825F36D94FA2E7 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		07B65D00B3138A5DB6951D67 /* MZFormSheetPresentationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZFormSheetPresentationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		080435A8C948A348B631089A /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		095BFF18DAFC8723482E79E6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A6A40AD806C2509FC00634C /* MZFormSheetPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationController.h; path = MZFormSheetPresentationController/MZFormSheetPresentationController.h; sourceTree = "<group>"; };
+		0B01DBD77D6EADA3516CAC04 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		0E02CB1183F35D46852251F0 /* Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig"; sourceTree = "<group>"; };
+		0F6C1CA64AC4575F0DCD1186 /* MZAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZAppearance.h; path = MZAppearance/MZAppearance.h; sourceTree = "<group>"; };
+		104582D1B5068A104EA88CBB /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		11F734159A7106C13359CBC6 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingTableView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		1450F1151234F7FD2C7C9E25 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		182D2228662D59D4C740B0F3 /* Pods-BrewBuddy-AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-AFNetworking.xcconfig"; sourceTree = "<group>"; };
+		18B5A62E7D1990163722D97D /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HCSStarRatingView-umbrella.h"; sourceTree = "<group>"; };
+		216072B93865C717DCAD36A1 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		22B7D0DFE775EDEF190BDCD8 /* Pods-BrewBuddy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrewBuddy-acknowledgements.plist"; sourceTree = "<group>"; };
+		24185A3C8C85631CE78D2C63 /* MZFormSheetPresentationControllerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationControllerAnimator.m; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerAnimator.m; sourceTree = "<group>"; };
+		2547DD9349A097815409242C /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		25AAE8FC46A6F6111A3DC4CA /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-HCSStarRatingView-dummy.m"; sourceTree = "<group>"; };
+		263E7F176F2208B6447EF903 /* Pods-BrewBuddy-AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		270D08C2F046146898E4172A /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-JGMethodSwizzler-umbrella.h"; sourceTree = "<group>"; };
+		277547ABDD3B21530FA6F539 /* HCSStarRatingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HCSStarRatingView.h; path = HCSStarRatingView/HCSStarRatingView.h; sourceTree = "<group>"; };
+		277F32515352E5580F243655 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		2888DB72EF70D36380D6A9C0 /* Pods-BrewBuddy-AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-AFNetworking.modulemap"; sourceTree = "<group>"; };
+		292630D4B268C9C5B6C668FB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		2A6F2C53944AB7EF08460664 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		2B2271EC8B054436A33486CC /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		2EB45F2E56B84884F103889C /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		2F0D7014545CC88F01E284B1 /* JGMethodSwizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGMethodSwizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30DFFE0D6E9694072CC6CBC2 /* Pods-BrewBuddy-HCSStarRatingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HCSStarRatingView.xcconfig"; sourceTree = "<group>"; };
+		3376F80D7518579C17F16D04 /* Pods-BrewBuddy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BrewBuddy-resources.sh"; sourceTree = "<group>"; };
+		344C9B9356E096929B874FCC /* Pods-BrewBuddy-HCSStarRatingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HCSStarRatingView-prefix.pch"; sourceTree = "<group>"; };
+		35AC35D76FC090A7FD32205B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TPKeyboardAvoidingAdditions.m"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		38B7032283D7ED7F44074626 /* HCSStarRatingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HCSStarRatingView.m; path = HCSStarRatingView/HCSStarRatingView.m; sourceTree = "<group>"; };
+		38E7ABCE1B648426460DFD19 /* MZAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZAppearance.m; path = MZAppearance/MZAppearance.m; sourceTree = "<group>"; };
+		3BC329403F540EA3C8B9E103 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		3D120C958C7D0A6C61DBDDE4 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		3E46C80BA845AD415514642C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F0EA36D9E24F78577F6779D /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AFNetworking.h"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
+		42209279D727DD8E3CA41057 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		42AA15716C8B6D07774E7988 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		437949A916B2CA21AD78F3AA /* MZFormSheetPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationController.m; path = MZFormSheetPresentationController/MZFormSheetPresentationController.m; sourceTree = "<group>"; };
+		462646719055ACCD62A08900 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		47C56EEFCBB4415458889E26 /* MZTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZTransition.m; path = MZFormSheetPresentationController/MZTransition.m; sourceTree = "<group>"; };
+		488C85ACF37DC39741756D5A /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		4914E43D526EF12FAC71441E /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig"; sourceTree = "<group>"; };
+		4A32619DF41B30F61CFA696C /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		4CD49A13F13A1FA756D24811 /* Pods-BrewBuddy-JGMethodSwizzler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-JGMethodSwizzler.modulemap"; sourceTree = "<group>"; };
+		4E688BC9EC13103FE58BFD2F /* Pods-BrewBuddy-AFNetworking-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-AFNetworking-Private.xcconfig"; sourceTree = "<group>"; };
+		4FA0F97CE369A681D282CF7F /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		53AEB8032CEA19967C520D78 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		54D9936C740E8628C41D2DB7 /* Pods-BrewBuddy-MZAppearance.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-MZAppearance.modulemap"; sourceTree = "<group>"; };
+		59412CE079100ABA14C493AB /* Pods-BrewBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		5A43D75971D3FE4652E0B946 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		5E560709E434AA399AEBFC14 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		5EF1508E07FCDED3B4AA53F0 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h"; sourceTree = "<group>"; };
+		622A47B25AA0DC2CD911400B /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig"; sourceTree = "<group>"; };
+		624A80130A82F66621295DD8 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AFNetworking.m"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
+		654E494B611B7F90F0603185 /* Pods-BrewBuddy-HCSStarRatingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-HCSStarRatingView.modulemap"; sourceTree = "<group>"; };
+		65F17797DF625AB12708255F /* Pods-BrewBuddy-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-environment.h"; sourceTree = "<group>"; };
+		672CC89798314907ABE380FD /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingCollectionView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		67C30BDEE635CF991D616BAA /* Pods-BrewBuddy-JGMethodSwizzler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-JGMethodSwizzler.xcconfig"; sourceTree = "<group>"; };
+		67C30C7BBCAD0CFA902C61C2 /* Pods-BrewBuddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy.modulemap"; sourceTree = "<group>"; };
+		67D3937EE1F57B3C2E782679 /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig"; sourceTree = "<group>"; };
+		69337BBD5DC77A2C672B0D27 /* Pods-BrewBuddy-MZAppearance-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-MZAppearance-dummy.m"; sourceTree = "<group>"; };
+		6C28280CB018AD81CB29DC3D /* MZFormSheetPresentationControllerSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationControllerSegue.m; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerSegue.m; sourceTree = "<group>"; };
+		712395C9AD41B21A2CE105B8 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MZFormSheetPresentationController Swift Example-Bridging-Header.h"; path = "MZFormSheetPresentationController/MZFormSheetPresentationController Swift Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		738DA4A43DAA48E3738FD1A4 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		766D1266C236EE153EE78202 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		76773018B899900BAC037C00 /* Pods_BrewBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78AA5DAABEC935D6AC891640 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig"; sourceTree = "<group>"; };
+		7A9DB5797578675EB033F293 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		806495BA521A6B492451042B /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingTableView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		8AA571CEBDCC594FA354774E /* JGMethodSwizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGMethodSwizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C563E7DF22DF693E3CCF91E /* HCSStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCSStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DCF7BB373A0EFA72EC384A1 /* Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch"; sourceTree = "<group>"; };
+		8E57D0330D934BE9B1B9BF88 /* Pods-BrewBuddy-MZAppearance-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZAppearance-umbrella.h"; sourceTree = "<group>"; };
+		8F878D86505AAA70CAE6B858 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93DB1B05BBC2E95C6BE47FF8 /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZAppearance-Private.xcconfig"; sourceTree = "<group>"; };
+		96FC551C14F7B8E339144EEE /* NSInvocation+Copy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Copy.m"; path = "MZAppearance/NSInvocation+Copy.m"; sourceTree = "<group>"; };
+		984D65B95CAD842D38C1CBD6 /* Pods-BrewBuddy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BrewBuddy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9946AAE516D67725EDD72B6D /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m"; sourceTree = "<group>"; };
+		99BBC30B15D408862CE05B41 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8F8DE1CBDF3ED7D008C3C7 /* MZTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZTransition.h; path = MZFormSheetPresentationController/MZTransition.h; sourceTree = "<group>"; };
+		9B1F67D1AB84A47C6CCB7C1A /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C606A9680232EC7E424F516 /* Pods-BrewBuddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-dummy.m"; sourceTree = "<group>"; };
+		9DB5FD99CE22F7D043A7689F /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		A4B3DF7DE0EAE43C00453296 /* Pods-BrewBuddy-MZFormSheetPresentationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-MZFormSheetPresentationController.modulemap"; sourceTree = "<group>"; };
+		A53BC3B9CDC2FEBD6D392F64 /* Pods-BrewBuddy-JGMethodSwizzler-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-JGMethodSwizzler-prefix.pch"; sourceTree = "<group>"; };
+		A832428B05FE953918572395 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		A9E41D88F715095E5CCAD652 /* Pods-BrewBuddy-AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-AFNetworking-umbrella.h"; sourceTree = "<group>"; };
+		AB266D8FCA301D440AFEBE57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B0E082EAF6759732408B9C01 /* Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch"; sourceTree = "<group>"; };
+		B3E333C84BD726850295149B /* MZFormSheetPresentationControllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationControllerAnimator.h; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerAnimator.h; sourceTree = "<group>"; };
+		B8F9F270DBA044D0A8B72200 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9ED5C641E4C5E64C73A8B07 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		BA4B96D01A83C6CCA1E369B7 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		BB15683C484F164D73DA3067 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		BD989CA9AEB13A2C9FB8EF74 /* Pods-BrewBuddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-umbrella.h"; sourceTree = "<group>"; };
+		BDA35BD8D3198098F8D5A1E4 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		BE05100783B347F66A4FEB6E /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m"; sourceTree = "<group>"; };
+		BF77D54426974C1DCC78F099 /* MZFormSheetPresentationControllerSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationControllerSegue.h; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerSegue.h; sourceTree = "<group>"; };
+		C37AC20EB4C45F85D3FE02FE /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		C499A3DDFC2C82D87B0A1F71 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingCollectionView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		C61B315EE458A02FA1B1CB06 /* Pods-BrewBuddy-MZAppearance-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZAppearance-prefix.pch"; sourceTree = "<group>"; };
+		C9739A99A27146CEBA79A93A /* Pods-BrewBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		CE17DBF0B097B0400DF87B8E /* Pods-BrewBuddy-TPKeyboardAvoiding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-TPKeyboardAvoiding.modulemap"; sourceTree = "<group>"; };
+		D1140446ED3E872B4B657149 /* UIViewController+TargetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TargetViewController.h"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.h"; sourceTree = "<group>"; };
+		D1A87613CFF6F7957AD0DEBC /* JGMethodSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGMethodSwizzler.h; path = JGMethodSwizzler/JGMethodSwizzler.h; sourceTree = "<group>"; };
+		D1CB9CEA565969A17E8EAA84 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-JGMethodSwizzler-dummy.m"; sourceTree = "<group>"; };
+		D1CE6604A1F503BF0081B0DB /* JGMethodSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGMethodSwizzler.m; path = JGMethodSwizzler/JGMethodSwizzler.m; sourceTree = "<group>"; };
+		D1F37CBE636967E802F8B054 /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D351FED8B75D54F4A6D1F055 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D59F84A84514616C2BBDC858 /* Pods-BrewBuddy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BrewBuddy-frameworks.sh"; sourceTree = "<group>"; };
+		D8256B31E05109932D811187 /* NSInvocation+Copy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Copy.h"; path = "MZAppearance/NSInvocation+Copy.h"; sourceTree = "<group>"; };
+		D87A325E28CD99D2E5D9FF79 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		DA6657A8DF8C618730B5D8E7 /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h"; sourceTree = "<group>"; };
+		DE67FB797200D472C163004B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		DEEA9D3B489C5C4F23A1C3E2 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		E3F7F661F5B3C0EFC1E90F93 /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TargetViewController.m"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
+		E7E1A65D600FC2363F125D29 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8EBC7E221445A38A32C0433 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		EE2FAF060030EBC26F5FD19B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		EEC90BDBB50F9AF36EAC6E40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		EED1CA5658E2DE48E7DA77FE /* TPKeyboardAvoiding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPKeyboardAvoiding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF18A377DDAB046C19F29D41 /* Pods-BrewBuddy-AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		F07789094E0C8D3F5813278B /* Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig"; sourceTree = "<group>"; };
+		F08EDB0F3E1FF96D47EF62D2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F09F6858A7C8661C3B44EF14 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F57FB94EB8F478C5C909FC4F /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		F6F3D9FC6AE8448C80B0B005 /* Pods-BrewBuddy-MZAppearance.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZAppearance.xcconfig"; sourceTree = "<group>"; };
+		F79B4FE138FB8069AB9FCA5E /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		030E018596B1C97BAB088FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED3F4F07BA74ABE29F7993C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22989AF42FB03B0F88C3C73E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1271953905447B73AFA656D1 /* Foundation.framework in Frameworks */,
+				7A08121287FFFE3D51EDF770 /* JGMethodSwizzler.framework in Frameworks */,
+				234AB2E7803D4818AE6B0A52 /* MZAppearance.framework in Frameworks */,
+				EA9638E33934CA94B8A8D532 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C47E414DD195AF940C1A851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1F0E7584E8155444BB4AAE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1C3D9915CC190E9EF20139 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A772323988075F150ECA34E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DAC49E0E9861EE626791319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744464FF9CC219159609F778 /* CoreGraphics.framework in Frameworks */,
+				44325B1E63B4ADF031086756 /* Foundation.framework in Frameworks */,
+				88A364A6F0AA97C9E5048B45 /* MobileCoreServices.framework in Frameworks */,
+				4B3DC8181E567479D6C28099 /* Security.framework in Frameworks */,
+				D5EDC963F4F32D3F801ADEDD /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8B0F35FA14206FB8EBBEAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062812C713B198D3D799D344 /* Foundation.framework in Frameworks */,
+				E07176FE79A6D51C500FA767 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E47F1F4838B6D57E3610D97C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78B784EFC636C0795BB46B8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09ECC8A542F70B84B5B1C269 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				06419E6CDA825F36D94FA2E7 /* AFNetworkActivityIndicatorManager.h */,
+				2EB45F2E56B84884F103889C /* AFNetworkActivityIndicatorManager.m */,
+				4FA0F97CE369A681D282CF7F /* UIActivityIndicatorView+AFNetworking.h */,
+				462646719055ACCD62A08900 /* UIActivityIndicatorView+AFNetworking.m */,
+				3F0EA36D9E24F78577F6779D /* UIAlertView+AFNetworking.h */,
+				624A80130A82F66621295DD8 /* UIAlertView+AFNetworking.m */,
+				E8EBC7E221445A38A32C0433 /* UIButton+AFNetworking.h */,
+				BDA35BD8D3198098F8D5A1E4 /* UIButton+AFNetworking.m */,
+				1450F1151234F7FD2C7C9E25 /* UIImageView+AFNetworking.h */,
+				D87A325E28CD99D2E5D9FF79 /* UIImageView+AFNetworking.m */,
+				080435A8C948A348B631089A /* UIKit+AFNetworking.h */,
+				216072B93865C717DCAD36A1 /* UIProgressView+AFNetworking.h */,
+				5A43D75971D3FE4652E0B946 /* UIProgressView+AFNetworking.m */,
+				104582D1B5068A104EA88CBB /* UIRefreshControl+AFNetworking.h */,
+				3D120C958C7D0A6C61DBDDE4 /* UIRefreshControl+AFNetworking.m */,
+				738DA4A43DAA48E3738FD1A4 /* UIWebView+AFNetworking.h */,
+				277F32515352E5580F243655 /* UIWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		126077F6A4F6296458146B2F /* JGMethodSwizzler */ = {
+			isa = PBXGroup;
+			children = (
+				D1A87613CFF6F7957AD0DEBC /* JGMethodSwizzler.h */,
+				D1CE6604A1F503BF0081B0DB /* JGMethodSwizzler.m */,
+				7C8168F2C68C7667F2607A88 /* Support Files */,
+			);
+			path = JGMethodSwizzler;
+			sourceTree = "<group>";
+		};
+		1652F2C55C383146B989D411 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				C499A3DDFC2C82D87B0A1F71 /* TPKeyboardAvoidingCollectionView.h */,
+				672CC89798314907ABE380FD /* TPKeyboardAvoidingCollectionView.m */,
+				9DB5FD99CE22F7D043A7689F /* TPKeyboardAvoidingScrollView.h */,
+				F79B4FE138FB8069AB9FCA5E /* TPKeyboardAvoidingScrollView.m */,
+				11F734159A7106C13359CBC6 /* TPKeyboardAvoidingTableView.h */,
+				806495BA521A6B492451042B /* TPKeyboardAvoidingTableView.m */,
+				0169640A1A469B2FEF88D544 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				35AC35D76FC090A7FD32205B /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				AEBD210E82DD0C836BA10C41 /* Support Files */,
+			);
+			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		1D06F2E8AE43E9682E52130A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				0B01DBD77D6EADA3516CAC04 /* AFNetworking.h */,
+				BC542ACA3DEBFBD11939A7C8 /* NSURLConnection */,
+				B7E460157E0E217E24886AC6 /* NSURLSession */,
+				B3B1F2A83CE83958FEA080ED /* Reachability */,
+				59E231031D631DAD94A0D9AA /* Security */,
+				52CFE2D6AAF6D74068218324 /* Serialization */,
+				6520A0E6D40203E4841484BE /* Support Files */,
+				09ECC8A542F70B84B5B1C269 /* UIKit */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		251F4E1A8CCE2572FB7FFC37 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				759AECEAD5D7175E14FC3BB3 /* Pods-BrewBuddy */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2D70DA922CCD7AF35F159B74 /* MZFormSheetPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A40AD806C2509FC00634C /* MZFormSheetPresentationController.h */,
+				437949A916B2CA21AD78F3AA /* MZFormSheetPresentationController.m */,
+				712395C9AD41B21A2CE105B8 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */,
+				B3E333C84BD726850295149B /* MZFormSheetPresentationControllerAnimator.h */,
+				24185A3C8C85631CE78D2C63 /* MZFormSheetPresentationControllerAnimator.m */,
+				BF77D54426974C1DCC78F099 /* MZFormSheetPresentationControllerSegue.h */,
+				6C28280CB018AD81CB29DC3D /* MZFormSheetPresentationControllerSegue.m */,
+				9A8F8DE1CBDF3ED7D008C3C7 /* MZTransition.h */,
+				47C56EEFCBB4415458889E26 /* MZTransition.m */,
+				D1140446ED3E872B4B657149 /* UIViewController+TargetViewController.h */,
+				E3F7F661F5B3C0EFC1E90F93 /* UIViewController+TargetViewController.m */,
+				FA17A095010F5678737EBFDE /* Support Files */,
+			);
+			path = MZFormSheetPresentationController;
+			sourceTree = "<group>";
+		};
+		52CFE2D6AAF6D74068218324 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				A832428B05FE953918572395 /* AFURLRequestSerialization.h */,
+				BA4B96D01A83C6CCA1E369B7 /* AFURLRequestSerialization.m */,
+				2B2271EC8B054436A33486CC /* AFURLResponseSerialization.h */,
+				DEEA9D3B489C5C4F23A1C3E2 /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		537A2B05BC4D5673193D533D /* HCSStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				277547ABDD3B21530FA6F539 /* HCSStarRatingView.h */,
+				38B7032283D7ED7F44074626 /* HCSStarRatingView.m */,
+				D2B2A188F481CC4A58432606 /* Support Files */,
+			);
+			path = HCSStarRatingView;
+			sourceTree = "<group>";
+		};
+		59E231031D631DAD94A0D9AA /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				5E560709E434AA399AEBFC14 /* AFSecurityPolicy.h */,
+				42209279D727DD8E3CA41057 /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		611D6E4953BF3B76EF746441 /* MZAppearance */ = {
+			isa = PBXGroup;
+			children = (
+				0F6C1CA64AC4575F0DCD1186 /* MZAppearance.h */,
+				38E7ABCE1B648426460DFD19 /* MZAppearance.m */,
+				D8256B31E05109932D811187 /* NSInvocation+Copy.h */,
+				96FC551C14F7B8E339144EEE /* NSInvocation+Copy.m */,
+				E403B51F470D365AAC3D8436 /* Support Files */,
+			);
+			path = MZAppearance;
+			sourceTree = "<group>";
+		};
+		65186B2A8B95FECEC321592A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99BBC30B15D408862CE05B41 /* AFNetworking.framework */,
+				8C563E7DF22DF693E3CCF91E /* HCSStarRatingView.framework */,
+				2F0D7014545CC88F01E284B1 /* JGMethodSwizzler.framework */,
+				D1F37CBE636967E802F8B054 /* MZAppearance.framework */,
+				07B65D00B3138A5DB6951D67 /* MZFormSheetPresentationController.framework */,
+				76773018B899900BAC037C00 /* Pods_BrewBuddy.framework */,
+				EED1CA5658E2DE48E7DA77FE /* TPKeyboardAvoiding.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6520A0E6D40203E4841484BE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E46C80BA845AD415514642C /* Info.plist */,
+				2888DB72EF70D36380D6A9C0 /* Pods-BrewBuddy-AFNetworking.modulemap */,
+				182D2228662D59D4C740B0F3 /* Pods-BrewBuddy-AFNetworking.xcconfig */,
+				4E688BC9EC13103FE58BFD2F /* Pods-BrewBuddy-AFNetworking-Private.xcconfig */,
+				EF18A377DDAB046C19F29D41 /* Pods-BrewBuddy-AFNetworking-dummy.m */,
+				263E7F176F2208B6447EF903 /* Pods-BrewBuddy-AFNetworking-prefix.pch */,
+				A9E41D88F715095E5CCAD652 /* Pods-BrewBuddy-AFNetworking-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-AFNetworking";
+			sourceTree = "<group>";
+		};
+		674EDA2C3D64232C79539F16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AA571CEBDCC594FA354774E /* JGMethodSwizzler.framework */,
+				9B1F67D1AB84A47C6CCB7C1A /* MZAppearance.framework */,
+				CD736C5AE458EAA3AAFD4410 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BA03B9067BFE4853FB87882 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D06F2E8AE43E9682E52130A /* AFNetworking */,
+				537A2B05BC4D5673193D533D /* HCSStarRatingView */,
+				126077F6A4F6296458146B2F /* JGMethodSwizzler */,
+				611D6E4953BF3B76EF746441 /* MZAppearance */,
+				2D70DA922CCD7AF35F159B74 /* MZFormSheetPresentationController */,
+				1652F2C55C383146B989D411 /* TPKeyboardAvoiding */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		759AECEAD5D7175E14FC3BB3 /* Pods-BrewBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				8F878D86505AAA70CAE6B858 /* Info.plist */,
+				67C30C7BBCAD0CFA902C61C2 /* Pods-BrewBuddy.modulemap */,
+				984D65B95CAD842D38C1CBD6 /* Pods-BrewBuddy-acknowledgements.markdown */,
+				22B7D0DFE775EDEF190BDCD8 /* Pods-BrewBuddy-acknowledgements.plist */,
+				9C606A9680232EC7E424F516 /* Pods-BrewBuddy-dummy.m */,
+				65F17797DF625AB12708255F /* Pods-BrewBuddy-environment.h */,
+				D59F84A84514616C2BBDC858 /* Pods-BrewBuddy-frameworks.sh */,
+				3376F80D7518579C17F16D04 /* Pods-BrewBuddy-resources.sh */,
+				BD989CA9AEB13A2C9FB8EF74 /* Pods-BrewBuddy-umbrella.h */,
+				C9739A99A27146CEBA79A93A /* Pods-BrewBuddy.debug.xcconfig */,
+				59412CE079100ABA14C493AB /* Pods-BrewBuddy.release.xcconfig */,
+			);
+			name = "Pods-BrewBuddy";
+			path = "Target Support Files/Pods-BrewBuddy";
+			sourceTree = "<group>";
+		};
+		7C8168F2C68C7667F2607A88 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7E1A65D600FC2363F125D29 /* Info.plist */,
+				4CD49A13F13A1FA756D24811 /* Pods-BrewBuddy-JGMethodSwizzler.modulemap */,
+				67C30BDEE635CF991D616BAA /* Pods-BrewBuddy-JGMethodSwizzler.xcconfig */,
+				622A47B25AA0DC2CD911400B /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */,
+				D1CB9CEA565969A17E8EAA84 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */,
+				A53BC3B9CDC2FEBD6D392F64 /* Pods-BrewBuddy-JGMethodSwizzler-prefix.pch */,
+				270D08C2F046146898E4172A /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-JGMethodSwizzler";
+			sourceTree = "<group>";
+		};
+		AEBD210E82DD0C836BA10C41 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F09F6858A7C8661C3B44EF14 /* Info.plist */,
+				CE17DBF0B097B0400DF87B8E /* Pods-BrewBuddy-TPKeyboardAvoiding.modulemap */,
+				0E02CB1183F35D46852251F0 /* Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig */,
+				4914E43D526EF12FAC71441E /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */,
+				9946AAE516D67725EDD72B6D /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */,
+				B0E082EAF6759732408B9C01 /* Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch */,
+				5EF1508E07FCDED3B4AA53F0 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding";
+			sourceTree = "<group>";
+		};
+		B3B1F2A83CE83958FEA080ED /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F57FB94EB8F478C5C909FC4F /* AFNetworkReachabilityManager.h */,
+				3BC329403F540EA3C8B9E103 /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		B7E460157E0E217E24886AC6 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				2547DD9349A097815409242C /* AFHTTPSessionManager.h */,
+				488C85ACF37DC39741756D5A /* AFHTTPSessionManager.m */,
+				7A9DB5797578675EB033F293 /* AFURLSessionManager.h */,
+				C37AC20EB4C45F85D3FE02FE /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		BC542ACA3DEBFBD11939A7C8 /* NSURLConnection */ = {
+			isa = PBXGroup;
+			children = (
+				EE2FAF060030EBC26F5FD19B /* AFHTTPRequestOperation.h */,
+				DE67FB797200D472C163004B /* AFHTTPRequestOperation.m */,
+				4A32619DF41B30F61CFA696C /* AFHTTPRequestOperationManager.h */,
+				BB15683C484F164D73DA3067 /* AFHTTPRequestOperationManager.m */,
+				42AA15716C8B6D07774E7988 /* AFURLConnectionOperation.h */,
+				53AEB8032CEA19967C520D78 /* AFURLConnectionOperation.m */,
+			);
+			name = NSURLConnection;
+			sourceTree = "<group>";
+		};
+		C775F66B1A5F6597D6390F5A = {
+			isa = PBXGroup;
+			children = (
+				D351FED8B75D54F4A6D1F055 /* Podfile */,
+				674EDA2C3D64232C79539F16 /* Frameworks */,
+				6BA03B9067BFE4853FB87882 /* Pods */,
+				65186B2A8B95FECEC321592A /* Products */,
+				251F4E1A8CCE2572FB7FFC37 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CD736C5AE458EAA3AAFD4410 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EEC90BDBB50F9AF36EAC6E40 /* CoreGraphics.framework */,
+				AB266D8FCA301D440AFEBE57 /* Foundation.framework */,
+				B9ED5C641E4C5E64C73A8B07 /* MobileCoreServices.framework */,
+				766D1266C236EE153EE78202 /* QuartzCore.framework */,
+				292630D4B268C9C5B6C668FB /* Security.framework */,
+				2A6F2C53944AB7EF08460664 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D2B2A188F481CC4A58432606 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				095BFF18DAFC8723482E79E6 /* Info.plist */,
+				654E494B611B7F90F0603185 /* Pods-BrewBuddy-HCSStarRatingView.modulemap */,
+				30DFFE0D6E9694072CC6CBC2 /* Pods-BrewBuddy-HCSStarRatingView.xcconfig */,
+				78AA5DAABEC935D6AC891640 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */,
+				25AAE8FC46A6F6111A3DC4CA /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */,
+				344C9B9356E096929B874FCC /* Pods-BrewBuddy-HCSStarRatingView-prefix.pch */,
+				18B5A62E7D1990163722D97D /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-HCSStarRatingView";
+			sourceTree = "<group>";
+		};
+		E403B51F470D365AAC3D8436 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8F9F270DBA044D0A8B72200 /* Info.plist */,
+				54D9936C740E8628C41D2DB7 /* Pods-BrewBuddy-MZAppearance.modulemap */,
+				F6F3D9FC6AE8448C80B0B005 /* Pods-BrewBuddy-MZAppearance.xcconfig */,
+				93DB1B05BBC2E95C6BE47FF8 /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */,
+				69337BBD5DC77A2C672B0D27 /* Pods-BrewBuddy-MZAppearance-dummy.m */,
+				C61B315EE458A02FA1B1CB06 /* Pods-BrewBuddy-MZAppearance-prefix.pch */,
+				8E57D0330D934BE9B1B9BF88 /* Pods-BrewBuddy-MZAppearance-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-MZAppearance";
+			sourceTree = "<group>";
+		};
+		FA17A095010F5678737EBFDE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F08EDB0F3E1FF96D47EF62D2 /* Info.plist */,
+				A4B3DF7DE0EAE43C00453296 /* Pods-BrewBuddy-MZFormSheetPresentationController.modulemap */,
+				F07789094E0C8D3F5813278B /* Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig */,
+				67D3937EE1F57B3C2E782679 /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */,
+				BE05100783B347F66A4FEB6E /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */,
+				8DCF7BB373A0EFA72EC384A1 /* Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch */,
+				DA6657A8DF8C618730B5D8E7 /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		487C95F6D9A9478E331614E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFA835AF6843B7CDD0BD91B /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h in Headers */,
+				25E1C962114F79B5B95F1F67 /* TPKeyboardAvoidingCollectionView.h in Headers */,
+				D2A836DE58EC5480FB1B849A /* TPKeyboardAvoidingScrollView.h in Headers */,
+				7B2E8A39FF0638132C563DDC /* TPKeyboardAvoidingTableView.h in Headers */,
+				0C5D75180E15D7380F9B2B26 /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DA73BB0ADA03FDBFC7770F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A934C82959CC0FC7259C7D1 /* Pods-BrewBuddy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB10F60B98FFC8D9DFAD9FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5FBD1584E51EE352463A1CD /* MZAppearance.h in Headers */,
+				7829F5B44DB6CA9DFB58A9D2 /* NSInvocation+Copy.h in Headers */,
+				6F100767AE296E30C2834E71 /* Pods-BrewBuddy-MZAppearance-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C331225BD1D9836518189389 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE37481A6361001FF2859F0F /* MZFormSheetPresentationController Swift Example-Bridging-Header.h in Headers */,
+				303E14D2D459A00EA38C7E66 /* MZFormSheetPresentationController.h in Headers */,
+				AB78842D0A7633521642B0BE /* MZFormSheetPresentationControllerAnimator.h in Headers */,
+				EFE70EC86C9D9C43E338FB3E /* MZFormSheetPresentationControllerSegue.h in Headers */,
+				7E5B8EF06E688BB62E0AABA5 /* MZTransition.h in Headers */,
+				B95E04D5111C4992445116D1 /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h in Headers */,
+				8CD71E9A019204136A832D9A /* UIViewController+TargetViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96DA9C7E18EE15017D5FD7B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F144ADBF3ECA22DBFFB76D99 /* JGMethodSwizzler.h in Headers */,
+				5813ACB3D6F82725CBA5025E /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9A841C58E2B5BB0492ECFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E3821FD587D6DE6645E0C6 /* HCSStarRatingView.h in Headers */,
+				3828E5A5B53881DE0172925B /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0177A8A663F515E67B9BCE3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F95FDE058E508241CE55377 /* AFHTTPRequestOperation.h in Headers */,
+				2BE53D835EC9A9FE130776A4 /* AFHTTPRequestOperationManager.h in Headers */,
+				CA1A85F640D356F96DADFDFB /* AFHTTPSessionManager.h in Headers */,
+				B890EF9A63B6E6542F7F8007 /* AFNetworkActivityIndicatorManager.h in Headers */,
+				BC96B0464923501690FAF45C /* AFNetworkReachabilityManager.h in Headers */,
+				FFB8098392AC2830939D136E /* AFNetworking.h in Headers */,
+				65C35203E848336EB303B629 /* AFSecurityPolicy.h in Headers */,
+				6061FFA781CC470AAC117831 /* AFURLConnectionOperation.h in Headers */,
+				8BB9029D164DF3D998ADEF90 /* AFURLRequestSerialization.h in Headers */,
+				EB0FF38A7CCB5ED427BC6B4D /* AFURLResponseSerialization.h in Headers */,
+				39387C38A7D3CE6A3290E8F6 /* AFURLSessionManager.h in Headers */,
+				22EAD17F1EF3592437CB6593 /* Pods-BrewBuddy-AFNetworking-umbrella.h in Headers */,
+				9AAD4F172E2F92A3154E3C78 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				9FA7D29E3D75F5060F276B20 /* UIAlertView+AFNetworking.h in Headers */,
+				95A5FE348AAE6BC8E7CA8467 /* UIButton+AFNetworking.h in Headers */,
+				9D3CF45E489E4E64BFA8061E /* UIImageView+AFNetworking.h in Headers */,
+				2C74E7C3ED946DDA9EB7DC6A /* UIKit+AFNetworking.h in Headers */,
+				343B72589B5F97447DB08698 /* UIProgressView+AFNetworking.h in Headers */,
+				C87739939878DDEBEA08A301 /* UIRefreshControl+AFNetworking.h in Headers */,
+				1F7E06793DC1D830EF1E365B /* UIWebView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5EDF1FD24B808B3B3B6B375E /* Pods-BrewBuddy-JGMethodSwizzler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D45536581C700E90E7B42A3 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-JGMethodSwizzler" */;
+			buildPhases = (
+				FA0594849F3CF3C8C76BA627 /* Sources */,
+				4C47E414DD195AF940C1A851 /* Frameworks */,
+				C96DA9C7E18EE15017D5FD7B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-JGMethodSwizzler";
+			productName = "Pods-BrewBuddy-JGMethodSwizzler";
+			productReference = 2F0D7014545CC88F01E284B1 /* JGMethodSwizzler.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6B78DAC238269EA9C33F2901 /* Pods-BrewBuddy-MZAppearance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F512D5A33DB380C1335A1EE7 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZAppearance" */;
+			buildPhases = (
+				188A980DFF49C05AC83630F8 /* Sources */,
+				BA8B0F35FA14206FB8EBBEAC /* Frameworks */,
+				8EB10F60B98FFC8D9DFAD9FD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-MZAppearance";
+			productName = "Pods-BrewBuddy-MZAppearance";
+			productReference = D1F37CBE636967E802F8B054 /* MZAppearance.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8ED6244502CB986AAF7175E3 /* Pods-BrewBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ADF74FBF23713C53B4174EA /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy" */;
+			buildPhases = (
+				FE085C8A0993144EF27BF0B5 /* Sources */,
+				030E018596B1C97BAB088FCF /* Frameworks */,
+				64DA73BB0ADA03FDBFC7770F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66C6C5CC2584D84936F13453 /* PBXTargetDependency */,
+				767AF9FB1B8DC9B130AACB24 /* PBXTargetDependency */,
+				0B31E301BC79F03912D97BA4 /* PBXTargetDependency */,
+				0079D907E8B820EEF26793F6 /* PBXTargetDependency */,
+				5712182F8ECF063D883922EF /* PBXTargetDependency */,
+				D903C4E07C6C1E8DEAAB3626 /* PBXTargetDependency */,
+			);
+			name = "Pods-BrewBuddy";
+			productName = "Pods-BrewBuddy";
+			productReference = 76773018B899900BAC037C00 /* Pods_BrewBuddy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9CFAF0FD2CF3B6D6D631AF9F /* Pods-BrewBuddy-MZFormSheetPresentationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 099B94D016362E46CAF7966C /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZFormSheetPresentationController" */;
+			buildPhases = (
+				F6731BBA7C04158819F64214 /* Sources */,
+				22989AF42FB03B0F88C3C73E /* Frameworks */,
+				C331225BD1D9836518189389 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B9C5ABC85E7B5044F11F140 /* PBXTargetDependency */,
+				6E4919D4CEE7F2433C0E7790 /* PBXTargetDependency */,
+			);
+			name = "Pods-BrewBuddy-MZFormSheetPresentationController";
+			productName = "Pods-BrewBuddy-MZFormSheetPresentationController";
+			productReference = 07B65D00B3138A5DB6951D67 /* MZFormSheetPresentationController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AFF6DC9E67C9D136402EAD0F /* Pods-BrewBuddy-HCSStarRatingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6F3D2CD167FDF3CEB4512CB /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HCSStarRatingView" */;
+			buildPhases = (
+				9B7842B18896CAE82D7B7FAC /* Sources */,
+				E47F1F4838B6D57E3610D97C /* Frameworks */,
+				EC9A841C58E2B5BB0492ECFC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-HCSStarRatingView";
+			productName = "Pods-BrewBuddy-HCSStarRatingView";
+			productReference = 8C563E7DF22DF693E3CCF91E /* HCSStarRatingView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E3B1CE568AFCD3C5E660EA66 /* Pods-BrewBuddy-AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D294F7378C400A418BD3FAF0 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-AFNetworking" */;
+			buildPhases = (
+				7123FB4C6554CBD3C8AB38AB /* Sources */,
+				6DAC49E0E9861EE626791319 /* Frameworks */,
+				F0177A8A663F515E67B9BCE3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-AFNetworking";
+			productName = "Pods-BrewBuddy-AFNetworking";
+			productReference = 99BBC30B15D408862CE05B41 /* AFNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8C5FA46A06FCF336E103313 /* Pods-BrewBuddy-TPKeyboardAvoiding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB5BD7397C0B37EEA3EEA57 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-TPKeyboardAvoiding" */;
+			buildPhases = (
+				FED562304ABCBA6FF12A5FC0 /* Sources */,
+				5B1C3D9915CC190E9EF20139 /* Frameworks */,
+				487C95F6D9A9478E331614E2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-TPKeyboardAvoiding";
+			productName = "Pods-BrewBuddy-TPKeyboardAvoiding";
+			productReference = EED1CA5658E2DE48E7DA77FE /* TPKeyboardAvoiding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8003F5A7C6ADB965FEF8D83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = EACAF0E387A93846E086015A /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C775F66B1A5F6597D6390F5A;
+			productRefGroup = 65186B2A8B95FECEC321592A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8ED6244502CB986AAF7175E3 /* Pods-BrewBuddy */,
+				E3B1CE568AFCD3C5E660EA66 /* Pods-BrewBuddy-AFNetworking */,
+				AFF6DC9E67C9D136402EAD0F /* Pods-BrewBuddy-HCSStarRatingView */,
+				5EDF1FD24B808B3B3B6B375E /* Pods-BrewBuddy-JGMethodSwizzler */,
+				6B78DAC238269EA9C33F2901 /* Pods-BrewBuddy-MZAppearance */,
+				9CFAF0FD2CF3B6D6D631AF9F /* Pods-BrewBuddy-MZFormSheetPresentationController */,
+				E8C5FA46A06FCF336E103313 /* Pods-BrewBuddy-TPKeyboardAvoiding */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		188A980DFF49C05AC83630F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02ED1C8E294151B22EFC3245 /* MZAppearance.m in Sources */,
+				128E056ED15E688D714A6A04 /* NSInvocation+Copy.m in Sources */,
+				471D338418A2EC5637F1451B /* Pods-BrewBuddy-MZAppearance-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7123FB4C6554CBD3C8AB38AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43C8A24265D6AF49DD4354C /* AFHTTPRequestOperation.m in Sources */,
+				1908DCF6F0C1E639E92002B3 /* AFHTTPRequestOperationManager.m in Sources */,
+				F0B0F06DC2DB1797709FDE90 /* AFHTTPSessionManager.m in Sources */,
+				5EDF443A7C9BF8A73E769EC0 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				FEE4CF338211D6D0AE372A09 /* AFNetworkReachabilityManager.m in Sources */,
+				0C8D9952006681E84CAA9F8F /* AFSecurityPolicy.m in Sources */,
+				6D1C7E20BF1D7127E95FFB98 /* AFURLConnectionOperation.m in Sources */,
+				48663AC7F5D722522A89B344 /* AFURLRequestSerialization.m in Sources */,
+				763D3CA48A65DCA61327CCB6 /* AFURLResponseSerialization.m in Sources */,
+				164164495E2FC0D64D9946C3 /* AFURLSessionManager.m in Sources */,
+				238C28746DD108B87ED6F533 /* Pods-BrewBuddy-AFNetworking-dummy.m in Sources */,
+				EAFBA6AE32650058BBF53FE5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				99AD1B0A4AB824A47F8904D0 /* UIAlertView+AFNetworking.m in Sources */,
+				0DAE44B0ECA90C89E9CE993A /* UIButton+AFNetworking.m in Sources */,
+				9C1C763E9B3C3DEB371C6F36 /* UIImageView+AFNetworking.m in Sources */,
+				7ABFB1EBF0D533229CA78DF3 /* UIProgressView+AFNetworking.m in Sources */,
+				305ACB6A1DD9892A34705FC8 /* UIRefreshControl+AFNetworking.m in Sources */,
+				500385E97886116960C2EE0D /* UIWebView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B7842B18896CAE82D7B7FAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255B795110F4A14E807D4C5E /* HCSStarRatingView.m in Sources */,
+				A4BA0376F0012FF62EB34028 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6731BBA7C04158819F64214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72057753DFAF76E2E7B81510 /* MZFormSheetPresentationController.m in Sources */,
+				E41DBE5640A5D3B227E07910 /* MZFormSheetPresentationControllerAnimator.m in Sources */,
+				6DEEA208B646D83E8FFEB428 /* MZFormSheetPresentationControllerSegue.m in Sources */,
+				63016BC48CBF360E9A536DC8 /* MZTransition.m in Sources */,
+				848B9861D726C4CBCC9600A7 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m in Sources */,
+				A744E3A2FC1517456B06F75C /* UIViewController+TargetViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA0594849F3CF3C8C76BA627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FED9494D9327BD678C82714 /* JGMethodSwizzler.m in Sources */,
+				01842CAAE1BFFD965EDC69A6 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE085C8A0993144EF27BF0B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48BC6D62A010D80801CA8FF8 /* Pods-BrewBuddy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED562304ABCBA6FF12A5FC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920ED592D77A45A9707EA0C4 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m in Sources */,
+				B6496CBD097BD2B80DBC0D51 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				D253051882E4058F49D6CB6A /* TPKeyboardAvoidingScrollView.m in Sources */,
+				634513C451DFD9C363AFA0E9 /* TPKeyboardAvoidingTableView.m in Sources */,
+				4B07DAC927006749D1B2E58C /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0079D907E8B820EEF26793F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-MZAppearance";
+			target = 6B78DAC238269EA9C33F2901 /* Pods-BrewBuddy-MZAppearance */;
+			targetProxy = 95A13F9AFAAACF22B2BDDD5A /* PBXContainerItemProxy */;
+		};
+		0B31E301BC79F03912D97BA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-JGMethodSwizzler";
+			target = 5EDF1FD24B808B3B3B6B375E /* Pods-BrewBuddy-JGMethodSwizzler */;
+			targetProxy = 0E48459045F987A161E084C2 /* PBXContainerItemProxy */;
+		};
+		0B9C5ABC85E7B5044F11F140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-JGMethodSwizzler";
+			target = 5EDF1FD24B808B3B3B6B375E /* Pods-BrewBuddy-JGMethodSwizzler */;
+			targetProxy = 2F5D4AEF328D2305EAAE6B0D /* PBXContainerItemProxy */;
+		};
+		5712182F8ECF063D883922EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-MZFormSheetPresentationController";
+			target = 9CFAF0FD2CF3B6D6D631AF9F /* Pods-BrewBuddy-MZFormSheetPresentationController */;
+			targetProxy = 02F17E9BB3F41C98A6324E3C /* PBXContainerItemProxy */;
+		};
+		66C6C5CC2584D84936F13453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-AFNetworking";
+			target = E3B1CE568AFCD3C5E660EA66 /* Pods-BrewBuddy-AFNetworking */;
+			targetProxy = 813F132F50922F9D6630960F /* PBXContainerItemProxy */;
+		};
+		6E4919D4CEE7F2433C0E7790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-MZAppearance";
+			target = 6B78DAC238269EA9C33F2901 /* Pods-BrewBuddy-MZAppearance */;
+			targetProxy = 554F524F615E0821F0C7A73C /* PBXContainerItemProxy */;
+		};
+		767AF9FB1B8DC9B130AACB24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-HCSStarRatingView";
+			target = AFF6DC9E67C9D136402EAD0F /* Pods-BrewBuddy-HCSStarRatingView */;
+			targetProxy = 040BC8A0DAC5CE4F3F0B3B18 /* PBXContainerItemProxy */;
+		};
+		D903C4E07C6C1E8DEAAB3626 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-TPKeyboardAvoiding";
+			target = E8C5FA46A06FCF336E103313 /* Pods-BrewBuddy-TPKeyboardAvoiding */;
+			targetProxy = 9580798A4E293F764A33F869 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		147EE06B7B401C9BF31026A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4914E43D526EF12FAC71441E /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TPKeyboardAvoiding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1AA809C2A3EA11F77E1545B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E688BC9EC13103FE58BFD2F /* Pods-BrewBuddy-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-AFNetworking/Pods-BrewBuddy-AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-AFNetworking/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-AFNetworking/Pods-BrewBuddy-AFNetworking.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25A19FC1F39250F94B0ECB5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59412CE079100ABA14C493AB /* Pods-BrewBuddy.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BrewBuddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2EA97D9504749DBCC49F4B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9739A99A27146CEBA79A93A /* Pods-BrewBuddy.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BrewBuddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3FF7C8D8C1DB0C9C737591BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 622A47B25AA0DC2CD911400B /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JGMethodSwizzler;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44796C19BDF938C40D15116F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93DB1B05BBC2E95C6BE47FF8 /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MZAppearance;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		516EA4A2E7218C529C973802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4914E43D526EF12FAC71441E /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TPKeyboardAvoiding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		81AE349C4B611F9EF1FAAE71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6848666AB44110732C2C09C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E688BC9EC13103FE58BFD2F /* Pods-BrewBuddy-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-AFNetworking/Pods-BrewBuddy-AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-AFNetworking/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-AFNetworking/Pods-BrewBuddy-AFNetworking.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C2519E108A643DAC0ABA6565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 622A47B25AA0DC2CD911400B /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JGMethodSwizzler;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C3A1B3BB9275662A78844BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78AA5DAABEC935D6AC891640 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HCSStarRatingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DEE58A4A498A6FF85A870F6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67D3937EE1F57B3C2E782679 /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController/Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController/Pods-BrewBuddy-MZFormSheetPresentationController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MZFormSheetPresentationController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DF39B3D791AEBCC27BADA94A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67D3937EE1F57B3C2E782679 /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController/Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController/Pods-BrewBuddy-MZFormSheetPresentationController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MZFormSheetPresentationController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4F49D06498E9988D31FF1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78AA5DAABEC935D6AC891640 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HCSStarRatingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F2C3B6A38EE7AC0E3E61CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FA0CF0ECD84BA0AC537B2604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93DB1B05BBC2E95C6BE47FF8 /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MZAppearance;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		099B94D016362E46CAF7966C /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZFormSheetPresentationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF39B3D791AEBCC27BADA94A /* Debug */,
+				DEE58A4A498A6FF85A870F6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D45536581C700E90E7B42A3 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-JGMethodSwizzler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FF7C8D8C1DB0C9C737591BE /* Debug */,
+				C2519E108A643DAC0ABA6565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ADF74FBF23713C53B4174EA /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EA97D9504749DBCC49F4B55 /* Debug */,
+				25A19FC1F39250F94B0ECB5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB5BD7397C0B37EEA3EEA57 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-TPKeyboardAvoiding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				516EA4A2E7218C529C973802 /* Debug */,
+				147EE06B7B401C9BF31026A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D294F7378C400A418BD3FAF0 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6848666AB44110732C2C09C /* Debug */,
+				1AA809C2A3EA11F77E1545B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F3D2CD167FDF3CEB4512CB /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HCSStarRatingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A1B3BB9275662A78844BCA /* Debug */,
+				E4F49D06498E9988D31FF1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EACAF0E387A93846E086015A /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2C3B6A38EE7AC0E3E61CAE5 /* Debug */,
+				81AE349C4B611F9EF1FAAE71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F512D5A33DB380C1335A1EE7 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZAppearance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0CF0ECD84BA0AC537B2604 /* Debug */,
+				44796C19BDF938C40D15116F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8003F5A7C6ADB965FEF8D83 /* Project object */;
+}

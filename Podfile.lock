@@ -1,0 +1,54 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - HCSStarRatingView (1.0)
+  - JGMethodSwizzler (2.0.1)
+  - MZAppearance (1.1.5)
+  - MZFormSheetPresentationController (1.0.1):
+    - JGMethodSwizzler
+    - MZAppearance
+  - TPKeyboardAvoiding (1.2.7)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - HCSStarRatingView (from `https://github.com/hugocampossousa/HCSStarRatingView.git`)
+  - MZFormSheetPresentationController (~> 1.0.1)
+  - TPKeyboardAvoiding (~> 1.2.7)
+
+EXTERNAL SOURCES:
+  HCSStarRatingView:
+    :git: https://github.com/hugocampossousa/HCSStarRatingView.git
+
+CHECKOUT OPTIONS:
+  HCSStarRatingView:
+    :commit: 52fcff0ec04ba7d1f8c8219c2f24c8ec71258b93
+    :git: https://github.com/hugocampossousa/HCSStarRatingView.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  HCSStarRatingView: 6fb5c03b4ae2b8a1cca712da20fca99898c69af1
+  JGMethodSwizzler: e0ea5c1c6c55304ec4ef3f54e441400c6735c899
+  MZAppearance: 6e9dc64e42074c0a19812a327f590746c3283bab
+  MZFormSheetPresentationController: 8a48589749da58177fb5184910fde5f48e3b6ecb
+  TPKeyboardAvoiding: 9375176f625873c9f9246cd42d5fcf9fc5787ae9
+
+COCOAPODS: 0.37.2
