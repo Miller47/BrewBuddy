@@ -70,7 +70,7 @@
         <scene sceneID="NPe-26-iAB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5DI-7w-fmD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="IYv-U7-pOg"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="IYv-U7-pOg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ix-Hx-qJk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -871,7 +871,7 @@
         <scene sceneID="eXJ-uo-aRC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QEO-AT-e1B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Add Brewery" id="Bf1-HI-dho"/>
+                    <tabBarItem key="tabBarItem" title="Add Brewery" image="plus" id="Bf1-HI-dho"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZXf-nK-6UY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -894,7 +894,7 @@
         <scene sceneID="2ct-yo-Msr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nyU-Cm-UEc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" id="P77-6E-laG"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star" id="P77-6E-laG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ibP-oy-l3f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -953,7 +953,7 @@
         <scene sceneID="dMF-qU-vls">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yDr-xU-GgR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Must Try" id="IPM-Qq-n4U"/>
+                    <tabBarItem key="tabBarItem" title="Must Try" image="certificate" id="IPM-Qq-n4U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="16t-yT-Rkq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -974,8 +974,12 @@
         <image name="banner" width="320" height="207"/>
         <image name="brewLogo" width="982" height="982"/>
         <image name="brewbuddy" width="2000" height="2000"/>
+        <image name="certificate" width="17" height="25"/>
         <image name="foam" width="2160" height="1176"/>
+        <image name="home" width="27" height="26"/>
         <image name="miller-apps" width="104" height="84"/>
+        <image name="plus" width="20" height="20"/>
+        <image name="star" width="25" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8DV-p6-lbe"/>
