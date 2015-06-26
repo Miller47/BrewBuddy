@@ -53,6 +53,10 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func cancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func forgotPass(sender: AnyObject) {
     }
     
