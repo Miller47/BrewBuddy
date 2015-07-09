@@ -13,6 +13,7 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     let berweries = ["Oyster City Brewing Company", "Monument Brewing Co.", "Ragtime Tavern Seafood & Grill", "Brewzzi"]
     let distance = [2.05, 6.02, 18.00, 28.03]
+    private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
 
 
     @IBOutlet weak var tableView: UITableView!
@@ -24,16 +25,22 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         navigationItem.backBarButtonItem = backItem
        
         configureTableView()
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            println("Object has been saved.")
-        }
-        
+        retriveBreweies(43.764471, long: -84.338055)
        
         
-        
 
+    }
+    
+    func retriveBreweies(lat: Double, long: Double) {
+        let breweryService =  BreweryService(APIKey: APIKey)
+        breweryService.getBreweries(lat, long: long) {
+            (let brew) in
+            if let info = brew {
+            
+                let breweries = info.breweries
+                println("Name: \(breweries.first?.name), \(breweries.first?.breweryId), \(breweries.first?.distance), \(breweries.first?.iconURL)")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
