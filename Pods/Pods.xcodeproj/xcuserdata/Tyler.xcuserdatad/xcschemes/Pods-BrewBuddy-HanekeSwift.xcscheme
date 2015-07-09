@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C139B2430BA3AB1185C999DD"
-               BuildableName = "MZFormSheetPresentationController.framework"
-               BlueprintName = "Pods-BrewBuddy-MZFormSheetPresentationController"
+               BlueprintIdentifier = "D2E3E8CD37BCAD1413F6AFED"
+               BuildableName = "Haneke.framework"
+               BlueprintName = "Pods-BrewBuddy-HanekeSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -48,16 +48,16 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework 'AFNetworking.framework'
   install_framework 'HCSStarRatingView.framework'
+  install_framework 'Haneke.framework'
   install_framework 'JGMethodSwizzler.framework'
   install_framework 'MZAppearance.framework'
   install_framework 'MZFormSheetPresentationController.framework'
   install_framework 'TPKeyboardAvoiding.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework 'AFNetworking.framework'
   install_framework 'HCSStarRatingView.framework'
+  install_framework 'Haneke.framework'
   install_framework 'JGMethodSwizzler.framework'
   install_framework 'MZAppearance.framework'
   install_framework 'MZFormSheetPresentationController.framework'

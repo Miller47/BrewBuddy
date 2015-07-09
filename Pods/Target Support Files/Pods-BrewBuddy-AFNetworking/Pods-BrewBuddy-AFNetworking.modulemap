@@ -1,6 +1,0 @@
-framework module AFNetworking {
-  umbrella header "Pods-BrewBuddy-AFNetworking-umbrella.h"
-
-  export *
-  module * { export * }
-}

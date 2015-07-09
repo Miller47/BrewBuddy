@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
                 } else {
                     // The login failed. Check error to see why.
                     let errorString = error!.userInfo?["error"] as? NSString
-                    let alert = UIAlertController(title: "Error", message: "\(errorString)", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
 

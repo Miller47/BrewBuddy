@@ -132,9 +132,10 @@
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="miller-apps" translatesAutoresizingMaskIntoConstraints="NO" id="4gc-Oy-mpa">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="miller-apps" translatesAutoresizingMaskIntoConstraints="NO" id="4gc-Oy-mpa">
                                                     <rect key="frame" x="9" y="20" width="80" height="43"/>
                                                     <animations/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.5 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56i-YX-HiX">
                                                     <rect key="frame" x="502" y="57" width="48" height="21"/>
@@ -247,15 +248,18 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j51-GC-WYO" id="bQC-Mk-V0L">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TylerMiller 06/25/15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY3-kK-SNh">
-                                                    <rect key="frame" x="21" y="11" width="150" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TylerMiller 06/25/15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY3-kK-SNh">
+                                                    <rect key="frame" x="14" y="11" width="150" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="pcn-Ib-yxm"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-Qn-6g0" customClass="HCSStarRatingView">
-                                                    <rect key="frame" x="49" y="40" width="284" height="37"/>
+                                                <view userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-Qn-6g0" customClass="HCSStarRatingView">
+                                                    <rect key="frame" x="112" y="40" width="250" height="37"/>
                                                     <animations/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" red="1" green="0.45098039220000002" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -273,6 +277,13 @@
                                                 </view>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="FKp-Qn-6g0" secondAttribute="centerY" constant="-12" id="91Y-DI-4Vd"/>
+                                                <constraint firstItem="FKp-Qn-6g0" firstAttribute="top" secondItem="TY3-kK-SNh" secondAttribute="bottom" constant="8" symbolic="YES" id="gTv-X4-Yn0"/>
+                                                <constraint firstItem="TY3-kK-SNh" firstAttribute="top" secondItem="bQC-Mk-V0L" secondAttribute="topMargin" constant="3" id="j93-jC-1pX"/>
+                                                <constraint firstAttribute="centerX" secondItem="FKp-Qn-6g0" secondAttribute="centerX" constant="47" id="twZ-6o-3Ol"/>
+                                                <constraint firstItem="TY3-kK-SNh" firstAttribute="leading" secondItem="bQC-Mk-V0L" secondAttribute="leadingMargin" constant="6" id="yFD-C9-8bL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

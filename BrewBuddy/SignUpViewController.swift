@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController {
                 if let error = error {
                     let errorString = error.userInfo?["error"] as? NSString
                     // Show the errorString somewhere and let the user try again.
-                    let alert = UIAlertController(title: "Error", message: "\(errorString)", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
 

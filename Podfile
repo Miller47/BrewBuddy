@@ -4,10 +4,10 @@ use_frameworks!
 
 target 'BrewBuddy' do
 
-pod 'AFNetworking', '~> 2.0'
 pod 'MZFormSheetPresentationController', '~> 1.0.1'
 pod 'HCSStarRatingView', :git => 'https://github.com/hugocampossousa/HCSStarRatingView.git'
 pod 'TPKeyboardAvoiding', '~> 1.2.7'
+pod 'HanekeSwift'
 
 end
 

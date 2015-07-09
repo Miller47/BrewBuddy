@@ -20,7 +20,7 @@ struct Breweries {
         name = brewDictionary["brewery"]?["name"] as? String
         breweryId = brewDictionary["breweryId"] as? String
         distance = brewDictionary["distance"] as? Double
-        iconURL = brewDictionary["brewery"]?["images"]??.objectForKey("medium") as? String
+        iconURL = brewDictionary["brewery"]?["images"]??.objectForKey("icon") as? String
         
         
     }

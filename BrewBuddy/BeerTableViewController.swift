@@ -1,21 +1,20 @@
 //
 //  BeerTableViewController.swift
-//  
+//
 //
 //  Created by Tyler Miller on 6/13/15.
 //
 //
 
 import UIKit
-import Parse
+import Haneke
+
 
 class BeerTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let berweries = ["Oyster City Brewing Company", "Monument Brewing Co.", "Ragtime Tavern Seafood & Grill", "Brewzzi"]
-    let distance = [2.05, 6.02, 18.00, 28.03]
     private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
-
-
+    var breweries: [Breweries] = []
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,12 +22,12 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         let backItem = UIBarButtonItem(title: "", style: .Plain
             , target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
-       
-        configureTableView()
-        retriveBreweies(43.764471, long: -84.338055)
-       
         
-
+        configureTableView()
+        retriveBreweies(35.772096, long: -78.638614)
+        
+        
+        
     }
     
     func retriveBreweies(lat: Double, long: Double) {
@@ -36,40 +35,57 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         breweryService.getBreweries(lat, long: long) {
             (let brew) in
             if let info = brew {
-            
-                let breweries = info.breweries
-                println("Name: \(breweries.first?.name), \(breweries.first?.breweryId), \(breweries.first?.distance), \(breweries.first?.iconURL)")
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    //set an array with the vcaules from the api
+                    self.breweries = info.breweries
+                    println(self.breweries.count)
+                    
+                    
+                    self.tableView.reloadData()
+                })
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return berweries.count
+        return breweries.count
     }
-
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! BeerTableViewCell
-
-         //Configure the cell...
-        cell.breweryName.text = berweries[indexPath.row]
-        cell.distance.text = "\(distance[indexPath.row])"
-
+        
+        //Configure the cell...
+        let brewery = breweries[indexPath.row]
+        cell.breweryName.text = brewery.name
+        cell.distance.text = "\(brewery.distance!)"
+        if brewery.iconURL != nil {
+            if let iconURL = NSURL(string: brewery.iconURL!) {
+                cell.breweryImage.hnk_setImageFromURL(iconURL)
+                println(iconURL)
+            }
+        } else {
+            cell.breweryImage.image = UIImage(named: "miller-apps")
+        }
+        
+        
+        
         return cell
     }
     
@@ -85,32 +101,32 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 86
     }
-
-   
     
-
+    
+    
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         if (segue.identifier == "ShowDetails") {
             
-           
+            
             
             if let VC: DetailViewController = segue.destinationViewController as? DetailViewController{
                 
+                
+                if let row = self.tableView.indexPathForSelectedRow()?.row {
+                    // VC.nameText = berweries[row]
+                    println("row \(row) was selected")
+                    // println("value \(berweries[row])")
+                }
+            }
             
-            if let row = self.tableView.indexPathForSelectedRow()?.row {
-                VC.nameText = berweries[row]
-                println("row \(row) was selected")
-                println("value \(berweries[row])")
-            }
-            }
-           
         }
     }
-
-
+    
+    
 }

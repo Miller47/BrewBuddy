@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-BrewBuddy-AFNetworking.xcscheme</key>
+		<key>Pods-BrewBuddy-HCSStarRatingView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-HCSStarRatingView.xcscheme</key>
+		<key>Pods-BrewBuddy-HanekeSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5EDF1FD24B808B3B3B6B375E</key>
+		<key>09D11DE8163BF62C3ACDA6C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B78DAC238269EA9C33F2901</key>
+		<key>4235E4EAC643562EA1634257</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8ED6244502CB986AAF7175E3</key>
+		<key>918A275178A98B9CE5F3AB6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CFAF0FD2CF3B6D6D631AF9F</key>
+		<key>C139B2430BA3AB1185C999DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AFF6DC9E67C9D136402EAD0F</key>
+		<key>D258FD919417D63852C980B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3B1CE568AFCD3C5E660EA66</key>
+		<key>D2E3E8CD37BCAD1413F6AFED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8C5FA46A06FCF336E103313</key>
+		<key>EBC8331C03AF5FDCB9038100</key>
 		<dict>
 			<key>primary</key>
 			<true/>
