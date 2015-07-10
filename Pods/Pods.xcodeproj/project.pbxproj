@@ -795,6 +795,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
+				TargetAttributes = {
+					EBC8331C03AF5FDCB9038100 = {
+						DevelopmentTeam = N2263DH3H7;
+					};
+				};
 			};
 			buildConfigurationList = 54D7B7AE276B7102C24BD4FC /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1081,6 +1086,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE8899FFCF24DBB836A392E5 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1096,6 +1102,7 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = HCSStarRatingView;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1369,6 +1376,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE8899FFCF24DBB836A392E5 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1384,6 +1392,7 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = HCSStarRatingView;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

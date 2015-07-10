@@ -8,14 +8,51 @@
 
 import UIKit
 import Haneke
+import CoreLocation
+import Parse
 
 
-class BeerTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
     var breweries: [Breweries] = []
     
+    //Location var/let
+    let locationManager = CLLocationManager()
+    var locValue: CLLocationCoordinate2D!
+    
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //check for currrent user
+        var currentUser = PFUser.currentUser()
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if currentUser == nil {
+            //Show Login
+            
+            let VC = storyBoard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
+            
+            self.presentViewController(VC, animated: true, completion: nil)
+        } else {
+            //set location manager
+            locationManager.delegate = self
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                if breweries.count == 0 {
+                    locationManager.startUpdatingLocation()
+                }
+            }
+            if CLLocationManager.authorizationStatus() == .NotDetermined {
+                locationManager.requestWhenInUseAuthorization()
+            }
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +61,8 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         navigationItem.backBarButtonItem = backItem
         
         configureTableView()
-        retriveBreweies(35.772096, long: -78.638614)
+        searchBar.delegate = self
+        
         
         
         
@@ -39,7 +77,7 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     //set an array with the vcaules from the api
                     self.breweries = info.breweries
-                    println(self.breweries.count)
+                    println("Number of Breweries: \(self.breweries.count)")
                     
                     
                     self.tableView.reloadData()
@@ -48,17 +86,99 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - CLLocationManager
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        
+        
+        let locationIssueController = UIAlertController(title: "Error", message: "Unable to get location data. Please check weather airplane mode is on!", preferredStyle: .Alert)
+        
+        let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        locationIssueController.addAction(okButton)
+        self.presentViewController(locationIssueController, animated: true, completion: nil)
+        
+        
+        
+        println("Error while updating location " + error.localizedDescription)
     }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        locValue = manager.location.coordinate
+        var long = locValue.longitude
+        var lat = locValue.latitude
+        
+        locationManager.stopUpdatingLocation()
+        
+        println("didUpdateLocations:  \(lat), \(long)")
+        
+        retriveBreweies(lat, long: long)
+        
+        
+        
+        
+    }
+    
+    func getLatAndLong(location: String) {
+        
+        
+        let geoCoder = CLGeocoder()
+        
+        
+        geoCoder.geocodeAddressString(location, completionHandler: { (placemarks: [AnyObject]!, error: NSError!) -> Void in
+            if error != nil {
+                println("Geocde faile with error: \(error.description)")
+            } else if placemarks.count > 0 {
+                let placemark = placemarks[0] as! CLPlacemark
+                let loc = placemark.location
+                let lat = loc.coordinate.latitude
+                let long = loc.coordinate.longitude
+                
+                self.retriveBreweies(lat, long: long)
+            }
+        })
+        
+        
+    }
+    
+    // MARK: - UISearchBar
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        if searchBar.text.isEmpty {
+            
+        } else {
+            let term =  searchBar.text
+            getLatAndLong(term)
+            searchBar.resignFirstResponder()
+            
+        }
+    }
+    
     
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        if breweries.count != 0 {
+            self.tableView.backgroundView = nil
+            return 1
+        } else {
+            let messageLabel = UILabel(frame: CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
+            messageLabel.text = "No data was available, this likely means there are no breweries in your area. Sorry!"
+            messageLabel.textColor = UIColor.whiteColor()
+            messageLabel.numberOfLines = 0
+            messageLabel.textAlignment = NSTextAlignment.Center
+            messageLabel.font = UIFont(name: "Helvetica Neue", size: 20)
+            messageLabel.sizeToFit()
+            
+            self.tableView.backgroundView = messageLabel
+            
+        }
+        
+        return 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,15 +193,24 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         //Configure the cell...
         let brewery = breweries[indexPath.row]
-        cell.breweryName.text = brewery.name
-        cell.distance.text = "\(brewery.distance!)"
-        if brewery.iconURL != nil {
-            if let iconURL = NSURL(string: brewery.iconURL!) {
+        
+        if let name = brewery.name {
+            cell.breweryName.text = name
+        }
+        
+        if let dis = brewery.distance {
+            
+            cell.distance.text = "\(dis)"
+        } else {
+            cell.distance.text = "N/A"
+        }
+        if brewery.largeIconURL != nil {
+            if let iconURL = NSURL(string: brewery.largeIconURL!) {
                 cell.breweryImage.hnk_setImageFromURL(iconURL)
                 println(iconURL)
             }
         } else {
-            cell.breweryImage.image = UIImage(named: "miller-apps")
+            cell.breweryImage.image = UIImage(named: "brewbuddy")
         }
         
         
@@ -119,7 +248,28 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
                 
                 
                 if let row = self.tableView.indexPathForSelectedRow()?.row {
-                    // VC.nameText = berweries[row]
+                    if let phone = breweries[row].phone {
+                        VC.phoneNum = phone
+                        
+                    }
+                    if let name = breweries[row].name {
+                        VC.nameText = name
+                    } else {
+                        VC.nameText = "Not Avaliable"
+                    }
+                    if let website = breweries[row].website {
+                        VC.websiteURL = website
+                    }
+                    if let loc = breweries[row].streetAddress, let state = breweries[row].region, let city = breweries[row].locality {
+                        VC.loc = loc + " " + city + ", " + state
+                    } else {
+                        VC.loc = "Not Avaliable"
+                    }
+                    if let image = breweries[row].largeIconURL {
+                        VC.imageURL = image
+                    } else {
+                        VC.imageURL = nil
+                    }
                     println("row \(row) was selected")
                     // println("value \(berweries[row])")
                 }

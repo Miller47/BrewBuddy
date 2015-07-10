@@ -9,9 +9,9 @@
 #ifndef BrewBuddy_BrewBuddy_Bridging_Header_h
 #define BrewBuddy_BrewBuddy_Bridging_Header_h
 
-#import <AFNetworking/AFNetworking.h>
 #import "MZFormSheetPresentationController.h"
 #import "MZFormSheetPresentationControllerSegue.h"
+
 
 
 

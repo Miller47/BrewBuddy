@@ -20,7 +20,7 @@ struct BreweryService {
     
     func getBreweries(lat: Double, long: Double, completion: (Brewery? -> Void)) {
         
-        if let breweryURL = NSURL(string: "search/geo/point?lat=\(lat)&lng=\(long)&key=\(breweryDbAPIKey)&format=json", relativeToURL: breweryDbBaseUrl) {
+        if let breweryURL = NSURL(string: "search/geo/point?lat=\(lat)&lng=\(long)&key=\(breweryDbAPIKey)&radius=50&format=json", relativeToURL: breweryDbBaseUrl) {
             println(breweryURL.absoluteString)
             
             let networkOperation = NetworkOperation(url: breweryURL)

@@ -13,14 +13,24 @@ struct Breweries {
     let name: String?
     let breweryId: String?
     let distance: Double?
-    var iconURL: String?
+    let largeIconURL: String?
+    let streetAddress: String?
+    let locality: String?
+    let region: String?
+    let phone: String?
+    let website: String?
     
     init(brewDictionary: [String: AnyObject]) {
         
         name = brewDictionary["brewery"]?["name"] as? String
         breweryId = brewDictionary["breweryId"] as? String
         distance = brewDictionary["distance"] as? Double
-        iconURL = brewDictionary["brewery"]?["images"]??.objectForKey("icon") as? String
+        largeIconURL = brewDictionary["brewery"]?["images"]??.objectForKey("large") as? String
+        streetAddress = brewDictionary["streetAddress"] as? String
+        locality = brewDictionary["locality"] as? String
+        region = brewDictionary["region"] as? String
+        phone = brewDictionary["phone"] as? String
+        website = brewDictionary["website"] as? String
         
         
     }

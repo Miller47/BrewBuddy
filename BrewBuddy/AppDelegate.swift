@@ -31,7 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          // Initialize Parse.
         Parse.setApplicationId("uWFjmAMpvmYjUCDMF7gJJ8Qd7rEKHsj2hRTtVASB",
             clientKey: "zoDl8rq4VC0ICFoEB32Oxauz9NVMZ1UC0PCgLGbH")
-//        PFUser.logOut()
+    
+
         
 
         return true

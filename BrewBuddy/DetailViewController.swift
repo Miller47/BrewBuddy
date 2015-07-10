@@ -1,6 +1,6 @@
 //
 //  DetailViewController.swift
-//  
+//
 //
 //  Created by Tyler Miller on 6/25/15.
 //
@@ -8,55 +8,79 @@
 
 import UIKit
 import Parse
+import Haneke
 
 
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var reviewTableView: UITableView!
-    @IBOutlet weak var hours: UILabel!
-    @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var website: UIButton!
+    @IBOutlet weak var phone: UIButton!
+    @IBOutlet weak var breweryImage: UIImageView!
     
-    var nameText = String()
+    var nameText: String?
+    var phoneNum: String?
+    var loc: String?
+    var websiteURL: String?
+    var imageURL: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         name.text = nameText
+        location.text = loc
+        if imageURL != nil {
+            let URL = NSURL(string: imageURL!)
+            breweryImage.hnk_setImageFromURL(URL!)
+        }
+        if phoneNum == nil {
+            phone.setTitle("No Phone Listed", forState: UIControlState.Normal)
+            
+        }
+        if websiteURL == nil {
+            website.setTitle("No Website Listed", forState: UIControlState.Normal)
+        }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func call(sender: AnyObject) {
+        //Calls number
+        if let num = phoneNum, let url = NSURL(string: "tel://\(num)") {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
+    @IBAction func visitWebsite() {
+        //open website will add native in app support
+        if let site = websiteURL, let url = NSURL(string: site) {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
+    
     @IBAction func postReview(sender: AnyObject) {
         
-        var currentUser = PFUser.currentUser()
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        if currentUser == nil {
-            //Show Login
-            
-            let VC = storyBoard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
-            
-            self.presentViewController(VC, animated: true, completion: nil)
-        } else {
-            
-            let VC = storyBoard.instantiateViewControllerWithIdentifier("ReviewViewController") as! UIViewController
-            let formSheetController = MZFormSheetPresentationController(contentViewController: VC)
-            formSheetController.shouldDismissOnBackgroundViewTap = true
-            formSheetController.shouldApplyBackgroundBlurEffect = true
-            formSheetController.shouldCenterVertically = true
-            formSheetController.contentViewSize = CGSizeMake(250, 250)
-            
-            self.presentViewController(formSheetController, animated: true, completion: nil)
-            
-        }
+        let VC = storyBoard.instantiateViewControllerWithIdentifier("ReviewViewController") as! UIViewController
+        let formSheetController = MZFormSheetPresentationController(contentViewController: VC)
+        formSheetController.shouldDismissOnBackgroundViewTap = true
+        formSheetController.shouldApplyBackgroundBlurEffect = true
+        formSheetController.shouldCenterVertically = true
+        formSheetController.contentViewSize = CGSizeMake(250, 250)
         
-            }
+        self.presentViewController(formSheetController, animated: true, completion: nil)
+        
+        
+        
+    }
     
     @IBAction func logOut(sender: AnyObject) {
         
@@ -94,18 +118,18 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             cell.backgroundColor = UIColor(red:0.929,  green:0.922,  blue:0.918, alpha:0.85)
         }
     }
-
-
-//    
-//    // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//      
-//
-//    }
-
-
+    
+    
+    //
+    //    // MARK: - Navigation
+    //
+    //    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    //        // Get the new view controller using segue.destinationViewController.
+    //        // Pass the selected object to the new view controller.
+    //
+    //
+    //    }
+    
+    
 }
