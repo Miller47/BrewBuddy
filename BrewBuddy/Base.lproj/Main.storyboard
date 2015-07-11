@@ -25,6 +25,7 @@
                         <segue destination="QEO-AT-e1B" kind="relationship" relationship="viewControllers" id="WSZ-xs-6QO"/>
                         <segue destination="nyU-Cm-UEc" kind="relationship" relationship="viewControllers" id="u0A-RP-I7R"/>
                         <segue destination="yDr-xU-GgR" kind="relationship" relationship="viewControllers" id="UPZ-pJ-UA4"/>
+                        <segue destination="PxT-nb-j4U" kind="relationship" relationship="viewControllers" id="mHz-rq-So7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -98,7 +99,7 @@
         <!--BrewBuddy-->
         <scene sceneID="PYy-js-7d6">
             <objects>
-                <viewController id="10f-2S-EJC" customClass="BeerTableViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Beer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="10f-2S-EJC" customClass="BeerTableViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Y2-2B-YVZ"/>
                         <viewControllerLayoutGuide type="bottom" id="OPL-Lb-3uf"/>
@@ -382,13 +383,7 @@
                             <constraint firstItem="KuS-85-R2T" firstAttribute="top" secondItem="7vM-iw-qzD" secondAttribute="bottom" constant="86" id="ytD-3I-diA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Brewery Details" id="sdY-P3-FsU">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="uCU-zO-Er4">
-                            <connections>
-                                <action selector="logOut:" destination="IHX-Da-us5" id="o3i-Aw-xh6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Brewery Details" id="sdY-P3-FsU"/>
                     <connections>
                         <outlet property="breweryImage" destination="5X4-lp-Ih6" id="6qM-yw-F6L"/>
                         <outlet property="location" destination="7vM-iw-qzD" id="B17-kZ-y3h"/>
@@ -1006,6 +1001,93 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="1511"/>
         </scene>
+        <!--Settings Table View Controller-->
+        <scene sceneID="odl-nj-QsA">
+            <objects>
+                <tableViewController id="S5c-dz-Sh2" customClass="SettingsTableViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kb0-E1-AWW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="User Settings" id="9mC-6d-5KA">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="r9D-S7-dhk">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r9D-S7-dhk" id="3Cm-FP-nmB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently logged in User:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFk-96-Axg">
+                                                    <rect key="frame" x="17" y="47" width="425" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="425" id="VZD-df-GAi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O2-fP-M2K">
+                                                    <rect key="frame" x="485" y="30" width="82" height="55"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.56862745100000001" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="82" id="jDy-if-mHy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <state key="normal" title="Logout">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="logOut" destination="S5c-dz-Sh2" eventType="touchUpInside" id="9M6-uR-E91"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9O2-fP-M2K" firstAttribute="top" secondItem="3Cm-FP-nmB" secondAttribute="topMargin" constant="22" id="OXe-8r-fma"/>
+                                                <constraint firstItem="lFk-96-Axg" firstAttribute="leading" secondItem="3Cm-FP-nmB" secondAttribute="leadingMargin" constant="9" id="bPg-hI-Ia5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lFk-96-Axg" secondAttribute="bottom" constant="39.5" id="fNz-Xt-Ohf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9O2-fP-M2K" secondAttribute="trailing" constant="25" id="mSe-Oc-8YD"/>
+                                                <constraint firstItem="lFk-96-Axg" firstAttribute="top" secondItem="3Cm-FP-nmB" secondAttribute="topMargin" constant="39" id="ptm-F9-6vw"/>
+                                                <constraint firstItem="9O2-fP-M2K" firstAttribute="centerY" secondItem="lFk-96-Axg" secondAttribute="centerY" id="qXX-rU-m5e"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="S5c-dz-Sh2" id="sKs-bF-5iV"/>
+                            <outlet property="delegate" destination="S5c-dz-Sh2" id="USV-4b-zJ3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="8Q0-f7-bIs"/>
+                    <connections>
+                        <outlet property="userLabel" destination="lFk-96-Axg" id="wfX-nj-zDh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPf-rK-lts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3282" y="1495"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="K7W-Om-caH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PxT-nb-j4U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="1zl-kT-OI9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NzJ-2X-FhA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S5c-dz-Sh2" kind="relationship" relationship="rootViewController" id="vxB-Vq-hWv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epW-Nl-iRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2470" y="1495"/>
+        </scene>
     </scenes>
     <resources>
         <image name="banner" width="320" height="207"/>
@@ -1015,6 +1097,7 @@
         <image name="foam" width="2160" height="1176"/>
         <image name="home" width="27" height="26"/>
         <image name="plus" width="20" height="20"/>
+        <image name="settings" width="24" height="24"/>
         <image name="star" width="25" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>

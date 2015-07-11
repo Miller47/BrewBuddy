@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1E573B1B50AA7D0078F673 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E573A1B50AA7D0078F673 /* SettingsTableViewController.swift */; };
 		2F21CDDD1B4E043200312C9C /* BrewerySevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F21CDDC1B4E043200312C9C /* BrewerySevice.swift */; };
 		2F21CDDF1B4ECA4300312C9C /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F21CDDE1B4ECA4300312C9C /* Brewery.swift */; };
 		2F6C11521B391D4800E631FC /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6C11511B391D4800E631FC /* BeerTableViewCell.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F1E573A1B50AA7D0078F673 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		2F21CDDC1B4E043200312C9C /* BrewerySevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewerySevice.swift; sourceTree = "<group>"; };
 		2F21CDDE1B4ECA4300312C9C /* Brewery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		2F6C11511B391D4800E631FC /* BeerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1E57391B50AA4C0078F673 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2F1E573A1B50AA7D0078F673 /* SettingsTableViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		2F897F781B2C21E40096D73C = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +225,7 @@
 		2FECE9D61B3C70F100DC82E1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F1E57391B50AA4C0078F673 /* Settings */,
 				2F953E6B1B3C990100B0152D /* SignUpViewController.swift */,
 				2FECE9D71B3C723A00DC82E1 /* LoginViewController.swift */,
 				2FDB067F1B3B9BBD00D50F80 /* ContainerViewController.swift */,
@@ -414,6 +425,7 @@
 				2FC6F1151B4DE47200A138EB /* Breweries.swift in Sources */,
 				2F953E6C1B3C990100B0152D /* SignUpViewController.swift in Sources */,
 				2F6C11521B391D4800E631FC /* BeerTableViewCell.swift in Sources */,
+				2F1E573B1B50AA7D0078F673 /* SettingsTableViewController.swift in Sources */,
 				2FECE9D41B3C706A00DC82E1 /* ReviewViewController.swift in Sources */,
 				2FDB06801B3B9BBD00D50F80 /* ContainerViewController.swift in Sources */,
 				2FAB59D91B2C2A35009A1A0D /* BeerTableViewController.swift in Sources */,

@@ -45,11 +45,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
     @IBAction func call(sender: AnyObject) {
         //Calls number
@@ -81,11 +77,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         
     }
-    
-    @IBAction func logOut(sender: AnyObject) {
-        
-        PFUser .logOut()
-    }
+
     
     // MARK: - Table view data source
     
