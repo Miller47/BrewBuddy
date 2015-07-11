@@ -79,7 +79,6 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         breweryService.getBreweries(lat, long: long) {
             (let brew) in
             if let info = brew {
-                
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     //set an array with the vcaules from the api
                     self.breweries = info.breweries
@@ -87,6 +86,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                     
                     
                     self.tableView.reloadData()
+                    SVProgressHUD.dismiss()
                 })
             }
         }
@@ -115,6 +115,8 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         locationManager.stopUpdatingLocation()
         
         println("didUpdateLocations:  \(lat), \(long)")
+        
+        SVProgressHUD.showWithStatus("Retrieving breweries nearby")
         
         retriveBreweies(lat, long: long)
         

@@ -7,760 +7,753 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01A40493624A9078046F024C /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175F356335AC9C51E74C519C /* UIView+Haneke.swift */; };
-		01ADB4FC74D6897606D00FE8 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB3ED5CAA257473FA6C1A19 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03C4A4897CAF6645BA853856 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F546F58337303426278ABD /* Foundation.framework */; };
-		07C9019B50FB20257659B6C6 /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261767AD9D739AC8DAF58F6 /* UIImage+Haneke.swift */; };
-		07FC108855A21A920119DD2A /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 061DD02BC27CF1D1DBEC4AA0 /* MZTransition.m */; };
-		08DE7D7942F3847BC1E21357 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636FE975A8C46BD1781BACB /* Format.swift */; };
-		0A0AE6C0EDC5E85EE2E2BF1A /* MZFormSheetPresentationControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1111D35F2AE18C708E6336EC /* MZFormSheetPresentationControllerAnimator.m */; };
-		111085E8274FFA4DF62B316C /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73B1AFEEB0679E498BAF48 /* CGSize+Swift.swift */; };
-		122ECAE1396F14C5D84E1E18 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3DCB760A8099C0F7069A6 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */; };
-		15BEF471EB5C677A3D47EB4B /* MZFormSheetPresentationControllerSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D691A7F6C8EA8E7CAECCEB /* MZFormSheetPresentationControllerSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		177170092C1A27DD082FB53E /* Pods-BrewBuddy-MZAppearance-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9650326EC5F219E8E006F70 /* Pods-BrewBuddy-MZAppearance-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18DBD0217F323A30868868AC /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB1CF562FB60141557B6CCF /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B2C9113C30BC0A6E9CA67E4 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 5611903BA3CE0931F64D8245 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1CA27E99F3DDAF8C36CAC46B /* MZFormSheetPresentationControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E8B606FA570AA96AEFA895 /* MZFormSheetPresentationControllerSegue.m */; };
-		1EBE014F6C927D68B11313C5 /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2801C7AB780EC9781620B2E /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		250F8B935C824E3A395805BF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4E17DBE54FE030EE0F0D1 /* Log.swift */; };
-		26A3EB6EB963A4771B448D94 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BD886B2B15BE1C2D03D3A9 /* TPKeyboardAvoidingTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		28CEF8B7527E700BAC8C6604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F546F58337303426278ABD /* Foundation.framework */; };
-		29F527585FCF41750A92EC17 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E809F7CF0676DED9934BD /* UIImageView+Haneke.swift */; };
-		2C1B24977AE2F6F245C301F1 /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAC5EC41EDDB28686C2C5BD /* MZAppearance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		32F2D523BB2D4F764F716D44 /* JGMethodSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B233318B90348E783359781 /* JGMethodSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3899A63DDB0AB0DB1D07A63D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F546F58337303426278ABD /* Foundation.framework */; };
-		3EED4F8E308E3620892ABC0B /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23C43C2D7756C89E64ABEDE6 /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40A042D0A20BA5B750E12B25 /* TPKeyboardAvoidingCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F36D05DBF81907201343C8 /* TPKeyboardAvoidingCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40E0E186DB659449B781BDC5 /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7ABA5DFC88FF82F69349EF /* HCSStarRatingView.m */; };
-		4272DCAC8EBFE80FE6BD71EC /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F3398CDB9F112C8D764FE7 /* String+Haneke.swift */; };
-		42DB436C342E6BF0EED01A4F /* MZAppearance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF00BF116E0C089A4CAD17 /* MZAppearance.framework */; };
-		45CF90DD91ABF14E37B33374 /* NSInvocation+Copy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D762461F55C7EDBEC0A491F /* NSInvocation+Copy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4ACB8D4D02002BB25E92A79E /* Pods-BrewBuddy-HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2DA5CFC632B35109A478C85 /* Pods-BrewBuddy-HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BD431AD3FC09C4F006DB549 /* JGMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D074027FDF5FA5FF1305C83 /* JGMethodSwizzler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5B10869EB2FBE687E3CD55C5 /* UIViewController+TargetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B895CD5BEE02565D7A13885 /* UIViewController+TargetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D0F21BB60C36E6A5A85BBDC /* Pods-BrewBuddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9479D0E88BA42DEDFECCFD /* Pods-BrewBuddy-dummy.m */; };
-		6099F613EBA828B667D56C5E /* Pods-BrewBuddy-MZAppearance-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B3F34B040DBABB118F0C0 /* Pods-BrewBuddy-MZAppearance-dummy.m */; };
-		632D19654A8DA733FEC1B7E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0143FA5E8AAD803883F681 /* QuartzCore.framework */; };
-		6346CC4FA19767A549229741 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F546F58337303426278ABD /* Foundation.framework */; };
-		63AA63B65D1DD9119E5786BD /* TPKeyboardAvoidingTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B87B855F8742AF8B63F749 /* TPKeyboardAvoidingTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A5FFF29FA4DB7D9C0B57110 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0143FA5E8AAD803883F681 /* QuartzCore.framework */; };
-		705DB7FA373937D3164B370C /* MZFormSheetPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 46B48A8C1F4468E9813FC427 /* MZFormSheetPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7DCFA6F68D50CE327F20E838 /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B2DCD1A4B5B4E98B06FBC9 /* UIViewController+TargetViewController.m */; };
-		83499E824A47302A727DE33B /* MZAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A14E726CCB2149EBA9052EA /* MZAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89D02EE114FAB70E7EE7D528 /* MZTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE24C40F015664608EF012E /* MZTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E9AB5F4381AB27EB8091176 /* TPKeyboardAvoidingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 86A688F2AC631EB87C09FA6F /* TPKeyboardAvoidingScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91372C2BEC7A8594AAD524FD /* JGMethodSwizzler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097AFDFEC4664CF9F796A90F /* JGMethodSwizzler.framework */; };
-		92E60B909A2DC01382FC4316 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D228142C821B14D995BEA16 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */; };
-		991DC0BC500C9C2A448C392F /* MZFormSheetPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D91105708014E446A048E741 /* MZFormSheetPresentationController.m */; };
-		9CA980CD2016E04F05BCE03F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F546F58337303426278ABD /* Foundation.framework */; };
-		9D28AD585CC8C241BE2ACCC1 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367DDC1C0ECE70BE0D37BB8 /* Cache.swift */; };
-		9EA19F250CB496E9FC05556E /* HCSStarRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = F18508567685FA134B09D261 /* HCSStarRatingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A069770C9157F8E0EB37DA9A /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A03730B49001992BFD361 /* NSFileManager+Haneke.swift */; };
-		A09FFA17CE1FAB2BCFD7E7CC /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 16D6DAD9F4385797D8DFC79D /* UIScrollView+TPKeyboardAvoidingAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A190413CE2D92D217AB2F85E /* MZFormSheetPresentationControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C9AA576BB02ED098E408E26 /* MZFormSheetPresentationControllerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A26884E74BB49AE8631BCDA5 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF1703B11C0CF2DB5D4143C /* NetworkFetcher.swift */; };
-		A527E240188A76C56B51CB66 /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F007E38C62405467E7A60A /* UIButton+Haneke.swift */; };
-		AA2A690BF002C6FA42554DC6 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B71C807C9CE5AC94CB910 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */; };
-		AC39F74AD5D14D5A652C93DC /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFA9598116760CEBA0C6699 /* TPKeyboardAvoidingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B31377A674E50A43A4C72E9A /* Pods-BrewBuddy-HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DD4E063D9CC45B5FE591A /* Pods-BrewBuddy-HanekeSwift-dummy.m */; };
-		B58DB54289BB1F8825687CA9 /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6CD55FC718402815B442B /* DiskFetcher.swift */; };
-		B5C99533CD2CF760A9E38427 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F546F58337303426278ABD /* Foundation.framework */; };
-		B60EAC9494A231836613337D /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3562623CB04B8F9E71504C /* Fetcher.swift */; };
-		BD3ED5B7065E9070C81757E1 /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C545C55EA2A13697FEB5E8B /* CryptoSwiftMD5.swift */; };
-		C12F7BE0BD5E4D0D4900D558 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C8149061E880ACE68F8484 /* DiskCache.swift */; };
-		C1DDFEE5C1CC1DD2E99710E4 /* Pods-BrewBuddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F90FD85E006DC342D638F3EC /* Pods-BrewBuddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D86F9FE13478FCE2E44EEAC4 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A2C3283F53ABA45EB5B839 /* TPKeyboardAvoidingCollectionView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D8FAC051662FE715EF61A8B6 /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9210CB09CB5DC5994C3A20E /* NSInvocation+Copy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D9892FF4FF4A54A945B9A698 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6882E077777C1728C0D080BA /* Fetch.swift */; };
-		DC5FB0E816253C692CE15D67 /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803564A37CD4127B7FE5634 /* NSHTTPURLResponse+Haneke.swift */; };
-		DD4D714DA975471D69EB7B17 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88076003770508C68EF60E12 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */; };
-		E2E8561ECE1E3E69E9FEB986 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 238E036B87B055A95A56E032 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F10C1D0E9A51F8A197FD7E1B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7A1748A19C432E175A4CE /* Data.swift */; };
-		F128993FD54A991A6641605D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F546F58337303426278ABD /* Foundation.framework */; };
-		F65C7EF77A4C95A0E349D1F4 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5883377571CB1185AB73733 /* Haneke.swift */; };
+		0234967EF2B5701F8B6E9624 /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71D35779D2E29502F09CD23 /* HCSStarRatingView.m */; };
+		037056A5AC64578AAB5138EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A62930302AA50D55EEFD21 /* QuartzCore.framework */; };
+		03CC11F0366461AB15268656 /* MZFormSheetPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98680DFF38F8EA638D0BF898 /* MZFormSheetPresentationController.m */; };
+		0839BEBF5AFADEA75A4C8CA9 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD15809D8E8965D957A80E /* Log.swift */; };
+		0CF4571FE3F60A7888D32744 /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB1B1B8A5D51F89BD8604DEC /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D38165DAB03C3829D13608C /* HCSStarRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5945A3DF1C3E2E8F8F893AD6 /* HCSStarRatingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12250A1BA43ED561EEF60116 /* MZFormSheetPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = AFE27CE7E1E905268BB57175 /* MZFormSheetPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C7DEF7CBA07057C0F6FE511 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A62930302AA50D55EEFD21 /* QuartzCore.framework */; };
+		1D3B9BEACA060D1AFE20A46A /* TPKeyboardAvoidingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9668A4F8FCE70C1B9286E83A /* TPKeyboardAvoidingScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EF880BB6E39086FF74A2483 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CD0525976C47437E39F464 /* Foundation.framework */; };
+		1F98A5A527D97221D0A84DFB /* Pods-BrewBuddy-HCSStarRatingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1474F9FAF5DF2CF5A079058 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */; };
+		21651715090ACD988B995925 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A62930302AA50D55EEFD21 /* QuartzCore.framework */; };
+		24C970196B4477DDB11FE174 /* Pods-BrewBuddy-MZAppearance-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4405DC4DB3DADE451CCCFBA /* Pods-BrewBuddy-MZAppearance-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27534247865A942812578CA9 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4126772B6EFBC6508B83E684 /* TPKeyboardAvoidingCollectionView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2BA4A1651E872C2C7DDDC45B /* Pods-BrewBuddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 197E5AFCED9932F93D56E1ED /* Pods-BrewBuddy-dummy.m */; };
+		2D7D2B21FD99B058E65572CC /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17382762EC5E86DE71861BD1 /* UIImage+Haneke.swift */; };
+		2EF1985EC8A00EC1430A1046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CD0525976C47437E39F464 /* Foundation.framework */; };
+		315E174CDEA828388A37F36C /* Pods-BrewBuddy-SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 497D7724F7C34584C6658CDE /* Pods-BrewBuddy-SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33516CDC600F8B12DE44AB7C /* JGMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C44B1F9A78431A327380C45 /* JGMethodSwizzler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		358364023A2F7F2CC6B3034F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CD0525976C47437E39F464 /* Foundation.framework */; };
+		3FBDE22AF17685F122FCD6A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CD0525976C47437E39F464 /* Foundation.framework */; };
+		4021F8A8431117E32098CFA1 /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB8F50FE67751A9E3985EC1 /* NSInvocation+Copy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		413486DF57656DE80D39B7EA /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACB77823CD7D5F197AC006 /* Fetcher.swift */; };
+		45147C193FB72D1CF0EA3CAD /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 8934F7E33A83EB5DCDDE6B01 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4589B62A9C374AAA0263CF81 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2EB9B578A5156A3A4F108 /* Cache.swift */; };
+		4D128A7C61C4743D7B749923 /* MZFormSheetPresentationControllerSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F7B9B3FC8DBB761CE61C70B /* MZFormSheetPresentationControllerSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E7D2EA512B8F775B8968F07 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FAD55BB4CB6A86D05A9307 /* NetworkFetcher.swift */; };
+		55FABBE1B228CC675DDE4C0C /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07F96FEAA39FB145E5D1DB08 /* SVProgressHUD.bundle */; };
+		5ABB4443595C4454CBDD2060 /* MZFormSheetPresentationControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D897EDFBF49BFC1410FF0F27 /* MZFormSheetPresentationControllerAnimator.m */; };
+		5ABCE736D8E7EC79A764535F /* JGMethodSwizzler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67ABCECCEFAA136187D2EAC /* JGMethodSwizzler.framework */; };
+		5BC5C800713D06B4BE6ABEBB /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C6D0D96AE2BA9FA366CC29 /* MZTransition.m */; };
+		661F73CABB4CB22490915E89 /* TPKeyboardAvoidingCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 08FEC2DA4D734A3F1944325A /* TPKeyboardAvoidingCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68E9C3966B8C4B6E570A81E8 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = E0C602E737B391E7B9E04AE2 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68EE636320F7E7A0BAEADD5C /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4768447487BE83310C1DA1A7 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */; };
+		6A8DE48A2529781B93C60713 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A983EEE1D59862396E364 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6D856FBDD2D455FD0C37252E /* TPKeyboardAvoidingTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 429AB8E719ADA70E0680417F /* TPKeyboardAvoidingTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7069AFAC5746DFB4011012C6 /* NSInvocation+Copy.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC1DA0BEB454C98D04BAA1F /* NSInvocation+Copy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		718CE8340F154AFE51311415 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F06FB4B56DEBA31CE1161F3 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */; };
+		724CFF2F5A75DBF24FC40AB9 /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD269D5DAE39DE9B47205E3 /* CryptoSwiftMD5.swift */; };
+		73F8337ECFEBDB608234CD1F /* MZTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = D9E59E8835C31AFCFF64F090 /* MZTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77C2AC3C77DB3C35DB3A3BDC /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB885E825E65A05E2D852DEA /* UIViewController+TargetViewController.m */; };
+		77DA79ED173983A2E648EFE0 /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8C8A3485D293D6B54A60DB /* UIScrollView+TPKeyboardAvoidingAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		780293E1D3A22419BCE1173D /* UIViewController+TargetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C9802014E433FD43CA5C4114 /* UIViewController+TargetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7867FF7DF7B685C6031714C5 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6521754885FC8EF335B22C1C /* Format.swift */; };
+		7AD02DE8D73E8D7790E52100 /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537BFB9922F66DF11540AC5 /* UIButton+Haneke.swift */; };
+		81F8F509B544811542A4DB2A /* Pods-BrewBuddy-HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 443116FA5FA49D6E01D04784 /* Pods-BrewBuddy-HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344E7EA28400951AC63C023 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9468E74DD7651FD0893202 /* CGSize+Swift.swift */; };
+		848524F4E2323669511EAC37 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE9A04917BCD7A2A6D18F0 /* String+Haneke.swift */; };
+		86F542541903A046272FB766 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902A000939425EA26B9FDE9 /* Data.swift */; };
+		8BF56636FB6271511EBA2D8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CD0525976C47437E39F464 /* Foundation.framework */; };
+		8C2E8EE67444A44E9F53C051 /* JGMethodSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5FDED880E72CC0EFF75466 /* JGMethodSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F28C58E27FD03B6A8DEEC61 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1464443D8329A6C55A0E8DCA /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */; };
+		92047A63EEDFB46ADF22DFBB /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD37FEA7093523BCB360FBAC /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		976EAB9A25F30607A078C2FE /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB8E77906647F0C7772C7D /* TPKeyboardAvoidingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9D61EC2AA5D20BE100FE1100 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3FF50EDCAC21217385C3C /* UIImageView+Haneke.swift */; };
+		9F7F3EF27D36E78BC0542324 /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20BC186A4F587BDA8AC6CE /* NSHTTPURLResponse+Haneke.swift */; };
+		A1998D87F5DA7C9AAAC6A0E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CD0525976C47437E39F464 /* Foundation.framework */; };
+		A32E992D1E02E2EED0DB55F3 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 426464ECAA407DCD4EEC12FB /* SVIndefiniteAnimatedView.m */; };
+		A4F98F424FFA2EF464F44A46 /* Pods-BrewBuddy-SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAA4DEEF4379A992F763734 /* Pods-BrewBuddy-SVProgressHUD-dummy.m */; };
+		AF1B902DFB5ED2E43A6B0306 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5764F4BA19A26FEAD21B2577 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B35DDA0BF1E2375F8766AC40 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 895BF7C752DC9B562EDF5E86 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70F9CE6569C1C126D493B81 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0A1101E9E70BDD9796AB12 /* SVProgressHUD.m */; };
+		BC4F5007471E8DADE6C52BED /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B37F61DC4704CAC13F642EF0 /* TPKeyboardAvoidingTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C1F75A057669B5AE93C9AB02 /* MZFormSheetPresentationControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4440260D9898C40F85D1CFF3 /* MZFormSheetPresentationControllerSegue.m */; };
+		C375F919A4EC36E16DA37B4B /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B3D2F4F70ED772E59739E8E /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C690F2953BF83AD8B2A63009 /* Pods-BrewBuddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B57152645EC667C799F61C70 /* Pods-BrewBuddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C69F44624183FE53D13A6718 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8941E106022503DE4D12EF /* DiskCache.swift */; };
+		C8AAABAC380F21B919149AD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CD0525976C47437E39F464 /* Foundation.framework */; };
+		C8EAB96EB36D8F519A9F3CA7 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904CDCD4953B77024CD97B98 /* Fetch.swift */; };
+		D0CFBD61CD5688D9CE37DA6E /* Pods-BrewBuddy-MZAppearance-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC51553E4410E44DFE24874 /* Pods-BrewBuddy-MZAppearance-dummy.m */; };
+		D3804F7C38EFC9BBC659C10E /* Pods-BrewBuddy-HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 630CF44A2070232AC2D18B87 /* Pods-BrewBuddy-HanekeSwift-dummy.m */; };
+		D41B05F3C0C6502FD9E8484F /* MZFormSheetPresentationControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D697C237978AADAFBFEC7AE /* MZFormSheetPresentationControllerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4487F693DF7A58BAE7980D8 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F50B2AB4E5F00BC1B48216D /* Haneke.swift */; };
+		D609AF0FE3E1166FAC05DDA9 /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE70C8822D380A752C801D4 /* DiskFetcher.swift */; };
+		DD02DF1C9F18353B6403BAD4 /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020203CFA3A936530B71A96B /* UIView+Haneke.swift */; };
+		E61F06D0C3892B4A0CD6AC11 /* MZAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A44337DBF00AC5A7CB002A9 /* MZAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBC296F2F67D01D25CCE73D0 /* MZAppearance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E9487A642467237CA5E70 /* MZAppearance.framework */; };
+		F4F73DA72AA06E8AEE290948 /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 71051AB8389A409343E43FEB /* MZAppearance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FC688B27FA50016D995E53F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CD0525976C47437E39F464 /* Foundation.framework */; };
+		FF23040BE72BFEB06EACFF26 /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3578A868116788BC8F59AA /* NSFileManager+Haneke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2320C311146E6E646CBBF21D /* PBXContainerItemProxy */ = {
+		323F8576D88069BBBAD3E2E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 918A275178A98B9CE5F3AB6A;
-			remoteInfo = "Pods-BrewBuddy-JGMethodSwizzler";
+			remoteGlobalIDString = 41FEA31FECE3E9BADD704D0A;
+			remoteInfo = "Pods-BrewBuddy-MZAppearance";
 		};
-		4EA69905308F5777087D2B42 /* PBXContainerItemProxy */ = {
+		6BA2BFF1F4A4F60BF524D112 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C139B2430BA3AB1185C999DD;
-			remoteInfo = "Pods-BrewBuddy-MZFormSheetPresentationController";
+			remoteGlobalIDString = 41FEA31FECE3E9BADD704D0A;
+			remoteInfo = "Pods-BrewBuddy-MZAppearance";
 		};
-		558E5DCB1249DF9E51096BA0 /* PBXContainerItemProxy */ = {
+		7A6F875638932AE3CB6D15FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D258FD919417D63852C980B1;
-			remoteInfo = "Pods-BrewBuddy-TPKeyboardAvoiding";
-		};
-		5A3A10171038CED3806B0E93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 918A275178A98B9CE5F3AB6A;
-			remoteInfo = "Pods-BrewBuddy-JGMethodSwizzler";
-		};
-		655DBB7FF9FA55E3637376D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EBC8331C03AF5FDCB9038100;
+			remoteGlobalIDString = 8B931D5DB0444E54C8104D4E;
 			remoteInfo = "Pods-BrewBuddy-HCSStarRatingView";
 		};
-		7A3339317A79B7BE02BCA95B /* PBXContainerItemProxy */ = {
+		8B56012346C44ECF7C98E421 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 09D11DE8163BF62C3ACDA6C1;
-			remoteInfo = "Pods-BrewBuddy-MZAppearance";
+			remoteGlobalIDString = 63854241A2C7C0EB82F8E1E3;
+			remoteInfo = "Pods-BrewBuddy-TPKeyboardAvoiding";
 		};
-		8BF0D5F8C249D0141C8FF841 /* PBXContainerItemProxy */ = {
+		9F789C638F07DF63452E1A73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 09D11DE8163BF62C3ACDA6C1;
-			remoteInfo = "Pods-BrewBuddy-MZAppearance";
+			remoteGlobalIDString = 3804F13FC341667A417D1068;
+			remoteInfo = "Pods-BrewBuddy-JGMethodSwizzler";
 		};
-		A245119E132DD35380E2468C /* PBXContainerItemProxy */ = {
+		A2ABF63ABD9CBDE05C85947D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2E3E8CD37BCAD1413F6AFED;
+			remoteGlobalIDString = 1D32F3B92E92C754631F9F24;
 			remoteInfo = "Pods-BrewBuddy-HanekeSwift";
+		};
+		D29593A982EFA50B7228F5D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B34D7FD6BEB629E0F459806;
+			remoteInfo = "Pods-BrewBuddy-SVProgressHUD";
+		};
+		D58AB5AE56EB63487E198424 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3804F13FC341667A417D1068;
+			remoteInfo = "Pods-BrewBuddy-JGMethodSwizzler";
+		};
+		F3F7018CBE9C91152CB3AB58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98EB9BAFE3254247778EBC7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E58E8D57B1D15379AB2BDD3;
+			remoteInfo = "Pods-BrewBuddy-MZFormSheetPresentationController";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01D6CD55FC718402815B442B /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
-		061DD02BC27CF1D1DBEC4AA0 /* MZTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZTransition.m; path = MZFormSheetPresentationController/MZTransition.m; sourceTree = "<group>"; };
-		097AFDFEC4664CF9F796A90F /* JGMethodSwizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGMethodSwizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D7ABA5DFC88FF82F69349EF /* HCSStarRatingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HCSStarRatingView.m; path = HCSStarRatingView/HCSStarRatingView.m; sourceTree = "<group>"; };
-		1111D35F2AE18C708E6336EC /* MZFormSheetPresentationControllerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationControllerAnimator.m; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerAnimator.m; sourceTree = "<group>"; };
-		11DF00BF116E0C089A4CAD17 /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		16D6DAD9F4385797D8DFC79D /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TPKeyboardAvoidingAdditions.h"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
-		175F356335AC9C51E74C519C /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
-		18B88DDAE5B8611E33257247 /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A14E726CCB2149EBA9052EA /* MZAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZAppearance.h; path = MZAppearance/MZAppearance.h; sourceTree = "<group>"; };
-		1C9AA576BB02ED098E408E26 /* MZFormSheetPresentationControllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationControllerAnimator.h; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerAnimator.h; sourceTree = "<group>"; };
-		1D762461F55C7EDBEC0A491F /* NSInvocation+Copy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Copy.h"; path = "MZAppearance/NSInvocation+Copy.h"; sourceTree = "<group>"; };
-		1F73B1AFEEB0679E498BAF48 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
-		2367DDC1C0ECE70BE0D37BB8 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
-		238E036B87B055A95A56E032 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TPKeyboardAvoidingAdditions.m"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
-		23C43C2D7756C89E64ABEDE6 /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-JGMethodSwizzler-umbrella.h"; sourceTree = "<group>"; };
-		27713729FA30CAE3F33B74F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		27BC65412FB9520914D4EBEE /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig"; sourceTree = "<group>"; };
-		2DE24C40F015664608EF012E /* MZTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZTransition.h; path = MZFormSheetPresentationController/MZTransition.h; sourceTree = "<group>"; };
-		30F36D05DBF81907201343C8 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingCollectionView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
-		35685C9BCE88FA3F93322025 /* Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch"; sourceTree = "<group>"; };
-		3623FF701A283DAEC1A18D07 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A8E2EA2C06DE440D4A6F84D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42D1FC6D0321A720E863B848 /* Pods-BrewBuddy-JGMethodSwizzler-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-JGMethodSwizzler-prefix.pch"; sourceTree = "<group>"; };
-		45DFFA75A8B7A88115245A6A /* Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig"; sourceTree = "<group>"; };
-		45F546F58337303426278ABD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46B48A8C1F4468E9813FC427 /* MZFormSheetPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationController.h; path = MZFormSheetPresentationController/MZFormSheetPresentationController.h; sourceTree = "<group>"; };
-		477961DB0BF8A57C57D2E1C6 /* Pods-BrewBuddy-MZAppearance-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZAppearance-prefix.pch"; sourceTree = "<group>"; };
-		496B8842C763FC33DC4B93F7 /* Pods-BrewBuddy-HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-HanekeSwift.modulemap"; sourceTree = "<group>"; };
-		49EBF734270E3D7044B194BD /* Pods-BrewBuddy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BrewBuddy-frameworks.sh"; sourceTree = "<group>"; };
-		4A5B3F34B040DBABB118F0C0 /* Pods-BrewBuddy-MZAppearance-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-MZAppearance-dummy.m"; sourceTree = "<group>"; };
-		4AAC5EC41EDDB28686C2C5BD /* MZAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZAppearance.m; path = MZAppearance/MZAppearance.m; sourceTree = "<group>"; };
-		4C545C55EA2A13697FEB5E8B /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
-		4E7545D5A0C808504310BB36 /* Pods-BrewBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy.debug.xcconfig"; sourceTree = "<group>"; };
-		5205587EB53DFFFED14B9E07 /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig"; sourceTree = "<group>"; };
-		54F3398CDB9F112C8D764FE7 /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
-		5611903BA3CE0931F64D8245 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MZFormSheetPresentationController Swift Example-Bridging-Header.h"; path = "MZFormSheetPresentationController/MZFormSheetPresentationController Swift Example-Bridging-Header.h"; sourceTree = "<group>"; };
-		58E8B606FA570AA96AEFA895 /* MZFormSheetPresentationControllerSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationControllerSegue.m; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerSegue.m; sourceTree = "<group>"; };
-		5C06CF58F72EF5B4880D7353 /* Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig"; sourceTree = "<group>"; };
-		5D228142C821B14D995BEA16 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m"; sourceTree = "<group>"; };
-		6882E077777C1728C0D080BA /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
-		6F9DD4E063D9CC45B5FE591A /* Pods-BrewBuddy-HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-HanekeSwift-dummy.m"; sourceTree = "<group>"; };
-		7100C5FBEE486ADFDFE87A80 /* TPKeyboardAvoiding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPKeyboardAvoiding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		724A17E6834282252F0ED794 /* MZFormSheetPresentationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZFormSheetPresentationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7358046135C451AAA4D72FC8 /* Pods-BrewBuddy-MZFormSheetPresentationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-MZFormSheetPresentationController.modulemap"; sourceTree = "<group>"; };
-		7440D657B3649EF61CB0E524 /* Pods-BrewBuddy-MZAppearance.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-MZAppearance.modulemap"; sourceTree = "<group>"; };
-		79BD886B2B15BE1C2D03D3A9 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingTableView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
-		7C6A03730B49001992BFD361 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
-		7D074027FDF5FA5FF1305C83 /* JGMethodSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGMethodSwizzler.m; path = JGMethodSwizzler/JGMethodSwizzler.m; sourceTree = "<group>"; };
-		853DC5A253ABE33BB620FCD8 /* Pods-BrewBuddy-JGMethodSwizzler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-JGMethodSwizzler.modulemap"; sourceTree = "<group>"; };
-		86A688F2AC631EB87C09FA6F /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
-		88073965A734EF3843C0371D /* Pods-BrewBuddy-TPKeyboardAvoiding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-TPKeyboardAvoiding.modulemap"; sourceTree = "<group>"; };
-		88076003770508C68EF60E12 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-HCSStarRatingView-dummy.m"; sourceTree = "<group>"; };
-		8A3562623CB04B8F9E71504C /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
-		8B233318B90348E783359781 /* JGMethodSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGMethodSwizzler.h; path = JGMethodSwizzler/JGMethodSwizzler.h; sourceTree = "<group>"; };
-		8C9297D4704EFA73244B6ED6 /* Pods-BrewBuddy-MZAppearance.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZAppearance.xcconfig"; sourceTree = "<group>"; };
-		8DFB01B952FB4D86285C56E6 /* Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch"; sourceTree = "<group>"; };
-		8FF1703B11C0CF2DB5D4143C /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
-		90AE1681E990A78EA96B8B10 /* Pods-BrewBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy.release.xcconfig"; sourceTree = "<group>"; };
-		99D691A7F6C8EA8E7CAECCEB /* MZFormSheetPresentationControllerSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationControllerSegue.h; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerSegue.h; sourceTree = "<group>"; };
-		9B895CD5BEE02565D7A13885 /* UIViewController+TargetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TargetViewController.h"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.h"; sourceTree = "<group>"; };
-		A803564A37CD4127B7FE5634 /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
-		A8B87B855F8742AF8B63F749 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingTableView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
-		A8B9A3B9FBFEB90ED45EAC6C /* Pods-BrewBuddy-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-environment.h"; sourceTree = "<group>"; };
-		AB489FC125266ED44C05D2AB /* Pods-BrewBuddy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrewBuddy-acknowledgements.plist"; sourceTree = "<group>"; };
-		AE70717EB300E0204FF87448 /* Pods-BrewBuddy-JGMethodSwizzler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-JGMethodSwizzler.xcconfig"; sourceTree = "<group>"; };
-		AE8899FFCF24DBB836A392E5 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig"; sourceTree = "<group>"; };
-		B2B7A1748A19C432E175A4CE /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
-		B496657D6852396565F2F1A5 /* Pods-BrewBuddy-HCSStarRatingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-HCSStarRatingView.modulemap"; sourceTree = "<group>"; };
-		B54B71C807C9CE5AC94CB910 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m"; sourceTree = "<group>"; };
-		B7E9EC13F346DCB183793509 /* Pods-BrewBuddy-HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
-		B8F72CB8FD9FEFF4D072FF04 /* JGMethodSwizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGMethodSwizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9210CB09CB5DC5994C3A20E /* NSInvocation+Copy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Copy.m"; path = "MZAppearance/NSInvocation+Copy.m"; sourceTree = "<group>"; };
-		BA795E7CD6DE7DF101595057 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB67A2C092C4D2D0C831DBDC /* Pods-BrewBuddy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BrewBuddy-resources.sh"; sourceTree = "<group>"; };
-		BDAA13DEAB47B77543F82B9D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF1E809F7CF0676DED9934BD /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
-		C23F8295342958C80F242C27 /* Pods-BrewBuddy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BrewBuddy-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C2801C7AB780EC9781620B2E /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HCSStarRatingView-umbrella.h"; sourceTree = "<group>"; };
-		C4B2DCD1A4B5B4E98B06FBC9 /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TargetViewController.m"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
-		C796051D285913BA56B7E075 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7F007E38C62405467E7A60A /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
-		CA0143FA5E8AAD803883F681 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		CCFA9598116760CEBA0C6699 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
-		CD37E01416CEA0B990C52FF3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE9479D0E88BA42DEDFECCFD /* Pods-BrewBuddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-dummy.m"; sourceTree = "<group>"; };
-		CEA9B2E5EDB4CE1BFD313E71 /* Pods-BrewBuddy-HCSStarRatingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HCSStarRatingView-prefix.pch"; sourceTree = "<group>"; };
-		CED3DCB760A8099C0F7069A6 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-JGMethodSwizzler-dummy.m"; sourceTree = "<group>"; };
-		D0AF911ACF55343C5574B779 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D603CB339D62EF1392F62C79 /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZAppearance-Private.xcconfig"; sourceTree = "<group>"; };
-		D7A2C3283F53ABA45EB5B839 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingCollectionView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
-		D91105708014E446A048E741 /* MZFormSheetPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationController.m; path = MZFormSheetPresentationController/MZFormSheetPresentationController.m; sourceTree = "<group>"; };
-		DA4C97898DEE1D4C69DCA7C6 /* HCSStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCSStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAB1CF562FB60141557B6CCF /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h"; sourceTree = "<group>"; };
-		DAD4E17DBE54FE030EE0F0D1 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
-		DBA5D44DC028AFE1908D0553 /* Pods-BrewBuddy-HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HanekeSwift.xcconfig"; sourceTree = "<group>"; };
-		E1BB0981CB93F1438CC5031F /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig"; sourceTree = "<group>"; };
-		E374001FE0424CBDE370BBBB /* Pods-BrewBuddy-HCSStarRatingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HCSStarRatingView.xcconfig"; sourceTree = "<group>"; };
-		E5883377571CB1185AB73733 /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
-		E636FE975A8C46BD1781BACB /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
-		E6C8149061E880ACE68F8484 /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
-		E6CED9E001ADC9C2F87D8E2E /* Pods-BrewBuddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy.modulemap"; sourceTree = "<group>"; };
-		E9650326EC5F219E8E006F70 /* Pods-BrewBuddy-MZAppearance-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZAppearance-umbrella.h"; sourceTree = "<group>"; };
-		EC7B8DA083764DEF3CF0C87A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1685DEEA67236F73B2A1DBC /* Pods-BrewBuddy-HanekeSwift-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HanekeSwift-Private.xcconfig"; sourceTree = "<group>"; };
-		F18508567685FA134B09D261 /* HCSStarRatingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HCSStarRatingView.h; path = HCSStarRatingView/HCSStarRatingView.h; sourceTree = "<group>"; };
-		F261767AD9D739AC8DAF58F6 /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
-		F2DA5CFC632B35109A478C85 /* Pods-BrewBuddy-HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
-		F90FD85E006DC342D638F3EC /* Pods-BrewBuddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-umbrella.h"; sourceTree = "<group>"; };
-		FE754ED1EA91220B7FA585BB /* Pods_BrewBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFB3ED5CAA257473FA6C1A19 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h"; sourceTree = "<group>"; };
+		020203CFA3A936530B71A96B /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
+		07F96FEAA39FB145E5D1DB08 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		081C5CF14A0909457AD39D3C /* Pods-BrewBuddy-SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-SVProgressHUD.xcconfig"; sourceTree = "<group>"; };
+		08243F05D020D1F9B8026937 /* HCSStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCSStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08FEC2DA4D734A3F1944325A /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingCollectionView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		0C44B1F9A78431A327380C45 /* JGMethodSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGMethodSwizzler.m; path = JGMethodSwizzler/JGMethodSwizzler.m; sourceTree = "<group>"; };
+		0E3578A868116788BC8F59AA /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
+		0E8C8A3485D293D6B54A60DB /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TPKeyboardAvoidingAdditions.h"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		0EB11FCAC1C9A50BCEED266A /* Pods-BrewBuddy-MZAppearance.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZAppearance.xcconfig"; sourceTree = "<group>"; };
+		10FD671B4F8A9D52209FD01F /* Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch"; sourceTree = "<group>"; };
+		11DD280A0D67301AA7D4F7E8 /* Pods-BrewBuddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy.modulemap"; sourceTree = "<group>"; };
+		1464443D8329A6C55A0E8DCA /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m"; sourceTree = "<group>"; };
+		17382762EC5E86DE71861BD1 /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		197E5AFCED9932F93D56E1ED /* Pods-BrewBuddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-dummy.m"; sourceTree = "<group>"; };
+		1A0A983EEE1D59862396E364 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TPKeyboardAvoidingAdditions.m"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		1A26F4EF4F2BF07AD01E271A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A28EB32A10DE071C9011068 /* Pods-BrewBuddy-JGMethodSwizzler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-JGMethodSwizzler.modulemap"; sourceTree = "<group>"; };
+		1E379912117ADA94EB2D3D36 /* Pods-BrewBuddy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BrewBuddy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		200EF1CFCAF74FC87A97E195 /* Pods-BrewBuddy-SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		23151E83549CC9D2F932E87B /* Pods-BrewBuddy-HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HanekeSwift.xcconfig"; sourceTree = "<group>"; };
+		23A62930302AA50D55EEFD21 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		23D3CBF1FA094F149D5F2C77 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D697C237978AADAFBFEC7AE /* MZFormSheetPresentationControllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationControllerAnimator.h; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerAnimator.h; sourceTree = "<group>"; };
+		3E71B423B1BF09AA2A0DDFBA /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZAppearance-Private.xcconfig"; sourceTree = "<group>"; };
+		3F9323515BA9BC8A73F4E182 /* Pods-BrewBuddy-TPKeyboardAvoiding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-TPKeyboardAvoiding.modulemap"; sourceTree = "<group>"; };
+		4126772B6EFBC6508B83E684 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingCollectionView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		426464ECAA407DCD4EEC12FB /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		429AB8E719ADA70E0680417F /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingTableView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		443116FA5FA49D6E01D04784 /* Pods-BrewBuddy-HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
+		4440260D9898C40F85D1CFF3 /* MZFormSheetPresentationControllerSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationControllerSegue.m; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerSegue.m; sourceTree = "<group>"; };
+		444339EA1196A834CE230AF6 /* Pods-BrewBuddy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BrewBuddy-frameworks.sh"; sourceTree = "<group>"; };
+		451989342634E433F9CA7622 /* MZFormSheetPresentationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZFormSheetPresentationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4537BFB9922F66DF11540AC5 /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
+		4578F5ECEE9D0F77073FC5A4 /* Pods-BrewBuddy-HCSStarRatingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HCSStarRatingView-prefix.pch"; sourceTree = "<group>"; };
+		46957CBD998CFE5853592912 /* Pods-BrewBuddy-MZAppearance.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-MZAppearance.modulemap"; sourceTree = "<group>"; };
+		469BCBBA65D0DB595F8A62A1 /* Pods-BrewBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		46D39208DA63C067ED4F32CC /* Pods-BrewBuddy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrewBuddy-acknowledgements.plist"; sourceTree = "<group>"; };
+		4768447487BE83310C1DA1A7 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-JGMethodSwizzler-dummy.m"; sourceTree = "<group>"; };
+		497D7724F7C34584C6658CDE /* Pods-BrewBuddy-SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		4AAA4DEEF4379A992F763734 /* Pods-BrewBuddy-SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		4E20BC186A4F587BDA8AC6CE /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		4F7B9B3FC8DBB761CE61C70B /* MZFormSheetPresentationControllerSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationControllerSegue.h; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerSegue.h; sourceTree = "<group>"; };
+		4FE70C8822D380A752C801D4 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
+		50563C01486E27FAE0EB1B02 /* Pods-BrewBuddy-JGMethodSwizzler-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-JGMethodSwizzler-prefix.pch"; sourceTree = "<group>"; };
+		5764F4BA19A26FEAD21B2577 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h"; sourceTree = "<group>"; };
+		57DD93E6D3057E9B97643398 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		593A08816713F0AD55A6F2E1 /* Pods-BrewBuddy-HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
+		5945A3DF1C3E2E8F8F893AD6 /* HCSStarRatingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HCSStarRatingView.h; path = HCSStarRatingView/HCSStarRatingView.h; sourceTree = "<group>"; };
+		5A44337DBF00AC5A7CB002A9 /* MZAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZAppearance.h; path = MZAppearance/MZAppearance.h; sourceTree = "<group>"; };
+		5CF6F1F2C1D5EC14AA0DABBA /* Pods-BrewBuddy-MZFormSheetPresentationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-MZFormSheetPresentationController.modulemap"; sourceTree = "<group>"; };
+		5F50B2AB4E5F00BC1B48216D /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
+		630CF44A2070232AC2D18B87 /* Pods-BrewBuddy-HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-HanekeSwift-dummy.m"; sourceTree = "<group>"; };
+		6521754885FC8EF335B22C1C /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
+		6550E27B85BD4DECCDE29475 /* Pods-BrewBuddy-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-environment.h"; sourceTree = "<group>"; };
+		67884A29C628CB1A501F9694 /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig"; sourceTree = "<group>"; };
+		6A514BB12620C7431DC09F9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BE2EB9B578A5156A3A4F108 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
+		6DACB77823CD7D5F197AC006 /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
+		6E0A1101E9E70BDD9796AB12 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		6E9468E74DD7651FD0893202 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
+		6EEBB25BAE29842EA21570BD /* Pods_BrewBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F06FB4B56DEBA31CE1161F3 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m"; sourceTree = "<group>"; };
+		71051AB8389A409343E43FEB /* MZAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZAppearance.m; path = MZAppearance/MZAppearance.m; sourceTree = "<group>"; };
+		73B3A885276BA1F080019CC7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A556B5670AA3BCC9CF09B01 /* Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig"; sourceTree = "<group>"; };
+		7A86F49225A671AA3A55CED8 /* TPKeyboardAvoiding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPKeyboardAvoiding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7355A8740DB6D91731C62C /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD9B1A08241BF5520C655CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ECB8E77906647F0C7772C7D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		81C6D0D96AE2BA9FA366CC29 /* MZTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZTransition.m; path = MZFormSheetPresentationController/MZTransition.m; sourceTree = "<group>"; };
+		88AE9A04917BCD7A2A6D18F0 /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
+		8934F7E33A83EB5DCDDE6B01 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		895BF7C752DC9B562EDF5E86 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MZFormSheetPresentationController Swift Example-Bridging-Header.h"; path = "MZFormSheetPresentationController/MZFormSheetPresentationController Swift Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B3D2F4F70ED772E59739E8E /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-HCSStarRatingView-umbrella.h"; sourceTree = "<group>"; };
+		904CDCD4953B77024CD97B98 /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
+		93871F949A9B497D37F00FC2 /* JGMethodSwizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGMethodSwizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95883251C36831969712613A /* Pods-BrewBuddy-MZAppearance-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZAppearance-prefix.pch"; sourceTree = "<group>"; };
+		9668A4F8FCE70C1B9286E83A /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		985B986921710677328C85A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98680DFF38F8EA638D0BF898 /* MZFormSheetPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationController.m; path = MZFormSheetPresentationController/MZFormSheetPresentationController.m; sourceTree = "<group>"; };
+		9902A000939425EA26B9FDE9 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		9A3080AC8A018AFD3C77B2D1 /* Pods-BrewBuddy-HCSStarRatingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-HCSStarRatingView.modulemap"; sourceTree = "<group>"; };
+		A1E9352F03B1F2EF559CC65D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2CD0525976C47437E39F464 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A4405DC4DB3DADE451CCCFBA /* Pods-BrewBuddy-MZAppearance-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZAppearance-umbrella.h"; sourceTree = "<group>"; };
+		A67ABCECCEFAA136187D2EAC /* JGMethodSwizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGMethodSwizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB885E825E65A05E2D852DEA /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TargetViewController.m"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
+		ABB8F50FE67751A9E3985EC1 /* NSInvocation+Copy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Copy.m"; path = "MZAppearance/NSInvocation+Copy.m"; sourceTree = "<group>"; };
+		ADC3FF50EDCAC21217385C3C /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
+		AE8941E106022503DE4D12EF /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
+		AF5FDED880E72CC0EFF75466 /* JGMethodSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGMethodSwizzler.h; path = JGMethodSwizzler/JGMethodSwizzler.h; sourceTree = "<group>"; };
+		AFD269D5DAE39DE9B47205E3 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
+		AFE27CE7E1E905268BB57175 /* MZFormSheetPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationController.h; path = MZFormSheetPresentationController/MZFormSheetPresentationController.h; sourceTree = "<group>"; };
+		B1DFEEFB83118A2828235B02 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B37F61DC4704CAC13F642EF0 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingTableView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		B3B70305AD17BA35E77F1941 /* Pods-BrewBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		B57152645EC667C799F61C70 /* Pods-BrewBuddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-umbrella.h"; sourceTree = "<group>"; };
+		B71D35779D2E29502F09CD23 /* HCSStarRatingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HCSStarRatingView.m; path = HCSStarRatingView/HCSStarRatingView.m; sourceTree = "<group>"; };
+		BD37FEA7093523BCB360FBAC /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h"; sourceTree = "<group>"; };
+		BDC1DA0BEB454C98D04BAA1F /* NSInvocation+Copy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Copy.h"; path = "MZAppearance/NSInvocation+Copy.h"; sourceTree = "<group>"; };
+		BEDF7BAD12C3256FB4C3C70E /* Pods-BrewBuddy-HanekeSwift-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HanekeSwift-Private.xcconfig"; sourceTree = "<group>"; };
+		C4CF03A337E0281D74351BE0 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C5C2DF4470110DA693BC4C34 /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig"; sourceTree = "<group>"; };
+		C7FD6C08B400AD32C246F190 /* Pods-BrewBuddy-HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-HanekeSwift.modulemap"; sourceTree = "<group>"; };
+		C9802014E433FD43CA5C4114 /* UIViewController+TargetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TargetViewController.h"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.h"; sourceTree = "<group>"; };
+		CB1B1B8A5D51F89BD8604DEC /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-JGMethodSwizzler-umbrella.h"; sourceTree = "<group>"; };
+		CD09D92FC651F3D114348D34 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig"; sourceTree = "<group>"; };
+		CE0E9487A642467237CA5E70 /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D897EDFBF49BFC1410FF0F27 /* MZFormSheetPresentationControllerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationControllerAnimator.m; path = MZFormSheetPresentationController/MZFormSheetPresentationControllerAnimator.m; sourceTree = "<group>"; };
+		D9E59E8835C31AFCFF64F090 /* MZTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZTransition.h; path = MZFormSheetPresentationController/MZTransition.h; sourceTree = "<group>"; };
+		E0C602E737B391E7B9E04AE2 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		E1474F9FAF5DF2CF5A079058 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-HCSStarRatingView-dummy.m"; sourceTree = "<group>"; };
+		E1E877DB51F9B2905DE96C93 /* Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig"; sourceTree = "<group>"; };
+		E6FAD55BB4CB6A86D05A9307 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
+		EB81E1BEE791F85BF541BA79 /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig"; sourceTree = "<group>"; };
+		ED680A84F22451F5372CB312 /* Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch"; sourceTree = "<group>"; };
+		F0FD15809D8E8965D957A80E /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
+		F248E4DD31FD279FBADF0056 /* Pods-BrewBuddy-SVProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-SVProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		F78F86E73A8451FD972E1115 /* Pods-BrewBuddy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BrewBuddy-resources.sh"; sourceTree = "<group>"; };
+		F95A49FA0FADC47C05EEE40D /* Pods-BrewBuddy-HCSStarRatingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-HCSStarRatingView.xcconfig"; sourceTree = "<group>"; };
+		FAC51553E4410E44DFE24874 /* Pods-BrewBuddy-MZAppearance-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrewBuddy-MZAppearance-dummy.m"; sourceTree = "<group>"; };
+		FBD7257570763D8527F439C0 /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE61699E779049AC5773FAD9 /* Pods-BrewBuddy-JGMethodSwizzler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrewBuddy-JGMethodSwizzler.xcconfig"; sourceTree = "<group>"; };
+		FF96F1212685E945A2A85396 /* Pods-BrewBuddy-SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BrewBuddy-SVProgressHUD.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		16996ED1C9C918D87495D2B8 /* Frameworks */ = {
+		124829B8A73AEAF4BD6DA09F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F128993FD54A991A6641605D /* Foundation.framework in Frameworks */,
+				1EF880BB6E39086FF74A2483 /* Foundation.framework in Frameworks */,
+				037056A5AC64578AAB5138EC /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22F0F29066D86AFDB4C175CF /* Frameworks */ = {
+		49411D8DD6C63581D7ADB8A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6346CC4FA19767A549229741 /* Foundation.framework in Frameworks */,
+				A1998D87F5DA7C9AAAC6A0E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BB9C6E2B2132BC7B76D8599 /* Frameworks */ = {
+		697F1372F98939EC48A5CA5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C99533CD2CF760A9E38427 /* Foundation.framework in Frameworks */,
+				FC688B27FA50016D995E53F9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C125BA6C4551E6455A94475 /* Frameworks */ = {
+		83CC90772F6836D83583B14D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3899A63DDB0AB0DB1D07A63D /* Foundation.framework in Frameworks */,
+				3FBDE22AF17685F122FCD6A4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C471AC6EF0A8112C6FF7240D /* Frameworks */ = {
+		87545CE500DFD57AD66B1B8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C4A4897CAF6645BA853856 /* Foundation.framework in Frameworks */,
-				91372C2BEC7A8594AAD524FD /* JGMethodSwizzler.framework in Frameworks */,
-				42DB436C342E6BF0EED01A4F /* MZAppearance.framework in Frameworks */,
-				632D19654A8DA733FEC1B7E7 /* QuartzCore.framework in Frameworks */,
+				8BF56636FB6271511EBA2D8A /* Foundation.framework in Frameworks */,
+				1C7DEF7CBA07057C0F6FE511 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE67D5B7989FA9CD1B16A9B7 /* Frameworks */ = {
+		8A98FA188FB3FD421700C4F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28CEF8B7527E700BAC8C6604 /* Foundation.framework in Frameworks */,
-				6A5FFF29FA4DB7D9C0B57110 /* QuartzCore.framework in Frameworks */,
+				358364023A2F7F2CC6B3034F /* Foundation.framework in Frameworks */,
+				5ABCE736D8E7EC79A764535F /* JGMethodSwizzler.framework in Frameworks */,
+				EBC296F2F67D01D25CCE73D0 /* MZAppearance.framework in Frameworks */,
+				21651715090ACD988B995925 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6D33C2EDE1345D62C6C12BB /* Frameworks */ = {
+		B8DE9625CB42D35AD5998952 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA980CD2016E04F05BCE03F /* Foundation.framework in Frameworks */,
+				C8AAABAC380F21B919149AD5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6116259C6C43A29657C70C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EF1985EC8A00EC1430A1046 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		040F31FA3FDC4C75596EFF87 /* Support Files */ = {
+		0A12351D2B00A99DC51A9EE6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BDAA13DEAB47B77543F82B9D /* Info.plist */,
-				88073965A734EF3843C0371D /* Pods-BrewBuddy-TPKeyboardAvoiding.modulemap */,
-				5C06CF58F72EF5B4880D7353 /* Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig */,
-				27BC65412FB9520914D4EBEE /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */,
-				5D228142C821B14D995BEA16 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */,
-				8DFB01B952FB4D86285C56E6 /* Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch */,
-				FFB3ED5CAA257473FA6C1A19 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */,
+				0EAFE32FBB43DEFD68264788 /* HCSStarRatingView */,
+				21B75D856794DE7387D38042 /* HanekeSwift */,
+				1A46D2B72EDA5297B25CA1AA /* JGMethodSwizzler */,
+				6D3A3BB6A7241FE35F83F352 /* MZAppearance */,
+				56019BEF30A13BABBAD248FE /* MZFormSheetPresentationController */,
+				BF52C03FE9084461CB8C6357 /* SVProgressHUD */,
+				DF6C57670E312A1E33DD0B88 /* TPKeyboardAvoiding */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0EAFE32FBB43DEFD68264788 /* HCSStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				5945A3DF1C3E2E8F8F893AD6 /* HCSStarRatingView.h */,
+				B71D35779D2E29502F09CD23 /* HCSStarRatingView.m */,
+				DD05B7293B38EE542ED816E9 /* Support Files */,
+			);
+			path = HCSStarRatingView;
+			sourceTree = "<group>";
+		};
+		0FFF21AF06F9B609F19C2C46 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1E9352F03B1F2EF559CC65D /* Info.plist */,
+				3F9323515BA9BC8A73F4E182 /* Pods-BrewBuddy-TPKeyboardAvoiding.modulemap */,
+				7A556B5670AA3BCC9CF09B01 /* Pods-BrewBuddy-TPKeyboardAvoiding.xcconfig */,
+				EB81E1BEE791F85BF541BA79 /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */,
+				6F06FB4B56DEBA31CE1161F3 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m */,
+				10FD671B4F8A9D52209FD01F /* Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch */,
+				5764F4BA19A26FEAD21B2577 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding";
 			sourceTree = "<group>";
 		};
-		1019EF5549F4C8E7E3FE0BF9 /* Targets Support Files */ = {
+		10AAFC68E0ECC84E40BFCDFB = {
 			isa = PBXGroup;
 			children = (
-				E8637DB170AD4C34D5367EF5 /* Pods-BrewBuddy */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		18C2B5B62345155A8F5F8A64 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8FC19FC9D8623E7A40439E89 /* HCSStarRatingView */,
-				860264B631F6AF97DD46E32D /* HanekeSwift */,
-				B21AAED26D84B6EBD225D69A /* JGMethodSwizzler */,
-				749043E6F9D32E88EDDA84E3 /* MZAppearance */,
-				D4F20F7923A8DCB1AAF7A60D /* MZFormSheetPresentationController */,
-				38302EB33C2AE3131E789B4B /* TPKeyboardAvoiding */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		38302EB33C2AE3131E789B4B /* TPKeyboardAvoiding */ = {
-			isa = PBXGroup;
-			children = (
-				30F36D05DBF81907201343C8 /* TPKeyboardAvoidingCollectionView.h */,
-				D7A2C3283F53ABA45EB5B839 /* TPKeyboardAvoidingCollectionView.m */,
-				86A688F2AC631EB87C09FA6F /* TPKeyboardAvoidingScrollView.h */,
-				CCFA9598116760CEBA0C6699 /* TPKeyboardAvoidingScrollView.m */,
-				A8B87B855F8742AF8B63F749 /* TPKeyboardAvoidingTableView.h */,
-				79BD886B2B15BE1C2D03D3A9 /* TPKeyboardAvoidingTableView.m */,
-				16D6DAD9F4385797D8DFC79D /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
-				238E036B87B055A95A56E032 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
-				040F31FA3FDC4C75596EFF87 /* Support Files */,
-			);
-			path = TPKeyboardAvoiding;
-			sourceTree = "<group>";
-		};
-		3F42FDAC847F793A87268BA0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EC7B8DA083764DEF3CF0C87A /* Info.plist */,
-				496B8842C763FC33DC4B93F7 /* Pods-BrewBuddy-HanekeSwift.modulemap */,
-				DBA5D44DC028AFE1908D0553 /* Pods-BrewBuddy-HanekeSwift.xcconfig */,
-				F1685DEEA67236F73B2A1DBC /* Pods-BrewBuddy-HanekeSwift-Private.xcconfig */,
-				6F9DD4E063D9CC45B5FE591A /* Pods-BrewBuddy-HanekeSwift-dummy.m */,
-				B7E9EC13F346DCB183793509 /* Pods-BrewBuddy-HanekeSwift-prefix.pch */,
-				F2DA5CFC632B35109A478C85 /* Pods-BrewBuddy-HanekeSwift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-BrewBuddy-HanekeSwift";
-			sourceTree = "<group>";
-		};
-		49A3310D8A4FB9153EB8CD8E = {
-			isa = PBXGroup;
-			children = (
-				27713729FA30CAE3F33B74F7 /* Podfile */,
-				A33124E945BEBFA7353A498B /* Frameworks */,
-				18C2B5B62345155A8F5F8A64 /* Pods */,
-				954EEE906E51CB353FDBAC85 /* Products */,
-				1019EF5549F4C8E7E3FE0BF9 /* Targets Support Files */,
+				C4CF03A337E0281D74351BE0 /* Podfile */,
+				89120CE2FD6EFC32BEB45D54 /* Frameworks */,
+				0A12351D2B00A99DC51A9EE6 /* Pods */,
+				3CF2436A4CF1CC6257C7A2CB /* Products */,
+				DFA46CAD81A0687BA2C21475 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		744A45E3298B4F7A82813B07 /* iOS */ = {
+		13E446F8BE39E7A9949F9A36 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				45F546F58337303426278ABD /* Foundation.framework */,
-				CA0143FA5E8AAD803883F681 /* QuartzCore.framework */,
+				07F96FEAA39FB145E5D1DB08 /* SVProgressHUD.bundle */,
 			);
-			name = iOS;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		749043E6F9D32E88EDDA84E3 /* MZAppearance */ = {
+		1A46D2B72EDA5297B25CA1AA /* JGMethodSwizzler */ = {
 			isa = PBXGroup;
 			children = (
-				1A14E726CCB2149EBA9052EA /* MZAppearance.h */,
-				4AAC5EC41EDDB28686C2C5BD /* MZAppearance.m */,
-				1D762461F55C7EDBEC0A491F /* NSInvocation+Copy.h */,
-				B9210CB09CB5DC5994C3A20E /* NSInvocation+Copy.m */,
-				CCC17FEA402F8B07B3E67AAB /* Support Files */,
+				AF5FDED880E72CC0EFF75466 /* JGMethodSwizzler.h */,
+				0C44B1F9A78431A327380C45 /* JGMethodSwizzler.m */,
+				41A0DCA72004BDE98AF27DAC /* Support Files */,
 			);
-			path = MZAppearance;
+			path = JGMethodSwizzler;
 			sourceTree = "<group>";
 		};
-		78D9F9BA35E673468728EE91 /* Support Files */ = {
+		21B75D856794DE7387D38042 /* HanekeSwift */ = {
 			isa = PBXGroup;
 			children = (
-				C796051D285913BA56B7E075 /* Info.plist */,
-				853DC5A253ABE33BB620FCD8 /* Pods-BrewBuddy-JGMethodSwizzler.modulemap */,
-				AE70717EB300E0204FF87448 /* Pods-BrewBuddy-JGMethodSwizzler.xcconfig */,
-				5205587EB53DFFFED14B9E07 /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */,
-				CED3DCB760A8099C0F7069A6 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */,
-				42D1FC6D0321A720E863B848 /* Pods-BrewBuddy-JGMethodSwizzler-prefix.pch */,
-				23C43C2D7756C89E64ABEDE6 /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */,
+				6E9468E74DD7651FD0893202 /* CGSize+Swift.swift */,
+				6BE2EB9B578A5156A3A4F108 /* Cache.swift */,
+				AFD269D5DAE39DE9B47205E3 /* CryptoSwiftMD5.swift */,
+				9902A000939425EA26B9FDE9 /* Data.swift */,
+				AE8941E106022503DE4D12EF /* DiskCache.swift */,
+				4FE70C8822D380A752C801D4 /* DiskFetcher.swift */,
+				904CDCD4953B77024CD97B98 /* Fetch.swift */,
+				6DACB77823CD7D5F197AC006 /* Fetcher.swift */,
+				6521754885FC8EF335B22C1C /* Format.swift */,
+				5F50B2AB4E5F00BC1B48216D /* Haneke.swift */,
+				F0FD15809D8E8965D957A80E /* Log.swift */,
+				0E3578A868116788BC8F59AA /* NSFileManager+Haneke.swift */,
+				4E20BC186A4F587BDA8AC6CE /* NSHTTPURLResponse+Haneke.swift */,
+				E6FAD55BB4CB6A86D05A9307 /* NetworkFetcher.swift */,
+				88AE9A04917BCD7A2A6D18F0 /* String+Haneke.swift */,
+				4537BFB9922F66DF11540AC5 /* UIButton+Haneke.swift */,
+				17382762EC5E86DE71861BD1 /* UIImage+Haneke.swift */,
+				ADC3FF50EDCAC21217385C3C /* UIImageView+Haneke.swift */,
+				020203CFA3A936530B71A96B /* UIView+Haneke.swift */,
+				9685C3097A3FFBA643DE4189 /* Support Files */,
+			);
+			path = HanekeSwift;
+			sourceTree = "<group>";
+		};
+		3CF2436A4CF1CC6257C7A2CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08243F05D020D1F9B8026937 /* HCSStarRatingView.framework */,
+				7B7355A8740DB6D91731C62C /* Haneke.framework */,
+				93871F949A9B497D37F00FC2 /* JGMethodSwizzler.framework */,
+				FBD7257570763D8527F439C0 /* MZAppearance.framework */,
+				451989342634E433F9CA7622 /* MZFormSheetPresentationController.framework */,
+				6EEBB25BAE29842EA21570BD /* Pods_BrewBuddy.framework */,
+				23D3CBF1FA094F149D5F2C77 /* SVProgressHUD.framework */,
+				7A86F49225A671AA3A55CED8 /* TPKeyboardAvoiding.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41A0DCA72004BDE98AF27DAC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73B3A885276BA1F080019CC7 /* Info.plist */,
+				1A28EB32A10DE071C9011068 /* Pods-BrewBuddy-JGMethodSwizzler.modulemap */,
+				FE61699E779049AC5773FAD9 /* Pods-BrewBuddy-JGMethodSwizzler.xcconfig */,
+				67884A29C628CB1A501F9694 /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */,
+				4768447487BE83310C1DA1A7 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m */,
+				50563C01486E27FAE0EB1B02 /* Pods-BrewBuddy-JGMethodSwizzler-prefix.pch */,
+				CB1B1B8A5D51F89BD8604DEC /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-BrewBuddy-JGMethodSwizzler";
 			sourceTree = "<group>";
 		};
-		860264B631F6AF97DD46E32D /* HanekeSwift */ = {
+		56019BEF30A13BABBAD248FE /* MZFormSheetPresentationController */ = {
 			isa = PBXGroup;
 			children = (
-				1F73B1AFEEB0679E498BAF48 /* CGSize+Swift.swift */,
-				2367DDC1C0ECE70BE0D37BB8 /* Cache.swift */,
-				4C545C55EA2A13697FEB5E8B /* CryptoSwiftMD5.swift */,
-				B2B7A1748A19C432E175A4CE /* Data.swift */,
-				E6C8149061E880ACE68F8484 /* DiskCache.swift */,
-				01D6CD55FC718402815B442B /* DiskFetcher.swift */,
-				6882E077777C1728C0D080BA /* Fetch.swift */,
-				8A3562623CB04B8F9E71504C /* Fetcher.swift */,
-				E636FE975A8C46BD1781BACB /* Format.swift */,
-				E5883377571CB1185AB73733 /* Haneke.swift */,
-				DAD4E17DBE54FE030EE0F0D1 /* Log.swift */,
-				7C6A03730B49001992BFD361 /* NSFileManager+Haneke.swift */,
-				A803564A37CD4127B7FE5634 /* NSHTTPURLResponse+Haneke.swift */,
-				8FF1703B11C0CF2DB5D4143C /* NetworkFetcher.swift */,
-				54F3398CDB9F112C8D764FE7 /* String+Haneke.swift */,
-				C7F007E38C62405467E7A60A /* UIButton+Haneke.swift */,
-				F261767AD9D739AC8DAF58F6 /* UIImage+Haneke.swift */,
-				BF1E809F7CF0676DED9934BD /* UIImageView+Haneke.swift */,
-				175F356335AC9C51E74C519C /* UIView+Haneke.swift */,
-				3F42FDAC847F793A87268BA0 /* Support Files */,
-			);
-			path = HanekeSwift;
-			sourceTree = "<group>";
-		};
-		8B31DAD10DF69212F532D381 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D0AF911ACF55343C5574B779 /* Info.plist */,
-				B496657D6852396565F2F1A5 /* Pods-BrewBuddy-HCSStarRatingView.modulemap */,
-				E374001FE0424CBDE370BBBB /* Pods-BrewBuddy-HCSStarRatingView.xcconfig */,
-				AE8899FFCF24DBB836A392E5 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */,
-				88076003770508C68EF60E12 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */,
-				CEA9B2E5EDB4CE1BFD313E71 /* Pods-BrewBuddy-HCSStarRatingView-prefix.pch */,
-				C2801C7AB780EC9781620B2E /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-BrewBuddy-HCSStarRatingView";
-			sourceTree = "<group>";
-		};
-		8FC19FC9D8623E7A40439E89 /* HCSStarRatingView */ = {
-			isa = PBXGroup;
-			children = (
-				F18508567685FA134B09D261 /* HCSStarRatingView.h */,
-				0D7ABA5DFC88FF82F69349EF /* HCSStarRatingView.m */,
-				8B31DAD10DF69212F532D381 /* Support Files */,
-			);
-			path = HCSStarRatingView;
-			sourceTree = "<group>";
-		};
-		954EEE906E51CB353FDBAC85 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DA4C97898DEE1D4C69DCA7C6 /* HCSStarRatingView.framework */,
-				3623FF701A283DAEC1A18D07 /* Haneke.framework */,
-				B8F72CB8FD9FEFF4D072FF04 /* JGMethodSwizzler.framework */,
-				18B88DDAE5B8611E33257247 /* MZAppearance.framework */,
-				724A17E6834282252F0ED794 /* MZFormSheetPresentationController.framework */,
-				FE754ED1EA91220B7FA585BB /* Pods_BrewBuddy.framework */,
-				7100C5FBEE486ADFDFE87A80 /* TPKeyboardAvoiding.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A33124E945BEBFA7353A498B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				097AFDFEC4664CF9F796A90F /* JGMethodSwizzler.framework */,
-				11DF00BF116E0C089A4CAD17 /* MZAppearance.framework */,
-				744A45E3298B4F7A82813B07 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AE2A48DC8AECDEFD8D2D91CB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BA795E7CD6DE7DF101595057 /* Info.plist */,
-				7358046135C451AAA4D72FC8 /* Pods-BrewBuddy-MZFormSheetPresentationController.modulemap */,
-				45DFFA75A8B7A88115245A6A /* Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig */,
-				E1BB0981CB93F1438CC5031F /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */,
-				B54B71C807C9CE5AC94CB910 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */,
-				35685C9BCE88FA3F93322025 /* Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch */,
-				DAB1CF562FB60141557B6CCF /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController";
-			sourceTree = "<group>";
-		};
-		B21AAED26D84B6EBD225D69A /* JGMethodSwizzler */ = {
-			isa = PBXGroup;
-			children = (
-				8B233318B90348E783359781 /* JGMethodSwizzler.h */,
-				7D074027FDF5FA5FF1305C83 /* JGMethodSwizzler.m */,
-				78D9F9BA35E673468728EE91 /* Support Files */,
-			);
-			path = JGMethodSwizzler;
-			sourceTree = "<group>";
-		};
-		CCC17FEA402F8B07B3E67AAB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD37E01416CEA0B990C52FF3 /* Info.plist */,
-				7440D657B3649EF61CB0E524 /* Pods-BrewBuddy-MZAppearance.modulemap */,
-				8C9297D4704EFA73244B6ED6 /* Pods-BrewBuddy-MZAppearance.xcconfig */,
-				D603CB339D62EF1392F62C79 /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */,
-				4A5B3F34B040DBABB118F0C0 /* Pods-BrewBuddy-MZAppearance-dummy.m */,
-				477961DB0BF8A57C57D2E1C6 /* Pods-BrewBuddy-MZAppearance-prefix.pch */,
-				E9650326EC5F219E8E006F70 /* Pods-BrewBuddy-MZAppearance-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-BrewBuddy-MZAppearance";
-			sourceTree = "<group>";
-		};
-		D4F20F7923A8DCB1AAF7A60D /* MZFormSheetPresentationController */ = {
-			isa = PBXGroup;
-			children = (
-				46B48A8C1F4468E9813FC427 /* MZFormSheetPresentationController.h */,
-				D91105708014E446A048E741 /* MZFormSheetPresentationController.m */,
-				5611903BA3CE0931F64D8245 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */,
-				1C9AA576BB02ED098E408E26 /* MZFormSheetPresentationControllerAnimator.h */,
-				1111D35F2AE18C708E6336EC /* MZFormSheetPresentationControllerAnimator.m */,
-				99D691A7F6C8EA8E7CAECCEB /* MZFormSheetPresentationControllerSegue.h */,
-				58E8B606FA570AA96AEFA895 /* MZFormSheetPresentationControllerSegue.m */,
-				2DE24C40F015664608EF012E /* MZTransition.h */,
-				061DD02BC27CF1D1DBEC4AA0 /* MZTransition.m */,
-				9B895CD5BEE02565D7A13885 /* UIViewController+TargetViewController.h */,
-				C4B2DCD1A4B5B4E98B06FBC9 /* UIViewController+TargetViewController.m */,
-				AE2A48DC8AECDEFD8D2D91CB /* Support Files */,
+				AFE27CE7E1E905268BB57175 /* MZFormSheetPresentationController.h */,
+				98680DFF38F8EA638D0BF898 /* MZFormSheetPresentationController.m */,
+				895BF7C752DC9B562EDF5E86 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */,
+				3D697C237978AADAFBFEC7AE /* MZFormSheetPresentationControllerAnimator.h */,
+				D897EDFBF49BFC1410FF0F27 /* MZFormSheetPresentationControllerAnimator.m */,
+				4F7B9B3FC8DBB761CE61C70B /* MZFormSheetPresentationControllerSegue.h */,
+				4440260D9898C40F85D1CFF3 /* MZFormSheetPresentationControllerSegue.m */,
+				D9E59E8835C31AFCFF64F090 /* MZTransition.h */,
+				81C6D0D96AE2BA9FA366CC29 /* MZTransition.m */,
+				C9802014E433FD43CA5C4114 /* UIViewController+TargetViewController.h */,
+				AB885E825E65A05E2D852DEA /* UIViewController+TargetViewController.m */,
+				D73485D62327FF2414B0A110 /* Support Files */,
 			);
 			path = MZFormSheetPresentationController;
 			sourceTree = "<group>";
 		};
-		E8637DB170AD4C34D5367EF5 /* Pods-BrewBuddy */ = {
+		599233CF539A29CCF658CFAC /* Pods-BrewBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				3A8E2EA2C06DE440D4A6F84D /* Info.plist */,
-				E6CED9E001ADC9C2F87D8E2E /* Pods-BrewBuddy.modulemap */,
-				C23F8295342958C80F242C27 /* Pods-BrewBuddy-acknowledgements.markdown */,
-				AB489FC125266ED44C05D2AB /* Pods-BrewBuddy-acknowledgements.plist */,
-				CE9479D0E88BA42DEDFECCFD /* Pods-BrewBuddy-dummy.m */,
-				A8B9A3B9FBFEB90ED45EAC6C /* Pods-BrewBuddy-environment.h */,
-				49EBF734270E3D7044B194BD /* Pods-BrewBuddy-frameworks.sh */,
-				BB67A2C092C4D2D0C831DBDC /* Pods-BrewBuddy-resources.sh */,
-				F90FD85E006DC342D638F3EC /* Pods-BrewBuddy-umbrella.h */,
-				4E7545D5A0C808504310BB36 /* Pods-BrewBuddy.debug.xcconfig */,
-				90AE1681E990A78EA96B8B10 /* Pods-BrewBuddy.release.xcconfig */,
+				6A514BB12620C7431DC09F9B /* Info.plist */,
+				11DD280A0D67301AA7D4F7E8 /* Pods-BrewBuddy.modulemap */,
+				1E379912117ADA94EB2D3D36 /* Pods-BrewBuddy-acknowledgements.markdown */,
+				46D39208DA63C067ED4F32CC /* Pods-BrewBuddy-acknowledgements.plist */,
+				197E5AFCED9932F93D56E1ED /* Pods-BrewBuddy-dummy.m */,
+				6550E27B85BD4DECCDE29475 /* Pods-BrewBuddy-environment.h */,
+				444339EA1196A834CE230AF6 /* Pods-BrewBuddy-frameworks.sh */,
+				F78F86E73A8451FD972E1115 /* Pods-BrewBuddy-resources.sh */,
+				B57152645EC667C799F61C70 /* Pods-BrewBuddy-umbrella.h */,
+				B3B70305AD17BA35E77F1941 /* Pods-BrewBuddy.debug.xcconfig */,
+				469BCBBA65D0DB595F8A62A1 /* Pods-BrewBuddy.release.xcconfig */,
 			);
 			name = "Pods-BrewBuddy";
 			path = "Target Support Files/Pods-BrewBuddy";
 			sourceTree = "<group>";
 		};
+		68B5A01BA7B88248DC204398 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2CD0525976C47437E39F464 /* Foundation.framework */,
+				23A62930302AA50D55EEFD21 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6D3A3BB6A7241FE35F83F352 /* MZAppearance */ = {
+			isa = PBXGroup;
+			children = (
+				5A44337DBF00AC5A7CB002A9 /* MZAppearance.h */,
+				71051AB8389A409343E43FEB /* MZAppearance.m */,
+				BDC1DA0BEB454C98D04BAA1F /* NSInvocation+Copy.h */,
+				ABB8F50FE67751A9E3985EC1 /* NSInvocation+Copy.m */,
+				B361996E9F7B58EA55B3C78A /* Support Files */,
+			);
+			path = MZAppearance;
+			sourceTree = "<group>";
+		};
+		89120CE2FD6EFC32BEB45D54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A67ABCECCEFAA136187D2EAC /* JGMethodSwizzler.framework */,
+				CE0E9487A642467237CA5E70 /* MZAppearance.framework */,
+				68B5A01BA7B88248DC204398 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9685C3097A3FFBA643DE4189 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				985B986921710677328C85A8 /* Info.plist */,
+				C7FD6C08B400AD32C246F190 /* Pods-BrewBuddy-HanekeSwift.modulemap */,
+				23151E83549CC9D2F932E87B /* Pods-BrewBuddy-HanekeSwift.xcconfig */,
+				BEDF7BAD12C3256FB4C3C70E /* Pods-BrewBuddy-HanekeSwift-Private.xcconfig */,
+				630CF44A2070232AC2D18B87 /* Pods-BrewBuddy-HanekeSwift-dummy.m */,
+				593A08816713F0AD55A6F2E1 /* Pods-BrewBuddy-HanekeSwift-prefix.pch */,
+				443116FA5FA49D6E01D04784 /* Pods-BrewBuddy-HanekeSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-HanekeSwift";
+			sourceTree = "<group>";
+		};
+		B361996E9F7B58EA55B3C78A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1DFEEFB83118A2828235B02 /* Info.plist */,
+				46957CBD998CFE5853592912 /* Pods-BrewBuddy-MZAppearance.modulemap */,
+				0EB11FCAC1C9A50BCEED266A /* Pods-BrewBuddy-MZAppearance.xcconfig */,
+				3E71B423B1BF09AA2A0DDFBA /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */,
+				FAC51553E4410E44DFE24874 /* Pods-BrewBuddy-MZAppearance-dummy.m */,
+				95883251C36831969712613A /* Pods-BrewBuddy-MZAppearance-prefix.pch */,
+				A4405DC4DB3DADE451CCCFBA /* Pods-BrewBuddy-MZAppearance-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-MZAppearance";
+			sourceTree = "<group>";
+		};
+		BF52C03FE9084461CB8C6357 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E0C602E737B391E7B9E04AE2 /* SVIndefiniteAnimatedView.h */,
+				426464ECAA407DCD4EEC12FB /* SVIndefiniteAnimatedView.m */,
+				8934F7E33A83EB5DCDDE6B01 /* SVProgressHUD.h */,
+				6E0A1101E9E70BDD9796AB12 /* SVProgressHUD.m */,
+				13E446F8BE39E7A9949F9A36 /* Resources */,
+				FC1BEBED169D75288D2DB17F /* Support Files */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		D73485D62327FF2414B0A110 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DD9B1A08241BF5520C655CD /* Info.plist */,
+				5CF6F1F2C1D5EC14AA0DABBA /* Pods-BrewBuddy-MZFormSheetPresentationController.modulemap */,
+				E1E877DB51F9B2905DE96C93 /* Pods-BrewBuddy-MZFormSheetPresentationController.xcconfig */,
+				C5C2DF4470110DA693BC4C34 /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */,
+				1464443D8329A6C55A0E8DCA /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m */,
+				ED680A84F22451F5372CB312 /* Pods-BrewBuddy-MZFormSheetPresentationController-prefix.pch */,
+				BD37FEA7093523BCB360FBAC /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-MZFormSheetPresentationController";
+			sourceTree = "<group>";
+		};
+		DD05B7293B38EE542ED816E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A26F4EF4F2BF07AD01E271A /* Info.plist */,
+				9A3080AC8A018AFD3C77B2D1 /* Pods-BrewBuddy-HCSStarRatingView.modulemap */,
+				F95A49FA0FADC47C05EEE40D /* Pods-BrewBuddy-HCSStarRatingView.xcconfig */,
+				CD09D92FC651F3D114348D34 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */,
+				E1474F9FAF5DF2CF5A079058 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m */,
+				4578F5ECEE9D0F77073FC5A4 /* Pods-BrewBuddy-HCSStarRatingView-prefix.pch */,
+				8B3D2F4F70ED772E59739E8E /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-HCSStarRatingView";
+			sourceTree = "<group>";
+		};
+		DF6C57670E312A1E33DD0B88 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				08FEC2DA4D734A3F1944325A /* TPKeyboardAvoidingCollectionView.h */,
+				4126772B6EFBC6508B83E684 /* TPKeyboardAvoidingCollectionView.m */,
+				9668A4F8FCE70C1B9286E83A /* TPKeyboardAvoidingScrollView.h */,
+				7ECB8E77906647F0C7772C7D /* TPKeyboardAvoidingScrollView.m */,
+				429AB8E719ADA70E0680417F /* TPKeyboardAvoidingTableView.h */,
+				B37F61DC4704CAC13F642EF0 /* TPKeyboardAvoidingTableView.m */,
+				0E8C8A3485D293D6B54A60DB /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				1A0A983EEE1D59862396E364 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				0FFF21AF06F9B609F19C2C46 /* Support Files */,
+			);
+			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		DFA46CAD81A0687BA2C21475 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				599233CF539A29CCF658CFAC /* Pods-BrewBuddy */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FC1BEBED169D75288D2DB17F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				57DD93E6D3057E9B97643398 /* Info.plist */,
+				FF96F1212685E945A2A85396 /* Pods-BrewBuddy-SVProgressHUD.modulemap */,
+				081C5CF14A0909457AD39D3C /* Pods-BrewBuddy-SVProgressHUD.xcconfig */,
+				F248E4DD31FD279FBADF0056 /* Pods-BrewBuddy-SVProgressHUD-Private.xcconfig */,
+				4AAA4DEEF4379A992F763734 /* Pods-BrewBuddy-SVProgressHUD-dummy.m */,
+				200EF1CFCAF74FC87A97E195 /* Pods-BrewBuddy-SVProgressHUD-prefix.pch */,
+				497D7724F7C34584C6658CDE /* Pods-BrewBuddy-SVProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BrewBuddy-SVProgressHUD";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2442B644A30875FCE0EF076A /* Headers */ = {
+		10C0B6E9F0E3C2D30A8ED54D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32F2D523BB2D4F764F716D44 /* JGMethodSwizzler.h in Headers */,
-				3EED4F8E308E3620892ABC0B /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h in Headers */,
+				B35DDA0BF1E2375F8766AC40 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h in Headers */,
+				12250A1BA43ED561EEF60116 /* MZFormSheetPresentationController.h in Headers */,
+				D41B05F3C0C6502FD9E8484F /* MZFormSheetPresentationControllerAnimator.h in Headers */,
+				4D128A7C61C4743D7B749923 /* MZFormSheetPresentationControllerSegue.h in Headers */,
+				73F8337ECFEBDB608234CD1F /* MZTransition.h in Headers */,
+				92047A63EEDFB46ADF22DFBB /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h in Headers */,
+				780293E1D3A22419BCE1173D /* UIViewController+TargetViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E538E08CD2C85B2643B50DF /* Headers */ = {
+		1D3B7F219B48115B1FF7BF73 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1DDFEE5C1CC1DD2E99710E4 /* Pods-BrewBuddy-umbrella.h in Headers */,
+				0D38165DAB03C3829D13608C /* HCSStarRatingView.h in Headers */,
+				C375F919A4EC36E16DA37B4B /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FB7D83D7670D53333BE4D45 /* Headers */ = {
+		296A1F5563D77B4921210032 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83499E824A47302A727DE33B /* MZAppearance.h in Headers */,
-				45CF90DD91ABF14E37B33374 /* NSInvocation+Copy.h in Headers */,
-				177170092C1A27DD082FB53E /* Pods-BrewBuddy-MZAppearance-umbrella.h in Headers */,
+				81F8F509B544811542A4DB2A /* Pods-BrewBuddy-HanekeSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81D8DA9D244795AA8E78C230 /* Headers */ = {
+		44E07C439225FF17A0B26C72 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EA19F250CB496E9FC05556E /* HCSStarRatingView.h in Headers */,
-				1EBE014F6C927D68B11313C5 /* Pods-BrewBuddy-HCSStarRatingView-umbrella.h in Headers */,
+				8C2E8EE67444A44E9F53C051 /* JGMethodSwizzler.h in Headers */,
+				0CF4571FE3F60A7888D32744 /* Pods-BrewBuddy-JGMethodSwizzler-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89D0159746BCF98405CC1F25 /* Headers */ = {
+		519C2881E0C50B64A69FB777 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B2C9113C30BC0A6E9CA67E4 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h in Headers */,
-				705DB7FA373937D3164B370C /* MZFormSheetPresentationController.h in Headers */,
-				A190413CE2D92D217AB2F85E /* MZFormSheetPresentationControllerAnimator.h in Headers */,
-				15BEF471EB5C677A3D47EB4B /* MZFormSheetPresentationControllerSegue.h in Headers */,
-				89D02EE114FAB70E7EE7D528 /* MZTransition.h in Headers */,
-				18DBD0217F323A30868868AC /* Pods-BrewBuddy-MZFormSheetPresentationController-umbrella.h in Headers */,
-				5B10869EB2FBE687E3CD55C5 /* UIViewController+TargetViewController.h in Headers */,
+				E61F06D0C3892B4A0CD6AC11 /* MZAppearance.h in Headers */,
+				7069AFAC5746DFB4011012C6 /* NSInvocation+Copy.h in Headers */,
+				24C970196B4477DDB11FE174 /* Pods-BrewBuddy-MZAppearance-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3ADA2FDA56A74B5B8545781 /* Headers */ = {
+		631C5607141494D4236A9297 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01ADB4FC74D6897606D00FE8 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h in Headers */,
-				40A042D0A20BA5B750E12B25 /* TPKeyboardAvoidingCollectionView.h in Headers */,
-				8E9AB5F4381AB27EB8091176 /* TPKeyboardAvoidingScrollView.h in Headers */,
-				63AA63B65D1DD9119E5786BD /* TPKeyboardAvoidingTableView.h in Headers */,
-				A09FFA17CE1FAB2BCFD7E7CC /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */,
+				AF1B902DFB5ED2E43A6B0306 /* Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h in Headers */,
+				661F73CABB4CB22490915E89 /* TPKeyboardAvoidingCollectionView.h in Headers */,
+				1D3B9BEACA060D1AFE20A46A /* TPKeyboardAvoidingScrollView.h in Headers */,
+				6D856FBDD2D455FD0C37252E /* TPKeyboardAvoidingTableView.h in Headers */,
+				77DA79ED173983A2E648EFE0 /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B476976C2E94E0C31202CAAE /* Headers */ = {
+		656E393BAB668DBDAAD5E6E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ACB8D4D02002BB25E92A79E /* Pods-BrewBuddy-HanekeSwift-umbrella.h in Headers */,
+				315E174CDEA828388A37F36C /* Pods-BrewBuddy-SVProgressHUD-umbrella.h in Headers */,
+				68E9C3966B8C4B6E570A81E8 /* SVIndefiniteAnimatedView.h in Headers */,
+				45147C193FB72D1CF0EA3CAD /* SVProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43BE49662741806A42DC6BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C690F2953BF83AD8B2A63009 /* Pods-BrewBuddy-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		09D11DE8163BF62C3ACDA6C1 /* Pods-BrewBuddy-MZAppearance */ = {
+		1D32F3B92E92C754631F9F24 /* Pods-BrewBuddy-HanekeSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20E1EC6E5975BC46F6D5B5FA /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZAppearance" */;
+			buildConfigurationList = 835B31EE6125866E90CB3755 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HanekeSwift" */;
 			buildPhases = (
-				43F02946791EB438B11E9136 /* Sources */,
-				CE67D5B7989FA9CD1B16A9B7 /* Frameworks */,
-				2FB7D83D7670D53333BE4D45 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-BrewBuddy-MZAppearance";
-			productName = "Pods-BrewBuddy-MZAppearance";
-			productReference = 18B88DDAE5B8611E33257247 /* MZAppearance.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4235E4EAC643562EA1634257 /* Pods-BrewBuddy */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 629261CAA2CCEF361667C5DA /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy" */;
-			buildPhases = (
-				0938A2AA603E1DAEEB3BAA13 /* Sources */,
-				E6D33C2EDE1345D62C6C12BB /* Frameworks */,
-				2E538E08CD2C85B2643B50DF /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CCC00D7E69C9ADD7D9533E68 /* PBXTargetDependency */,
-				767B59B783B2E34EC210450C /* PBXTargetDependency */,
-				92C034343302D6A130D2A2C5 /* PBXTargetDependency */,
-				9697EF3E454FBDA5E382611C /* PBXTargetDependency */,
-				BF49EE651523469E6F036CE1 /* PBXTargetDependency */,
-				B6C16B47A012222AF741FCA2 /* PBXTargetDependency */,
-			);
-			name = "Pods-BrewBuddy";
-			productName = "Pods-BrewBuddy";
-			productReference = FE754ED1EA91220B7FA585BB /* Pods_BrewBuddy.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		918A275178A98B9CE5F3AB6A /* Pods-BrewBuddy-JGMethodSwizzler */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FCD57CBEB637B1905B22712E /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-JGMethodSwizzler" */;
-			buildPhases = (
-				F983A15D186CA0313B73EB2E /* Sources */,
-				3BB9C6E2B2132BC7B76D8599 /* Frameworks */,
-				2442B644A30875FCE0EF076A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-BrewBuddy-JGMethodSwizzler";
-			productName = "Pods-BrewBuddy-JGMethodSwizzler";
-			productReference = B8F72CB8FD9FEFF4D072FF04 /* JGMethodSwizzler.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C139B2430BA3AB1185C999DD /* Pods-BrewBuddy-MZFormSheetPresentationController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4E582DC0FF5EEE7C8F17909 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZFormSheetPresentationController" */;
-			buildPhases = (
-				55F6046F2CC22C46CB980F68 /* Sources */,
-				C471AC6EF0A8112C6FF7240D /* Frameworks */,
-				89D0159746BCF98405CC1F25 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E741AB87E70A7C85A064469E /* PBXTargetDependency */,
-				CB89EB5619A7805862255825 /* PBXTargetDependency */,
-			);
-			name = "Pods-BrewBuddy-MZFormSheetPresentationController";
-			productName = "Pods-BrewBuddy-MZFormSheetPresentationController";
-			productReference = 724A17E6834282252F0ED794 /* MZFormSheetPresentationController.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D258FD919417D63852C980B1 /* Pods-BrewBuddy-TPKeyboardAvoiding */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16128FC1D548FA11FF7B28DE /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-TPKeyboardAvoiding" */;
-			buildPhases = (
-				38D10E44D4D9318E20B4BC9B /* Sources */,
-				5C125BA6C4551E6455A94475 /* Frameworks */,
-				A3ADA2FDA56A74B5B8545781 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-BrewBuddy-TPKeyboardAvoiding";
-			productName = "Pods-BrewBuddy-TPKeyboardAvoiding";
-			productReference = 7100C5FBEE486ADFDFE87A80 /* TPKeyboardAvoiding.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D2E3E8CD37BCAD1413F6AFED /* Pods-BrewBuddy-HanekeSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD573D9FBB3749B0988103DD /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HanekeSwift" */;
-			buildPhases = (
-				942202566CB9689AB6FA05E3 /* Sources */,
-				22F0F29066D86AFDB4C175CF /* Frameworks */,
-				B476976C2E94E0C31202CAAE /* Headers */,
+				E26ABA5C4033154E919B26B6 /* Sources */,
+				697F1372F98939EC48A5CA5A /* Frameworks */,
+				296A1F5563D77B4921210032 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -768,16 +761,109 @@
 			);
 			name = "Pods-BrewBuddy-HanekeSwift";
 			productName = "Pods-BrewBuddy-HanekeSwift";
-			productReference = 3623FF701A283DAEC1A18D07 /* Haneke.framework */;
+			productReference = 7B7355A8740DB6D91731C62C /* Haneke.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EBC8331C03AF5FDCB9038100 /* Pods-BrewBuddy-HCSStarRatingView */ = {
+		33597B9D3A04699B3FFC5F20 /* Pods-BrewBuddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6D063BBF8A9E7AEA355F85F2 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HCSStarRatingView" */;
+			buildConfigurationList = 055C19A087425AB6CD86B7DC /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy" */;
 			buildPhases = (
-				676679A65AAC6E04D90E647C /* Sources */,
-				16996ED1C9C918D87495D2B8 /* Frameworks */,
-				81D8DA9D244795AA8E78C230 /* Headers */,
+				029D83DE1753909AFF79EF26 /* Sources */,
+				B8DE9625CB42D35AD5998952 /* Frameworks */,
+				F43BE49662741806A42DC6BD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F67862021191F3950ED3E5AA /* PBXTargetDependency */,
+				297AEE6959F71AF0EB9C2386 /* PBXTargetDependency */,
+				8AD24A05CC0E1B4801EA8C12 /* PBXTargetDependency */,
+				543FE21D2F13918960B8A1FF /* PBXTargetDependency */,
+				8DD5E81203C3E39C21100B20 /* PBXTargetDependency */,
+				59BA95E5220058F84A12AB0F /* PBXTargetDependency */,
+				FB88437B2A9B1073AB69F7DA /* PBXTargetDependency */,
+			);
+			name = "Pods-BrewBuddy";
+			productName = "Pods-BrewBuddy";
+			productReference = 6EEBB25BAE29842EA21570BD /* Pods_BrewBuddy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3804F13FC341667A417D1068 /* Pods-BrewBuddy-JGMethodSwizzler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44A2E47DFCD4ED8DFB0D14B7 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-JGMethodSwizzler" */;
+			buildPhases = (
+				9A382E7CEF1D7EFF075006FB /* Sources */,
+				83CC90772F6836D83583B14D /* Frameworks */,
+				44E07C439225FF17A0B26C72 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-JGMethodSwizzler";
+			productName = "Pods-BrewBuddy-JGMethodSwizzler";
+			productReference = 93871F949A9B497D37F00FC2 /* JGMethodSwizzler.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41FEA31FECE3E9BADD704D0A /* Pods-BrewBuddy-MZAppearance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E14980686C362C3CD4A7CD6 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZAppearance" */;
+			buildPhases = (
+				000CC73CE2AA2FDE93CEE55F /* Sources */,
+				87545CE500DFD57AD66B1B8B /* Frameworks */,
+				519C2881E0C50B64A69FB777 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-MZAppearance";
+			productName = "Pods-BrewBuddy-MZAppearance";
+			productReference = FBD7257570763D8527F439C0 /* MZAppearance.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4B34D7FD6BEB629E0F459806 /* Pods-BrewBuddy-SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AC7EEA41B8C22C38EFC4FD8 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-SVProgressHUD" */;
+			buildPhases = (
+				A4A4F9C2ECBA667068201B8B /* Sources */,
+				124829B8A73AEAF4BD6DA09F /* Frameworks */,
+				656E393BAB668DBDAAD5E6E0 /* Headers */,
+				6F93ABBC953E394B41962BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-SVProgressHUD";
+			productName = "Pods-BrewBuddy-SVProgressHUD";
+			productReference = 23D3CBF1FA094F149D5F2C77 /* SVProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63854241A2C7C0EB82F8E1E3 /* Pods-BrewBuddy-TPKeyboardAvoiding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3366EC6B640806E4F219529B /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-TPKeyboardAvoiding" */;
+			buildPhases = (
+				02EBADB3CF8C8BCAAFAB9B33 /* Sources */,
+				49411D8DD6C63581D7ADB8A6 /* Frameworks */,
+				631C5607141494D4236A9297 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BrewBuddy-TPKeyboardAvoiding";
+			productName = "Pods-BrewBuddy-TPKeyboardAvoiding";
+			productReference = 7A86F49225A671AA3A55CED8 /* TPKeyboardAvoiding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B931D5DB0444E54C8104D4E /* Pods-BrewBuddy-HCSStarRatingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E67E694CA573C261F4B665C2 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HCSStarRatingView" */;
+			buildPhases = (
+				6D716159FC052F9BEE4619D2 /* Sources */,
+				D6116259C6C43A29657C70C8 /* Frameworks */,
+				1D3B7F219B48115B1FF7BF73 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -785,191 +871,314 @@
 			);
 			name = "Pods-BrewBuddy-HCSStarRatingView";
 			productName = "Pods-BrewBuddy-HCSStarRatingView";
-			productReference = DA4C97898DEE1D4C69DCA7C6 /* HCSStarRatingView.framework */;
+			productReference = 08243F05D020D1F9B8026937 /* HCSStarRatingView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E58E8D57B1D15379AB2BDD3 /* Pods-BrewBuddy-MZFormSheetPresentationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63EECD5A9F22C6245409B1E4 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZFormSheetPresentationController" */;
+			buildPhases = (
+				335392324CDD9F28CF35F577 /* Sources */,
+				8A98FA188FB3FD421700C4F1 /* Frameworks */,
+				10C0B6E9F0E3C2D30A8ED54D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A01BC9D937AA96AE6EB9A74 /* PBXTargetDependency */,
+				DFE630C8B4B13E97D1A416A8 /* PBXTargetDependency */,
+			);
+			name = "Pods-BrewBuddy-MZFormSheetPresentationController";
+			productName = "Pods-BrewBuddy-MZFormSheetPresentationController";
+			productReference = 451989342634E433F9CA7622 /* MZFormSheetPresentationController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8DEB4E4876A8CE32CDFE1C8D /* Project object */ = {
+		98EB9BAFE3254247778EBC7C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
-				TargetAttributes = {
-					EBC8331C03AF5FDCB9038100 = {
-						DevelopmentTeam = N2263DH3H7;
-					};
-				};
 			};
-			buildConfigurationList = 54D7B7AE276B7102C24BD4FC /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = CDF8EB86A293A5D6F6FDD609 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 49A3310D8A4FB9153EB8CD8E;
-			productRefGroup = 954EEE906E51CB353FDBAC85 /* Products */;
+			mainGroup = 10AAFC68E0ECC84E40BFCDFB;
+			productRefGroup = 3CF2436A4CF1CC6257C7A2CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4235E4EAC643562EA1634257 /* Pods-BrewBuddy */,
-				EBC8331C03AF5FDCB9038100 /* Pods-BrewBuddy-HCSStarRatingView */,
-				D2E3E8CD37BCAD1413F6AFED /* Pods-BrewBuddy-HanekeSwift */,
-				918A275178A98B9CE5F3AB6A /* Pods-BrewBuddy-JGMethodSwizzler */,
-				09D11DE8163BF62C3ACDA6C1 /* Pods-BrewBuddy-MZAppearance */,
-				C139B2430BA3AB1185C999DD /* Pods-BrewBuddy-MZFormSheetPresentationController */,
-				D258FD919417D63852C980B1 /* Pods-BrewBuddy-TPKeyboardAvoiding */,
+				33597B9D3A04699B3FFC5F20 /* Pods-BrewBuddy */,
+				8B931D5DB0444E54C8104D4E /* Pods-BrewBuddy-HCSStarRatingView */,
+				1D32F3B92E92C754631F9F24 /* Pods-BrewBuddy-HanekeSwift */,
+				3804F13FC341667A417D1068 /* Pods-BrewBuddy-JGMethodSwizzler */,
+				41FEA31FECE3E9BADD704D0A /* Pods-BrewBuddy-MZAppearance */,
+				8E58E8D57B1D15379AB2BDD3 /* Pods-BrewBuddy-MZFormSheetPresentationController */,
+				4B34D7FD6BEB629E0F459806 /* Pods-BrewBuddy-SVProgressHUD */,
+				63854241A2C7C0EB82F8E1E3 /* Pods-BrewBuddy-TPKeyboardAvoiding */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		6F93ABBC953E394B41962BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FABBE1B228CC675DDE4C0C /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		0938A2AA603E1DAEEB3BAA13 /* Sources */ = {
+		000CC73CE2AA2FDE93CEE55F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D0F21BB60C36E6A5A85BBDC /* Pods-BrewBuddy-dummy.m in Sources */,
+				F4F73DA72AA06E8AEE290948 /* MZAppearance.m in Sources */,
+				4021F8A8431117E32098CFA1 /* NSInvocation+Copy.m in Sources */,
+				D0CFBD61CD5688D9CE37DA6E /* Pods-BrewBuddy-MZAppearance-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38D10E44D4D9318E20B4BC9B /* Sources */ = {
+		029D83DE1753909AFF79EF26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E60B909A2DC01382FC4316 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m in Sources */,
-				D86F9FE13478FCE2E44EEAC4 /* TPKeyboardAvoidingCollectionView.m in Sources */,
-				AC39F74AD5D14D5A652C93DC /* TPKeyboardAvoidingScrollView.m in Sources */,
-				26A3EB6EB963A4771B448D94 /* TPKeyboardAvoidingTableView.m in Sources */,
-				E2E8561ECE1E3E69E9FEB986 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				2BA4A1651E872C2C7DDDC45B /* Pods-BrewBuddy-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43F02946791EB438B11E9136 /* Sources */ = {
+		02EBADB3CF8C8BCAAFAB9B33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C1B24977AE2F6F245C301F1 /* MZAppearance.m in Sources */,
-				D8FAC051662FE715EF61A8B6 /* NSInvocation+Copy.m in Sources */,
-				6099F613EBA828B667D56C5E /* Pods-BrewBuddy-MZAppearance-dummy.m in Sources */,
+				718CE8340F154AFE51311415 /* Pods-BrewBuddy-TPKeyboardAvoiding-dummy.m in Sources */,
+				27534247865A942812578CA9 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				976EAB9A25F30607A078C2FE /* TPKeyboardAvoidingScrollView.m in Sources */,
+				BC4F5007471E8DADE6C52BED /* TPKeyboardAvoidingTableView.m in Sources */,
+				6A8DE48A2529781B93C60713 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55F6046F2CC22C46CB980F68 /* Sources */ = {
+		335392324CDD9F28CF35F577 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991DC0BC500C9C2A448C392F /* MZFormSheetPresentationController.m in Sources */,
-				0A0AE6C0EDC5E85EE2E2BF1A /* MZFormSheetPresentationControllerAnimator.m in Sources */,
-				1CA27E99F3DDAF8C36CAC46B /* MZFormSheetPresentationControllerSegue.m in Sources */,
-				07FC108855A21A920119DD2A /* MZTransition.m in Sources */,
-				AA2A690BF002C6FA42554DC6 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m in Sources */,
-				7DCFA6F68D50CE327F20E838 /* UIViewController+TargetViewController.m in Sources */,
+				03CC11F0366461AB15268656 /* MZFormSheetPresentationController.m in Sources */,
+				5ABB4443595C4454CBDD2060 /* MZFormSheetPresentationControllerAnimator.m in Sources */,
+				C1F75A057669B5AE93C9AB02 /* MZFormSheetPresentationControllerSegue.m in Sources */,
+				5BC5C800713D06B4BE6ABEBB /* MZTransition.m in Sources */,
+				8F28C58E27FD03B6A8DEEC61 /* Pods-BrewBuddy-MZFormSheetPresentationController-dummy.m in Sources */,
+				77C2AC3C77DB3C35DB3A3BDC /* UIViewController+TargetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		676679A65AAC6E04D90E647C /* Sources */ = {
+		6D716159FC052F9BEE4619D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40E0E186DB659449B781BDC5 /* HCSStarRatingView.m in Sources */,
-				DD4D714DA975471D69EB7B17 /* Pods-BrewBuddy-HCSStarRatingView-dummy.m in Sources */,
+				0234967EF2B5701F8B6E9624 /* HCSStarRatingView.m in Sources */,
+				1F98A5A527D97221D0A84DFB /* Pods-BrewBuddy-HCSStarRatingView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		942202566CB9689AB6FA05E3 /* Sources */ = {
+		9A382E7CEF1D7EFF075006FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111085E8274FFA4DF62B316C /* CGSize+Swift.swift in Sources */,
-				9D28AD585CC8C241BE2ACCC1 /* Cache.swift in Sources */,
-				BD3ED5B7065E9070C81757E1 /* CryptoSwiftMD5.swift in Sources */,
-				F10C1D0E9A51F8A197FD7E1B /* Data.swift in Sources */,
-				C12F7BE0BD5E4D0D4900D558 /* DiskCache.swift in Sources */,
-				B58DB54289BB1F8825687CA9 /* DiskFetcher.swift in Sources */,
-				D9892FF4FF4A54A945B9A698 /* Fetch.swift in Sources */,
-				B60EAC9494A231836613337D /* Fetcher.swift in Sources */,
-				08DE7D7942F3847BC1E21357 /* Format.swift in Sources */,
-				F65C7EF77A4C95A0E349D1F4 /* Haneke.swift in Sources */,
-				250F8B935C824E3A395805BF /* Log.swift in Sources */,
-				A069770C9157F8E0EB37DA9A /* NSFileManager+Haneke.swift in Sources */,
-				DC5FB0E816253C692CE15D67 /* NSHTTPURLResponse+Haneke.swift in Sources */,
-				A26884E74BB49AE8631BCDA5 /* NetworkFetcher.swift in Sources */,
-				B31377A674E50A43A4C72E9A /* Pods-BrewBuddy-HanekeSwift-dummy.m in Sources */,
-				4272DCAC8EBFE80FE6BD71EC /* String+Haneke.swift in Sources */,
-				A527E240188A76C56B51CB66 /* UIButton+Haneke.swift in Sources */,
-				07C9019B50FB20257659B6C6 /* UIImage+Haneke.swift in Sources */,
-				29F527585FCF41750A92EC17 /* UIImageView+Haneke.swift in Sources */,
-				01A40493624A9078046F024C /* UIView+Haneke.swift in Sources */,
+				33516CDC600F8B12DE44AB7C /* JGMethodSwizzler.m in Sources */,
+				68EE636320F7E7A0BAEADD5C /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F983A15D186CA0313B73EB2E /* Sources */ = {
+		A4A4F9C2ECBA667068201B8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BD431AD3FC09C4F006DB549 /* JGMethodSwizzler.m in Sources */,
-				122ECAE1396F14C5D84E1E18 /* Pods-BrewBuddy-JGMethodSwizzler-dummy.m in Sources */,
+				A4F98F424FFA2EF464F44A46 /* Pods-BrewBuddy-SVProgressHUD-dummy.m in Sources */,
+				A32E992D1E02E2EED0DB55F3 /* SVIndefiniteAnimatedView.m in Sources */,
+				B70F9CE6569C1C126D493B81 /* SVProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E26ABA5C4033154E919B26B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344E7EA28400951AC63C023 /* CGSize+Swift.swift in Sources */,
+				4589B62A9C374AAA0263CF81 /* Cache.swift in Sources */,
+				724CFF2F5A75DBF24FC40AB9 /* CryptoSwiftMD5.swift in Sources */,
+				86F542541903A046272FB766 /* Data.swift in Sources */,
+				C69F44624183FE53D13A6718 /* DiskCache.swift in Sources */,
+				D609AF0FE3E1166FAC05DDA9 /* DiskFetcher.swift in Sources */,
+				C8EAB96EB36D8F519A9F3CA7 /* Fetch.swift in Sources */,
+				413486DF57656DE80D39B7EA /* Fetcher.swift in Sources */,
+				7867FF7DF7B685C6031714C5 /* Format.swift in Sources */,
+				D4487F693DF7A58BAE7980D8 /* Haneke.swift in Sources */,
+				0839BEBF5AFADEA75A4C8CA9 /* Log.swift in Sources */,
+				FF23040BE72BFEB06EACFF26 /* NSFileManager+Haneke.swift in Sources */,
+				9F7F3EF27D36E78BC0542324 /* NSHTTPURLResponse+Haneke.swift in Sources */,
+				4E7D2EA512B8F775B8968F07 /* NetworkFetcher.swift in Sources */,
+				D3804F7C38EFC9BBC659C10E /* Pods-BrewBuddy-HanekeSwift-dummy.m in Sources */,
+				848524F4E2323669511EAC37 /* String+Haneke.swift in Sources */,
+				7AD02DE8D73E8D7790E52100 /* UIButton+Haneke.swift in Sources */,
+				2D7D2B21FD99B058E65572CC /* UIImage+Haneke.swift in Sources */,
+				9D61EC2AA5D20BE100FE1100 /* UIImageView+Haneke.swift in Sources */,
+				DD02DF1C9F18353B6403BAD4 /* UIView+Haneke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		767B59B783B2E34EC210450C /* PBXTargetDependency */ = {
+		297AEE6959F71AF0EB9C2386 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-BrewBuddy-HanekeSwift";
-			target = D2E3E8CD37BCAD1413F6AFED /* Pods-BrewBuddy-HanekeSwift */;
-			targetProxy = A245119E132DD35380E2468C /* PBXContainerItemProxy */;
+			target = 1D32F3B92E92C754631F9F24 /* Pods-BrewBuddy-HanekeSwift */;
+			targetProxy = A2ABF63ABD9CBDE05C85947D /* PBXContainerItemProxy */;
 		};
-		92C034343302D6A130D2A2C5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-BrewBuddy-JGMethodSwizzler";
-			target = 918A275178A98B9CE5F3AB6A /* Pods-BrewBuddy-JGMethodSwizzler */;
-			targetProxy = 2320C311146E6E646CBBF21D /* PBXContainerItemProxy */;
-		};
-		9697EF3E454FBDA5E382611C /* PBXTargetDependency */ = {
+		543FE21D2F13918960B8A1FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-BrewBuddy-MZAppearance";
-			target = 09D11DE8163BF62C3ACDA6C1 /* Pods-BrewBuddy-MZAppearance */;
-			targetProxy = 8BF0D5F8C249D0141C8FF841 /* PBXContainerItemProxy */;
+			target = 41FEA31FECE3E9BADD704D0A /* Pods-BrewBuddy-MZAppearance */;
+			targetProxy = 6BA2BFF1F4A4F60BF524D112 /* PBXContainerItemProxy */;
 		};
-		B6C16B47A012222AF741FCA2 /* PBXTargetDependency */ = {
+		59BA95E5220058F84A12AB0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-BrewBuddy-TPKeyboardAvoiding";
-			target = D258FD919417D63852C980B1 /* Pods-BrewBuddy-TPKeyboardAvoiding */;
-			targetProxy = 558E5DCB1249DF9E51096BA0 /* PBXContainerItemProxy */;
+			name = "Pods-BrewBuddy-SVProgressHUD";
+			target = 4B34D7FD6BEB629E0F459806 /* Pods-BrewBuddy-SVProgressHUD */;
+			targetProxy = D29593A982EFA50B7228F5D2 /* PBXContainerItemProxy */;
 		};
-		BF49EE651523469E6F036CE1 /* PBXTargetDependency */ = {
+		7A01BC9D937AA96AE6EB9A74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-JGMethodSwizzler";
+			target = 3804F13FC341667A417D1068 /* Pods-BrewBuddy-JGMethodSwizzler */;
+			targetProxy = D58AB5AE56EB63487E198424 /* PBXContainerItemProxy */;
+		};
+		8AD24A05CC0E1B4801EA8C12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BrewBuddy-JGMethodSwizzler";
+			target = 3804F13FC341667A417D1068 /* Pods-BrewBuddy-JGMethodSwizzler */;
+			targetProxy = 9F789C638F07DF63452E1A73 /* PBXContainerItemProxy */;
+		};
+		8DD5E81203C3E39C21100B20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-BrewBuddy-MZFormSheetPresentationController";
-			target = C139B2430BA3AB1185C999DD /* Pods-BrewBuddy-MZFormSheetPresentationController */;
-			targetProxy = 4EA69905308F5777087D2B42 /* PBXContainerItemProxy */;
+			target = 8E58E8D57B1D15379AB2BDD3 /* Pods-BrewBuddy-MZFormSheetPresentationController */;
+			targetProxy = F3F7018CBE9C91152CB3AB58 /* PBXContainerItemProxy */;
 		};
-		CB89EB5619A7805862255825 /* PBXTargetDependency */ = {
+		DFE630C8B4B13E97D1A416A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-BrewBuddy-MZAppearance";
-			target = 09D11DE8163BF62C3ACDA6C1 /* Pods-BrewBuddy-MZAppearance */;
-			targetProxy = 7A3339317A79B7BE02BCA95B /* PBXContainerItemProxy */;
+			target = 41FEA31FECE3E9BADD704D0A /* Pods-BrewBuddy-MZAppearance */;
+			targetProxy = 323F8576D88069BBBAD3E2E4 /* PBXContainerItemProxy */;
 		};
-		CCC00D7E69C9ADD7D9533E68 /* PBXTargetDependency */ = {
+		F67862021191F3950ED3E5AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-BrewBuddy-HCSStarRatingView";
-			target = EBC8331C03AF5FDCB9038100 /* Pods-BrewBuddy-HCSStarRatingView */;
-			targetProxy = 655DBB7FF9FA55E3637376D9 /* PBXContainerItemProxy */;
+			target = 8B931D5DB0444E54C8104D4E /* Pods-BrewBuddy-HCSStarRatingView */;
+			targetProxy = 7A6F875638932AE3CB6D15FA /* PBXContainerItemProxy */;
 		};
-		E741AB87E70A7C85A064469E /* PBXTargetDependency */ = {
+		FB88437B2A9B1073AB69F7DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-BrewBuddy-JGMethodSwizzler";
-			target = 918A275178A98B9CE5F3AB6A /* Pods-BrewBuddy-JGMethodSwizzler */;
-			targetProxy = 5A3A10171038CED3806B0E93 /* PBXContainerItemProxy */;
+			name = "Pods-BrewBuddy-TPKeyboardAvoiding";
+			target = 63854241A2C7C0EB82F8E1E3 /* Pods-BrewBuddy-TPKeyboardAvoiding */;
+			targetProxy = 8B56012346C44ECF7C98E421 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0294FE33E0F63D61DEA59656 /* Debug */ = {
+		033B12F5D9DC390FCD77C347 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1BB0981CB93F1438CC5031F /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */;
+			baseConfigurationReference = F248E4DD31FD279FBADF0056 /* Pods-BrewBuddy-SVProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-SVProgressHUD/Pods-BrewBuddy-SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-SVProgressHUD/Pods-BrewBuddy-SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0C1A0E801B78CEC8763A84A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD09D92FC651F3D114348D34 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HCSStarRatingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0D222B3E61EDE54EE7586B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEDF7BAD12C3256FB4C3C70E /* Pods-BrewBuddy-HanekeSwift-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Pods-BrewBuddy-HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Pods-BrewBuddy-HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0FBCB89E1351DF23BD3A9D97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C2DF4470110DA693BC4C34 /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -994,7 +1203,283 @@
 			};
 			name = Debug;
 		};
-		25660141A5832F30FE918F2A /* Release */ = {
+		1973B31174F60E9D123D60D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E71B423B1BF09AA2A0DDFBA /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MZAppearance;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		24CB5735E434A774BD7556EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD09D92FC651F3D114348D34 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HCSStarRatingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		30212148B146F5DD40B8CC9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEDF7BAD12C3256FB4C3C70E /* Pods-BrewBuddy-HanekeSwift-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Pods-BrewBuddy-HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Pods-BrewBuddy-HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		49132CC46FA79DEB76A9D456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B70305AD17BA35E77F1941 /* Pods-BrewBuddy.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BrewBuddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63C3E6794F699241AF354317 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F248E4DD31FD279FBADF0056 /* Pods-BrewBuddy-SVProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-SVProgressHUD/Pods-BrewBuddy-SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-SVProgressHUD/Pods-BrewBuddy-SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		65D537CCA9EFF879ACCE7ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 469BCBBA65D0DB595F8A62A1 /* Pods-BrewBuddy.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BrewBuddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		66BFD0D073B15067BE065DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB81E1BEE791F85BF541BA79 /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TPKeyboardAvoiding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		714B51C1D17384146FD0C731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67884A29C628CB1A501F9694 /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JGMethodSwizzler;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7279A8888D265BB9A3F86FBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67884A29C628CB1A501F9694 /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JGMethodSwizzler;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		78443A6A16B79629AADFDB8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB81E1BEE791F85BF541BA79 /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TPKeyboardAvoiding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C080198A5AA76110C9009E64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1028,36 +1513,9 @@
 			};
 			name = Release;
 		};
-		52F78BAC780C6654099BFC58 /* Release */ = {
+		C8FF44540A9ACA06BA18D4EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5205587EB53DFFFED14B9E07 /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = JGMethodSwizzler;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		555EE12CAE2249C6498F266A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D603CB339D62EF1392F62C79 /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */;
+			baseConfigurationReference = 3E71B423B1BF09AA2A0DDFBA /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1072,7 +1530,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = MZAppearance;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1080,70 +1538,11 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
-		};
-		56052A713B37E52611A516F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE8899FFCF24DBB836A392E5 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = HCSStarRatingView;
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6E10B09BAAC6F7594487B3C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E7545D5A0C808504310BB36 /* Pods-BrewBuddy.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_BrewBuddy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
 			name = Debug;
 		};
-		784DD80FF08EAC1176947353 /* Release */ = {
+		D1169557CA5985A4AEE22960 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1BB0981CB93F1438CC5031F /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */;
+			baseConfigurationReference = C5C2DF4470110DA693BC4C34 /* Pods-BrewBuddy-MZFormSheetPresentationController-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1168,90 +1567,7 @@
 			};
 			name = Release;
 		};
-		869B2C68159B874DCBA62BDD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90AE1681E990A78EA96B8B10 /* Pods-BrewBuddy.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_BrewBuddy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		993710348AE99979C0775C96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27BC65412FB9520914D4EBEE /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TPKeyboardAvoiding;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9CB08363A5BF348C1517C9AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D603CB339D62EF1392F62C79 /* Pods-BrewBuddy-MZAppearance-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-MZAppearance/Pods-BrewBuddy-MZAppearance.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MZAppearance;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AA7B01835FB5EFA702DC22F8 /* Debug */ = {
+		E203BA629D6E3FBCF525A4CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1290,220 +1606,91 @@
 			};
 			name = Debug;
 		};
-		E1DB59A6BE628CB1772B7C5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1685DEEA67236F73B2A1DBC /* Pods-BrewBuddy-HanekeSwift-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Pods-BrewBuddy-HanekeSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Pods-BrewBuddy-HanekeSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Haneke;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E8138C4E2223806589AE303C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1685DEEA67236F73B2A1DBC /* Pods-BrewBuddy-HanekeSwift-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Pods-BrewBuddy-HanekeSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HanekeSwift/Pods-BrewBuddy-HanekeSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Haneke;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F474743F1CC29EFCFD8BC653 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27BC65412FB9520914D4EBEE /* Pods-BrewBuddy-TPKeyboardAvoiding-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-TPKeyboardAvoiding/Pods-BrewBuddy-TPKeyboardAvoiding.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TPKeyboardAvoiding;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FE0172FCF4EFDE56EFE7CA9E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE8899FFCF24DBB836A392E5 /* Pods-BrewBuddy-HCSStarRatingView-Private.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-HCSStarRatingView/Pods-BrewBuddy-HCSStarRatingView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = HCSStarRatingView;
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FF389AC5B2AF17A239831F9C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5205587EB53DFFFED14B9E07 /* Pods-BrewBuddy-JGMethodSwizzler-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BrewBuddy-JGMethodSwizzler/Pods-BrewBuddy-JGMethodSwizzler.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = JGMethodSwizzler;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16128FC1D548FA11FF7B28DE /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-TPKeyboardAvoiding" */ = {
+		055C19A087425AB6CD86B7DC /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				993710348AE99979C0775C96 /* Debug */,
-				F474743F1CC29EFCFD8BC653 /* Release */,
+				49132CC46FA79DEB76A9D456 /* Debug */,
+				65D537CCA9EFF879ACCE7ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20E1EC6E5975BC46F6D5B5FA /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZAppearance" */ = {
+		3366EC6B640806E4F219529B /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-TPKeyboardAvoiding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9CB08363A5BF348C1517C9AB /* Debug */,
-				555EE12CAE2249C6498F266A /* Release */,
+				66BFD0D073B15067BE065DE1 /* Debug */,
+				78443A6A16B79629AADFDB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54D7B7AE276B7102C24BD4FC /* Build configuration list for PBXProject "Pods" */ = {
+		3AC7EEA41B8C22C38EFC4FD8 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-SVProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA7B01835FB5EFA702DC22F8 /* Debug */,
-				25660141A5832F30FE918F2A /* Release */,
+				033B12F5D9DC390FCD77C347 /* Debug */,
+				63C3E6794F699241AF354317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		629261CAA2CCEF361667C5DA /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy" */ = {
+		44A2E47DFCD4ED8DFB0D14B7 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-JGMethodSwizzler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E10B09BAAC6F7594487B3C9 /* Debug */,
-				869B2C68159B874DCBA62BDD /* Release */,
+				714B51C1D17384146FD0C731 /* Debug */,
+				7279A8888D265BB9A3F86FBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6D063BBF8A9E7AEA355F85F2 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HCSStarRatingView" */ = {
+		5E14980686C362C3CD4A7CD6 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZAppearance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE0172FCF4EFDE56EFE7CA9E /* Debug */,
-				56052A713B37E52611A516F0 /* Release */,
+				C8FF44540A9ACA06BA18D4EE /* Debug */,
+				1973B31174F60E9D123D60D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4E582DC0FF5EEE7C8F17909 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZFormSheetPresentationController" */ = {
+		63EECD5A9F22C6245409B1E4 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-MZFormSheetPresentationController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0294FE33E0F63D61DEA59656 /* Debug */,
-				784DD80FF08EAC1176947353 /* Release */,
+				0FBCB89E1351DF23BD3A9D97 /* Debug */,
+				D1169557CA5985A4AEE22960 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCD57CBEB637B1905B22712E /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-JGMethodSwizzler" */ = {
+		835B31EE6125866E90CB3755 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HanekeSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF389AC5B2AF17A239831F9C /* Debug */,
-				52F78BAC780C6654099BFC58 /* Release */,
+				30212148B146F5DD40B8CC9A /* Debug */,
+				0D222B3E61EDE54EE7586B20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD573D9FBB3749B0988103DD /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HanekeSwift" */ = {
+		CDF8EB86A293A5D6F6FDD609 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E8138C4E2223806589AE303C /* Debug */,
-				E1DB59A6BE628CB1772B7C5A /* Release */,
+				E203BA629D6E3FBCF525A4CB /* Debug */,
+				C080198A5AA76110C9009E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E67E694CA573C261F4B665C2 /* Build configuration list for PBXNativeTarget "Pods-BrewBuddy-HCSStarRatingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C1A0E801B78CEC8763A84A4 /* Debug */,
+				24CB5735E434A774BD7556EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8DEB4E4876A8CE32CDFE1C8D /* Project object */;
+	rootObject = 98EB9BAFE3254247778EBC7C /* Project object */;
 }

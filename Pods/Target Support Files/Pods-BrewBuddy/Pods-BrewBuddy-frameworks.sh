@@ -53,6 +53,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'JGMethodSwizzler.framework'
   install_framework 'MZAppearance.framework'
   install_framework 'MZFormSheetPresentationController.framework'
+  install_framework 'SVProgressHUD.framework'
   install_framework 'TPKeyboardAvoiding.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -61,5 +62,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'JGMethodSwizzler.framework'
   install_framework 'MZAppearance.framework'
   install_framework 'MZFormSheetPresentationController.framework'
+  install_framework 'SVProgressHUD.framework'
   install_framework 'TPKeyboardAvoiding.framework'
 fi
