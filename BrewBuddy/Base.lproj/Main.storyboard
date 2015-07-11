@@ -8,7 +8,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -1073,7 +1073,7 @@
         <scene sceneID="K7W-Om-caH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PxT-nb-j4U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="1zl-kT-OI9"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="1zl-kT-OI9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NzJ-2X-FhA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

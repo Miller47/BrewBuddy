@@ -37,7 +37,11 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             
             let VC = storyBoard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.parentViewController!.presentViewController(VC, animated: true, completion: nil)
+                if let parentView = self.parentViewController?.tabBarController {
+                parentView.presentViewController(VC, animated: true, completion: nil)
+                } else {
+                    self.presentViewController(VC, animated: true, completion: nil)
+                }
             })
             
         } else {

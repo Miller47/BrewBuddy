@@ -38,9 +38,9 @@ class SettingsTableViewController: UITableViewController {
         
         //Show Login
         
-        let VC = storyBoard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
+        let VC = storyBoard.instantiateViewControllerWithIdentifier("TabBar") as! UITabBarController
         self.presentViewController(VC, animated: true, completion: nil)
-    
+        
         
         
     }
