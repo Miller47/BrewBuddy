@@ -36,8 +36,10 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             //Show Login
             
             let VC = storyBoard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.parentViewController!.presentViewController(VC, animated: true, completion: nil)
+            })
             
-            self.presentViewController(VC, animated: true, completion: nil)
         } else {
             //set location manager
             locationManager.delegate = self
@@ -143,6 +145,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        searchBar.text = nil
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -152,6 +155,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             let term =  searchBar.text
             getLatAndLong(term)
             searchBar.resignFirstResponder()
+            searchBar.text = nil
             
         }
     }
