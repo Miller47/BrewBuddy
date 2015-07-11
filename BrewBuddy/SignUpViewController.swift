@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
-            
+            SVProgressHUD.showWithStatus("Signing Up")
             var user = PFUser()
             user.username = username.text .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             user.password = password.text .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
@@ -48,6 +48,7 @@ class SignUpViewController: UIViewController {
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool, error: NSError?) -> Void in
                 if let error = error {
+                    SVProgressHUD.dismiss()
                     let errorString = error.userInfo?["error"] as? NSString
                     // Show the errorString somewhere and let the user try again.
                     let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
@@ -56,6 +57,7 @@ class SignUpViewController: UIViewController {
 
                 } else {
                     // Hooray! Let them use the app now.
+                    SVProgressHUD.dismiss()
                     self.presentingViewController!.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
                 }
             }

@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
             
         } else {
-            
+            SVProgressHUD.showWithStatus("Logging in")
             var user = userName.text .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             var pass = password.text .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             
@@ -40,12 +40,16 @@ class LoginViewController: UIViewController {
                 if user != nil {
                     // Do stuff after successful login.
                     self.dismissViewControllerAnimated(true, completion: nil)
+                    SVProgressHUD.dismiss()
                 } else {
+                    SVProgressHUD.dismiss()
                     // The login failed. Check error to see why.
-                    let errorString = error!.userInfo?["error"] as? NSString
-                    let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
-                    alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
+                    if let error = error {
+                        let errorString = error.userInfo?["error"] as? NSString
+                        let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
                     
                 }
             }
@@ -64,7 +68,23 @@ class LoginViewController: UIViewController {
         let reset = UIAlertAction(title: "Reset", style: .Default) { (action) -> Void in
             if let textField =  passwordRest.textFields?.first as? UITextField {
                 if !(textField.text.isEmpty) {
-                    PFUser.requestPasswordResetForEmailInBackground(textField.text)
+                    SVProgressHUD.showWithStatus("Sending reset instructrions")
+                    PFUser.requestPasswordResetForEmailInBackground(textField.text, block: { (pass: Bool, error: NSError?) -> Void in
+                        if error == nil {
+                            SVProgressHUD.dismiss()
+                        } else {
+                            SVProgressHUD.dismiss()
+                            if let error = error {
+                                let errorString = error.userInfo?["error"] as? NSString
+                                let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                                alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                                self.presentViewController(alert, animated: true, completion:nil)
+                            }
+                            
+                        }
+                        
+                    })
+                    
                 } else {
                     let alert = UIAlertController(title: "Error", message: "Make sure you provide an email", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))

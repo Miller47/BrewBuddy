@@ -70,8 +70,14 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         searchBar.delegate = self
         
         
-        
-        
+    }
+    
+    func showNetworkActivityIndicator(bool: Bool) {
+        if bool {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        } else {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        }
     }
     
     func retriveBreweies(lat: Double, long: Double) {
@@ -87,6 +93,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                     
                     self.tableView.reloadData()
                     SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
                 })
             }
         }
@@ -117,6 +124,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         println("didUpdateLocations:  \(lat), \(long)")
         
         SVProgressHUD.showWithStatus("Retrieving breweries nearby")
+        showNetworkActivityIndicator(true)
         
         retriveBreweies(lat, long: long)
         
@@ -141,6 +149,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                 let long = loc.coordinate.longitude
                 
                 self.retriveBreweies(lat, long: long)
+                SVProgressHUD.showWithStatus("Retrieving breweries near desired location")
             }
         })
         
