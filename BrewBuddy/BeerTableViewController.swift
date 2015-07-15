@@ -177,8 +177,10 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         search.startWithCompletionHandler { (response: MKLocalSearchResponse!, error: NSError!) -> Void in
             if error != nil {
                 println("Error occured in search: \(error.description)")
+                search.cancel()
             } else if response.mapItems.count == 0 {
                 println("No Matches found")
+                search.cancel()
             } else {
                 println("matches found")
                 
@@ -206,7 +208,15 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             getLatAndLong(term)
             suggestionsController.dismissViewControllerAnimated(true, completion: nil)
             searchBar.text = nil
+            results.removeAll()
+            self.sugesstionResults?.tableView.reloadData()
         }
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        results.removeAll()
+        self.sugesstionResults?.tableView.reloadData()
+        println("Canceled: \(results)")
     }
     
     func configureSearch() {
