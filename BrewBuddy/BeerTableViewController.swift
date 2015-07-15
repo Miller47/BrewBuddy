@@ -9,10 +9,11 @@
 import UIKit
 import Haneke
 import CoreLocation
+import MapKit
 import Parse
 
 
-class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
     private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
     var breweries: [Breweries] = []
@@ -20,10 +21,17 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     //Location var/let
     let locationManager = CLLocationManager()
     var locValue: CLLocationCoordinate2D!
+    // UISearchController
+    var suggestionsController = UISearchController()
+    var sugesstionResults: UITableViewController?
+    var results: [AnyObject] = []
+    
     
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    
     
     
     override func viewWillAppear(animated: Bool) {
@@ -38,7 +46,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             let VC = storyBoard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if let parentView = self.parentViewController?.tabBarController {
-                parentView.presentViewController(VC, animated: true, completion: nil)
+                    parentView.presentViewController(VC, animated: true, completion: nil)
                 } else {
                     self.presentViewController(VC, animated: true, completion: nil)
                 }
@@ -67,10 +75,12 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         navigationItem.backBarButtonItem = backItem
         
         configureTableView()
-        searchBar.delegate = self
+        configureSearch()
+        
         
         
     }
+    
     
     func showNetworkActivityIndicator(bool: Bool) {
         if bool {
@@ -158,21 +168,72 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     
     // MARK: - UISearchBar
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        searchBar.text = nil
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        results.removeAll()
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = searchController.searchBar.text
+        
+        let search = MKLocalSearch(request: request)
+        search.startWithCompletionHandler { (response: MKLocalSearchResponse!, error: NSError!) -> Void in
+            if error != nil {
+                println("Error occured in search: \(error.description)")
+            } else if response.mapItems.count == 0 {
+                println("No Matches found")
+            } else {
+                println("matches found")
+                
+                
+                for item in response.mapItems {
+                    println("Name: \(item.name)")
+                    
+                    self.results.append(item.name)
+                    
+                    
+                }
+                self.sugesstionResults?.tableView.reloadData()
+                
+            }
+        }
+        
     }
     
+    
+    
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        if searchBar.text.isEmpty {
-            
-        } else {
+        if !searchBar.text.isEmpty {
             let term =  searchBar.text
             getLatAndLong(term)
-            searchBar.resignFirstResponder()
+            suggestionsController.dismissViewControllerAnimated(true, completion: nil)
             searchBar.text = nil
-            
         }
+    }
+    
+    func configureSearch() {
+        
+        // A table for search results and its controller.
+        let resultsTableView = UITableView(frame: self.tableView.frame)
+        sugesstionResults = UITableViewController()
+        sugesstionResults?.tableView = resultsTableView
+        sugesstionResults?.tableView.dataSource = self
+        sugesstionResults?.tableView.delegate = self
+        sugesstionResults?.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        suggestionsController = UISearchController(searchResultsController: sugesstionResults)
+        suggestionsController.searchResultsUpdater = self
+        suggestionsController.searchBar.autocorrectionType = .Yes
+        suggestionsController.dimsBackgroundDuringPresentation = false
+        suggestionsController.hidesNavigationBarDuringPresentation = false
+        suggestionsController.searchBar.tintColor = UIColor.whiteColor()
+        suggestionsController.searchBar.sizeToFit()
+        suggestionsController.searchBar.delegate = self
+        
+        
+        self.navigationItem.titleView = suggestionsController.searchBar
+        
+        self.definesPresentationContext = true
+        
+        
     }
     
     
@@ -203,33 +264,45 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return breweries.count
+        if tableView == sugesstionResults?.tableView {
+            return results.count
+        } else {
+            return breweries.count
+        }
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! BeerTableViewCell
-        
-        //Configure the cell...
-        let brewery = breweries[indexPath.row]
-        
-        if let name = brewery.name {
-            cell.breweryName.text = name
-        }
-        
-        if let dis = brewery.distance {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        if tableView == sugesstionResults?.tableView {
             
-            cell.distance.text = "\(dis)"
+            cell.textLabel?.text = results[indexPath.row] as? String
+            
         } else {
-            cell.distance.text = "N/A"
-        }
-        if brewery.largeIconURL != nil {
-            if let iconURL = NSURL(string: brewery.largeIconURL!) {
-                cell.breweryImage.hnk_setImageFromURL(iconURL)
-                println(iconURL)
+            
+            let cell = cell as! BeerTableViewCell
+            
+            //Configure the cell...
+            let brewery = breweries[indexPath.row]
+            
+            if let name = brewery.name {
+                cell.breweryName.text = name
             }
-        } else {
-            cell.breweryImage.image = UIImage(named: "brewbuddy")
+            
+            if let dis = brewery.distance {
+                
+                cell.distance.text = "\(dis)"
+            } else {
+                cell.distance.text = "N/A"
+            }
+            if brewery.largeIconURL != nil {
+                if let iconURL = NSURL(string: brewery.largeIconURL!) {
+                    cell.breweryImage.hnk_setImageFromURL(iconURL)
+                    println(iconURL)
+                }
+            } else {
+                cell.breweryImage.image = UIImage(named: "brewbuddy")
+            }
         }
         
         
@@ -248,6 +321,14 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     func configureTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 86
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if tableView == self.sugesstionResults?.tableView {
+            let locationString = results[indexPath.row] as? String
+            suggestionsController.searchBar.text = locationString
+        }
     }
     
     
