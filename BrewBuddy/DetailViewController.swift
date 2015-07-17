@@ -76,17 +76,15 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             })
             activityController.addAction(appleMaps)
             
-            let googleMaps = UIAlertAction(title: "Google Maps", style: .Default, handler: { (action) -> Void in
-                if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
-                    
+            if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+                
+                let googleMaps = UIAlertAction(title: "Google Maps", style: .Default, handler: { (action) -> Void in
                     
                     UIApplication.sharedApplication().openURL(NSURL(string:
                         "comgooglemaps://?q=\(query)")!)
-                } else {
-                    NSLog("Can't use comgooglemaps://");
-                }
-            })
-            activityController.addAction(googleMaps)
+                })
+                activityController.addAction(googleMaps)
+            }
             
             self.presentViewController(activityController, animated: true, completion: nil)
             
@@ -143,16 +141,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    //
-    //    // MARK: - Navigation
-    //
-    //    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    //        // Get the new view controller using segue.destinationViewController.
-    //        // Pass the selected object to the new view controller.
-    //
-    //
-    //    }
+    
     
     
 }
