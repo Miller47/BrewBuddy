@@ -45,7 +45,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
     }
-
+    
     
     @IBAction func call(sender: AnyObject) {
         //Calls number
@@ -63,14 +63,32 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func getDirections() {
         if let loc = loc {
-            if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+            let query = loc.stringByReplacingOccurrencesOfString(" ", withString: "+")
+            let activityController = UIAlertController(title: "Open In", message: "Please choose either Apple maps or Google maps", preferredStyle: .ActionSheet)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
                 
-                let query = loc.stringByReplacingOccurrencesOfString(" ", withString: "+")
-                UIApplication.sharedApplication().openURL(NSURL(string:
-                    "comgooglemaps://?q=\(query)")!)
-            } else {
-                NSLog("Can't use comgooglemaps://");
-            }
+            })
+            activityController.addAction(cancelAction)
+            
+            let appleMaps = UIAlertAction(title: "Apple Maps", style: .Default, handler: { (action) -> Void in
+                
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?q=\(query)")!)
+            })
+            activityController.addAction(appleMaps)
+            
+            let googleMaps = UIAlertAction(title: "Google Maps", style: .Default, handler: { (action) -> Void in
+                if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+                    
+                    
+                    UIApplication.sharedApplication().openURL(NSURL(string:
+                        "comgooglemaps://?q=\(query)")!)
+                } else {
+                    NSLog("Can't use comgooglemaps://");
+                }
+            })
+            activityController.addAction(googleMaps)
+            
+            self.presentViewController(activityController, animated: true, completion: nil)
             
         }
     }
@@ -90,7 +108,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         
     }
-
+    
     
     // MARK: - Table view data source
     
