@@ -33,6 +33,7 @@ class NetworkOperation {
                 switch(httpResponse.statusCode) {
                 case 200:
                     let jsonDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [String: AnyObject]
+                    //println(jsonDictionary)
                     completion(jsonDictionary)
                     
                 default:

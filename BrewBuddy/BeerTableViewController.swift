@@ -13,6 +13,7 @@ import MapKit
 import Parse
 
 
+
 class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
     private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
@@ -25,13 +26,11 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     var suggestionsController = UISearchController()
     var sugesstionResults: UITableViewController?
     var results: [AnyObject] = []
+   
     
     
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
     
     
     override func viewWillAppear(animated: Bool) {
@@ -74,12 +73,13 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             , target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
         
+    
         configureTableView()
         configureSearch()
         
-        
-        
     }
+    
+
     
     
     func showNetworkActivityIndicator(bool: Bool) {
@@ -91,22 +91,23 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     }
     
     func retriveBreweies(lat: Double, long: Double) {
-        let breweryService =  BreweryService(APIKey: APIKey)
-        breweryService.getBreweries(lat, long: long) {
-            (let brew) in
-            if let info = brew {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    //set an array with the vcaules from the api
-                    self.breweries = info.breweries
-                    println("Number of Breweries: \(self.breweries.count)")
-                    
-                    
-                    self.tableView.reloadData()
-                    SVProgressHUD.dismiss()
-                    self.showNetworkActivityIndicator(false)
-                })
+            let breweryService =  BreweryService(APIKey: APIKey)
+            breweryService.getBreweries(lat, long: long) {
+                (let brew) in
+                if let info = brew {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        //set an array with the vcaules from the api
+                        self.breweries = info.breweries
+                        println("Number of Breweries: \(self.breweries.count)")
+                        
+                        
+                        self.tableView.reloadData()
+                        SVProgressHUD.dismiss()
+                        self.showNetworkActivityIndicator(false)
+                    })
+                }
             }
-        }
+        
     }
     
     // MARK: - CLLocationManager
@@ -137,9 +138,6 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         showNetworkActivityIndicator(true)
         
         retriveBreweies(lat, long: long)
-        
-        
-        
         
     }
     

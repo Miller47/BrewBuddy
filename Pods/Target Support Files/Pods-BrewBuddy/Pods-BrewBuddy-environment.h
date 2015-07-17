@@ -36,6 +36,12 @@
 #define COCOAPODS_VERSION_MINOR_MZFormSheetPresentationController 0
 #define COCOAPODS_VERSION_PATCH_MZFormSheetPresentationController 1
 
+// ReachabilitySwift
+#define COCOAPODS_POD_AVAILABLE_ReachabilitySwift
+#define COCOAPODS_VERSION_MAJOR_ReachabilitySwift 1
+#define COCOAPODS_VERSION_MINOR_ReachabilitySwift 1
+#define COCOAPODS_VERSION_PATCH_ReachabilitySwift 0
+
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD
 #define COCOAPODS_VERSION_MAJOR_SVProgressHUD 1

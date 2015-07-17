@@ -61,6 +61,19 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
+    @IBAction func getDirections() {
+        if let loc = loc {
+            if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+                
+                let query = loc.stringByReplacingOccurrencesOfString(" ", withString: "+")
+                UIApplication.sharedApplication().openURL(NSURL(string:
+                    "comgooglemaps://?q=\(query)")!)
+            } else {
+                NSLog("Can't use comgooglemaps://");
+            }
+            
+        }
+    }
     
     @IBAction func postReview(sender: AnyObject) {
         

@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-BrewBuddy-ReachabilitySwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-BrewBuddy-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D32F3B92E92C754631F9F24</key>
+		<key>1B29140914C59BD6AE8BD8DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33597B9D3A04699B3FFC5F20</key>
+		<key>6FEC10DCF74A41E439E31E4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3804F13FC341667A417D1068</key>
+		<key>9CDC80814D949EAD654100D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41FEA31FECE3E9BADD704D0A</key>
+		<key>9E7C3E46C5F54A340C8C0910</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B34D7FD6BEB629E0F459806</key>
+		<key>9F809F8C241A2698E21B32C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63854241A2C7C0EB82F8E1E3</key>
+		<key>A85CC132E999B1878594E77A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B931D5DB0444E54C8104D4E</key>
+		<key>BC6A76D26BEA1B5C8D9B11C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E58E8D57B1D15379AB2BDD3</key>
+		<key>C017D245D43A2756052F31BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE637ED894332226128C2997</key>
 		<dict>
 			<key>primary</key>
 			<true/>

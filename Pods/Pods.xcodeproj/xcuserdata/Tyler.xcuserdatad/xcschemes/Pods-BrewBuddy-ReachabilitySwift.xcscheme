@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC6A76D26BEA1B5C8D9B11C8"
-               BuildableName = "JGMethodSwizzler.framework"
-               BlueprintName = "Pods-BrewBuddy-JGMethodSwizzler"
+               BlueprintIdentifier = "CE637ED894332226128C2997"
+               BuildableName = "ReachabilitySwift.framework"
+               BlueprintName = "Pods-BrewBuddy-ReachabilitySwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

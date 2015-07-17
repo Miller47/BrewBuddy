@@ -9,6 +9,7 @@ pod 'HCSStarRatingView', :git => 'https://github.com/hugocampossousa/HCSStarRati
 pod 'TPKeyboardAvoiding', '~> 1.2.7'
 pod 'HanekeSwift'
 pod 'SVProgressHUD'
+pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.swift'
 
 end
 

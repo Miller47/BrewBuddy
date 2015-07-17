@@ -1,14 +1,14 @@
 //
-//  BrewerySevice.swift
+//  FeaturedBreweriesService.swift
 //  BrewBuddy
 //
-//  Created by Tyler Miller on 7/8/15.
+//  Created by Tyler Miller on 7/15/15.
 //  Copyright (c) 2015 Miller Apps. All rights reserved.
 //
 
 import Foundation
 
-struct BreweryService {
+struct FeaturedBreweriesService {
     
     let breweryDbAPIKey: String
     let breweryDbBaseUrl: NSURL?
@@ -18,9 +18,9 @@ struct BreweryService {
         breweryDbBaseUrl = NSURL(string: "https://api.brewerydb.com/v2/")
     }
     
-    func getBreweries(lat: Double, long: Double, completion: (Brewery? -> Void)) {
+    func getFeatured(completion: (Brewery? -> Void)) {
         
-        if let breweryURL = NSURL(string: "search/geo/point?lat=\(lat)&lng=\(long)&key=\(breweryDbAPIKey)&radius=50&format=json", relativeToURL: breweryDbBaseUrl) {
+        if let breweryURL = NSURL(string: "featured?key=\(breweryDbAPIKey)&format=json", relativeToURL: breweryDbBaseUrl) {
             println(breweryURL.absoluteString)
             
             let networkOperation = NetworkOperation(url: breweryURL)
@@ -29,12 +29,12 @@ struct BreweryService {
                 (let JSON) in
                 let breweries = Brewery(breweyDictionary: JSON)
                 completion(breweries)
-                //println(breweries)
-                }
+                println(breweries)
+            }
         } else {
             println("Coukd not constuct a vaild URL")
         }
     }
     
-  
+    
 }
