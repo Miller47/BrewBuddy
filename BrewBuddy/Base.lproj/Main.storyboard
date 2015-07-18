@@ -995,6 +995,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Xn-H0-g8j">
+                            <rect key="frame" x="0.0" y="287" width="600" height="62"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.1137254902" green="0.56862745100000001" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="logOut" destination="S5c-dz-Sh2" eventType="touchUpInside" id="ZnZ-Ve-VZ4"/>
+                            </connections>
+                        </button>
                         <sections>
                             <tableViewSection headerTitle="User Settings" id="9mC-6d-5KA">
                                 <cells>
@@ -1064,46 +1077,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="pLs-e6-Kgt">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pLs-e6-Kgt" id="P9m-oO-Crx">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently logged in User:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-7V-Yca">
-                                                    <rect key="frame" x="17" y="47" width="425" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="425" id="Wdj-kg-6Bc"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-H0-g8j">
-                                                    <rect key="frame" x="485" y="30" width="82" height="55"/>
-                                                    <color key="backgroundColor" red="0.1137254902" green="0.56862745100000001" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="82" id="YZK-98-x4e"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                    <state key="normal" title="Logout">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="logOut" destination="S5c-dz-Sh2" eventType="touchUpInside" id="ZnZ-Ve-VZ4"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="2Xn-H0-g8j" secondAttribute="trailing" constant="25" id="1xF-aa-tCU"/>
-                                                <constraint firstItem="mkE-7V-Yca" firstAttribute="top" secondItem="P9m-oO-Crx" secondAttribute="topMargin" constant="39" id="7fM-CR-mMJ"/>
-                                                <constraint firstItem="2Xn-H0-g8j" firstAttribute="top" secondItem="P9m-oO-Crx" secondAttribute="topMargin" constant="22" id="Dbs-iX-Ctj"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="mkE-7V-Yca" secondAttribute="bottom" constant="39.5" id="f2F-nU-7dH"/>
-                                                <constraint firstItem="2Xn-H0-g8j" firstAttribute="centerY" secondItem="mkE-7V-Yca" secondAttribute="centerY" id="woo-uv-eGf"/>
-                                                <constraint firstItem="mkE-7V-Yca" firstAttribute="leading" secondItem="P9m-oO-Crx" secondAttribute="leadingMargin" constant="9" id="zlv-ij-TJP"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1113,9 +1086,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8Q0-f7-bIs"/>
-                    <connections>
-                        <outlet property="userLabel" destination="mkE-7V-Yca" id="HyT-oT-GvI"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPf-rK-lts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

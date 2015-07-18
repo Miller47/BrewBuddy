@@ -11,7 +11,6 @@ import Parse
 
 class SettingsTableViewController: UITableViewController {
     
-    @IBOutlet weak var userLabel: UILabel!
     
     var currentUser: PFUser?
     
@@ -23,7 +22,7 @@ class SettingsTableViewController: UITableViewController {
         
         if currentUser != nil {
             if let currentUserName = currentUser?.username {
-                self.userLabel.text = "Logged in as: \(currentUserName)"
+                self.navigationItem.title = "Logged in as: \(currentUserName)"
             }
             
         }
@@ -110,7 +109,7 @@ class SettingsTableViewController: UITableViewController {
                                 SVProgressHUD.dismiss()
                                 self.showNetworkActivityIndicator(false)
                                 if let currentUserName = self.currentUser?.username {
-                                    self.userLabel.text = "Logged in as: \(currentUserName)"
+                                    self.navigationItem.title = "Logged in as: \(currentUserName)"
                                 }
                                 
                             } else {
