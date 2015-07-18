@@ -26,6 +26,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     var websiteURL: String?
     var imageURL: String?
     var breweryId: String?
+    var reviews: [AnyObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,11 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         if websiteURL == nil {
             website.setTitle("No Website Listed", forState: UIControlState.Normal)
         }
+        
+        //register as obsever
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "retriveReviews", name: "refreshReviewData", object: nil)
+        
+        retriveReviews()
         
     }
     
@@ -99,19 +105,46 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    func retriveReviews() {
+        
+        SVProgressHUD.showWithStatus("Retriving Data")
+        showNetworkActivityIndicator(true)
+        
+        var query = PFQuery(className: "Reviews")
+        if let brewId = breweryId {
+            query.whereKey("breweryId", equalTo: brewId)
+            query.orderByDescending("createdAt")
+            query.findObjectsInBackgroundWithBlock({ (results: [AnyObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    if let data = results {
+                        self.reviews = data
+                        self.reviewTableView.reloadData()
+                        SVProgressHUD.dismiss()
+                        self.showNetworkActivityIndicator(false)
+                    } else {
+                        SVProgressHUD.dismiss()
+                        self.showNetworkActivityIndicator(false)
+                        if let error = error {
+                            let errorString = error.userInfo?["error"] as? NSString
+                            let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                            alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                            self.presentViewController(alert, animated: true, completion:nil)
+                        }
+                        
+                    }
+                    
+                }
+            })
+        }
+        
+    }
     
     // MARK: - Table view data source
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
-    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 2
+        return reviews.count
     }
     
     
@@ -119,7 +152,15 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ReviewTableViewCell
         
         //Configure the cell...
-        //cell.breweryName.text = "test"
+        let reviewInfo: PFObject = reviews[indexPath.row] as! PFObject
+        
+        if let userName = reviewInfo.objectForKey("userName") as? String, let ratingVal = reviewInfo.objectForKey("rating") as? CGFloat {
+            
+            cell.userName.text = userName
+            cell.rating.value = ratingVal
+        }
+        
+        
         
         return cell
     }

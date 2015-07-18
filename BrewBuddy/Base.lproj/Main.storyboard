@@ -287,6 +287,10 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="rating" destination="FKp-Qn-6g0" id="f7M-OV-amU"/>
+                                            <outlet property="userName" destination="TY3-kK-SNh" id="B33-hN-jE3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

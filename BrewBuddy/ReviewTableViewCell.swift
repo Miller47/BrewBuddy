@@ -10,6 +10,9 @@ import UIKit
 
 class ReviewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var rating: HCSStarRatingView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

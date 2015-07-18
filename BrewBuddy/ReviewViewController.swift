@@ -15,6 +15,7 @@ class ReviewViewController: UIViewController {
     
     var id: String?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +45,8 @@ class ReviewViewController: UIViewController {
                     
                     //dimiss review 
                     self.dismissViewControllerAnimated(true, completion: nil)
+                    
+                    NSNotificationCenter.defaultCenter().postNotificationName("refreshReviewData", object: nil)
 
                     
                 } else {
