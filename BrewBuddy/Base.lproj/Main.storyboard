@@ -32,41 +32,6 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Favorites-->
-        <scene sceneID="ql4-kM-s3A">
-            <objects>
-                <viewController id="5TD-59-vpC" customClass="ContainerViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q0q-h4-XoD"/>
-                        <viewControllerLayoutGuide type="bottom" id="B4h-SL-8HZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cD5-kq-ezd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-vi-e0I">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
-                                <connections>
-                                    <segue destination="10f-2S-EJC" kind="embed" id="jn4-Wp-NSL"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="5XM-vi-e0I" secondAttribute="bottom" id="ArR-3u-gcy"/>
-                            <constraint firstAttribute="trailing" secondItem="5XM-vi-e0I" secondAttribute="trailing" id="BNE-jT-JD5"/>
-                            <constraint firstItem="5XM-vi-e0I" firstAttribute="leading" secondItem="cD5-kq-ezd" secondAttribute="leading" id="suT-U8-c9I"/>
-                            <constraint firstItem="5XM-vi-e0I" firstAttribute="top" secondItem="cD5-kq-ezd" secondAttribute="top" id="xQr-YH-TV9"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Favorites" id="EWQ-8H-IQp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="seS-gX-hqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="740" y="790"/>
-        </scene>
         <!--Home-->
         <scene sceneID="NPe-26-iAB">
             <objects>
@@ -400,7 +365,14 @@
                             <constraint firstItem="KuS-85-R2T" firstAttribute="top" secondItem="7vM-iw-qzD" secondAttribute="bottom" constant="129" id="ytD-3I-diA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Brewery Details" id="sdY-P3-FsU"/>
+                    <navigationItem key="navigationItem" title="Brewery Details" id="sdY-P3-FsU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mY1-to-mzO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addToFavorites:" destination="IHX-Da-us5" id="HjR-Yd-VQW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="breweryImage" destination="5X4-lp-Ih6" id="6qM-yw-F6L"/>
                         <outlet property="location" destination="7vM-iw-qzD" id="B17-kZ-y3h"/>
@@ -971,7 +943,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5TD-59-vpC" kind="relationship" relationship="rootViewController" id="cI4-1E-5ro"/>
+                        <segue destination="11O-J5-n3h" kind="relationship" relationship="rootViewController" id="JtR-om-hWL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFu-kO-UYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1227,6 +1199,111 @@
             </objects>
             <point key="canvasLocation" x="761" y="1511"/>
         </scene>
+        <!--Must Try View Controller-->
+        <scene sceneID="I4C-Xq-gtp">
+            <objects>
+                <viewController storyboardIdentifier="Favorites" useStoryboardIdentifierAsRestorationIdentifier="YES" id="11O-J5-n3h" customClass="MustTryViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="25b-rA-Loc"/>
+                        <viewControllerLayoutGuide type="bottom" id="c6o-dV-o6n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cnW-ck-zH7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foam" translatesAutoresizingMaskIntoConstraints="NO" id="XQy-8t-6s9">
+                                <rect key="frame" x="0.0" y="392" width="600" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="i9l-9i-gOL"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="106" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FsM-z2-5T8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="106" id="qa3-TA-4sk" customClass="BeerTableViewCell" customModule="BrewBuddy" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qa3-TA-4sk" id="Sqg-Dv-Eqk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="brewbuddy" translatesAutoresizingMaskIntoConstraints="NO" id="67Q-s4-cbA">
+                                                    <rect key="frame" x="9" y="8" width="121" height="90"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="121" id="BCH-V7-nid"/>
+                                                        <constraint firstAttribute="height" constant="90" id="NvR-rF-2Oa"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa7-St-9AS">
+                                                    <rect key="frame" x="138" y="0.0" width="252" height="63"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="252" id="Nmu-Ff-I3d"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-8a-5yC">
+                                                    <rect key="frame" x="138" y="57" width="43.5" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="67Q-s4-cbA" firstAttribute="leading" secondItem="Sqg-Dv-Eqk" secondAttribute="leadingMargin" constant="1" id="WAE-gq-DRp"/>
+                                                <constraint firstItem="67Q-s4-cbA" firstAttribute="top" secondItem="Sqg-Dv-Eqk" secondAttribute="topMargin" id="cRX-BJ-d5x"/>
+                                                <constraint firstItem="Xa7-St-9AS" firstAttribute="leading" secondItem="Sqg-Dv-Eqk" secondAttribute="leadingMargin" constant="130" id="eJi-cc-k0A"/>
+                                                <constraint firstItem="4OY-8a-5yC" firstAttribute="bottom" secondItem="Sqg-Dv-Eqk" secondAttribute="bottomMargin" id="ePa-OG-9DS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="67Q-s4-cbA" secondAttribute="bottom" id="nrW-4g-HCb"/>
+                                                <constraint firstItem="4OY-8a-5yC" firstAttribute="leading" secondItem="Sqg-Dv-Eqk" secondAttribute="leadingMargin" constant="130" id="uLl-HP-9dm"/>
+                                                <constraint firstItem="4OY-8a-5yC" firstAttribute="top" secondItem="Sqg-Dv-Eqk" secondAttribute="topMargin" constant="49" id="uxq-fM-Z4j"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Xa7-St-9AS" secondAttribute="bottom" constant="35" id="ySm-fI-QN4"/>
+                                                <constraint firstItem="Xa7-St-9AS" firstAttribute="top" secondItem="Sqg-Dv-Eqk" secondAttribute="topMargin" constant="-8" id="zji-OS-x4n"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="breweryImage" destination="67Q-s4-cbA" id="rUL-EX-AXo"/>
+                                            <outlet property="breweryName" destination="Xa7-St-9AS" id="R6n-UZ-I75"/>
+                                            <outlet property="distance" destination="4OY-8a-5yC" id="9ap-Qe-IYB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="11O-J5-n3h" id="nYu-j9-GYe"/>
+                                    <outlet property="delegate" destination="11O-J5-n3h" id="VF7-jx-cSe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.89411764709999997" blue="0.8862745098" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="FsM-z2-5T8" firstAttribute="bottom" secondItem="c6o-dV-o6n" secondAttribute="top" id="5Eo-T9-TfI"/>
+                            <constraint firstItem="FsM-z2-5T8" firstAttribute="top" secondItem="25b-rA-Loc" secondAttribute="bottom" id="Z4l-br-DIL"/>
+                            <constraint firstItem="FsM-z2-5T8" firstAttribute="trailing" secondItem="XQy-8t-6s9" secondAttribute="trailing" id="caV-fx-eNi"/>
+                            <constraint firstItem="XQy-8t-6s9" firstAttribute="bottom" secondItem="c6o-dV-o6n" secondAttribute="top" id="dLG-40-stz"/>
+                            <constraint firstItem="FsM-z2-5T8" firstAttribute="leading" secondItem="XQy-8t-6s9" secondAttribute="leading" id="gWx-YS-ja8"/>
+                            <constraint firstItem="XQy-8t-6s9" firstAttribute="top" secondItem="25b-rA-Loc" secondAttribute="bottom" constant="328" id="iDY-9D-4Ki"/>
+                            <constraint firstItem="XQy-8t-6s9" firstAttribute="leading" secondItem="cnW-ck-zH7" secondAttribute="leading" id="sOM-Eo-IDe"/>
+                            <constraint firstAttribute="trailing" secondItem="XQy-8t-6s9" secondAttribute="trailing" id="xg2-uB-pYS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iDY-9D-4Ki"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="iU1-e4-via"/>
+                    <connections>
+                        <outlet property="tableView" destination="FsM-z2-5T8" id="dCP-KN-lnu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpe-DN-e21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="820"/>
+        </scene>
     </scenes>
     <resources>
         <image name="banner" width="320" height="207"/>
@@ -1240,7 +1317,6 @@
         <image name="star" width="25" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8DV-p6-lbe"/>
         <segue reference="NZq-Bh-oyF"/>
     </inferredMetricsTieBreakers>
 </document>

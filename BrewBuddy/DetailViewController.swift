@@ -105,6 +105,45 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    @IBAction func addToFavorites(sender: AnyObject) {
+        println("Fav")
+        SVProgressHUD.showWithStatus("Saving as Favorite")
+        showNetworkActivityIndicator(true)
+        
+        if let id = breweryId, let name = nameText, let icon = imageURL, let location = loc {
+        
+            var fav = PFObject(className: "Favorites")
+            fav["breweryId"] = id
+            fav["breweryName"] = name
+            fav["icon"] = icon
+            fav["loc"] = location
+            fav.ACL = PFACL(user: PFUser.currentUser()!)
+            fav.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+                if success {
+                    
+                    SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
+                    
+                    //dimiss review
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                    
+                    
+                } else {
+                    SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
+                    if let error = error {
+                        let errorString = error.userInfo?["error"] as? NSString
+                        let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion:nil)
+                    }
+                    
+                }
+            })
+        }
+
+    }
+    
     func retriveReviews() {
         
         SVProgressHUD.showWithStatus("Retriving Data")
@@ -156,7 +195,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         if let userName = reviewInfo.objectForKey("userName") as? String, let ratingVal = reviewInfo.objectForKey("rating") as? CGFloat {
             
-            cell.userName.text = userName
+            cell.userName.text = userName 
             cell.rating.value = ratingVal
         }
         

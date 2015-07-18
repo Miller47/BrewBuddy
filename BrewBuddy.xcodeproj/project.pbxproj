@@ -25,6 +25,7 @@
 		2FC6F1151B4DE47200A138EB /* Breweries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC6F1141B4DE47200A138EB /* Breweries.swift */; };
 		2FC6F1171B4DF18700A138EB /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC6F1161B4DF18700A138EB /* NetworkOperation.swift */; };
 		2FDE98721B5A0DE000F15DB5 /* ActivityIndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE98711B5A0DE000F15DB5 /* ActivityIndicatorExtension.swift */; };
+		2FDE98741B5A538F00F15DB5 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE98731B5A538F00F15DB5 /* FavoritesViewController.swift */; };
 		2FE942661B5708E5001347F2 /* FeaturedBreweries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE942651B5708E5001347F2 /* FeaturedBreweries.swift */; };
 		2FECE9B71B3C6BD200DC82E1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECE9B51B3C6BD200DC82E1 /* Bolts.framework */; };
 		2FECE9B81B3C6BD200DC82E1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECE9B61B3C6BD200DC82E1 /* Parse.framework */; };
@@ -81,6 +82,7 @@
 		2FC6F1141B4DE47200A138EB /* Breweries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breweries.swift; sourceTree = "<group>"; };
 		2FC6F1161B4DF18700A138EB /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		2FDE98711B5A0DE000F15DB5 /* ActivityIndicatorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorExtension.swift; sourceTree = "<group>"; };
+		2FDE98731B5A538F00F15DB5 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		2FE942651B5708E5001347F2 /* FeaturedBreweries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedBreweries.swift; sourceTree = "<group>"; };
 		2FECE9B51B3C6BD200DC82E1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2FECE9B61B3C6BD200DC82E1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				2FECE9D31B3C706A00DC82E1 /* ReviewViewController.swift */,
 				2F8B3C2B1B570FAA00734450 /* MustTryViewController.swift */,
 				2F8B3C2F1B5736DA00734450 /* AddBreweryViewController.swift */,
+				2FDE98731B5A538F00F15DB5 /* FavoritesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				2F1E573B1B50AA7D0078F673 /* SettingsTableViewController.swift in Sources */,
 				2FECE9D41B3C706A00DC82E1 /* ReviewViewController.swift in Sources */,
 				2F8B3C301B5736DA00734450 /* AddBreweryViewController.swift in Sources */,
+				2FDE98741B5A538F00F15DB5 /* FavoritesViewController.swift in Sources */,
 				2FAB59D91B2C2A35009A1A0D /* BeerTableViewController.swift in Sources */,
 				2F8B3C2E1B5714C900734450 /* FeaturedBreweriesService.swift in Sources */,
 				2F953E6E1B3CBC1E00B0152D /* ReviewTableViewCell.swift in Sources */,
