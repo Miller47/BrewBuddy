@@ -33,6 +33,11 @@ class SettingsTableViewController: UITableViewController {
     
     @IBAction func logOut() {
         
+      logOutCurrentuser()
+        
+    }
+    
+    func logOutCurrentuser() {
         PFUser.logOutInBackground()
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -40,9 +45,6 @@ class SettingsTableViewController: UITableViewController {
         
         let VC = storyBoard.instantiateViewControllerWithIdentifier("TabBar") as! UITabBarController
         self.presentViewController(VC, animated: true, completion: nil)
-        
-        
-        
     }
     
     
@@ -54,7 +56,7 @@ class SettingsTableViewController: UITableViewController {
                 
             })
             changeEmail.addAction(cancelAction)
-            let inputAction =  UIAlertAction(title: "e-mail", style: .Default, handler: { (action) -> Void in
+            let inputAction =  UIAlertAction(title: "Done", style: .Default, handler: { (action) -> Void in
                 if let inputField = changeEmail.textFields?.first as? UITextField {
                     if !(inputField.text.isEmpty) {
                         SVProgressHUD.showWithStatus("Changing e-mail")
@@ -83,10 +85,6 @@ class SettingsTableViewController: UITableViewController {
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
                     
-                } else {
-                    let alert = UIAlertController(title: "Error", message: "Make sure you provide an email", preferredStyle: .Alert)
-                    alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
                 }
             })
             changeEmail.addAction(inputAction)
@@ -94,6 +92,99 @@ class SettingsTableViewController: UITableViewController {
                 textField.textColor = UIColor(red: 0.325, green: 0.792, blue: 0.714, alpha: 1)
             }
             self.presentViewController(changeEmail, animated: true, completion: nil)
+            
+        case 1:
+            let changeUsername = UIAlertController(title: "Change Username", message: "Enter your desired username", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
+                
+            })
+            changeUsername.addAction(cancelAction)
+            let inputAction =  UIAlertAction(title: "Done", style: .Default, handler: { (action) -> Void in
+                if let inputField = changeUsername.textFields?.first as? UITextField {
+                    if !(inputField.text.isEmpty) {
+                        SVProgressHUD.showWithStatus("Changing username")
+                        self.showNetworkActivityIndicator(true)
+                        self.currentUser?.username = inputField.text
+                        self.currentUser?.saveInBackgroundWithBlock({ (pass: Bool, error: NSError?) -> Void in
+                            if error == nil {
+                                SVProgressHUD.dismiss()
+                                self.showNetworkActivityIndicator(false)
+                                if let currentUserName = self.currentUser?.username {
+                                    self.userLabel.text = "Logged in as: \(currentUserName)"
+                                }
+                                
+                            } else {
+                                SVProgressHUD.dismiss()
+                                self.showNetworkActivityIndicator(false)
+                                if let error = error {
+                                    let errorString = error.userInfo?["error"] as? NSString
+                                    let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                                    alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                                    self.presentViewController(alert, animated: true, completion:nil)
+                                }
+                                
+                                
+                            }
+                        })
+                    } else {
+                        let alert = UIAlertController(title: "Error", message: "Make sure you provide an username", preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+                    
+                }
+            })
+            changeUsername.addAction(inputAction)
+            changeUsername.addTextFieldWithConfigurationHandler { (textField) -> Void in
+                textField.textColor = UIColor(red: 0.325, green: 0.792, blue: 0.714, alpha: 1)
+            }
+            self.presentViewController(changeUsername, animated: true, completion: nil)
+            
+        case 2:
+            let changePassword = UIAlertController(title: "Change password", message: "Enter your desired password. Please note changing your password will require you to login once more.", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
+                
+            })
+            changePassword.addAction(cancelAction)
+            let inputAction =  UIAlertAction(title: "Done", style: .Default, handler: { (action) -> Void in
+                if let inputField = changePassword.textFields?.first as? UITextField {
+                    if !(inputField.text.isEmpty) {
+                        SVProgressHUD.showWithStatus("Changing password")
+                        self.showNetworkActivityIndicator(true)
+                        self.currentUser?.password = inputField.text
+                        self.currentUser?.saveInBackgroundWithBlock({ (pass: Bool, error: NSError?) -> Void in
+                            if error == nil {
+                                SVProgressHUD.dismiss()
+                                self.showNetworkActivityIndicator(false)
+                                self.logOutCurrentuser()
+                            } else {
+                                SVProgressHUD.dismiss()
+                                self.showNetworkActivityIndicator(false)
+                                if let error = error {
+                                    let errorString = error.userInfo?["error"] as? NSString
+                                    let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                                    alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                                    self.presentViewController(alert, animated: true, completion:nil)
+                                }
+                                
+                                
+                            }
+                        })
+                    } else {
+                        let alert = UIAlertController(title: "Error", message: "Make sure you provide an password", preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+                    
+                }
+            })
+            changePassword.addAction(inputAction)
+            changePassword.addTextFieldWithConfigurationHandler { (textField) -> Void in
+                textField.textColor = UIColor(red: 0.325, green: 0.792, blue: 0.714, alpha: 1)
+                textField.secureTextEntry = true
+            }
+            self.presentViewController(changePassword, animated: true, completion: nil)
+            
             
         default:
             println("Noting vaild selected")
