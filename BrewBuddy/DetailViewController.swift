@@ -25,6 +25,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     var loc: String?
     var websiteURL: String?
     var imageURL: String?
+    var breweryId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,17 +94,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func postReview(sender: AnyObject) {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let VC = storyBoard.instantiateViewControllerWithIdentifier("ReviewViewController") as! UIViewController
-        let formSheetController = MZFormSheetPresentationController(contentViewController: VC)
-        formSheetController.shouldDismissOnBackgroundViewTap = true
-        formSheetController.shouldApplyBackgroundBlurEffect = true
-        formSheetController.shouldCenterVertically = true
-        formSheetController.contentViewSize = CGSizeMake(250, 250)
         
-        self.presentViewController(formSheetController, animated: true, completion: nil)
-        
-        
+        self.performSegueWithIdentifier("showReview", sender: nil)
         
     }
     
@@ -141,7 +133,26 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showReview" {
+            
+            if let VC: ReviewViewController = segue.destinationViewController as? ReviewViewController {
+                
+                let presentsationSegue = segue as! MZFormSheetPresentationControllerSegue
+                presentsationSegue.formSheetPresentationController.shouldDismissOnBackgroundViewTap = true
+                
+                presentsationSegue.formSheetPresentationController.shouldApplyBackgroundBlurEffect = true
+                presentsationSegue.formSheetPresentationController.shouldCenterVertically = true
+                presentsationSegue.formSheetPresentationController.contentViewSize = CGSizeMake(250, 250)
+                
+                //pass data
+                if let brewId = breweryId {
+                    VC.id = brewId
+                }
+            }
+            
+        }
+    }
     
     
 }

@@ -368,6 +368,9 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                     } else {
                         VC.imageURL = nil
                     }
+                    if let id = breweries[row].breweryId {
+                        VC.breweryId = id
+                    }
                     println("row \(row) was selected")
                     // println("value \(berweries[row])")
                 }

@@ -404,6 +404,7 @@
                         <outlet property="phone" destination="rQD-F0-RmN" id="YYN-40-ajj"/>
                         <outlet property="reviewTableView" destination="KuS-85-R2T" id="hJE-Vv-cSV"/>
                         <outlet property="website" destination="GIG-H9-eqz" id="qjW-76-gMZ"/>
+                        <segue destination="sp4-tK-wlH" kind="custom" identifier="showReview" customClass="MZFormSheetPresentationControllerSegue" id="Lhx-Pk-5wq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBe-4s-e6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -600,6 +601,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="postReview" destination="sp4-tK-wlH" eventType="touchUpInside" id="Q62-rx-L24"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -617,6 +621,9 @@
                             <constraint firstAttribute="centerY" secondItem="gX9-dK-zXP" secondAttribute="centerY" constant="-99" id="xYZ-kC-YrI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ratingStars" destination="ZZt-AJ-7zn" id="OvD-zJ-NOK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efh-5p-7EJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
