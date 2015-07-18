@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPass(sender: AnyObject) {
         
-        let passwordRest = UIAlertController(title: "Reset Password", message: "Plaese prodeive your email, in order to reset your password.", preferredStyle: .Alert)
+        let passwordRest = UIAlertController(title: "Reset Password", message: "Plaese provide your email, in order to reset your password.", preferredStyle: .Alert)
         let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
             
         }

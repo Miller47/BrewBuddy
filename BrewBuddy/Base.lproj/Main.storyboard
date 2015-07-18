@@ -998,25 +998,91 @@
                         <sections>
                             <tableViewSection headerTitle="User Settings" id="9mC-6d-5KA">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="r9D-S7-dhk">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="r9D-S7-dhk">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r9D-S7-dhk" id="3Cm-FP-nmB">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently logged in User:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFk-96-Axg">
-                                                    <rect key="frame" x="17" y="47" width="425" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change e-mail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFk-96-Axg">
+                                                    <rect key="frame" x="21" y="23" width="132" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="425" id="VZD-df-GAi"/>
+                                                        <constraint firstAttribute="width" constant="132" id="joG-Wc-r5w"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O2-fP-M2K">
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lFk-96-Axg" firstAttribute="centerY" secondItem="3Cm-FP-nmB" secondAttribute="centerY" id="Mny-s4-wsb"/>
+                                                <constraint firstItem="lFk-96-Axg" firstAttribute="leading" secondItem="3Cm-FP-nmB" secondAttribute="leadingMargin" constant="13" id="VVk-rH-F5j"/>
+                                                <constraint firstItem="lFk-96-Axg" firstAttribute="top" secondItem="3Cm-FP-nmB" secondAttribute="topMargin" constant="15" id="wHy-Pd-X2q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="Mcb-to-nt7">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mcb-to-nt7" id="KEP-uE-gf2">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="67" translatesAutoresizingMaskIntoConstraints="NO" id="r5e-2O-Tbt">
+                                                    <rect key="frame" x="18" y="23" width="144" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="144" id="53v-XB-bI1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r5e-2O-Tbt" firstAttribute="leading" secondItem="KEP-uE-gf2" secondAttribute="leadingMargin" constant="10" id="2xo-YL-hdc"/>
+                                                <constraint firstItem="r5e-2O-Tbt" firstAttribute="top" secondItem="KEP-uE-gf2" secondAttribute="topMargin" constant="15" id="4Wf-YJ-HDt"/>
+                                                <constraint firstItem="r5e-2O-Tbt" firstAttribute="centerY" secondItem="KEP-uE-gf2" secondAttribute="centerY" id="fHY-iT-0gA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="tFe-AS-ztK">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tFe-AS-ztK" id="b7X-4r-zzD">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv9-4j-wZO">
+                                                    <rect key="frame" x="18" y="23" width="140" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="Uya-iu-1ru"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mv9-4j-wZO" firstAttribute="top" secondItem="b7X-4r-zzD" secondAttribute="topMargin" constant="15" id="OUj-AP-907"/>
+                                                <constraint firstItem="mv9-4j-wZO" firstAttribute="centerY" secondItem="b7X-4r-zzD" secondAttribute="centerY" id="vLa-KF-DpL"/>
+                                                <constraint firstItem="mv9-4j-wZO" firstAttribute="leading" secondItem="b7X-4r-zzD" secondAttribute="leadingMargin" constant="10" id="vVp-1j-PGN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="pLs-e6-Kgt">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pLs-e6-Kgt" id="P9m-oO-Crx">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently logged in User:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-7V-Yca">
+                                                    <rect key="frame" x="17" y="47" width="425" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="425" id="Wdj-kg-6Bc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-H0-g8j">
                                                     <rect key="frame" x="485" y="30" width="82" height="55"/>
                                                     <color key="backgroundColor" red="0.1137254902" green="0.56862745100000001" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="82" id="jDy-if-mHy"/>
+                                                        <constraint firstAttribute="width" constant="82" id="YZK-98-x4e"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <state key="normal" title="Logout">
@@ -1024,17 +1090,17 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="logOut" destination="S5c-dz-Sh2" eventType="touchUpInside" id="9M6-uR-E91"/>
+                                                        <action selector="logOut" destination="S5c-dz-Sh2" eventType="touchUpInside" id="ZnZ-Ve-VZ4"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9O2-fP-M2K" firstAttribute="top" secondItem="3Cm-FP-nmB" secondAttribute="topMargin" constant="22" id="OXe-8r-fma"/>
-                                                <constraint firstItem="lFk-96-Axg" firstAttribute="leading" secondItem="3Cm-FP-nmB" secondAttribute="leadingMargin" constant="9" id="bPg-hI-Ia5"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="lFk-96-Axg" secondAttribute="bottom" constant="39.5" id="fNz-Xt-Ohf"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="9O2-fP-M2K" secondAttribute="trailing" constant="25" id="mSe-Oc-8YD"/>
-                                                <constraint firstItem="lFk-96-Axg" firstAttribute="top" secondItem="3Cm-FP-nmB" secondAttribute="topMargin" constant="39" id="ptm-F9-6vw"/>
-                                                <constraint firstItem="9O2-fP-M2K" firstAttribute="centerY" secondItem="lFk-96-Axg" secondAttribute="centerY" id="qXX-rU-m5e"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2Xn-H0-g8j" secondAttribute="trailing" constant="25" id="1xF-aa-tCU"/>
+                                                <constraint firstItem="mkE-7V-Yca" firstAttribute="top" secondItem="P9m-oO-Crx" secondAttribute="topMargin" constant="39" id="7fM-CR-mMJ"/>
+                                                <constraint firstItem="2Xn-H0-g8j" firstAttribute="top" secondItem="P9m-oO-Crx" secondAttribute="topMargin" constant="22" id="Dbs-iX-Ctj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mkE-7V-Yca" secondAttribute="bottom" constant="39.5" id="f2F-nU-7dH"/>
+                                                <constraint firstItem="2Xn-H0-g8j" firstAttribute="centerY" secondItem="mkE-7V-Yca" secondAttribute="centerY" id="woo-uv-eGf"/>
+                                                <constraint firstItem="mkE-7V-Yca" firstAttribute="leading" secondItem="P9m-oO-Crx" secondAttribute="leadingMargin" constant="9" id="zlv-ij-TJP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1048,7 +1114,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="8Q0-f7-bIs"/>
                     <connections>
-                        <outlet property="userLabel" destination="lFk-96-Axg" id="wfX-nj-zDh"/>
+                        <outlet property="userLabel" destination="mkE-7V-Yca" id="HyT-oT-GvI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPf-rK-lts" userLabel="First Responder" sceneMemberID="firstResponder"/>
