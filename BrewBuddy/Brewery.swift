@@ -12,6 +12,7 @@ struct Brewery {
     
     var breweries: [Breweries] = []
     var featured: FeaturedBreweries?
+    var brewery: BrweryById?
     
     init(breweyDictionary: [String: AnyObject]?) {
         if let breweryArray = breweyDictionary?["data"] as? [[String: AnyObject]] {
@@ -29,6 +30,11 @@ struct Brewery {
             featured = FeaturedBreweries(brewDictionary: dataDict, brewArray: locationArray)
             
             
+        }
+        
+        if let breweryByIdDict = breweyDictionary?["data"] as? [String: AnyObject], let locArray = breweryByIdDict["locations"] as? [[String: AnyObject]] {
+            
+            brewery = BrweryById(brewDictionary: breweryByIdDict, brewArray: locArray)
         }
     }
 }

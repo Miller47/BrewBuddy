@@ -108,10 +108,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyM-rJ-CBb">
-                                                    <rect key="frame" x="138" y="21" width="252" height="63"/>
+                                                    <rect key="frame" x="138" y="21" width="210" height="63"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="252" id="ULR-UB-hvq"/>
+                                                        <constraint firstAttribute="width" constant="210" id="ULR-UB-hvq"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -374,6 +374,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addFav" destination="mY1-to-mzO" id="C7a-Be-XHP"/>
                         <outlet property="breweryImage" destination="5X4-lp-Ih6" id="6qM-yw-F6L"/>
                         <outlet property="location" destination="7vM-iw-qzD" id="B17-kZ-y3h"/>
                         <outlet property="name" destination="lMl-yk-Znb" id="dRC-39-JzB"/>
@@ -1130,17 +1131,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVG-3M-VBg">
-                                                    <rect key="frame" x="138" y="0.0" width="252" height="63"/>
+                                                    <rect key="frame" x="138" y="0.0" width="210" height="63"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="252" id="do7-K7-q1G"/>
+                                                        <constraint firstAttribute="width" constant="210" id="do7-K7-q1G"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMM-eD-poO">
-                                                    <rect key="frame" x="138" y="57" width="43.5" height="41"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="138" y="57" width="31.5" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1236,17 +1237,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa7-St-9AS">
-                                                    <rect key="frame" x="138" y="0.0" width="252" height="63"/>
+                                                    <rect key="frame" x="138" y="0.0" width="210" height="63"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="252" id="Nmu-Ff-I3d"/>
+                                                        <constraint firstAttribute="width" constant="210" id="Nmu-Ff-I3d"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-8a-5yC">
-                                                    <rect key="frame" x="138" y="57" width="43.5" height="41"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="138" y="57" width="31.5" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1269,6 +1270,7 @@
                                             <outlet property="breweryImage" destination="67Q-s4-cbA" id="rUL-EX-AXo"/>
                                             <outlet property="breweryName" destination="Xa7-St-9AS" id="R6n-UZ-I75"/>
                                             <outlet property="distance" destination="4OY-8a-5yC" id="9ap-Qe-IYB"/>
+                                            <segue destination="IHX-Da-us5" kind="show" identifier="ShowDetail" id="3Vq-yh-Uj4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1317,6 +1319,6 @@
         <image name="star" width="25" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NZq-Bh-oyF"/>
+        <segue reference="3Vq-yh-Uj4"/>
     </inferredMetricsTieBreakers>
 </document>

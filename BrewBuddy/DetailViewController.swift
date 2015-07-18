@@ -13,6 +13,7 @@ import Haneke
 
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var addFav: UIBarButtonItem!
     @IBOutlet weak var reviewTableView: UITableView!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var name: UILabel!
@@ -20,6 +21,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var phone: UIButton!
     @IBOutlet weak var breweryImage: UIImageView!
     
+    private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
     var nameText: String?
     var phoneNum: String?
     var loc: String?
@@ -32,25 +34,42 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        name.text = nameText
-        location.text = loc
-        if imageURL != nil {
-            let URL = NSURL(string: imageURL!)
-            breweryImage.hnk_setImageFromURL(URL!)
-        }
-        if phoneNum == nil {
-            phone.setTitle("No Phone Listed", forState: UIControlState.Normal)
-            
-        }
-        if websiteURL == nil {
-            website.setTitle("No Website Listed", forState: UIControlState.Normal)
-        }
+        setUpView()
         
         //register as obsever
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "retriveReviews", name: "refreshReviewData", object: nil)
         
+        
+        
         retriveReviews()
         
+    }
+    
+    func setUpView() {
+        
+        if nameText != nil {
+            name.text = nameText
+        }
+        
+        if loc != nil {
+            location.text = loc
+        }
+        if imageURL != nil {
+            if let URL = NSURL(string: imageURL!) {
+                breweryImage.hnk_setImageFromURL(URL)
+            }
+        }
+        if phoneNum == nil {
+            phone.setTitle("No Phone Listed", forState: UIControlState.Normal)
+            
+        } else {
+            phone.setTitle("Call", forState: UIControlState.Normal)
+        }
+        if websiteURL == nil {
+            website.setTitle("No Website Listed", forState: UIControlState.Normal)
+        } else {
+            website.setTitle("Visit Website", forState: UIControlState.Normal)
+        }
     }
     
     
@@ -177,6 +196,36 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
     }
+    
+    func getBreweryById(id: String) {
+        
+        SVProgressHUD.showWithStatus("Retrieving brewery")
+        showNetworkActivityIndicator(true)
+        let byId = BreweryByIdService(APIKey: APIKey)
+        byId.getById(id) {
+            (let brew) in
+            if let info = brew, let data = info.brewery {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.imageURL = data.largeIconURL
+                    self.nameText = data.name
+                    self.loc = data.streetAddress! + " " + data.locality! + ", " + data.region!
+                    self.websiteURL = data.website
+                    self.phoneNum = data.phone
+                    self.breweryId = data.breweryId
+                    
+                    self.setUpView()
+                    self.retriveReviews()
+                    
+                    SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
+                })
+            }
+        }
+        
+        
+        
+    }
+    
     
     // MARK: - Table view data source
     

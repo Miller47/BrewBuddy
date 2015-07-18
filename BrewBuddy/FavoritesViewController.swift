@@ -19,6 +19,10 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
+        let backItem = UIBarButtonItem(title: "", style: .Plain
+            , target: nil, action: nil)
+        navigationItem.backBarButtonItem = backItem
+        
         retriveFavorites()
     }
     
@@ -98,6 +102,48 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        
+        
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            let user = PFUser.currentUser()
+            let selectedObject: PFObject = favorites[indexPath.row] as! PFObject
+            selectedObject.deleteInBackground()
+            retriveFavorites()
+            favorites.removeAtIndex(indexPath.row)
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if (segue.identifier == "ShowDetail") {
+            
+            
+            if let VC: DetailViewController = segue.destinationViewController as? DetailViewController{
+                
+                
+                
+                if let row = self.tableView.indexPathForSelectedRow()?.row {
+                    let favInfo: PFObject = favorites[row] as! PFObject
+                  
+                    if let id = favInfo.objectForKey("breweryId") as? String {
+                        VC.getBreweryById(id)
+                    
+                    }
+                    
+                }
+            }
+            
+        }
+
+    }
     
     
 }

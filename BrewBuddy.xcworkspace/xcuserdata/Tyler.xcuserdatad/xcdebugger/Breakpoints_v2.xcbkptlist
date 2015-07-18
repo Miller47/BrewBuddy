@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewBuddy/DetailViewController.swift"
-            timestampString = "458902404.143903"
+            timestampString = "458955086.587213"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewBuddy/DetailViewController.swift"
-            timestampString = "458903112.202739"
+            timestampString = "458955406.64328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "call(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewBuddy/Brewery.swift"
-            timestampString = "458765782.728384"
+            timestampString = "458952760.916777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "init(breweyDictionary:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,12 +282,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewBuddy/DetailViewController.swift"
-            timestampString = "458903112.202739"
+            timestampString = "458955406.64328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "getDirections()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrewBuddy/DetailViewController.swift"
+            timestampString = "458955406.64328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "getBreweryById(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
