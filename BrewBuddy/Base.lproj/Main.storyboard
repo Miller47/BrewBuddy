@@ -1199,10 +1199,10 @@
             </objects>
             <point key="canvasLocation" x="761" y="1511"/>
         </scene>
-        <!--Must Try View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="I4C-Xq-gtp">
             <objects>
-                <viewController storyboardIdentifier="Favorites" useStoryboardIdentifierAsRestorationIdentifier="YES" id="11O-J5-n3h" customClass="MustTryViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Favorites" useStoryboardIdentifierAsRestorationIdentifier="YES" id="11O-J5-n3h" customClass="FavoritesViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="25b-rA-Loc"/>
                         <viewControllerLayoutGuide type="bottom" id="c6o-dV-o6n"/>
@@ -1297,7 +1297,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iU1-e4-via"/>
                     <connections>
-                        <outlet property="tableView" destination="FsM-z2-5T8" id="dCP-KN-lnu"/>
+                        <outlet property="tableView" destination="FsM-z2-5T8" id="igP-Ob-grs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpe-DN-e21" userLabel="First Responder" sceneMemberID="firstResponder"/>

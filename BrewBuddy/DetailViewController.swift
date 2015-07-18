@@ -111,7 +111,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         showNetworkActivityIndicator(true)
         
         if let id = breweryId, let name = nameText, let icon = imageURL, let location = loc {
-        
+            
             var fav = PFObject(className: "Favorites")
             fav["breweryId"] = id
             fav["breweryName"] = name
@@ -141,7 +141,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                 }
             })
         }
-
+        
     }
     
     func retriveReviews() {
@@ -160,16 +160,16 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                         self.reviewTableView.reloadData()
                         SVProgressHUD.dismiss()
                         self.showNetworkActivityIndicator(false)
-                    } else {
-                        SVProgressHUD.dismiss()
-                        self.showNetworkActivityIndicator(false)
-                        if let error = error {
-                            let errorString = error.userInfo?["error"] as? NSString
-                            let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
-                            alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
-                            self.presentViewController(alert, animated: true, completion:nil)
-                        }
-                        
+                    }
+                    
+                } else {
+                    SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
+                    if let error = error {
+                        let errorString = error.userInfo?["error"] as? NSString
+                        let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion:nil)
                     }
                     
                 }
@@ -195,7 +195,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         if let userName = reviewInfo.objectForKey("userName") as? String, let ratingVal = reviewInfo.objectForKey("rating") as? CGFloat {
             
-            cell.userName.text = userName 
+            cell.userName.text = userName
             cell.rating.value = ratingVal
         }
         
