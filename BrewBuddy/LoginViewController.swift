@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
             
         } else {
             SVProgressHUD.showWithStatus("Logging in")
+            showNetworkActivityIndicator(true)
             var user = userName.text .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             var pass = password.text .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             
@@ -41,8 +42,10 @@ class LoginViewController: UIViewController {
                     // Do stuff after successful login.
                     self.dismissViewControllerAnimated(true, completion: nil)
                     SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
                 } else {
                     SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
                     // The login failed. Check error to see why.
                     if let error = error {
                         let errorString = error.userInfo?["error"] as? NSString
@@ -69,11 +72,14 @@ class LoginViewController: UIViewController {
             if let textField =  passwordRest.textFields?.first as? UITextField {
                 if !(textField.text.isEmpty) {
                     SVProgressHUD.showWithStatus("Sending reset instructrions")
+                    self.showNetworkActivityIndicator(true)
                     PFUser.requestPasswordResetForEmailInBackground(textField.text, block: { (pass: Bool, error: NSError?) -> Void in
                         if error == nil {
                             SVProgressHUD.dismiss()
+                            self.showNetworkActivityIndicator(false)
                         } else {
                             SVProgressHUD.dismiss()
+                            self.showNetworkActivityIndicator(false)
                             if let error = error {
                                 let errorString = error.userInfo?["error"] as? NSString
                                 let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)

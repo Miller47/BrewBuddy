@@ -28,6 +28,8 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func getMustTrys() {
         
+        SVProgressHUD.showWithStatus("Retrieving must try brewery")
+        showNetworkActivityIndicator(true)
         let mustTryService = FeaturedBreweriesService(APIKey: APIKey)
         mustTryService.getFeatured() {
             (let brew) in
@@ -57,6 +59,8 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
                     println(self.breweries.count)
                     
                     self.tableView.reloadData()
+                    SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
                 })
             }
         }

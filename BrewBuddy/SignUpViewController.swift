@@ -39,6 +39,7 @@ class SignUpViewController: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
             SVProgressHUD.showWithStatus("Signing Up")
+            self.showNetworkActivityIndicator(true)
             var user = PFUser()
             user.username = username.text .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             user.password = password.text .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
@@ -49,6 +50,7 @@ class SignUpViewController: UIViewController {
                 (succeeded: Bool, error: NSError?) -> Void in
                 if let error = error {
                     SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
                     let errorString = error.userInfo?["error"] as? NSString
                     // Show the errorString somewhere and let the user try again.
                     let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
@@ -58,24 +60,12 @@ class SignUpViewController: UIViewController {
                 } else {
                     // Hooray! Let them use the app now.
                     SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
                     self.presentingViewController!.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
                 }
             }
         }
         
     }
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

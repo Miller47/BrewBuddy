@@ -79,16 +79,6 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         
     }
     
-
-    
-    
-    func showNetworkActivityIndicator(bool: Bool) {
-        if bool {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        } else {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        }
-    }
     
     func retriveBreweies(lat: Double, long: Double) {
             let breweryService =  BreweryService(APIKey: APIKey)

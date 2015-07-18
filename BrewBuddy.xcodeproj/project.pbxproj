@@ -24,6 +24,7 @@
 		2FAB59D91B2C2A35009A1A0D /* BeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB59D81B2C2A35009A1A0D /* BeerTableViewController.swift */; };
 		2FC6F1151B4DE47200A138EB /* Breweries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC6F1141B4DE47200A138EB /* Breweries.swift */; };
 		2FC6F1171B4DF18700A138EB /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC6F1161B4DF18700A138EB /* NetworkOperation.swift */; };
+		2FDE98721B5A0DE000F15DB5 /* ActivityIndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE98711B5A0DE000F15DB5 /* ActivityIndicatorExtension.swift */; };
 		2FE942661B5708E5001347F2 /* FeaturedBreweries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE942651B5708E5001347F2 /* FeaturedBreweries.swift */; };
 		2FECE9B71B3C6BD200DC82E1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECE9B51B3C6BD200DC82E1 /* Bolts.framework */; };
 		2FECE9B81B3C6BD200DC82E1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECE9B61B3C6BD200DC82E1 /* Parse.framework */; };
@@ -79,6 +80,7 @@
 		2FAB59D81B2C2A35009A1A0D /* BeerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerTableViewController.swift; sourceTree = "<group>"; };
 		2FC6F1141B4DE47200A138EB /* Breweries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breweries.swift; sourceTree = "<group>"; };
 		2FC6F1161B4DF18700A138EB /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		2FDE98711B5A0DE000F15DB5 /* ActivityIndicatorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorExtension.swift; sourceTree = "<group>"; };
 		2FE942651B5708E5001347F2 /* FeaturedBreweries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedBreweries.swift; sourceTree = "<group>"; };
 		2FECE9B51B3C6BD200DC82E1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2FECE9B61B3C6BD200DC82E1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				2F21CDDC1B4E043200312C9C /* BrewerySevice.swift */,
 				2F21CDDE1B4ECA4300312C9C /* Brewery.swift */,
 				2F8B3C2D1B5714C900734450 /* FeaturedBreweriesService.swift */,
+				2FDE98711B5A0DE000F15DB5 /* ActivityIndicatorExtension.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FDE98721B5A0DE000F15DB5 /* ActivityIndicatorExtension.swift in Sources */,
 				2F21CDDF1B4ECA4300312C9C /* Brewery.swift in Sources */,
 				2FECE9D81B3C723A00DC82E1 /* LoginViewController.swift in Sources */,
 				2F897F871B2C21E40096D73C /* AppDelegate.swift in Sources */,
