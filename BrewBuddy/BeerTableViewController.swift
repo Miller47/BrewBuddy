@@ -36,6 +36,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+    
         //check for currrent user
         var currentUser = PFUser.currentUser()
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

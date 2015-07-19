@@ -148,15 +148,15 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             }
             
             
-            fav.ACL = PFACL(user: PFUser.currentUser()!)
+            if let currentUser = PFUser.currentUser() {
+                fav.ACL = PFACL(user: currentUser)
+                println("Current User: \(currentUser)")
+            }
             fav.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if success {
                     
                     SVProgressHUD.dismiss()
                     self.showNetworkActivityIndicator(false)
-                    
-                    //dimiss review
-                    self.dismissViewControllerAnimated(true, completion: nil)
                     
                     
                 } else {

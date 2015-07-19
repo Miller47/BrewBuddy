@@ -38,6 +38,8 @@ class SettingsTableViewController: UITableViewController {
     
     func logOutCurrentuser() {
         PFUser.logOutInBackground()
+        let user = PFUser.currentUser()
+        println("user: session \(user?.sessionToken)")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         //Show Login
