@@ -70,10 +70,16 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         //Configure the cell...
         let favInfo: PFObject = favorites[indexPath.row] as! PFObject
         
-        if let breweryName = favInfo.objectForKey("breweryName") as? String, let icon = favInfo.objectForKey("icon") as? String, let location = favInfo.objectForKey("loc") as? String {
+        if let breweryName = favInfo.objectForKey("breweryName") as? String {
             
             cell.breweryName.text = breweryName
+        }
+        
+        if let location = favInfo.objectForKey("loc") as? String {
+            
             cell.distance.text = location
+        }
+        if let icon = favInfo.objectForKey("icon") as? String {
             if icon.isEmpty {
                 
                 cell.breweryImage.image = UIImage(named: "brewbuddy")
@@ -132,17 +138,17 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
                 
                 if let row = self.tableView.indexPathForSelectedRow()?.row {
                     let favInfo: PFObject = favorites[row] as! PFObject
-                  
+                    
                     if let id = favInfo.objectForKey("breweryId") as? String {
                         VC.getBreweryById(id)
-                    
+                        
                     }
                     
                 }
             }
             
         }
-
+        
     }
     
     

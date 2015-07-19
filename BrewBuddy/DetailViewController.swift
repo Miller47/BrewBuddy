@@ -129,13 +129,25 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         SVProgressHUD.showWithStatus("Saving as Favorite")
         showNetworkActivityIndicator(true)
         
-        if let id = breweryId, let name = nameText, let icon = imageURL, let location = loc {
+        if let id = breweryId {
             
             var fav = PFObject(className: "Favorites")
             fav["breweryId"] = id
-            fav["breweryName"] = name
-            fav["icon"] = icon
-            fav["loc"] = location
+            
+            if  let name = nameText {
+                fav["breweryName"] = name
+            }
+            
+            
+            if let icon = imageURL {
+                fav["icon"] = icon
+            }
+            
+            if let location = loc {
+                fav["loc"] = location
+            }
+            
+            
             fav.ACL = PFACL(user: PFUser.currentUser()!)
             fav.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if success {
