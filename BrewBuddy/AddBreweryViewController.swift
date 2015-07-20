@@ -15,10 +15,6 @@ class AddBreweryViewController: UIViewController {
     @IBOutlet weak var breweryDescription: UITextField!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
     @IBAction func save() {
         
