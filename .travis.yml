@@ -4,10 +4,9 @@ branches:
 only:
 - master
 
-xcode_project: Brewbuddy.xcodeproj
+xcode_workspace: BrewBuddy.xcworkspace
 xcode_scheme: BrewBuddyTests
 osx_image: xcode6.4
 xcode_sdk: iphonesimulator8.4
 
-script:
-- xcodebuild clean build test -project BrewBuddy.xcodeproj -scheme BreweBuddyTests
+
