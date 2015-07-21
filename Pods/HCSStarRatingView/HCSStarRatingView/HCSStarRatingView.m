@@ -22,16 +22,20 @@
 
 #import "HCSStarRatingView.h"
 
+@interface HCSStarRatingView ()
+@property (nonatomic, readonly) BOOL shouldUseImages;
+@end
+
 @implementation HCSStarRatingView {
-    NSUInteger _minimumValue;
+    CGFloat _minimumValue;
     NSUInteger _maximumValue;
     CGFloat _value;
-    NSUInteger _previousValue;
 }
 
 @dynamic minimumValue;
 @dynamic maximumValue;
 @dynamic value;
+@dynamic shouldUseImages;
 
 #pragma mark - Initialization
 
@@ -52,21 +56,33 @@
 }
 
 - (void)_customInit {
-    self.backgroundColor = [UIColor clearColor];
     self.exclusiveTouch = YES;
-    _minimumValue = 1;
+    _minimumValue = 0;
     _maximumValue = 5;
     _value = 0;
     _spacing = 5.f;
 }
 
+- (void)setNeedsLayout {
+    [super setNeedsLayout];
+    [self setNeedsDisplay];
+}
+
 #pragma mark - Properties
 
-- (NSUInteger)minimumValue {
+- (UIColor *)backgroundColor {
+    if ([super backgroundColor]) {
+        return [super backgroundColor];
+    } else {
+        return self.isOpaque ? [UIColor whiteColor] : [UIColor clearColor];
+    };
+}
+
+- (CGFloat)minimumValue {
     return MAX(_minimumValue, 0);
 }
 
-- (void)setMinimumValue:(NSUInteger)minimumValue {
+- (void)setMinimumValue:(CGFloat)minimumValue {
     if (_minimumValue != minimumValue) {
         _minimumValue = minimumValue;
         [self setNeedsDisplay];
@@ -90,7 +106,7 @@
 }
 
 - (void)setValue:(CGFloat)value {
-    if (_value != value) {
+    if (_value != value && value >= _minimumValue && value <= _maximumValue) {
         _value = value;
         [self sendActionsForControlEvents:UIControlEventValueChanged];
         [self setNeedsDisplay];
@@ -109,9 +125,65 @@
     }
 }
 
-#pragma mark - Drawing
+- (void)setEmptyStarImage:(UIImage *)emptyStarImage {
+    if (_emptyStarImage != emptyStarImage) {
+        _emptyStarImage = emptyStarImage;
+        [self setNeedsDisplay];
+    }
+}
 
-- (void)_drawStarWithFrame:(CGRect)frame tintColor:(UIColor*)tintColor highlighted:(BOOL)highlighted {
+- (void)setHalfStarImage:(UIImage *)halfStarImage {
+    if (_halfStarImage != halfStarImage) {
+        _halfStarImage = halfStarImage;
+        [self setNeedsDisplay];
+    }
+}
+
+- (void)setFilledStarImage:(UIImage *)filledStarImage {
+    if (_filledStarImage != filledStarImage) {
+        _filledStarImage = filledStarImage;
+        [self setNeedsDisplay];
+    }
+}
+
+- (BOOL)shouldUseImages {
+    return (self.emptyStarImage!=nil && self.filledStarImage!=nil);
+}
+
+#pragma mark - Image Drawing
+
+- (void)_drawStarImageWithFrame:(CGRect)frame tintColor:(UIColor*)tintColor highlighted:(BOOL)highlighted {
+    UIImage *image = highlighted ? self.filledStarImage : self.emptyStarImage;
+    [self _drawImage:image frame:frame tintColor:tintColor];
+}
+
+- (void)_drawHalfStarImageWithFrame:(CGRect)frame tintColor:(UIColor *)tintColor {
+    // first draw star outline
+    [self _drawStarImageWithFrame:frame tintColor:tintColor highlighted:NO];
+    
+    UIImage *image = self.halfStarImage;
+    if (image == nil) {
+        image = self.filledStarImage;
+        CGRect imageFrame = CGRectMake(0, 0, image.size.width * image.scale / 2.f, image.size.height * image.scale);
+        frame.size.width /= 2.f;
+        CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage, imageFrame);
+        UIImage *halfImage = [UIImage imageWithCGImage:imageRef scale:image.scale orientation:image.imageOrientation];
+        image = [halfImage imageWithRenderingMode:image.renderingMode];
+        CGImageRelease(imageRef);
+    }
+    [self _drawImage:image frame:frame tintColor:tintColor];
+}
+
+- (void)_drawImage:(UIImage *)image frame:(CGRect)frame tintColor:(UIColor *)tintColor {
+    if (image.renderingMode == UIImageRenderingModeAlwaysTemplate) {
+        [tintColor setFill];
+    }
+    [image drawInRect:frame];
+}
+
+#pragma mark - Shape Drawing
+
+- (void)_drawStarShapeWithFrame:(CGRect)frame tintColor:(UIColor*)tintColor highlighted:(BOOL)highlighted {
     UIBezierPath* starShapePath = UIBezierPath.bezierPath;
     [starShapePath moveToPoint: CGPointMake(CGRectGetMinX(frame) + 0.62723 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.37309 * CGRectGetHeight(frame))];
     [starShapePath addLineToPoint: CGPointMake(CGRectGetMinX(frame) + 0.50000 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.02500 * CGRectGetHeight(frame))];
@@ -137,7 +209,11 @@
     [starShapePath stroke];
 }
 
-- (void)_drawHalfStarWithFrame:(CGRect)frame tintcolor:(UIColor *)tintColor highlighted:(BOOL)highlighted {
+- (void)_drawHalfStarShapeWithFrame:(CGRect)frame tintColor:(UIColor *)tintColor {
+    
+    // first draw star outline
+    [self _drawStarShapeWithFrame:frame tintColor:tintColor highlighted:NO];
+    
     UIBezierPath* starShapePath = UIBezierPath.bezierPath;
     [starShapePath moveToPoint: CGPointMake(CGRectGetMinX(frame) + 0.50000 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.02500 * CGRectGetHeight(frame))];
     [starShapePath addLineToPoint: CGPointMake(CGRectGetMinX(frame) + 0.37292 * CGRectGetWidth(frame), CGRectGetMinY(frame) + 0.37309 * CGRectGetHeight(frame))];
@@ -149,41 +225,50 @@
     [starShapePath closePath];
     starShapePath.miterLimit = 4;
     
-    if (highlighted) {
-        [tintColor setFill];
-        [starShapePath fill];
-    }
+    [tintColor setFill];
+    [starShapePath fill];
     
     [tintColor setStroke];
     starShapePath.lineWidth = 1;
     [starShapePath stroke];
 }
 
+#pragma mark - Drawing
+
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor);
     CGContextFillRect(context, rect);
     
-    CGFloat availableWidth = rect.size.width - (_spacing * (_maximumValue + 1));
+    CGFloat availableWidth = rect.size.width - (_spacing * (_maximumValue - 1));
     CGFloat cellWidth = (availableWidth / _maximumValue);
     CGFloat starSide = (cellWidth <= rect.size.height) ? cellWidth : rect.size.height;
     for (int idx = 0; idx < _maximumValue; idx++) {
-        CGPoint center = CGPointMake(cellWidth*idx + cellWidth/2 + _spacing*(idx+1), rect.size.height/2);
+        CGPoint center = CGPointMake(cellWidth*idx + cellWidth/2 + _spacing*idx, rect.size.height/2);
         CGRect frame = CGRectMake(center.x - starSide/2, center.y - starSide/2, starSide, starSide);
         BOOL highlighted = (idx+1 <= ceilf(_value));
-        BOOL halfStar = highlighted ? (idx+1 > _value) : NO;
-        if (halfStar && _allowsHalfStars) {
-            [self _drawStarWithFrame:frame tintColor:self.tintColor highlighted:NO];
-            [self _drawHalfStarWithFrame:frame tintcolor:self.tintColor highlighted:highlighted];
+        if (_allowsHalfStars && highlighted && (idx+1 > _value)) {
+            [self _drawHalfStarWithFrame:frame tintColor:self.tintColor];
         } else {
             [self _drawStarWithFrame:frame tintColor:self.tintColor highlighted:highlighted];
         }
     }
 }
 
-- (void)setNeedsLayout {
-    [super setNeedsLayout];
-    [self setNeedsDisplay];
+- (void)_drawStarWithFrame:(CGRect)frame tintColor:(UIColor *)tintColor highlighted:(BOOL)highlighted {
+    if (self.shouldUseImages) {
+        [self _drawStarImageWithFrame:frame tintColor:tintColor highlighted:highlighted];
+    } else {
+        [self _drawStarShapeWithFrame:frame tintColor:tintColor highlighted:highlighted];
+    }
+}
+
+- (void)_drawHalfStarWithFrame:(CGRect)frame tintColor:(UIColor *)tintColor {
+    if (self.shouldUseImages) {
+        [self _drawHalfStarImageWithFrame:frame tintColor:tintColor];
+    } else {
+        [self _drawHalfStarShapeWithFrame:frame tintColor:tintColor];
+    }
 }
 
 #pragma mark - Touches
@@ -193,7 +278,6 @@
     if (![self isFirstResponder]) {
         [self becomeFirstResponder];
     }
-    _previousValue = _value;
     [self _handleTouch:touch];
     return YES;
 }
@@ -210,9 +294,6 @@
         [self resignFirstResponder];
     }
     [self _handleTouch:touch];
-    if (_value != _previousValue) {
-        [self sendActionsForControlEvents:UIControlEventValueChanged];
-    }
 }
 
 - (void)cancelTrackingWithEvent:(UIEvent *)event {
@@ -231,11 +312,10 @@
     CGPoint location = [touch locationInView:self];
     CGFloat value = location.x / cellWidth;
     if (_allowsHalfStars && value+.5f < ceilf(value)) {
-        _value = floor(value)+.5f;
+        self.value = floor(value)+.5f;
     } else {
-        _value = ceilf(value);
+        self.value = ceilf(value);
     }
-    [self setNeedsDisplay];
 }
 
 #pragma mark - First responder
@@ -248,7 +328,37 @@
 
 - (CGSize)intrinsicContentSize {
     CGFloat height = 44.f;
-    return CGSizeMake(_maximumValue * height + (_maximumValue+1) * _spacing, height);
+    return CGSizeMake(_maximumValue * height + (_maximumValue-1) * _spacing, height);
+}
+
+#pragma mark - Accessibility
+
+- (BOOL)isAccessibilityElement {
+    return YES;
+}
+
+- (NSString *)accessibilityLabel {
+    return [super accessibilityLabel] ?: NSLocalizedString(@"Rating", @"Accessibility label for star rating control.");
+}
+
+- (UIAccessibilityTraits)accessibilityTraits {
+    return ([super accessibilityTraits] | UIAccessibilityTraitAdjustable);
+}
+
+- (NSString *)accessibilityValue {
+    return [@(self.value) description];
+}
+
+- (BOOL)accessibilityActivate {
+    return YES;
+}
+
+- (void)accessibilityIncrement {
+    self.value += self.allowsHalfStars ? .5f : 1.f;
+}
+
+- (void)accessibilityDecrement {
+    self.value -= self.allowsHalfStars ? .5f : 1.f;
 }
 
 @end

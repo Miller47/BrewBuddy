@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F809F8C241A2698E21B32C7"
+               BlueprintIdentifier = "86ADBDA88E6017693FBFC0CC"
                BuildableName = "SVProgressHUD.framework"
                BlueprintName = "Pods-BrewBuddy-SVProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9F809F8C241A2698E21B32C7"
-            BuildableName = "SVProgressHUD.framework"
-            BlueprintName = "Pods-BrewBuddy-SVProgressHUD"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

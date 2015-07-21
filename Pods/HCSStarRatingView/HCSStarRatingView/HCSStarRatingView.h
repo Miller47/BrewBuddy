@@ -25,8 +25,12 @@
 IB_DESIGNABLE
 @interface HCSStarRatingView : UIControl
 @property (nonatomic) IBInspectable NSUInteger maximumValue;
-@property (nonatomic) IBInspectable NSUInteger minimumValue;
+@property (nonatomic) IBInspectable CGFloat minimumValue;
 @property (nonatomic) IBInspectable CGFloat value;
 @property (nonatomic) IBInspectable CGFloat spacing;
 @property (nonatomic) IBInspectable BOOL allowsHalfStars;
+
+@property (nonatomic, strong) IBInspectable UIImage *emptyStarImage;
+@property (nonatomic, strong) IBInspectable UIImage *halfStarImage;
+@property (nonatomic, strong) IBInspectable UIImage *filledStarImage;
 @end

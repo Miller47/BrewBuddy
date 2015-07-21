@@ -8,109 +8,91 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-BrewBuddy-HanekeSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-BrewBuddy-JGMethodSwizzler.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-BrewBuddy-MZAppearance.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-BrewBuddy-MZFormSheetPresentationController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-BrewBuddy-ReachabilitySwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>Pods-BrewBuddy-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>Pods-BrewBuddy-TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>Pods-BrewBuddy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B29140914C59BD6AE8BD8DD</key>
+		<key>4B99A02E4FB75889DD4BE3F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FEC10DCF74A41E439E31E4C</key>
+		<key>65B577182546C7D032033795</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CDC80814D949EAD654100D0</key>
+		<key>794B6AE576E8A353CFF236D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E7C3E46C5F54A340C8C0910</key>
+		<key>7C5A4AE73173979E6FBD1696</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F809F8C241A2698E21B32C7</key>
+		<key>86ADBDA88E6017693FBFC0CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A85CC132E999B1878594E77A</key>
+		<key>A1F8C5FAADCC2875364065BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC6A76D26BEA1B5C8D9B11C8</key>
+		<key>BC10DED0768A0357D0BFBDC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C017D245D43A2756052F31BC</key>
+		<key>D41492CFAD379BE6A951D39B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE637ED894332226128C2997</key>
+		<key>DB558A7E3572BFB7C4F07EDE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
