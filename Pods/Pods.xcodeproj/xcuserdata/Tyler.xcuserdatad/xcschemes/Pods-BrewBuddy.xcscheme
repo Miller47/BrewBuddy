@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65B577182546C7D032033795"
+               BlueprintIdentifier = "7542EF10E36CD4DFE4764FE1"
                BuildableName = "Pods_BrewBuddy.framework"
                BlueprintName = "Pods-BrewBuddy"
                ReferencedContainer = "container:Pods.xcodeproj">

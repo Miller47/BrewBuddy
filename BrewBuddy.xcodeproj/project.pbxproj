@@ -613,7 +613,7 @@
 				INFOPLIST_FILE = BrewBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c59db15e-3b64-4f7c-92fd-a57078f38626";
+				PROVISIONING_PROFILE = "d83bb630-a7f1-4a1e-9bd8-dc1fbb52148f";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/BrewBuddy-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
@@ -633,7 +633,7 @@
 				INFOPLIST_FILE = BrewBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c59db15e-3b64-4f7c-92fd-a57078f38626";
+				PROVISIONING_PROFILE = "d83bb630-a7f1-4a1e-9bd8-dc1fbb52148f";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/BrewBuddy-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};

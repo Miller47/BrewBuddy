@@ -1,5 +1,6 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, '8.0'
+inhibit_all_warnings!
 use_frameworks!
 
 target 'BrewBuddy' do
@@ -17,12 +18,5 @@ target 'BrewBuddyTests' do
 
 end
 
-post_install do |installer|
-    puts 'Removing static analyzer support'
-    installer.project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['OTHER_CFLAGS'] = "$(inherited) -Qunused-arguments -Xanalyzer -analyzer-disable-all-checks"
-        end
-    end
-end
+
 

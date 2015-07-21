@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "794B6AE576E8A353CFF236D0"
+               BlueprintIdentifier = "559C294E4825B59A263EAD44"
                BuildableName = "JGMethodSwizzler.framework"
                BlueprintName = "Pods-BrewBuddy-JGMethodSwizzler"
                ReferencedContainer = "container:Pods.xcodeproj">
