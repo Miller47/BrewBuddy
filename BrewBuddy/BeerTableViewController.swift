@@ -26,7 +26,9 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     var suggestionsController = UISearchController()
     var sugesstionResults: UITableViewController?
     var results: [AnyObject] = []
-   
+    
+    
+    
     
     
     
@@ -36,7 +38,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-    
+        
         //check for currrent user
         var currentUser = PFUser.currentUser()
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -74,30 +76,44 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             , target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
         
-    
+        //set up pull to refres
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refresh)
+        
+        
         configureTableView()
         configureSearch()
         
     }
     
+    func handleRefresh(refresh: UIRefreshControl) {
+        //refreshes data based on current location
+        locationManager.startUpdatingLocation()
+        //stops refrehing control
+        refresh.endRefreshing()
+    }
+    
     
     func retriveBreweies(lat: Double, long: Double) {
-            let breweryService =  BreweryService(APIKey: APIKey)
-            breweryService.getBreweries(lat, long: long) {
-                (let brew) in
-                if let info = brew {
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        //set an array with the vcaules from the api
-                        self.breweries = info.breweries
-                        println("Number of Breweries: \(self.breweries.count)")
-                        
-                        
-                        self.tableView.reloadData()
-                        SVProgressHUD.dismiss()
-                        self.showNetworkActivityIndicator(false)
-                    })
-                }
+        let breweryService =  BreweryService(APIKey: APIKey)
+        breweryService.getBreweries(lat, long: long) {
+            (let brew) in
+            if let info = brew {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    //set an array with the vcaules from the api
+                    self.breweries = info.breweries
+                    println("Number of Breweries: \(self.breweries.count)")
+                    
+                    
+                    self.tableView.reloadData()
+                    //scroll to top of tableView
+                    self.tableView.setContentOffset(CGPointZero, animated: true)
+                    SVProgressHUD.dismiss()
+                    self.showNetworkActivityIndicator(false)
+                })
             }
+        }
         
     }
     
@@ -146,6 +162,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                 let loc = placemark.location
                 let lat = loc.coordinate.latitude
                 let long = loc.coordinate.longitude
+                println(loc)
                 
                 self.retriveBreweies(lat, long: long)
                 SVProgressHUD.showWithStatus("Retrieving breweries near desired location")
@@ -159,33 +176,44 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         results.removeAll()
-        let request = MKLocalSearchRequest()
-        request.naturalLanguageQuery = searchController.searchBar.text
+        let placesClient = GMSPlacesClient()
+        let filter = GMSAutocompleteFilter()
+        filter.type = GMSPlacesAutocompleteTypeFilter.Geocode
+        var query = searchController.searchBar.text
         
-        let search = MKLocalSearch(request: request)
-        search.startWithCompletionHandler { (response: MKLocalSearchResponse!, error: NSError!) -> Void in
-            if error != nil {
-                println("Error occured in search: \(error.description)")
-                search.cancel()
-            } else if response.mapItems.count == 0 {
-                println("No Matches found")
-                search.cancel()
-            } else {
-                println("matches found")
-                
-                
-                for item in response.mapItems {
-                    println("Name: \(item.name)")
-                    
-                    self.results.append(item.name)
-                    
-                    
+        
+        if count(query) > 0 {
+            println("Searching for: \(query)")
+            placesClient.autocompleteQuery(query, bounds: nil , filter: filter, callback: { (result, error) -> Void in
+                if error != nil {
+                    println("Autocomplete error \(error)")
+                    //return
                 }
-                self.sugesstionResults?.tableView.reloadData()
                 
-            }
+                if let data = result {
+                    for resultData in data {
+                        if let result = resultData as? GMSAutocompletePrediction {
+                            
+                            
+                            placesClient.lookUpPlaceID(result.placeID, callback: { (place: GMSPlace?, erro: NSError?) -> Void in
+                                if error != nil {
+                                    println("Error getting place")
+                                }
+                                if let placeData = place {
+                                    self.results.append(placeData)
+                                    
+                                    
+                                    
+                                }
+                            })
+                        }
+                    }
+                    
+                   self.sugesstionResults?.tableView.reloadData()
+                }
+                
+            })
         }
-        
     }
     
     
@@ -195,6 +223,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         if !searchBar.text.isEmpty {
             let term =  searchBar.text
             getLatAndLong(term)
+            //remove sugeestiongs tableview
             suggestionsController.dismissViewControllerAnimated(true, completion: nil)
             searchBar.text = nil
             results.removeAll()
@@ -217,10 +246,15 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         sugesstionResults?.tableView.dataSource = self
         sugesstionResults?.tableView.delegate = self
         sugesstionResults?.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        //set up footer
+        let poweredBy = UIImage(named: "powered-by-google-on-white")
+        var imageView = UIImageView(image: poweredBy)
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        sugesstionResults?.tableView.tableFooterView = imageView
+        
         
         suggestionsController = UISearchController(searchResultsController: sugesstionResults)
         suggestionsController.searchResultsUpdater = self
-        suggestionsController.searchBar.autocorrectionType = .Yes
         suggestionsController.dimsBackgroundDuringPresentation = false
         suggestionsController.hidesNavigationBarDuringPresentation = false
         suggestionsController.searchBar.tintColor = UIColor.whiteColor()
@@ -275,7 +309,12 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         if tableView == sugesstionResults?.tableView {
             
-            cell.textLabel?.text = results[indexPath.row] as? String
+            
+            if let address = results[indexPath.row].formattedAddress {
+                cell.textLabel?.text = address
+            }
+            
+            
             
         } else {
             
@@ -325,8 +364,11 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if tableView == self.sugesstionResults?.tableView {
-            let locationString = results[indexPath.row] as? String
-            suggestionsController.searchBar.text = locationString
+            if let locationString = results[indexPath.row].formattedAddress {
+                suggestionsController.searchBar.text = locationString
+            } else {
+                SVProgressHUD.showErrorWithStatus("Sorry could not get coorinaties")
+            }
         }
     }
     
