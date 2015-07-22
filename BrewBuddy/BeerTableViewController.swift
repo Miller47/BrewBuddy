@@ -209,7 +209,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                         }
                     }
                     
-                   self.sugesstionResults?.tableView.reloadData()
+                    self.sugesstionResults?.tableView.reloadData()
                 }
                 
             })
@@ -310,8 +310,10 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         if tableView == sugesstionResults?.tableView {
             
             
-            if let address = results[indexPath.row].formattedAddress {
-                cell.textLabel?.text = address
+            if results.count > 0 {
+                if let address = results[indexPath.row].formattedAddress {
+                    cell.textLabel?.text = address
+                }
             }
             
             
