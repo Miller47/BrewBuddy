@@ -6,12 +6,6 @@
 // project.
 
 
-// GoogleMaps
-#define COCOAPODS_POD_AVAILABLE_GoogleMaps
-#define COCOAPODS_VERSION_MAJOR_GoogleMaps 1
-#define COCOAPODS_VERSION_MINOR_GoogleMaps 10
-#define COCOAPODS_VERSION_PATCH_GoogleMaps 1
-
 // HCSStarRatingView
 #define COCOAPODS_POD_AVAILABLE_HCSStarRatingView
 #define COCOAPODS_VERSION_MAJOR_HCSStarRatingView 1

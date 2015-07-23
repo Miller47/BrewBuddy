@@ -9,7 +9,6 @@
 import UIKit
 import Haneke
 import CoreLocation
-import MapKit
 import Parse
 
 
@@ -24,8 +23,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     var locValue: CLLocationCoordinate2D!
     // UISearchController
     var suggestionsController = UISearchController()
-    var sugesstionResults: UITableViewController?
-    var results: [AnyObject] = []
+    var results: [Breweries] = []
     
     
     
@@ -175,45 +173,22 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     // MARK: - UISearchBar
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        results.removeAll()
-        let placesClient = GMSPlacesClient()
-        let filter = GMSAutocompleteFilter()
-        filter.type = GMSPlacesAutocompleteTypeFilter.Geocode
-        var query = searchController.searchBar.text
+        
+        // filter brewerery results based on user input
+        results.removeAll(keepCapacity: false)
         
         
-        if count(query) > 0 {
-            println("Searching for: \(query)")
-            placesClient.autocompleteQuery(query, bounds: nil , filter: filter, callback: { (result, error) -> Void in
-                if error != nil {
-                    println("Autocomplete error \(error)")
-                    //return
-                }
-                
-                if let data = result {
-                    for resultData in data {
-                        if let result = resultData as? GMSAutocompletePrediction {
-                            
-                            
-                            placesClient.lookUpPlaceID(result.placeID, callback: { (place: GMSPlace?, erro: NSError?) -> Void in
-                                if error != nil {
-                                    println("Error getting place")
-                                }
-                                if let placeData = place {
-                                    self.results.append(placeData)
-                                    
-                                    
-                                    
-                                }
-                            })
-                        }
-                    }
-                    
-                    self.sugesstionResults?.tableView.reloadData()
-                }
-                
-            })
+        var array = breweries.filter() {
+            ($0.name!.lowercaseString as NSString).containsString(searchController.searchBar.text.lowercaseString)}
+        
+        results = array
+        
+        println("Array has \(array.count) elements")
+        for brewery in array {
+            println(brewery.name)
         }
+        
+        tableView.reloadData()
     }
     
     
@@ -221,43 +196,30 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         if !searchBar.text.isEmpty {
-            let term =  searchBar.text
-            getLatAndLong(term)
-            //remove sugeestiongs tableview
-            suggestionsController.dismissViewControllerAnimated(true, completion: nil)
+            
             searchBar.text = nil
-            results.removeAll()
-            self.sugesstionResults?.tableView.reloadData()
+            suggestionsController.dismissViewControllerAnimated(true, completion: nil)
+            
         }
     }
     
+    
+    
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         results.removeAll()
-        self.sugesstionResults?.tableView.reloadData()
-        println("Canceled: \(results)")
+        
     }
     
     func configureSearch() {
         
-        // A table for search results and its controller.
-        let resultsTableView = UITableView(frame: self.tableView.frame)
-        sugesstionResults = UITableViewController()
-        sugesstionResults?.tableView = resultsTableView
-        sugesstionResults?.tableView.dataSource = self
-        sugesstionResults?.tableView.delegate = self
-        sugesstionResults?.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        //set up footer
-        let poweredBy = UIImage(named: "powered-by-google-on-white")
-        var imageView = UIImageView(image: poweredBy)
-        imageView.contentMode = UIViewContentMode.ScaleAspectFit
-        sugesstionResults?.tableView.tableFooterView = imageView
         
-        
-        suggestionsController = UISearchController(searchResultsController: sugesstionResults)
+        suggestionsController = UISearchController(searchResultsController: nil)
         suggestionsController.searchResultsUpdater = self
         suggestionsController.dimsBackgroundDuringPresentation = false
         suggestionsController.hidesNavigationBarDuringPresentation = false
         suggestionsController.searchBar.tintColor = UIColor.whiteColor()
+        suggestionsController.searchBar.returnKeyType = .Done
+        suggestionsController.searchBar.placeholder = "Filter breweries"
         suggestionsController.searchBar.sizeToFit()
         suggestionsController.searchBar.delegate = self
         
@@ -297,32 +259,47 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        if tableView == sugesstionResults?.tableView {
+        if suggestionsController.active {
             return results.count
         } else {
             return breweries.count
         }
+        
+        
+        
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-        if tableView == sugesstionResults?.tableView {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! BeerTableViewCell
+        
+        if suggestionsController.active {
             
+            let brewery = results[indexPath.row]
             
-            if results.count > 0 {
-                if let address = results[indexPath.row].formattedAddress {
-                    cell.textLabel?.text = address
-                }
+            if let name = brewery.name {
+                cell.breweryName.text = name
             }
             
+            if let dis = brewery.distance {
+                
+                cell.distance.text = "\(dis)"
+            } else {
+                cell.distance.text = "N/A"
+            }
+            if brewery.largeIconURL != nil {
+                if let iconURL = NSURL(string: brewery.largeIconURL!) {
+                    cell.breweryImage.hnk_setImageFromURL(iconURL)
+                    println(iconURL)
+                }
+            } else {
+                cell.breweryImage.image = UIImage(named: "brewbuddy")
+            }
             
             
         } else {
             
-            let cell = cell as! BeerTableViewCell
             
-            //Configure the cell...
             let brewery = breweries[indexPath.row]
             
             if let name = brewery.name {
@@ -347,6 +324,8 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         
         
         
+        
+        
         return cell
     }
     
@@ -363,16 +342,6 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
         tableView.estimatedRowHeight = 86
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        if tableView == self.sugesstionResults?.tableView {
-            if let locationString = results[indexPath.row].formattedAddress {
-                suggestionsController.searchBar.text = locationString
-            } else {
-                SVProgressHUD.showErrorWithStatus("Sorry could not get coorinaties")
-            }
-        }
-    }
     
     
     
@@ -389,35 +358,66 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             
             if let VC: DetailViewController = segue.destinationViewController as? DetailViewController{
                 
-                
-                if let row = self.tableView.indexPathForSelectedRow()?.row {
-                    if let phone = breweries[row].phone {
-                        VC.phoneNum = phone
+                if suggestionsController.active {
+                    
+                    if let row = self.tableView.indexPathForSelectedRow()?.row {
+                        if let phone = results[row].phone {
+                            VC.phoneNum = phone
+                            
+                        }
+                        if let name = results[row].name {
+                            VC.nameText = name
+                        } else {
+                            VC.nameText = "Not Avaliable"
+                        }
+                        if let website = results[row].website {
+                            VC.websiteURL = website
+                        }
+                        if let loc = results[row].streetAddress, let state = breweries[row].region, let city = breweries[row].locality {
+                            VC.loc = loc + " " + city + ", " + state
+                        } else {
+                            VC.loc = "Not Avaliable"
+                        }
+                        if let image = results[row].largeIconURL {
+                            VC.imageURL = image
+                        } else {
+                            VC.imageURL = nil
+                        }
+                        if let id = results[row].breweryId {
+                            VC.breweryId = id
+                        }
                         
                     }
-                    if let name = breweries[row].name {
-                        VC.nameText = name
-                    } else {
-                        VC.nameText = "Not Avaliable"
+                } else {
+                    
+                    if let row = self.tableView.indexPathForSelectedRow()?.row {
+                        if let phone = breweries[row].phone {
+                            VC.phoneNum = phone
+                            
+                        }
+                        if let name = breweries[row].name {
+                            VC.nameText = name
+                        } else {
+                            VC.nameText = "Not Avaliable"
+                        }
+                        if let website = breweries[row].website {
+                            VC.websiteURL = website
+                        }
+                        if let loc = breweries[row].streetAddress, let state = breweries[row].region, let city = breweries[row].locality {
+                            VC.loc = loc + " " + city + ", " + state
+                        } else {
+                            VC.loc = "Not Avaliable"
+                        }
+                        if let image = breweries[row].largeIconURL {
+                            VC.imageURL = image
+                        } else {
+                            VC.imageURL = nil
+                        }
+                        if let id = breweries[row].breweryId {
+                            VC.breweryId = id
+                        }
+                
                     }
-                    if let website = breweries[row].website {
-                        VC.websiteURL = website
-                    }
-                    if let loc = breweries[row].streetAddress, let state = breweries[row].region, let city = breweries[row].locality {
-                        VC.loc = loc + " " + city + ", " + state
-                    } else {
-                        VC.loc = "Not Avaliable"
-                    }
-                    if let image = breweries[row].largeIconURL {
-                        VC.imageURL = image
-                    } else {
-                        VC.imageURL = nil
-                    }
-                    if let id = breweries[row].breweryId {
-                        VC.breweryId = id
-                    }
-                    println("row \(row) was selected")
-                    // println("value \(berweries[row])")
                 }
             }
             

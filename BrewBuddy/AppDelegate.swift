@@ -33,8 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Parse.
         Parse.setApplicationId("uWFjmAMpvmYjUCDMF7gJJ8Qd7rEKHsj2hRTtVASB",
             clientKey: "zoDl8rq4VC0ICFoEB32Oxauz9NVMZ1UC0PCgLGbH")
-        //google api
-        [GMSServices .provideAPIKey("AIzaSyAify3LBb9ADqYHTlj9CqteYjn-zhPwksQ")]
+
         
         return true
     }
