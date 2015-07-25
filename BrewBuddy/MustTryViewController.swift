@@ -33,26 +33,7 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
             (let brew) in
             if let info = brew, let feature = info.featured {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    
-                    if let name = feature.name {
-                        println("Feature name: \(name)")
-                    }
-                    
-                    if let phone = feature.phone {
-                        println("Feature Phone: \(phone)")
-                    }
-                    
-                    if let id = feature.breweryId {
-                        println("ID: \(id)")
-                    }
-                    
-                    if let icon = feature.largeIconURL {
-                        println("icon: \(icon)")
-                    }
-                    
-                    if let region  = feature.region {
-                        println("region: \(region)")
-                    }
+             
                     self.breweries.append(feature)
                     println(self.breweries.count)
                     
@@ -191,6 +172,15 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
                     }
                     if let id = breweries[row].breweryId {
                         VC.breweryId = id
+                    }
+                    if let open = breweries[row].openToPublic {
+                        VC.open = open
+                    }
+                    if let closed = breweries[row].isClosed {
+                        VC.closedValue = closed
+                    }
+                    if let type = breweries[row].locationTypeDisplay {
+                        VC.typeOfBrewery = type
                     }
                     println("row \(row) was selected")
                     // println("value \(berweries[row])")

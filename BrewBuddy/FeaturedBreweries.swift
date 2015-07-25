@@ -19,6 +19,10 @@ struct FeaturedBreweries {
     let phone: String?
     let website: String?
     let hours: String?
+    let established: String?
+    let isClosed: String?
+    let openToPublic: String?
+    let locationTypeDisplay: String?
     
     init(brewDictionary: [String: AnyObject], brewArray: [[String: AnyObject]]) {
         // Gets the correct index from array
@@ -37,6 +41,10 @@ struct FeaturedBreweries {
         region = location["region"] as? String
         phone = location["phone"] as? String
         website = brewDictionary["brewery"]?["website"] as? String
+        established = brewDictionary["brewery"]?["established"] as? String
+        isClosed = location["isClosed"] as? String
+        openToPublic = location["openToPublic"] as? String
+        locationTypeDisplay = location["locationTypeDisplay"] as? String
         
         
     }

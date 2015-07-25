@@ -45,7 +45,7 @@ class AddBreweryViewController: UIViewController {
                         if let data = NSString(data: data, encoding: NSUTF8StringEncoding) as? String {
                             
                             println("Response: \(data)")
-                            let alert = UIAlertController(title: "Success", message: "\(data)", preferredStyle: .Alert)
+                            let alert = UIAlertController(title: "Success", message: "The data will be reviewed in order to ensure quality", preferredStyle: .Alert)
                             alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
                             self.presentViewController(alert, animated: true, completion:nil)
                         }
