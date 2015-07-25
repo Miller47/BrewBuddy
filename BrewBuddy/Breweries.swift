@@ -19,6 +19,10 @@ struct Breweries {
     let region: String?
     let phone: String?
     let website: String?
+    let openToPublic: String?
+    let established: String?
+    let locationTypeDisplay: String?
+    let isClosed: String?
     
     init(brewDictionary: [String: AnyObject]) {
         
@@ -31,7 +35,10 @@ struct Breweries {
         region = brewDictionary["region"] as? String
         phone = brewDictionary["phone"] as? String
         website = brewDictionary["website"] as? String
-        
+        openToPublic = brewDictionary["openToPublic"] as? String
+        established = brewDictionary["brewery"]?["established"] as? String
+        locationTypeDisplay =  brewDictionary["locationTypeDisplay"] as? String
+        isClosed = brewDictionary["isClosed"] as? String
         
     }
 }

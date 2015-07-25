@@ -19,9 +19,7 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let backItem = UIBarButtonItem(title: "", style: .Plain
-            , target: nil, action: nil)
-        navigationItem.backBarButtonItem = backItem
+       setBackBtnText()
         
         getMustTrys()
     }

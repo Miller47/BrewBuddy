@@ -21,6 +21,7 @@ struct BreweryByIdService {
     func getById(id: String, completion: (Brewery? -> Void)) {
         
         if let breweryURL = NSURL(string: "brewery/\(id)?key=\(breweryDbAPIKey)&withLocations=y&format=json", relativeToURL: breweryDbBaseUrl) {
+             println(breweryURL.absoluteString)
             
             let networkOperation = NetworkOperation(url: breweryURL)
             

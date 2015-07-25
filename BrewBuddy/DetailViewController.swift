@@ -11,15 +11,19 @@ import Parse
 import Haneke
 
 
-class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DetailViewController: UITableViewController {
     
     @IBOutlet weak var addFav: UIBarButtonItem!
-    @IBOutlet weak var reviewTableView: UITableView!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var website: UIButton!
-    @IBOutlet weak var phone: UIButton!
+    @IBOutlet weak var website: UILabel!
+    @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var breweryImage: UIImageView!
+    @IBOutlet weak var openToPublic: UILabel!
+    @IBOutlet weak var closed: UILabel!
+    @IBOutlet weak var established: UILabel!
+    @IBOutlet weak var type: UILabel!
+    
     
     private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
     var nameText: String?
@@ -28,20 +32,19 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     var websiteURL: String?
     var imageURL: String?
     var breweryId: String?
-    var reviews: [AnyObject] = []
+    var open: String?
+    var closedValue: String?
+    var establishedDate: String?
+    var typeOfBrewery: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        setBackBtnText()
+        
         setUpView()
-        
-        //register as obsever
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "retriveReviews", name: "refreshReviewData", object: nil)
-        
-        
-        
-        retriveReviews()
         
     }
     
@@ -60,34 +63,58 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
         if phoneNum == nil {
-            phone.setTitle("No Phone Listed", forState: UIControlState.Normal)
+            phone.text = "No Phone Listed"
             
         } else {
-            phone.setTitle("Call", forState: UIControlState.Normal)
+            phone.text = phoneNum
         }
         if websiteURL == nil {
-            website.setTitle("No Website Listed", forState: UIControlState.Normal)
+            website.text = "No Website Listed"
         } else {
-            website.setTitle("Visit Website", forState: UIControlState.Normal)
+            website.text = websiteURL
+        }
+        
+        if open != nil {
+            if open == "Y" {
+                openToPublic.text = "Open to public: Yes"
+            } else if open == "N" {
+                
+                openToPublic.text = "Open to public: No"
+            }
+        }
+        if closedValue != nil {
+            if closedValue == "Y" {
+                closed.text = "Closed: Yes"
+            } else {
+                closed.text = "Closed: No"
+            }
+        }
+        if establishedDate != nil {
+            established.text = "Established: \(establishedDate!)"
+        } else {
+            established.text = "Established: N/A"
+        }
+        if typeOfBrewery != nil {
+            type.text = "Type: \(typeOfBrewery!)"
         }
     }
     
     
-    @IBAction func call(sender: AnyObject) {
+    func call() {
         //Calls number
         if let num = phoneNum, let url = NSURL(string: "tel://\(num)") {
             UIApplication.sharedApplication().openURL(url)
         }
     }
     
-    @IBAction func visitWebsite() {
+    func visitWebsite() {
         //open website will add native in app support
         if let site = websiteURL, let url = NSURL(string: site) {
             UIApplication.sharedApplication().openURL(url)
         }
     }
     
-    @IBAction func getDirections() {
+    func getDirections() {
         if let loc = loc {
             let query = loc.stringByReplacingOccurrencesOfString(" ", withString: "+")
             let activityController = UIAlertController(title: "Open In", message: "Please choose either Apple maps or Google maps", preferredStyle: .ActionSheet)
@@ -117,13 +144,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    @IBAction func postReview(sender: AnyObject) {
-        
-        
-        self.performSegueWithIdentifier("showReview", sender: nil)
-        
-    }
-    
+  
     @IBAction func addToFavorites(sender: AnyObject) {
         println("Fav")
         SVProgressHUD.showWithStatus("Saving as Favorite")
@@ -175,39 +196,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-    func retriveReviews() {
-        
-        SVProgressHUD.showWithStatus("Retriving Data")
-        showNetworkActivityIndicator(true)
-        
-        var query = PFQuery(className: "Reviews")
-        if let brewId = breweryId {
-            query.whereKey("breweryId", equalTo: brewId)
-            query.orderByDescending("createdAt")
-            query.findObjectsInBackgroundWithBlock({ (results: [AnyObject]?, error: NSError?) -> Void in
-                if error == nil {
-                    if let data = results {
-                        self.reviews = data
-                        self.reviewTableView.reloadData()
-                        SVProgressHUD.dismiss()
-                        self.showNetworkActivityIndicator(false)
-                    }
-                    
-                } else {
-                    SVProgressHUD.dismiss()
-                    self.showNetworkActivityIndicator(false)
-                    if let error = error {
-                        let errorString = error.userInfo?["error"] as? NSString
-                        let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
-                        self.presentViewController(alert, animated: true, completion:nil)
-                    }
-                    
-                }
-            })
-        }
-        
-    }
     
     func getBreweryById(id: String) {
         
@@ -224,9 +212,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                     self.websiteURL = data.website
                     self.phoneNum = data.phone
                     self.breweryId = data.breweryId
+                    self.open = data.openToPublic
+                    self.closedValue =  data.isClosed
+                    self.establishedDate = data.established
+                    self.typeOfBrewery = data.locationTypeDisplay
                     
                     self.setUpView()
-                    self.retriveReviews()
                     
                     SVProgressHUD.dismiss()
                     self.showNetworkActivityIndicator(false)
@@ -241,54 +232,31 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     // MARK: - Table view data source
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return reviews.count
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ReviewTableViewCell
-        
-        //Configure the cell...
-        let reviewInfo: PFObject = reviews[indexPath.row] as! PFObject
-        
-        if let userName = reviewInfo.objectForKey("userName") as? String, let ratingVal = reviewInfo.objectForKey("rating") as? CGFloat {
-            
-            cell.userName.text = userName
-            cell.rating.value = ratingVal
-        }
-        
-        
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor(red:0.918,  green:0.894,  blue:0.886, alpha:0.85)
-        } else {
-            cell.backgroundColor = UIColor(red:0.929,  green:0.922,  blue:0.918, alpha:0.85)
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1 {
+            switch indexPath.row {
+            case 0:
+                getDirections()
+            case 1:
+                call()
+            case 2:
+                visitWebsite()
+            default:
+                println("Noting")
+            }
         }
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showReview" {
+        if segue.identifier == "showUserReviews" {
             
-            if let VC: ReviewViewController = segue.destinationViewController as? ReviewViewController {
+            if let VC: ReviewsTableViewController = segue.destinationViewController as? ReviewsTableViewController {
                 
-                let presentsationSegue = segue as! MZFormSheetPresentationControllerSegue
-                presentsationSegue.formSheetPresentationController.shouldDismissOnBackgroundViewTap = true
-                
-                presentsationSegue.formSheetPresentationController.shouldApplyBackgroundBlurEffect = true
-                presentsationSegue.formSheetPresentationController.shouldCenterVertically = true
-                presentsationSegue.formSheetPresentationController.contentViewSize = CGSizeMake(250, 250)
                 
                 //pass data
                 if let brewId = breweryId {
-                    VC.id = brewId
+                    VC.breweryId = brewId
                 }
             }
             

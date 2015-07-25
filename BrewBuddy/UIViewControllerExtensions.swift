@@ -1,5 +1,5 @@
 //
-//  ActivityIndicatorExtension.swift
+//  UIViewControllerExtensions.swift
 //  BrewBuddy
 //
 //  Created by Tyler Miller on 7/18/15.
@@ -16,6 +16,11 @@ extension UIViewController {
         } else {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
+    }
+    
+    func setBackBtnText() {
+        let backItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backItem
     }
     
 }

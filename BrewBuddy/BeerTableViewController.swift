@@ -70,9 +70,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backItem = UIBarButtonItem(title: "", style: .Plain
-            , target: nil, action: nil)
-        navigationItem.backBarButtonItem = backItem
+        setBackBtnText()
         
         //set up pull to refres
         let refresh = UIRefreshControl()
@@ -386,6 +384,18 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                         if let id = results[row].breweryId {
                             VC.breweryId = id
                         }
+                        if let open = results[row].openToPublic {
+                            VC.open = open
+                        }
+                        if let closed = results[row].isClosed {
+                            VC.closedValue = closed
+                        }
+                        if let estab = results[row].established {
+                            VC.establishedDate =  estab
+                        }
+                        if let type = results[row].locationTypeDisplay {
+                            VC.typeOfBrewery = type
+                        }
                         
                     }
                 } else {
@@ -415,6 +425,18 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                         }
                         if let id = breweries[row].breweryId {
                             VC.breweryId = id
+                        }
+                        if let open = breweries[row].openToPublic {
+                            VC.open = open
+                        }
+                        if let closed = breweries[row].isClosed {
+                            VC.closedValue = closed
+                        }
+                        if let estab = breweries[row].established {
+                            VC.establishedDate =  estab
+                        }
+                        if let type = breweries[row].locationTypeDisplay {
+                            VC.typeOfBrewery = type
                         }
                 
                     }
