@@ -26,6 +26,10 @@ class ReviewsTableViewController: UITableViewController {
         retriveReviews()
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     func retriveReviews() {
         
         SVProgressHUD.showWithStatus("Retriving Data")
