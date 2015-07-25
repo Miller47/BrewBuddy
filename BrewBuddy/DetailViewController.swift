@@ -84,9 +84,9 @@ class DetailViewController: UITableViewController {
         }
         if closedValue != nil {
             if closedValue == "Y" {
-                closed.text = "Closed: Yes"
+                closed.text = "In Buisiness: No"
             } else {
-                closed.text = "Closed: No"
+                closed.text = "In Buisiness: Yes"
             }
         }
         if establishedDate != nil {
