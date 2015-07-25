@@ -294,25 +294,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="web" translatesAutoresizingMaskIntoConstraints="NO" id="zYe-FR-0pJ">
-                                                    <rect key="frame" x="6" y="11" width="62" height="22"/>
+                                                    <rect key="frame" x="13" y="11" width="48" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="62" id="0e5-DZ-Pwx"/>
+                                                        <constraint firstAttribute="width" constant="48" id="0e5-DZ-Pwx"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2i-3S-bw8">
-                                                    <rect key="frame" x="76" y="12" width="439" height="21"/>
+                                                    <rect key="frame" x="69" y="12" width="439" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="U2i-3S-bw8" firstAttribute="leading" secondItem="zYe-FR-0pJ" secondAttribute="trailing" constant="8" symbolic="YES" id="3GL-gO-oxZ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="U2i-3S-bw8" secondAttribute="trailing" constant="77" id="5uG-S8-zsN"/>
+                                                <constraint firstItem="U2i-3S-bw8" firstAttribute="leading" secondItem="zYe-FR-0pJ" secondAttribute="trailing" constant="8" id="3GL-gO-oxZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="U2i-3S-bw8" secondAttribute="trailing" constant="84" id="5uG-S8-zsN"/>
                                                 <constraint firstItem="U2i-3S-bw8" firstAttribute="bottom" secondItem="zYe-FR-0pJ" secondAttribute="bottom" id="A9R-sz-QJD"/>
                                                 <constraint firstItem="zYe-FR-0pJ" firstAttribute="top" secondItem="0gD-aD-Iwh" secondAttribute="topMargin" constant="3" id="BU1-s5-U2e"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="zYe-FR-0pJ" secondAttribute="bottom" constant="2.5" id="MJk-8y-Edw"/>
-                                                <constraint firstItem="zYe-FR-0pJ" firstAttribute="leading" secondItem="0gD-aD-Iwh" secondAttribute="leadingMargin" constant="-2" id="Vcb-3f-2ZM"/>
+                                                <constraint firstItem="zYe-FR-0pJ" firstAttribute="leading" secondItem="0gD-aD-Iwh" secondAttribute="leadingMargin" constant="5" id="Vcb-3f-2ZM"/>
                                                 <constraint firstItem="U2i-3S-bw8" firstAttribute="centerY" secondItem="zYe-FR-0pJ" secondAttribute="centerY" id="c6Q-sV-cof"/>
                                             </constraints>
                                         </tableViewCellContentView>
