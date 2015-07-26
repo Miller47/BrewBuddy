@@ -41,7 +41,9 @@ class DetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        // Ensures tableview starts below navbar
+        tableView.contentInset = UIEdgeInsets(top: 30.0, left: 0.0, bottom: 0.0, right: 0.0)
+        
         setBackBtnText()
         
         setUpView()

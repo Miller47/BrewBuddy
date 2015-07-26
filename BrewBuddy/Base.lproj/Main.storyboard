@@ -178,11 +178,12 @@
         <!--Details-->
         <scene sceneID="8kR-kz-Zn1">
             <objects>
-                <tableViewController id="HLc-Fs-TvY" customClass="DetailViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="HLc-Fs-TvY" customClass="DetailViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="dBj-ka-c0f">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="150" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="sOw-kX-0fs">
                                 <cells>
