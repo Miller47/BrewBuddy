@@ -103,7 +103,15 @@ class DetailViewController: UITableViewController {
     func call() {
         //Calls number
         if let num = phoneNum, let url = NSURL(string: "tel://\(num)") {
-            UIApplication.sharedApplication().openURL(url)
+            let alert = UIAlertController(title: "Call?", message: "Are you sure you want to call?", preferredStyle: .Alert)
+            let noAction = UIAlertAction(title: "NO", style: .Cancel, handler: nil)
+            alert.addAction(noAction)
+            let yesAction = UIAlertAction(title: "YES", style: .Default, handler: { (action) -> Void in
+                UIApplication.sharedApplication().openURL(url)
+            })
+            alert.addAction(yesAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
@@ -118,9 +126,7 @@ class DetailViewController: UITableViewController {
         if let loc = loc {
             let query = loc.stringByReplacingOccurrencesOfString(" ", withString: "+")
             let activityController = UIAlertController(title: "Open In", message: "Please choose either Apple maps or Google maps", preferredStyle: .ActionSheet)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
-                
-            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
             activityController.addAction(cancelAction)
             
             let appleMaps = UIAlertAction(title: "Apple Maps", style: .Default, handler: { (action) -> Void in
