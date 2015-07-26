@@ -67,7 +67,7 @@ class SettingsTableViewController: UITableViewController {
                             if error == nil {
                                 SVProgressHUD.dismiss()
                                 self.showNetworkActivityIndicator(false)
-                                let alert = UIAlertController(title: "Please verify yoru email", message: "An email has been sent to the provided address in order to verify your new email.", preferredStyle: .Alert)
+                                let alert = UIAlertController(title: "Please verify your email", message: "An email has been sent to the provided address in order to verify your new email.", preferredStyle: .Alert)
                                 alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
                                 self.presentViewController(alert, animated: true, completion:nil)
                                 
