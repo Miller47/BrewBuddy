@@ -36,6 +36,7 @@ class DetailViewController: UITableViewController {
     var closedValue: String?
     var establishedDate: String?
     var typeOfBrewery: String?
+    var isFav: Bool?
     
     
     override func viewDidLoad() {
@@ -48,6 +49,30 @@ class DetailViewController: UITableViewController {
         
         setUpView()
         
+        setFavIcon()
+        
+    }
+    
+    func setFavIcon() {
+        if let id =  breweryId {
+            var query = PFQuery(className: "Favorites")
+            query.whereKey("breweryId", equalTo: id)
+            query.findObjectsInBackgroundWithBlock { (favs, error) -> Void in
+                
+                if error == nil {
+                    if let fav = favs as? [PFObject] {
+                        for item in fav {
+                            println(item.objectForKey("isFav")!)
+                            self.isFav = item.objectForKey("isFav") as? Bool
+                        }
+                        
+                        if let fav = self.isFav {
+                            self.addFav.image = UIImage(named: "favSelected")!
+                        }
+                    }
+                }
+            }
+        }
     }
     
     func setUpView() {
@@ -152,55 +177,83 @@ class DetailViewController: UITableViewController {
         }
     }
     
-  
+    
     @IBAction func addToFavorites(sender: AnyObject) {
         println("Fav")
-        SVProgressHUD.showWithStatus("Saving as Favorite")
-        showNetworkActivityIndicator(true)
-        
-        if let id = breweryId {
+        if let fav = isFav {
+            SVProgressHUD.showWithStatus("Removing favorite")
+            showNetworkActivityIndicator(true)
             
-            var fav = PFObject(className: "Favorites")
-            fav["breweryId"] = id
-            
-            if  let name = nameText {
-                fav["breweryName"] = name
-            }
-            
-            
-            if let icon = imageURL {
-                fav["icon"] = icon
-            }
-            
-            if let location = loc {
-                fav["loc"] = location
-            }
-            
-            
-            if let currentUser = PFUser.currentUser() {
-                fav.ACL = PFACL(user: currentUser)
-                println("Current User: \(currentUser)")
-            }
-            fav.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
-                if success {
-                    
-                    SVProgressHUD.dismiss()
-                    self.showNetworkActivityIndicator(false)
-                    
-                    
-                } else {
-                    SVProgressHUD.dismiss()
-                    self.showNetworkActivityIndicator(false)
-                    if let error = error {
-                        let errorString = error.userInfo?["error"] as? NSString
-                        let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
-                        self.presentViewController(alert, animated: true, completion:nil)
+            if let id =  breweryId {
+                var query = PFQuery(className: "Favorites")
+                query.whereKey("breweryId", equalTo: id)
+                query.findObjectsInBackgroundWithBlock({ (favs, error) -> Void in
+                    if error == nil {
+                        if let favorite = favs as? [PFObject] {
+                            for item in favorite {
+                                item.deleteInBackgroundWithBlock({ (done, error) -> Void in
+                                    SVProgressHUD.dismiss()
+                                    self.showNetworkActivityIndicator(false)
+                                    self.addFav.image = UIImage(named: "fav")
+                                })
+                            }
+                        }
+                        
+                        
                     }
-                    
+                })
+            }
+            
+        } else {
+            SVProgressHUD.showWithStatus("Saving as Favorite")
+            showNetworkActivityIndicator(true)
+            
+            if let id = breweryId {
+                
+                var fav = PFObject(className: "Favorites")
+                fav["breweryId"] = id
+                
+                if  let name = nameText {
+                    fav["breweryName"] = name
                 }
-            })
+                
+                
+                if let icon = imageURL {
+                    fav["icon"] = icon
+                }
+                
+                if let location = loc {
+                    fav["loc"] = location
+                }
+                fav["isFav"] = true
+                
+                if let currentUser = PFUser.currentUser() {
+                    fav.ACL = PFACL(user: currentUser)
+                    println("Current User: \(currentUser)")
+                }
+                fav.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+                    if success {
+                        
+                        SVProgressHUD.dismiss()
+                        self.showNetworkActivityIndicator(false)
+                        self.addFav.image = UIImage(named: "favSelected")
+                        
+                        
+                    } else {
+                        SVProgressHUD.dismiss()
+                        self.showNetworkActivityIndicator(false)
+                        if let error = error {
+                            let errorString = error.userInfo?["error"] as? NSString
+                            let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                            alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                            self.presentViewController(alert, animated: true, completion:nil)
+                        }
+                        
+                    }
+                })
+            }
         }
+        
         
     }
     
@@ -226,6 +279,7 @@ class DetailViewController: UITableViewController {
                     self.typeOfBrewery = data.locationTypeDisplay
                     
                     self.setUpView()
+                    self.setFavIcon()
                     
                     SVProgressHUD.dismiss()
                     self.showNetworkActivityIndicator(false)
