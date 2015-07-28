@@ -39,8 +39,8 @@ class DetailViewController: UITableViewController {
     var isFav: Bool?
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         
         // Ensures tableview starts below navbar
         tableView.contentInset = UIEdgeInsets(top: 30.0, left: 0.0, bottom: 0.0, right: 0.0)
@@ -50,7 +50,12 @@ class DetailViewController: UITableViewController {
         setUpView()
         
         setFavIcon()
-        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //set tablewview to not hidden
+        tableView.hidden = false
     }
     
     func setFavIcon() {

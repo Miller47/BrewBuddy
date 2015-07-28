@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.5.0"
+  },
+  "applications": {
+    "BrewBuddy": {
+      "applicationId": "uWFjmAMpvmYjUCDMF7gJJ8Qd7rEKHsj2hRTtVASB",
+      "masterKey": "mQoQwYVfcMlKwILZ1rUCOrOtJjUbPIY1x0FB2UuC"
+    },
+    "_default": {
+      "link": "BrewBuddy"
+    }
+  }
+}
