@@ -78,19 +78,15 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
             cell.distance.text = location
         }
         if let icon = favInfo.objectForKey("icon") as? String {
-            if icon.isEmpty {
+            
+            if let iconURL = NSURL(string: icon) {
+                cell.breweryImage.hnk_setImageFromURL(iconURL)
                 
-                cell.breweryImage.image = UIImage(named: "brewbuddy")
-                
-            } else {
-                if let iconURL = NSURL(string: icon) {
-                    cell.breweryImage.hnk_setImageFromURL(iconURL)
-                    
-                }
             }
             
             
-            
+        } else {
+            cell.breweryImage.image = UIImage(named: "brewbuddy")
         }
         
         
