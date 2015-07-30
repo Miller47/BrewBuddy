@@ -108,10 +108,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sullivan's Black Forest Brew Haus &amp; Grill" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyM-rJ-CBb">
-                                                    <rect key="frame" x="138" y="8" width="206" height="63"/>
+                                                    <rect key="frame" x="138" y="8" width="142" height="63"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="206" id="ULR-UB-hvq"/>
+                                                        <constraint firstAttribute="width" constant="142" id="ULR-UB-hvq"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,8 +128,8 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="4gc-Oy-mpa" secondAttribute="bottom" id="f2I-8g-nY3"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="56i-YX-HiX" secondAttribute="trailing" constant="9" id="ifj-ZW-o0n"/>
                                                 <constraint firstItem="56i-YX-HiX" firstAttribute="top" secondItem="eaW-FY-2du" secondAttribute="topMargin" constant="49" id="lKl-7j-amr"/>
+                                                <constraint firstItem="xyM-rJ-CBb" firstAttribute="top" secondItem="eaW-FY-2du" secondAttribute="topMargin" id="n2S-K7-FXv"/>
                                                 <constraint firstItem="4gc-Oy-mpa" firstAttribute="leading" secondItem="eaW-FY-2du" secondAttribute="leadingMargin" constant="1" id="nfR-oq-aDt"/>
-                                                <constraint firstItem="xyM-rJ-CBb" firstAttribute="top" secondItem="eaW-FY-2du" secondAttribute="topMargin" id="wQA-Ot-ujI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -178,8 +178,8 @@
         <!--Details-->
         <scene sceneID="8kR-kz-Zn1">
             <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="HLc-Fs-TvY" customClass="DetailViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="dBj-ka-c0f">
+                <tableViewController id="HLc-Fs-TvY" customClass="DetailViewController" customModule="BrewBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="dBj-ka-c0f">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -240,9 +240,9 @@
                                                     <rect key="frame" x="13" y="11" width="48" height="22"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5011 Saginaw Road Midland, Michigan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="116-VP-gA0">
-                                                    <rect key="frame" x="69" y="0.0" width="254" height="44"/>
+                                                    <rect key="frame" x="69" y="0.0" width="204" height="44"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="254" id="y58-fW-xvx"/>
+                                                        <constraint firstAttribute="width" constant="204" id="y58-fW-xvx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -300,8 +300,8 @@
                                                         <constraint firstAttribute="width" constant="48" id="0e5-DZ-Pwx"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2i-3S-bw8">
-                                                    <rect key="frame" x="69" y="12" width="439" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2i-3S-bw8">
+                                                    <rect key="frame" x="69" y="3" width="439" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -310,7 +310,7 @@
                                             <constraints>
                                                 <constraint firstItem="U2i-3S-bw8" firstAttribute="leading" secondItem="zYe-FR-0pJ" secondAttribute="trailing" constant="8" id="3GL-gO-oxZ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="U2i-3S-bw8" secondAttribute="trailing" constant="84" id="5uG-S8-zsN"/>
-                                                <constraint firstItem="U2i-3S-bw8" firstAttribute="bottom" secondItem="zYe-FR-0pJ" secondAttribute="bottom" id="A9R-sz-QJD"/>
+                                                <constraint firstItem="U2i-3S-bw8" firstAttribute="bottom" secondItem="zYe-FR-0pJ" secondAttribute="bottom" constant="8" id="A9R-sz-QJD"/>
                                                 <constraint firstItem="zYe-FR-0pJ" firstAttribute="top" secondItem="0gD-aD-Iwh" secondAttribute="topMargin" constant="3" id="BU1-s5-U2e"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="zYe-FR-0pJ" secondAttribute="bottom" constant="2.5" id="MJk-8y-Edw"/>
                                                 <constraint firstItem="zYe-FR-0pJ" firstAttribute="leading" secondItem="0gD-aD-Iwh" secondAttribute="leadingMargin" constant="5" id="Vcb-3f-2ZM"/>
@@ -1427,16 +1427,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sullivan's Black Forest Brew Haus &amp; Grill" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa7-St-9AS">
-                                                    <rect key="frame" x="138" y="8" width="206" height="63"/>
+                                                    <rect key="frame" x="138" y="8" width="142" height="63"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="206" id="Nmu-Ff-I3d"/>
+                                                        <constraint firstAttribute="width" constant="142" id="Nmu-Ff-I3d"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-8a-5yC">
-                                                    <rect key="frame" x="138" y="57" width="31.5" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5011 Saginaw Road Midland, Michigan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-8a-5yC">
+                                                    <rect key="frame" x="398" y="69" width="161" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1447,10 +1447,7 @@
                                                 <constraint firstItem="67Q-s4-cbA" firstAttribute="leading" secondItem="Sqg-Dv-Eqk" secondAttribute="leadingMargin" constant="1" id="WAE-gq-DRp"/>
                                                 <constraint firstItem="67Q-s4-cbA" firstAttribute="top" secondItem="Sqg-Dv-Eqk" secondAttribute="topMargin" id="cRX-BJ-d5x"/>
                                                 <constraint firstItem="Xa7-St-9AS" firstAttribute="leading" secondItem="Sqg-Dv-Eqk" secondAttribute="leadingMargin" constant="130" id="eJi-cc-k0A"/>
-                                                <constraint firstItem="4OY-8a-5yC" firstAttribute="bottom" secondItem="Sqg-Dv-Eqk" secondAttribute="bottomMargin" id="ePa-OG-9DS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="67Q-s4-cbA" secondAttribute="bottom" id="nrW-4g-HCb"/>
-                                                <constraint firstItem="4OY-8a-5yC" firstAttribute="leading" secondItem="Sqg-Dv-Eqk" secondAttribute="leadingMargin" constant="130" id="uLl-HP-9dm"/>
-                                                <constraint firstItem="4OY-8a-5yC" firstAttribute="top" secondItem="Sqg-Dv-Eqk" secondAttribute="topMargin" constant="49" id="uxq-fM-Z4j"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Xa7-St-9AS" secondAttribute="bottom" constant="27" id="ySm-fI-QN4"/>
                                                 <constraint firstItem="Xa7-St-9AS" firstAttribute="top" secondItem="Sqg-Dv-Eqk" secondAttribute="topMargin" id="zji-OS-x4n"/>
                                             </constraints>
@@ -1517,6 +1514,6 @@
         <image name="web" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M4X-lL-gmE"/>
+        <segue reference="63X-gE-xrK"/>
     </inferredMetricsTieBreakers>
 </document>

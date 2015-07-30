@@ -7,13 +7,39 @@
 //
 
 import UIKit
+import Parse
 
 class MustTryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
     var breweries: [FeaturedBreweries] = []
+    var loc: PFGeoPoint?
     
     @IBOutlet weak var tableView: UITableView!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        PFGeoPoint.geoPointForCurrentLocationInBackground({ (geoPoint, error) -> Void in
+            if error == nil {
+                self.loc = geoPoint
+                if let pointTemp = self.loc {
+                    println(pointTemp)
+                }
+                
+                if let loctaion = self.loc {
+                    PFCloud.callFunctionInBackground("featured", withParameters: ["loc":loctaion], block: { (results, error) -> Void in
+                        if error == nil {
+                            println("Cloud code: \(results)")
+                        } else{
+                            println("Cloud code error: \(error)")
+                        }
+                    })
+                }
+
+            }
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +48,10 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
        setBackBtnText()
         
         getMustTrys()
+        
+       
+
+        
     }
     
     func getMustTrys() {

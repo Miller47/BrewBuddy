@@ -12,7 +12,7 @@ import Parse
 class ReviewsTableViewController: UITableViewController {
     
     var breweryId: String?
-    var reviews: [AnyObject] = []
+    var reviews: NSArray = []
     
     
     override func viewDidLoad() {
@@ -35,20 +35,22 @@ class ReviewsTableViewController: UITableViewController {
         SVProgressHUD.showWithStatus("Retriving Data")
         showNetworkActivityIndicator(true)
         
-        var query = PFQuery(className: "Reviews")
+        var query = PFQuery(className: "Brewery")
         if let brewId = breweryId {
             println(brewId)
             query.whereKey("breweryId", equalTo: brewId)
-            query.orderByDescending("createdAt")
-            query.findObjectsInBackgroundWithBlock({ (results: [AnyObject]?, error: NSError?) -> Void in
+            query.includeKey("rating")
+            query.getFirstObjectInBackgroundWithBlock({ (brewery: PFObject?, error: NSError?) -> Void in
+                
                 if error == nil {
-                    if let data = results {
-                        self.reviews = data
+                    if let reviews: AnyObject = brewery?.objectForKey("rating") {
+                        let allReviews = reviews as! [AnyObject]
+                        let sortDiscriptor = NSSortDescriptor(key: "rating", ascending: false)
+                        self.reviews =  (allReviews as NSArray).sortedArrayUsingDescriptors([sortDiscriptor])
                         self.tableView.reloadData()
                         SVProgressHUD.dismiss()
                         self.showNetworkActivityIndicator(false)
                     }
-                    
                 } else {
                     SVProgressHUD.dismiss()
                     self.showNetworkActivityIndicator(false)
@@ -60,7 +62,9 @@ class ReviewsTableViewController: UITableViewController {
                     }
                     
                 }
+
             })
+
         }
         
     }

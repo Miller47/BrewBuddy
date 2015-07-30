@@ -39,11 +39,9 @@ class DetailViewController: UITableViewController {
     var isFav: Bool?
     
     
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        
-        // Ensures tableview starts below navbar
-        tableView.contentInset = UIEdgeInsets(top: 30.0, left: 0.0, bottom: 0.0, right: 0.0)
         
         setBackBtnText()
         
@@ -54,8 +52,10 @@ class DetailViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //set tablewview to not hidden
-        tableView.hidden = false
+        
+        // Ensures tableview starts below navbar
+        tableView.contentInset = UIEdgeInsets(top: -35.0, left: 0.0, bottom: 0.0, right: 0.0)
+        
     }
     
     func setFavIcon() {
@@ -185,7 +185,9 @@ class DetailViewController: UITableViewController {
     
     @IBAction func addToFavorites(sender: AnyObject) {
         println("Fav")
-        if let fav = isFav {
+        addFav.enabled = false
+        if isFav ?? false {
+            //println("fav is: \(fav)")
             SVProgressHUD.showWithStatus("Removing favorite")
             showNetworkActivityIndicator(true)
             
@@ -200,6 +202,13 @@ class DetailViewController: UITableViewController {
                                     SVProgressHUD.dismiss()
                                     self.showNetworkActivityIndicator(false)
                                     self.addFav.image = UIImage(named: "fav")
+                                    
+                                    self.addFav.enabled = true
+                                    
+                                    //set isfav bool to false to ensure this block is not called unless it is true
+                                    
+                                    self.isFav = false
+                                    println("IsFav: \(self.isFav)")
                                 })
                             }
                         }
@@ -242,7 +251,9 @@ class DetailViewController: UITableViewController {
                         SVProgressHUD.dismiss()
                         self.showNetworkActivityIndicator(false)
                         self.addFav.image = UIImage(named: "favSelected")
-                        
+                        self.isFav = true
+                        self.addFav.enabled = true
+                        println("IsFav: \(self.isFav)")
                         
                     } else {
                         SVProgressHUD.dismiss()
