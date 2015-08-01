@@ -44,7 +44,6 @@ class DetailViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        setBackBtnText()
         
         setUpView()
         

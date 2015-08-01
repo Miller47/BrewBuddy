@@ -50,13 +50,7 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
         })
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        setBackBtnText()
-        
-    }
+
     
     func getMustTrys(id: String) {
         

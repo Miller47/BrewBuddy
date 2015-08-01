@@ -18,7 +18,6 @@
 		2F897F931B2C21E40096D73C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F897F911B2C21E40096D73C /* LaunchScreen.xib */; };
 		2F897F9F1B2C21E40096D73C /* BrewBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F897F9E1B2C21E40096D73C /* BrewBuddyTests.swift */; };
 		2F8B3C2C1B570FAA00734450 /* MustTryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B3C2B1B570FAA00734450 /* MustTryViewController.swift */; };
-		2F8B3C2E1B5714C900734450 /* FeaturedBreweriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B3C2D1B5714C900734450 /* FeaturedBreweriesService.swift */; };
 		2F8B3C301B5736DA00734450 /* AddBreweryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8B3C2F1B5736DA00734450 /* AddBreweryViewController.swift */; };
 		2F953E6C1B3C990100B0152D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F953E6B1B3C990100B0152D /* SignUpViewController.swift */; };
 		2F953E6E1B3CBC1E00B0152D /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F953E6D1B3CBC1E00B0152D /* ReviewTableViewCell.swift */; };
@@ -29,7 +28,6 @@
 		2FDE98741B5A538F00F15DB5 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE98731B5A538F00F15DB5 /* FavoritesViewController.swift */; };
 		2FDE98761B5B066C00F15DB5 /* BreweryByIdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE98751B5B066C00F15DB5 /* BreweryByIdService.swift */; };
 		2FDE98781B5B08E500F15DB5 /* BreweryById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE98771B5B08E500F15DB5 /* BreweryById.swift */; };
-		2FE942661B5708E5001347F2 /* FeaturedBreweries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE942651B5708E5001347F2 /* FeaturedBreweries.swift */; };
 		2FECE9B71B3C6BD200DC82E1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECE9B51B3C6BD200DC82E1 /* Bolts.framework */; };
 		2FECE9B81B3C6BD200DC82E1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECE9B61B3C6BD200DC82E1 /* Parse.framework */; };
 		2FECE9BA1B3C6CC500DC82E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FECE9B91B3C6CC500DC82E1 /* AudioToolbox.framework */; };
@@ -77,7 +75,6 @@
 		2F897F9D1B2C21E40096D73C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F897F9E1B2C21E40096D73C /* BrewBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewBuddyTests.swift; sourceTree = "<group>"; };
 		2F8B3C2B1B570FAA00734450 /* MustTryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MustTryViewController.swift; sourceTree = "<group>"; };
-		2F8B3C2D1B5714C900734450 /* FeaturedBreweriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedBreweriesService.swift; sourceTree = "<group>"; };
 		2F8B3C2F1B5736DA00734450 /* AddBreweryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBreweryViewController.swift; sourceTree = "<group>"; };
 		2F953E6B1B3C990100B0152D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2F953E6D1B3CBC1E00B0152D /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,7 +86,6 @@
 		2FDE98731B5A538F00F15DB5 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		2FDE98751B5B066C00F15DB5 /* BreweryByIdService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweryByIdService.swift; sourceTree = "<group>"; };
 		2FDE98771B5B08E500F15DB5 /* BreweryById.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweryById.swift; sourceTree = "<group>"; };
-		2FE942651B5708E5001347F2 /* FeaturedBreweries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedBreweries.swift; sourceTree = "<group>"; };
 		2FECE9B51B3C6BD200DC82E1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2FECE9B61B3C6BD200DC82E1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		2FECE9B91B3C6CC500DC82E1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -225,7 +221,6 @@
 				2FC6F1161B4DF18700A138EB /* NetworkOperation.swift */,
 				2F21CDDC1B4E043200312C9C /* BrewerySevice.swift */,
 				2F21CDDE1B4ECA4300312C9C /* Brewery.swift */,
-				2F8B3C2D1B5714C900734450 /* FeaturedBreweriesService.swift */,
 				2FDE98711B5A0DE000F15DB5 /* UIViewControllerExtensions.swift */,
 				2FDE98751B5B066C00F15DB5 /* BreweryByIdService.swift */,
 			);
@@ -245,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				2FC6F1141B4DE47200A138EB /* Breweries.swift */,
-				2FE942651B5708E5001347F2 /* FeaturedBreweries.swift */,
 				2FDE98771B5B08E500F15DB5 /* BreweryById.swift */,
 				2F8B3C321B573CAD00734450 /* Network */,
 			);
@@ -474,10 +468,8 @@
 				2F8B3C301B5736DA00734450 /* AddBreweryViewController.swift in Sources */,
 				2FDE98741B5A538F00F15DB5 /* FavoritesViewController.swift in Sources */,
 				2FAB59D91B2C2A35009A1A0D /* BeerTableViewController.swift in Sources */,
-				2F8B3C2E1B5714C900734450 /* FeaturedBreweriesService.swift in Sources */,
 				2F953E6E1B3CBC1E00B0152D /* ReviewTableViewCell.swift in Sources */,
 				2F21CDDD1B4E043200312C9C /* BrewerySevice.swift in Sources */,
-				2FE942661B5708E5001347F2 /* FeaturedBreweries.swift in Sources */,
 				2F8B3C2C1B570FAA00734450 /* MustTryViewController.swift in Sources */,
 				2FECE9DA1B3C7ED500DC82E1 /* DetailViewController.swift in Sources */,
 				2FC6F1171B4DF18700A138EB /* NetworkOperation.swift in Sources */,

@@ -18,9 +18,6 @@ extension UIViewController {
         }
     }
     
-    func setBackBtnText() {
-        let backItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backItem
-    }
+  
     
 }

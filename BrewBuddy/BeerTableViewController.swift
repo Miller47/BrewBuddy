@@ -70,7 +70,6 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackBtnText()
         
         //set up pull to refres
         let refresh = UIRefreshControl()

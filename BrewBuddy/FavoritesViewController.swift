@@ -19,7 +19,6 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        setBackBtnText()
         
         retriveFavorites()
     }
