@@ -1435,8 +1435,11 @@
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5011 Saginaw Road Midland, Michigan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-8a-5yC">
-                                                    <rect key="frame" x="398" y="69" width="161" height="29"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midland, Michigan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-8a-5yC">
+                                                    <rect key="frame" x="138" y="77" width="161" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="161" id="zQN-Dx-UaB"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.3921568627" green="0.45882352939999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1444,7 +1447,10 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="4OY-8a-5yC" firstAttribute="leading" secondItem="Xa7-St-9AS" secondAttribute="leading" id="4EZ-qe-6oY"/>
+                                                <constraint firstItem="4OY-8a-5yC" firstAttribute="top" secondItem="Xa7-St-9AS" secondAttribute="bottom" constant="6" id="NRK-vV-A6p"/>
                                                 <constraint firstItem="67Q-s4-cbA" firstAttribute="leading" secondItem="Sqg-Dv-Eqk" secondAttribute="leadingMargin" constant="1" id="WAE-gq-DRp"/>
+                                                <constraint firstAttribute="bottom" secondItem="4OY-8a-5yC" secondAttribute="bottom" id="Z37-Mv-ghZ"/>
                                                 <constraint firstItem="67Q-s4-cbA" firstAttribute="top" secondItem="Sqg-Dv-Eqk" secondAttribute="topMargin" id="cRX-BJ-d5x"/>
                                                 <constraint firstItem="Xa7-St-9AS" firstAttribute="leading" secondItem="Sqg-Dv-Eqk" secondAttribute="leadingMargin" constant="130" id="eJi-cc-k0A"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="67Q-s4-cbA" secondAttribute="bottom" id="nrW-4g-HCb"/>

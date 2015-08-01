@@ -11,6 +11,7 @@ import Parse
 import Haneke
 
 
+
 class DetailViewController: UITableViewController {
     
     @IBOutlet weak var addFav: UIBarButtonItem!
@@ -37,7 +38,7 @@ class DetailViewController: UITableViewController {
     var establishedDate: String?
     var typeOfBrewery: String?
     var isFav: Bool?
-    
+    var cityState: String?
     
     
     override func viewWillAppear(animated: Bool) {
@@ -68,278 +69,284 @@ class DetailViewController: UITableViewController {
                     if let fav = favs as? [PFObject] {
                         for item in fav {
                             println(item.objectForKey("isFav")!)
-                            self.isFav = item.objectForKey("isFav") as? Bool
-                        }
-                        
-                        if let fav = self.isFav {
-                            self.addFav.image = UIImage(named: "favSelected")!
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    func setUpView() {
-        
-        if nameText != nil {
-            name.text = nameText
-        }
-        
-        if loc != nil {
-            location.text = loc
-        }
-        if imageURL != nil {
-            if let URL = NSURL(string: imageURL!) {
-                breweryImage.hnk_setImageFromURL(URL)
-            }
-        }
-        if phoneNum == nil {
-            phone.text = "No Phone Listed"
-            
-        } else {
-            phone.text = phoneNum
-        }
-        if websiteURL == nil {
-            website.text = "No Website Listed"
-        } else {
-            website.text = websiteURL
-        }
-        
-        if open != nil {
-            if open == "Y" {
-                openToPublic.text = "Open to public: Yes"
-            } else if open == "N" {
-                
-                openToPublic.text = "Open to public: No"
-            }
-        }
-        if closedValue != nil {
-            if closedValue == "Y" {
-                closed.text = "In Buisiness: No"
-            } else {
-                closed.text = "In Buisiness: Yes"
-            }
-        }
-        if establishedDate != nil {
-            established.text = "Established: \(establishedDate!)"
-        } else {
-            established.text = "Established: N/A"
-        }
-        if typeOfBrewery != nil {
-            type.text = "Type: \(typeOfBrewery!)"
-        }
-    }
-    
-    
-    func call() {
-        //Calls number
-        if let num = phoneNum, let url = NSURL(string: "tel://\(num)") {
-            let alert = UIAlertController(title: "Call?", message: "Are you sure you want to call?", preferredStyle: .Alert)
-            let noAction = UIAlertAction(title: "NO", style: .Cancel, handler: nil)
-            alert.addAction(noAction)
-            let yesAction = UIAlertAction(title: "YES", style: .Default, handler: { (action) -> Void in
-                UIApplication.sharedApplication().openURL(url)
-            })
-            alert.addAction(yesAction)
-            
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-    }
-    
-    func visitWebsite() {
-        //open website will add native in app support
-        if let site = websiteURL, let url = NSURL(string: site) {
-            UIApplication.sharedApplication().openURL(url)
-        }
-    }
-    
-    func getDirections() {
-        if let loc = loc {
-            let query = loc.stringByReplacingOccurrencesOfString(" ", withString: "+")
-            let activityController = UIAlertController(title: "Open In", message: "Please choose either Apple maps or Google maps", preferredStyle: .ActionSheet)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-            activityController.addAction(cancelAction)
-            
-            let appleMaps = UIAlertAction(title: "Apple Maps", style: .Default, handler: { (action) -> Void in
-                
-                UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?q=\(query)")!)
-            })
-            activityController.addAction(appleMaps)
-            
-            if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
-                
-                let googleMaps = UIAlertAction(title: "Google Maps", style: .Default, handler: { (action) -> Void in
-                    
-                    UIApplication.sharedApplication().openURL(NSURL(string:
-                        "comgooglemaps://?q=\(query)")!)
-                })
-                activityController.addAction(googleMaps)
-            }
-            
-            self.presentViewController(activityController, animated: true, completion: nil)
-            
-        }
-    }
-    
-    
-    @IBAction func addToFavorites(sender: AnyObject) {
-        println("Fav")
-        addFav.enabled = false
-        if isFav ?? false {
-            //println("fav is: \(fav)")
-            SVProgressHUD.showWithStatus("Removing favorite")
-            showNetworkActivityIndicator(true)
-            
-            if let id =  breweryId {
-                var query = PFQuery(className: "Favorites")
-                query.whereKey("breweryId", equalTo: id)
-                query.findObjectsInBackgroundWithBlock({ (favs, error) -> Void in
-                    if error == nil {
-                        if let favorite = favs as? [PFObject] {
-                            for item in favorite {
-                                item.deleteInBackgroundWithBlock({ (done, error) -> Void in
-                                    SVProgressHUD.dismiss()
-                                    self.showNetworkActivityIndicator(false)
-                                    self.addFav.image = UIImage(named: "fav")
-                                    
-                                    self.addFav.enabled = true
-                                    
-                                    //set isfav bool to false to ensure this block is not called unless it is true
-                                    
-                                    self.isFav = false
-                                    println("IsFav: \(self.isFav)")
-                                })
+                            let fav = item.objectForKey("isFav") as? Bool
+                            if fav == true {
+                                self.isFav = true
+                                
+                                self.addFav.image = UIImage(named: "favSelected")!
+                                
+                            } else {
+                                self.isFav = false
+                                self.addFav.image = UIImage(named: "fav")
+                                
                             }
                         }
-                        
-                        
                     }
-                })
+                }
+            }
+        }
+    }
+    
+        func setUpView() {
+            
+            if nameText != nil {
+                name.text = nameText
             }
             
-        } else {
-            SVProgressHUD.showWithStatus("Saving as Favorite")
-            showNetworkActivityIndicator(true)
+            if loc != nil {
+                location.text = loc
+            }
+            if imageURL != nil {
+                if let URL = NSURL(string: imageURL!) {
+                    breweryImage.hnk_setImageFromURL(URL)
+                }
+            }
+            if phoneNum == nil {
+                phone.text = "No Phone Listed"
+                
+            } else {
+                phone.text = phoneNum
+            }
+            if websiteURL == nil {
+                website.text = "No Website Listed"
+            } else {
+                website.text = websiteURL
+            }
             
-            if let id = breweryId {
-                
-                var fav = PFObject(className: "Favorites")
-                fav["breweryId"] = id
-                
-                if  let name = nameText {
-                    fav["breweryName"] = name
+            if open != nil {
+                if open == "Y" {
+                    openToPublic.text = "Open to public: Yes"
+                } else if open == "N" {
+                    
+                    openToPublic.text = "Open to public: No"
                 }
-                
-                
-                if let icon = imageURL {
-                    fav["icon"] = icon
+            }
+            if closedValue != nil {
+                if closedValue == "Y" {
+                    closed.text = "In Buisiness: No"
+                } else {
+                    closed.text = "In Buisiness: Yes"
                 }
+            }
+            if establishedDate != nil {
+                established.text = "Established: \(establishedDate!)"
+            } else {
+                established.text = "Established: N/A"
+            }
+            if typeOfBrewery != nil {
+                type.text = "Type: \(typeOfBrewery!)"
+            }
+        }
+        
+        
+        func call() {
+            //Calls number
+            if let num = phoneNum, let url = NSURL(string: "tel://\(num)") {
+                let alert = UIAlertController(title: "Call?", message: "Are you sure you want to call?", preferredStyle: .Alert)
+                let noAction = UIAlertAction(title: "NO", style: .Cancel, handler: nil)
+                alert.addAction(noAction)
+                let yesAction = UIAlertAction(title: "YES", style: .Default, handler: { (action) -> Void in
+                    UIApplication.sharedApplication().openURL(url)
+                })
+                alert.addAction(yesAction)
                 
-                if let location = loc {
-                    fav["loc"] = location
-                }
-                fav["isFav"] = true
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+        
+        func visitWebsite() {
+            //open website will add native in app support
+            if let site = websiteURL, let url = NSURL(string: site) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
+        
+        func getDirections() {
+            if let loc = loc {
+                let query = loc.stringByReplacingOccurrencesOfString(" ", withString: "+")
+                let activityController = UIAlertController(title: "Open In", message: "Please choose either Apple maps or Google maps", preferredStyle: .ActionSheet)
+                let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+                activityController.addAction(cancelAction)
                 
-                if let currentUser = PFUser.currentUser() {
-                    fav.ACL = PFACL(user: currentUser)
-                    println("Current User: \(currentUser)")
-                }
-                fav.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
-                    if success {
+                let appleMaps = UIAlertAction(title: "Apple Maps", style: .Default, handler: { (action) -> Void in
+                    
+                    UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?q=\(query)")!)
+                })
+                activityController.addAction(appleMaps)
+                
+                if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+                    
+                    let googleMaps = UIAlertAction(title: "Google Maps", style: .Default, handler: { (action) -> Void in
                         
-                        SVProgressHUD.dismiss()
-                        self.showNetworkActivityIndicator(false)
-                        self.addFav.image = UIImage(named: "favSelected")
-                        self.isFav = true
-                        self.addFav.enabled = true
-                        println("IsFav: \(self.isFav)")
-                        
-                    } else {
-                        SVProgressHUD.dismiss()
-                        self.showNetworkActivityIndicator(false)
-                        if let error = error {
-                            let errorString = error.userInfo?["error"] as? NSString
-                            let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
-                            alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
-                            self.presentViewController(alert, animated: true, completion:nil)
+                        UIApplication.sharedApplication().openURL(NSURL(string:
+                            "comgooglemaps://?q=\(query)")!)
+                    })
+                    activityController.addAction(googleMaps)
+                }
+                
+                self.presentViewController(activityController, animated: true, completion: nil)
+                
+            }
+        }
+        
+        
+        @IBAction func addToFavorites(sender: AnyObject) {
+            println("Fav")
+            addFav.enabled = false
+            if isFav ?? false {
+                //println("fav is: \(fav)")
+                SVProgressHUD.showWithStatus("Removing favorite")
+                showNetworkActivityIndicator(true)
+                
+                if let id =  breweryId {
+                    var query = PFQuery(className: "Favorites")
+                    query.whereKey("breweryId", equalTo: id)
+                    query.findObjectsInBackgroundWithBlock({ (favs, error) -> Void in
+                        if error == nil {
+                            if let favorite = favs as? [PFObject] {
+                                for item in favorite {
+                                    item.deleteInBackgroundWithBlock({ (done, error) -> Void in
+                                        SVProgressHUD.dismiss()
+                                        self.showNetworkActivityIndicator(false)
+                                        self.addFav.image = UIImage(named: "fav")
+                                        
+                                        self.addFav.enabled = true
+                                        
+                                        //set isfav bool to false to ensure this block is not called unless it is true
+                                        
+                                        self.isFav = false
+                                        println("IsFav: \(self.isFav)")
+                                    })
+                                }
+                            }
+                            
+                            
                         }
-                        
+                    })
+                }
+                
+            } else {
+                SVProgressHUD.showWithStatus("Saving as Favorite")
+                showNetworkActivityIndicator(true)
+                
+                if let id = breweryId {
+                    
+                    var fav = PFObject(className: "Favorites")
+                    fav["breweryId"] = id
+                    
+                    if  let name = nameText {
+                        fav["breweryName"] = name
                     }
-                })
-            }
-        }
-        
-        
-    }
-    
-    
-    func getBreweryById(id: String) {
-        
-        SVProgressHUD.showWithStatus("Retrieving brewery")
-        showNetworkActivityIndicator(true)
-        let byId = BreweryByIdService(APIKey: APIKey)
-        byId.getById(id) {
-            (let brew) in
-            if let info = brew, let data = info.brewery {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.imageURL = data.largeIconURL
-                    self.nameText = data.name
-                    self.loc = data.streetAddress! + " " + data.locality! + ", " + data.region!
-                    self.websiteURL = data.website
-                    self.phoneNum = data.phone
-                    self.breweryId = data.breweryId
-                    self.open = data.openToPublic
-                    self.closedValue =  data.isClosed
-                    self.establishedDate = data.established
-                    self.typeOfBrewery = data.locationTypeDisplay
                     
-                    self.setUpView()
-                    self.setFavIcon()
                     
-                    SVProgressHUD.dismiss()
-                    self.showNetworkActivityIndicator(false)
-                })
-            }
-        }
-        
-        
-        
-    }
-    
-    
-    // MARK: - Table view data source
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 1 {
-            switch indexPath.row {
-            case 0:
-                getDirections()
-            case 1:
-                call()
-            case 2:
-                visitWebsite()
-            default:
-                println("Noting")
-            }
-        }
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showUserReviews" {
-            
-            if let VC: ReviewsTableViewController = segue.destinationViewController as? ReviewsTableViewController {
-                
-                
-                //pass data
-                if let brewId = breweryId {
-                    VC.breweryId = brewId
+                    if let icon = imageURL {
+                        fav["icon"] = icon
+                    }
+                    
+                    if let location = cityState {
+                        fav["loc"] = location
+                    }
+                    fav["isFav"] = true
+                    
+                    if let currentUser = PFUser.currentUser() {
+                        fav.ACL = PFACL(user: currentUser)
+                        println("Current User: \(currentUser)")
+                    }
+                    fav.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+                        if success {
+                            
+                            SVProgressHUD.dismiss()
+                            self.showNetworkActivityIndicator(false)
+                            self.addFav.image = UIImage(named: "favSelected")
+                            self.isFav = true
+                            self.addFav.enabled = true
+                            println("IsFav: \(self.isFav)")
+                            
+                        } else {
+                            SVProgressHUD.dismiss()
+                            self.showNetworkActivityIndicator(false)
+                            if let error = error {
+                                let errorString = error.userInfo?["error"] as? NSString
+                                let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                                alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                                self.presentViewController(alert, animated: true, completion:nil)
+                            }
+                            
+                        }
+                    })
                 }
             }
             
+            
         }
-    }
-    
-    
+        
+        
+        func getBreweryById(id: String) {
+            
+            SVProgressHUD.showWithStatus("Retrieving brewery")
+            showNetworkActivityIndicator(true)
+            let byId = BreweryByIdService(APIKey: APIKey)
+            byId.getById(id) {
+                (let brew) in
+                if let info = brew, let data = info.brewery {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.imageURL = data.largeIconURL
+                        self.nameText = data.name
+                        self.loc = data.streetAddress! + " " + data.locality! + ", " + data.region!
+                        self.websiteURL = data.website
+                        self.phoneNum = data.phone
+                        self.breweryId = data.breweryId
+                        self.open = data.openToPublic
+                        self.closedValue =  data.isClosed
+                        self.establishedDate = data.established
+                        self.typeOfBrewery = data.locationTypeDisplay
+                        
+                        self.setUpView()
+                        self.setFavIcon()
+                        
+                        SVProgressHUD.dismiss()
+                        self.showNetworkActivityIndicator(false)
+                    })
+                }
+            }
+            
+            
+            
+        }
+        
+        
+        // MARK: - Table view data source
+        
+        override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            if indexPath.section == 1 {
+                switch indexPath.row {
+                case 0:
+                    getDirections()
+                case 1:
+                    call()
+                case 2:
+                    visitWebsite()
+                default:
+                    println("Noting")
+                }
+            }
+        }
+        
+        
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "showUserReviews" {
+                
+                if let VC: ReviewsTableViewController = segue.destinationViewController as? ReviewsTableViewController {
+                    
+                    
+                    //pass data
+                    if let brewId = breweryId {
+                        VC.breweryId = brewId
+                    }
+                }
+                
+            }
+        }
+        
+        
 }

@@ -371,7 +371,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                         if let website = results[row].website {
                             VC.websiteURL = website
                         }
-                        if let loc = results[row].streetAddress, let state = breweries[row].region, let city = breweries[row].locality {
+                        if let loc = results[row].streetAddress, let state = results[row].region, let city = results[row].locality {
                             VC.loc = loc + " " + city + ", " + state
                         } else {
                             VC.loc = "Not Avaliable"
@@ -395,6 +395,10 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                         }
                         if let type = results[row].locationTypeDisplay {
                             VC.typeOfBrewery = type
+                        }
+                        if let cityL = results[row].locality, let stateL = results[row].region {
+                            VC.cityState = cityL + ", " + stateL
+                            
                         }
                         
                     }
@@ -437,6 +441,10 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                         }
                         if let type = breweries[row].locationTypeDisplay {
                             VC.typeOfBrewery = type
+                        }
+                        if let cityL = breweries[row].locality, let stateL = breweries[row].region {
+                            VC.cityState = cityL + ", " + stateL
+                            
                         }
                 
                     }

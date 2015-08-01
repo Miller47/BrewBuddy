@@ -12,7 +12,7 @@ import Parse
 class MustTryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
-    var breweries: [FeaturedBreweries] = []
+    var breweries: [BrweryById] = [];
     var loc: PFGeoPoint?
     
     @IBOutlet weak var tableView: UITableView!
@@ -31,12 +31,21 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
                     PFCloud.callFunctionInBackground("featured", withParameters: ["loc":loctaion], block: { (results, error) -> Void in
                         if error == nil {
                             println("Cloud code: \(results)")
+                            if let ids: AnyObject =  results {
+                                for i in 0..<ids.count {
+                                    
+                                    println(ids[i] as! String)
+                                    
+                                    let brewId = ids[i] as! String
+                                    self.getMustTrys(brewId)
+                                }
+                            }
                         } else{
                             println("Cloud code error: \(error)")
                         }
                     })
                 }
-
+                
             }
         })
     }
@@ -45,35 +54,33 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-       setBackBtnText()
-        
-        getMustTrys()
-        
-       
-
+        setBackBtnText()
         
     }
     
-    func getMustTrys() {
+    func getMustTrys(id: String) {
+        
+        breweries.removeAll(keepCapacity: false)
         
         SVProgressHUD.showWithStatus("Retrieving must try brewery")
         showNetworkActivityIndicator(true)
-        let mustTryService = FeaturedBreweriesService(APIKey: APIKey)
-        mustTryService.getFeatured() {
-            (let brew) in
-            if let info = brew, let feature = info.featured {
+        let mustTryService = BreweryByIdService(APIKey: APIKey)
+        mustTryService.getById(id) { (let feature) in
+            if let info = feature, let data = info.brewery {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-             
-                    self.breweries.append(feature)
-                    println(self.breweries.count)
+              
+                    self.breweries.append(data)
+                    self.breweries.sort({ $0.name < $1.name})
+                    println(data)
                     
                     self.tableView.reloadData()
                     SVProgressHUD.dismiss()
                     self.showNetworkActivityIndicator(false)
                 })
             }
+            
+            
         }
-        
         
         
     }
