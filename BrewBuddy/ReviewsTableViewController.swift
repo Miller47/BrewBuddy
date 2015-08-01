@@ -55,16 +55,21 @@ class ReviewsTableViewController: UITableViewController {
                     SVProgressHUD.dismiss()
                     self.showNetworkActivityIndicator(false)
                     if let error = error {
-                        let errorString = error.userInfo?["error"] as? NSString
-                        let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
-                        self.presentViewController(alert, animated: true, completion:nil)
+                        if error.code != 101 {
+                            let errorString = error.userInfo?["error"] as? NSString
+                            let alert = UIAlertController(title: "Error", message: "\(errorString!)", preferredStyle: .Alert)
+                            alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
+                            self.presentViewController(alert, animated: true, completion:nil)
+                        } else {
+                            let errorString = error.userInfo?["error"] as? NSString
+                            println(errorString!)
+                        }
                     }
                     
                 }
-
+                
             })
-
+            
         }
         
     }
@@ -121,7 +126,7 @@ class ReviewsTableViewController: UITableViewController {
             
         }
         
-
+        
     }
     
     
