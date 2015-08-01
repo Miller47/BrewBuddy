@@ -56,8 +56,12 @@ class AddBreweryViewController: UIViewController, UIImagePickerControllerDelegat
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         breweryImage.contentMode = .ScaleAspectFit
         breweryImage.image = image
-        let imageData = UIImagePNGRepresentation(image)
-        base64Str = imageData.base64EncodedStringWithOptions(.allZeros)
+        //possible memroy warining fix
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            let imageData = UIImagePNGRepresentation(image)
+            self.base64Str = imageData.base64EncodedStringWithOptions(.allZeros)
+        })
+        
         
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -71,18 +75,18 @@ class AddBreweryViewController: UIViewController, UIImagePickerControllerDelegat
         
         if name.text.isEmpty == false && website.text.isEmpty == false && breweryDescription.text.isEmpty == false  && established.text.isEmpty == false {
             
-            if self.name.isFirstResponder() || self.website.isFirstResponder() || self.breweryDescription.isFirstResponder() {
+            if self.name.isFirstResponder() || self.website.isFirstResponder() || self.breweryDescription.isFirstResponder() || self.established.isFirstResponder() {
                 self.view.endEditing(true)
             }
             var postString: String?
-           
+            
             if breweryImage.image != nil {
                 
                 
                 if let baseStr = base64Str {
                     
                     let str = (baseStr as NSString).stringByReplacingOccurrencesOfString("+", withString: "%2B")
-//                    println(str)
+                    //                    println(str)
                     
                     postString = "name=\(name.text)&image=\(str)&website=\(website.text)&description=\(breweryDescription.text)&established=\(established.text)"
                     
@@ -110,14 +114,14 @@ class AddBreweryViewController: UIViewController, UIImagePickerControllerDelegat
                             
                         } else {
                             if let dataStr = NSString(data: data, encoding: NSUTF8StringEncoding) as? String {
-                                 println("Response: \(dataStr)")
+                                println("Response: \(dataStr)")
                                 
                                 var json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil)
                                 if let jsonResponse: AnyObject = json {
                                     var outPut = jsonResponse["status"] as! String
                                     
                                     println("Response: \(outPut)")
-                                   
+                                    
                                     if outPut == "success" {
                                         let alert = UIAlertController(title: "Success", message: "The data will be reviewed in order to ensure quality", preferredStyle: .Alert)
                                         alert.addAction(UIAlertAction(title: "OKAY", style: .Default, handler: nil))
