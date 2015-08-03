@@ -20,6 +20,28 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
+        if breweries.count == 0 {
+            retriveMustTry()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refresh)
+        
+    }
+    
+    func handleRefresh(refresh: UIRefreshControl) {
+        //refreshes data based on current location
+        retriveMustTry()
+        //stops refrehing control
+        refresh.endRefreshing()
+    }
+    
+    func retriveMustTry() {
         PFGeoPoint.geoPointForCurrentLocationInBackground({ (geoPoint, error) -> Void in
             if error == nil {
                 self.loc = geoPoint
@@ -48,9 +70,10 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
                 
             }
         })
+        
     }
     
-
+    
     
     func getMustTrys(id: String) {
         
@@ -62,7 +85,7 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
         mustTryService.getById(id) { (let feature) in
             if let info = feature, let data = info.brewery {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-              
+                    
                     self.breweries.append(data)
                     self.breweries.sort({ $0.name < $1.name})
                     println(data)
@@ -137,7 +160,7 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
         } else {
             cell.breweryImage.image =  UIImage(named: "brewbuddy")
         }
-
+        
         
         
         
