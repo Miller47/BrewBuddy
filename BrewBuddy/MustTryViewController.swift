@@ -134,7 +134,10 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
                 cell.breweryImage.setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
                 println(iconURL)
             }
+        } else {
+            cell.breweryImage.image =  UIImage(named: "brewbuddy")
         }
+
         
         
         

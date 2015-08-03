@@ -98,6 +98,8 @@ class DetailViewController: UITableViewController {
             if imageURL != nil {
                 if let URL = NSURL(string: imageURL!) {
                     breweryImage.setImageFromURL(URL, placeholderImage: UIImage(named: "brewlogo"))
+                } else {
+                    breweryImage.image = UIImage(named: "brewbuddy")
                 }
             }
             if phoneNum == nil {
