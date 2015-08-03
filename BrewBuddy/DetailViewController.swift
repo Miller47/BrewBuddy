@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-import Haneke
+
 
 
 
@@ -97,7 +97,7 @@ class DetailViewController: UITableViewController {
             }
             if imageURL != nil {
                 if let URL = NSURL(string: imageURL!) {
-                    breweryImage.hnk_setImageFromURL(URL)
+                    breweryImage.setImageFromURL(URL, placeholderImage: UIImage(named: "brewlogo"))
                 }
             }
             if phoneNum == nil {

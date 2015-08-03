@@ -79,13 +79,11 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         if let icon = favInfo.objectForKey("icon") as? String {
             
             if let iconURL = NSURL(string: icon) {
-                cell.breweryImage.hnk_setImageFromURL(iconURL)
+                cell.breweryImage.setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
                 
             }
             
             
-        } else {
-            cell.breweryImage.image = UIImage(named: "brewbuddy")
         }
         
         

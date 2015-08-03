@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Haneke
+import PINRemoteImage
 import CoreLocation
 import Parse
 
@@ -286,7 +286,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             }
             if brewery.largeIconURL != nil {
                 if let iconURL = NSURL(string: brewery.largeIconURL!) {
-                    cell.breweryImage.hnk_setImageFromURL(iconURL)
+                    cell.breweryImage.setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
                     println(iconURL)
                 }
             } else {
@@ -311,11 +311,9 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
             }
             if brewery.largeIconURL != nil {
                 if let iconURL = NSURL(string: brewery.largeIconURL!) {
-                    cell.breweryImage.hnk_setImageFromURL(iconURL)
+                    cell.breweryImage.setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
                     println(iconURL)
                 }
-            } else {
-                cell.breweryImage.image = UIImage(named: "brewbuddy")
             }
         }
         
@@ -445,7 +443,7 @@ class BeerTableViewController: UIViewController, CLLocationManagerDelegate, UITa
                             VC.cityState = cityL + ", " + stateL
                             
                         }
-                
+                        
                     }
                 }
             }

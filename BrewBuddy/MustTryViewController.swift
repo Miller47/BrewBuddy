@@ -131,11 +131,9 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
         
         if brewery.largeIconURL != nil {
             if let iconURL = NSURL(string: brewery.largeIconURL!) {
-                cell.breweryImage.hnk_setImageFromURL(iconURL)
+                cell.breweryImage.setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
                 println(iconURL)
             }
-        } else {
-            cell.breweryImage.image = UIImage(named: "brewbuddy")
         }
         
         

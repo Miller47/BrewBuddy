@@ -6,17 +6,17 @@
 // project.
 
 
+// FLAnimatedImage
+#define COCOAPODS_POD_AVAILABLE_FLAnimatedImage
+#define COCOAPODS_VERSION_MAJOR_FLAnimatedImage 1
+#define COCOAPODS_VERSION_MINOR_FLAnimatedImage 0
+#define COCOAPODS_VERSION_PATCH_FLAnimatedImage 8
+
 // HCSStarRatingView
 #define COCOAPODS_POD_AVAILABLE_HCSStarRatingView
 #define COCOAPODS_VERSION_MAJOR_HCSStarRatingView 1
 #define COCOAPODS_VERSION_MINOR_HCSStarRatingView 2
 #define COCOAPODS_VERSION_PATCH_HCSStarRatingView 0
-
-// HanekeSwift
-#define COCOAPODS_POD_AVAILABLE_HanekeSwift
-#define COCOAPODS_VERSION_MAJOR_HanekeSwift 0
-#define COCOAPODS_VERSION_MINOR_HanekeSwift 9
-#define COCOAPODS_VERSION_PATCH_HanekeSwift 1
 
 // JGMethodSwizzler
 #define COCOAPODS_POD_AVAILABLE_JGMethodSwizzler
@@ -35,6 +35,18 @@
 #define COCOAPODS_VERSION_MAJOR_MZFormSheetPresentationController 1
 #define COCOAPODS_VERSION_MINOR_MZFormSheetPresentationController 0
 #define COCOAPODS_VERSION_PATCH_MZFormSheetPresentationController 1
+
+// PINCache
+#define COCOAPODS_POD_AVAILABLE_PINCache
+#define COCOAPODS_VERSION_MAJOR_PINCache 2
+#define COCOAPODS_VERSION_MINOR_PINCache 0
+#define COCOAPODS_VERSION_PATCH_PINCache 0
+
+// PINRemoteImage
+#define COCOAPODS_POD_AVAILABLE_PINRemoteImage
+#define COCOAPODS_VERSION_MAJOR_PINRemoteImage 1
+#define COCOAPODS_VERSION_MINOR_PINRemoteImage 0
+#define COCOAPODS_VERSION_PATCH_PINRemoteImage 0
 
 // ReachabilitySwift
 #define COCOAPODS_POD_AVAILABLE_ReachabilitySwift

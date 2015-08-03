@@ -8,10 +8,9 @@ target 'BrewBuddy' do
 pod 'MZFormSheetPresentationController', '~> 1.0.1'
 pod 'HCSStarRatingView', :git => 'https://github.com/hugocampossousa/HCSStarRatingView.git'
 pod 'TPKeyboardAvoiding', '~> 1.2.7'
-pod 'HanekeSwift'
 pod 'SVProgressHUD'
 pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.swift'
-
+pod 'PINRemoteImage'
 
 end
 

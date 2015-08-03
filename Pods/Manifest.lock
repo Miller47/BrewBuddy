@@ -1,19 +1,23 @@
 PODS:
-  - HanekeSwift (0.9.1)
+  - FLAnimatedImage (1.0.8)
   - HCSStarRatingView (1.2)
   - JGMethodSwizzler (2.0.1)
   - MZAppearance (1.1.5)
   - MZFormSheetPresentationController (1.0.1):
     - JGMethodSwizzler
     - MZAppearance
+  - PINCache (2.0)
+  - PINRemoteImage (1.0):
+    - FLAnimatedImage (>= 1.0)
+    - PINCache (>= 2.0)
   - ReachabilitySwift (1.1)
   - SVProgressHUD (1.1.3)
   - TPKeyboardAvoiding (1.2.8)
 
 DEPENDENCIES:
-  - HanekeSwift
   - HCSStarRatingView (from `https://github.com/hugocampossousa/HCSStarRatingView.git`)
   - MZFormSheetPresentationController (~> 1.0.1)
+  - PINRemoteImage
   - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
   - SVProgressHUD
   - TPKeyboardAvoiding (~> 1.2.7)
@@ -33,11 +37,13 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ashleymills/Reachability.swift
 
 SPEC CHECKSUMS:
-  HanekeSwift: 50d37bfbc4432edc649167e538c259feccb4a2bb
+  FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24
   HCSStarRatingView: 398beb411f6197f3445bac8eb90962c3166597cb
   JGMethodSwizzler: e0ea5c1c6c55304ec4ef3f54e441400c6735c899
   MZAppearance: 6e9dc64e42074c0a19812a327f590746c3283bab
   MZFormSheetPresentationController: 8a48589749da58177fb5184910fde5f48e3b6ecb
+  PINCache: ca953ba93ce1edde056fdd99121ee65b295a08c9
+  PINRemoteImage: dd0126a7dd6f00191199ac090cb8c914049812f3
   ReachabilitySwift: 1e53abddb01111deac0d229dabdb8bb043567b18
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   TPKeyboardAvoiding: f1ef0028fe9ba98ef2871cf55b4bbc39cae0267b

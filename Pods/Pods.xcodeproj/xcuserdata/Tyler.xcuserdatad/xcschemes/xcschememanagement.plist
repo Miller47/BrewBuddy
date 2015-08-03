@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-BrewBuddy-HCSStarRatingView.xcscheme</key>
+		<key>Pods-BrewBuddy-FLAnimatedImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-HanekeSwift.xcscheme</key>
+		<key>Pods-BrewBuddy-HCSStarRatingView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -25,6 +25,16 @@
 			<false/>
 		</dict>
 		<key>Pods-BrewBuddy-MZFormSheetPresentationController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BrewBuddy-PINCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BrewBuddy-PINRemoteImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,47 +62,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>49CFC97EBAEB412B130795BA</key>
+		<key>12024AD0C245130CBADFA0C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4A0165AB9D2F6DEBB158A09A</key>
+		<key>141FE993943CDE71A90C6CFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>677E38DD15EA67E2F36EC20D</key>
+		<key>179A8DEB343ADCE7BD4A1452</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F637959A58053B659E96C29</key>
+		<key>18184C003327BF54F00EDF48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96E3C0C517FC768C656EC62B</key>
+		<key>292173479C12EF1714DD655B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD00E0BA3671AA9F770105CC</key>
+		<key>2A9E5D372208DD0CD6C9156D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEE693F7B3FBF333FD212211</key>
+		<key>5118EBC9A43D9A8B9F8BB231</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB0E24AB2686ADF56EBEA812</key>
+		<key>589B3F13CCD93924DA3BB0CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F202AB31901B656765A377F1</key>
+		<key>5C36BE2A04964D7A25815F84</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>721961746004C75C1BB4E74F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9A8227E579BC8EF8B324CE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
