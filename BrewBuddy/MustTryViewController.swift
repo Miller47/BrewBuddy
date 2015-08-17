@@ -140,27 +140,28 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! BeerTableViewCell
         
         //Configure the cell...
-        let brewery = breweries[indexPath.row]
-        
-        if let name = brewery.name {
-            cell.breweryName.text = name
-        }
-        
-        if let state = brewery.region, let city = brewery.locality {
-            cell.distance.text = city + ", " + state
-        } else {
-            cell.distance.text = "Not Avaliable"
-        }
-        
-        if brewery.largeIconURL != nil {
-            if let iconURL = NSURL(string: brewery.largeIconURL!) {
-                cell.breweryImage.pin_setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
-                println(iconURL)
+        if breweries.count > 0 {
+            let brewery = breweries[indexPath.row]
+            
+            if let name = brewery.name {
+                cell.breweryName.text = name
             }
-        } else {
-            cell.breweryImage.image =  UIImage(named: "brewbuddy")
+            
+            if let state = brewery.region, let city = brewery.locality {
+                cell.distance.text = city + ", " + state
+            } else {
+                cell.distance.text = "Not Avaliable"
+            }
+            
+            if brewery.largeIconURL != nil {
+                if let iconURL = NSURL(string: brewery.largeIconURL!) {
+                    cell.breweryImage.pin_setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
+                    println(iconURL)
+                }
+            } else {
+                cell.breweryImage.image =  UIImage(named: "brewbuddy")
+            }
         }
-        
         
         
         

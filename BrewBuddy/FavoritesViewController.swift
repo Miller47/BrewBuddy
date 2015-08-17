@@ -26,6 +26,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     func retriveFavorites() {
         SVProgressHUD.showWithStatus("Retriving Favorites")
         showNetworkActivityIndicator(true)
+        favorites.removeAll(keepCapacity: false)
         
         var query = PFQuery(className: "Favorites")
         query.findObjectsInBackgroundWithBlock { (results: [AnyObject]?, error: NSError?) -> Void in
