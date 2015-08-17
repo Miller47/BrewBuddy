@@ -4,52 +4,42 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-BrewBuddy-FLAnimatedImage.xcscheme</key>
+		<key>FLAnimatedImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-HCSStarRatingView.xcscheme</key>
+		<key>HCSStarRatingView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-JGMethodSwizzler.xcscheme</key>
+		<key>JGMethodSwizzler.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-MZAppearance.xcscheme</key>
+		<key>Keys.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-MZFormSheetPresentationController.xcscheme</key>
+		<key>MZAppearance.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-PINCache.xcscheme</key>
+		<key>MZFormSheetPresentationController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-PINRemoteImage.xcscheme</key>
+		<key>PINCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BrewBuddy-ReachabilitySwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-BrewBuddy-SVProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-BrewBuddy-TPKeyboardAvoiding.xcscheme</key>
+		<key>PINRemoteImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -59,60 +49,80 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReachabilitySwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TPKeyboardAvoiding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>12024AD0C245130CBADFA0C9</key>
+		<key>0C66C30381F86C3D642FC983CCADEBB6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>141FE993943CDE71A90C6CFD</key>
+		<key>5651F0DF713D120906D23C696E2F2D66</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>179A8DEB343ADCE7BD4A1452</key>
+		<key>5B856FE6D1767E78CBD6BA37C1D563CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>18184C003327BF54F00EDF48</key>
+		<key>5C3D7521E2680DA4295C10E205DD3C8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>292173479C12EF1714DD655B</key>
+		<key>5D20FCCAB4DA10D70A141FC552D37218</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2A9E5D372208DD0CD6C9156D</key>
+		<key>71B72D6162A8EDA749F5685E0923179E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5118EBC9A43D9A8B9F8BB231</key>
+		<key>74DE59681C0868995FBDDA1660438ACB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>589B3F13CCD93924DA3BB0CD</key>
+		<key>A064B75A9838606659BB57FE5AC8A101</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C36BE2A04964D7A25815F84</key>
+		<key>A973FBA4ACF97C1488A1615FC2A921CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>721961746004C75C1BB4E74F</key>
+		<key>C13B5064206C780ABAF6D9274DE600A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9A8227E579BC8EF8B324CE2</key>
+		<key>D74A61425F0C85D23B9DF4CCC369EE31</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC19C6B32D8D1845093C2F36A85BF697</key>
 		<dict>
 			<key>primary</key>
 			<true/>

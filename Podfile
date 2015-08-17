@@ -3,6 +3,16 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 use_frameworks!
 
+plugin 'cocoapods-keys', {
+    :project => "BrewBuddy",
+    :target => "BrewBuddy",
+    :keys => [
+    "ParseSecret",
+    "ParseClient",
+    "BreweryDBKEY"
+    ]}
+
+
 target 'BrewBuddy' do
 
 pod 'MZFormSheetPresentationController', '~> 1.0.1'
@@ -17,6 +27,4 @@ end
 target 'BrewBuddyTests' do
 
 end
-
-
 

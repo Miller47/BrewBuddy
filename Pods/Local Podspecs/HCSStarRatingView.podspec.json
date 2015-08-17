@@ -2,7 +2,7 @@
   "name": "HCSStarRatingView",
   "version": "1.2",
   "summary": "Simple star rating view for iOS written in Objective-C",
-  "description": "A UIControl subclass to easily provide users with a basic star-rating interface. It supports all device resolutions and requires no images do render the stars, thanks to PaintCode.",
+  "description": "A UIControl subclass to easily provide users with a basic star-rating interface. It's fully accessible, supports all device resolutions and requires no images do render the stars, thanks to PaintCode. You can, however, provide your own custom images if you like.",
   "homepage": "https://github.com/hugocampossousa/HCSStarRatingView",
   "license": {
     "type": "MIT",
@@ -16,8 +16,8 @@
     "ios": "7.0"
   },
   "source": {
-    "git": "git@github.com:hugocampossousa/HCSStarRatingView.git",
-    "branch": "master"
+    "git": "https://github.com/hugocampossousa/HCSStarRatingView.git",
+    "tag": "1.2"
   },
   "source_files": "HCSStarRatingView/*",
   "requires_arc": true

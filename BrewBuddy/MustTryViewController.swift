@@ -11,7 +11,7 @@ import Parse
 
 class MustTryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
+    private let APIKey = BrewbuddyKeys().breweryDBKEY()
     var breweries: [BrweryById] = [];
     var loc: PFGeoPoint?
     
@@ -154,7 +154,7 @@ class MustTryViewController: UIViewController, UITableViewDataSource, UITableVie
         
         if brewery.largeIconURL != nil {
             if let iconURL = NSURL(string: brewery.largeIconURL!) {
-                cell.breweryImage.setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
+                cell.breweryImage.pin_setImageFromURL(iconURL, placeholderImage: UIImage(named: "brewbuddy"))
                 println(iconURL)
             }
         } else {

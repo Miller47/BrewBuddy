@@ -1,6 +1,0 @@
-framework module JGMethodSwizzler {
-  umbrella header "Pods-BrewBuddy-JGMethodSwizzler-umbrella.h"
-
-  export *
-  module * { export * }
-}

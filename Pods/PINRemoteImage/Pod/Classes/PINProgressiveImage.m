@@ -8,8 +8,8 @@
 
 #import "PINProgressiveImage.h"
 
-#import <ImageIO/ImageIO.h>
-#import <CoreImage/CoreImage.h>
+@import ImageIO;
+@import CoreImage;
 
 #import "PINRemoteImage.h"
 #import "UIImage+DecodedImage.h"
@@ -47,6 +47,7 @@
 {
     if (self = [super init]) {
         self.lock = [[NSLock alloc] init];
+        self.lock.name = @"PINProgressiveImage";
         
         _imageSource = CGImageSourceCreateIncremental(NULL);;
         self.size = CGSizeZero;
@@ -75,6 +76,7 @@
 - (void)dealloc
 {
     [self.lock lock];
+        self.processingContext = nil;
         if (self.imageSource) {
             CFRelease(_imageSource);
         }
@@ -357,7 +359,7 @@
         CGImageRef outputImageRef = [self.processingContext createCGImage:outputImage fromRect:CGRectMake(0, 0, inputImage.size.width, inputImage.size.height)];
         
         //"decoding" the image here copies it to CPU memory?
-        outputUIImage = [UIImage decodedImageWithCGImageRef:outputImageRef];
+        outputUIImage = [UIImage pin_decodedImageWithCGImageRef:outputImageRef];
         CGImageRelease(outputImageRef);
     }
     

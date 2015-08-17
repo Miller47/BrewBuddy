@@ -17,7 +17,11 @@ github "hugocampossousa/HCSStarRatingView"
 ### CocoaPods
 
 ```
-pod 'HCSStarRatingView', :git => 'https://github.com/hugocampossousa/HCSStarRatingView.git'
+use_frameworks!
+
+(...)
+
+pod 'HCSStarRatingView', '~> 1.2'
 ```
 
 and run `pod install`

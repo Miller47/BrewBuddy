@@ -26,7 +26,7 @@ class DetailViewController: UITableViewController {
     @IBOutlet weak var type: UILabel!
     
     
-    private let APIKey = "46fdb18ac2e65c0422cdd01a915d63cb"
+    private let APIKey = BrewbuddyKeys().breweryDBKEY()
     var nameText: String?
     var phoneNum: String?
     var loc: String?
@@ -97,7 +97,7 @@ class DetailViewController: UITableViewController {
             }
             if imageURL != nil {
                 if let URL = NSURL(string: imageURL!) {
-                    breweryImage.setImageFromURL(URL, placeholderImage: UIImage(named: "brewlogo"))
+                    breweryImage.pin_setImageFromURL(URL, placeholderImage: UIImage(named: "brewlogo"))
                 } else {
                     breweryImage.image = UIImage(named: "brewbuddy")
                 }

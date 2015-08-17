@@ -70,7 +70,7 @@ class AddBreweryViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func save() {
         
         //intail post test
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://api.brewerydb.com/v2/breweries?key=46fdb18ac2e65c0422cdd01a915d63cb")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://api.brewerydb.com/v2/breweries?key=\(BrewbuddyKeys().breweryDBKEY())")!)
         request.HTTPMethod = "POST"
         
         if name.text.isEmpty == false && website.text.isEmpty == false && breweryDescription.text.isEmpty == false  && established.text.isEmpty == false {

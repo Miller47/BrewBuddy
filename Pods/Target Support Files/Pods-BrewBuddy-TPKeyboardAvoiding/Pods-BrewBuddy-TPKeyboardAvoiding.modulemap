@@ -1,6 +1,0 @@
-framework module TPKeyboardAvoiding {
-  umbrella header "Pods-BrewBuddy-TPKeyboardAvoiding-umbrella.h"
-
-  export *
-  module * { export * }
-}

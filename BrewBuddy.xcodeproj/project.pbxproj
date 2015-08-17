@@ -46,7 +46,7 @@
 		2FECE9D41B3C706A00DC82E1 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FECE9D31B3C706A00DC82E1 /* ReviewViewController.swift */; };
 		2FECE9D81B3C723A00DC82E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FECE9D71B3C723A00DC82E1 /* LoginViewController.swift */; };
 		2FECE9DA1B3C7ED500DC82E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FECE9D91B3C7ED500DC82E1 /* DetailViewController.swift */; };
-		3B4A2768628690930695A162 /* Pods_BrewBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DBEDCFEA9BDEEC988B0A31 /* Pods_BrewBuddy.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D8A67AFEDF2EA7E58DCC6760 /* Pods_BrewBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE460D068DEAF8878179B7AE /* Pods_BrewBuddy.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,9 +104,9 @@
 		2FECE9D31B3C706A00DC82E1 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		2FECE9D71B3C723A00DC82E1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FECE9D91B3C7ED500DC82E1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		BE20AE0735B7CB1C847AA467 /* Pods-BrewBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.debug.xcconfig"; sourceTree = "<group>"; };
-		C4DBEDCFEA9BDEEC988B0A31 /* Pods_BrewBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFC37F711700FC82BB08F0E1 /* Pods-BrewBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		4DC13C7FA9128C646B5F706A /* Pods-BrewBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		9E9F36769D03435F4879B314 /* Pods-BrewBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		EE460D068DEAF8878179B7AE /* Pods_BrewBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +128,8 @@
 				2FECE9C01B3C6CE300DC82E1 /* CoreLocation.framework in Frameworks */,
 				2FECE9BC1B3C6CCE00DC82E1 /* CFNetwork.framework in Frameworks */,
 				2FECE9BA1B3C6CC500DC82E1 /* AudioToolbox.framework in Frameworks */,
-				3B4A2768628690930695A162 /* Pods_BrewBuddy.framework in Frameworks */,
 				2FECE9B81B3C6BD200DC82E1 /* Parse.framework in Frameworks */,
+				D8A67AFEDF2EA7E58DCC6760 /* Pods_BrewBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +273,8 @@
 		F2D359E40E4ADD9FCA7D0985 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BE20AE0735B7CB1C847AA467 /* Pods-BrewBuddy.debug.xcconfig */,
-				CFC37F711700FC82BB08F0E1 /* Pods-BrewBuddy.release.xcconfig */,
+				9E9F36769D03435F4879B314 /* Pods-BrewBuddy.debug.xcconfig */,
+				4DC13C7FA9128C646B5F706A /* Pods-BrewBuddy.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				2FECE9BE1B3C6CE300DC82E1 /* CoreLocation.framework */,
 				2FECE9BB1B3C6CCE00DC82E1 /* CFNetwork.framework */,
 				2FECE9B91B3C6CC500DC82E1 /* AudioToolbox.framework */,
-				C4DBEDCFEA9BDEEC988B0A31 /* Pods_BrewBuddy.framework */,
+				EE460D068DEAF8878179B7AE /* Pods_BrewBuddy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,12 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F897FA21B2C21E40096D73C /* Build configuration list for PBXNativeTarget "BrewBuddy" */;
 			buildPhases = (
-				E14D02D5F4E28945B37572F1 /* Check Pods Manifest.lock */,
+				52B2CB6C6EFC060DAE8F4B24 /* Check Pods Manifest.lock */,
 				2F897F7D1B2C21E40096D73C /* Sources */,
 				2F897F7E1B2C21E40096D73C /* Frameworks */,
 				2F897F7F1B2C21E40096D73C /* Resources */,
-				0BE2F572BED2549B36AA23D6 /* Copy Pods Resources */,
-				4508CF303C5E5B1B31258667 /* Embed Pods Frameworks */,
+				D4C0CD7A0640181C10C0FEE8 /* Embed Pods Frameworks */,
+				AEAF8484CAD1E4A86FB56A77 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -401,7 +401,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BE2F572BED2549B36AA23D6 /* Copy Pods Resources */ = {
+		52B2CB6C6EFC060DAE8F4B24 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEAF8484CAD1E4A86FB56A77 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,7 +431,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4508CF303C5E5B1B31258667 /* Embed Pods Frameworks */ = {
+		D4C0CD7A0640181C10C0FEE8 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,21 +444,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrewBuddy/Pods-BrewBuddy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E14D02D5F4E28945B37572F1 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -598,7 +598,7 @@
 		};
 		2F897FA31B2C21E40096D73C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE20AE0735B7CB1C847AA467 /* Pods-BrewBuddy.debug.xcconfig */;
+			baseConfigurationReference = 9E9F36769D03435F4879B314 /* Pods-BrewBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -618,7 +618,7 @@
 		};
 		2F897FA41B2C21E40096D73C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFC37F711700FC82BB08F0E1 /* Pods-BrewBuddy.release.xcconfig */;
+			baseConfigurationReference = 4DC13C7FA9128C646B5F706A /* Pods-BrewBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

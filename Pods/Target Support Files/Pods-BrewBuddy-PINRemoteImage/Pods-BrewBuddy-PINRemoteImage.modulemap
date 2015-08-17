@@ -1,6 +1,0 @@
-framework module PINRemoteImage {
-  umbrella header "Pods-BrewBuddy-PINRemoteImage-umbrella.h"
-
-  export *
-  module * { export * }
-}

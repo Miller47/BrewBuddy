@@ -78,7 +78,7 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
 
 @interface NSOperationQueue (PINRemoteImageManager)
 
-- (void)addOperationWithQueuePriority:(PINRemoteImageManagerPriority)priority block:(void (^)(void))block;
+- (void)pin_addOperationWithQueuePriority:(PINRemoteImageManagerPriority)priority block:(void (^)(void))block;
 
 @end
 
@@ -104,7 +104,7 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
 @property (nonatomic, strong) PINURLSessionManager *sessionManager;
 @property (nonatomic, assign) NSTimeInterval timeout;
 @property (nonatomic, strong) NSMutableDictionary *tasks;
-@property (nonatomic, strong) NSMutableArray *canceledTasks;
+@property (nonatomic, strong) NSMutableSet *canceledTasks;
 @property (nonatomic, strong) NSArray *progressThresholds;
 @property (nonatomic, assign) NSTimeInterval estimatedRemainingTimeThreshold;
 @property (nonatomic, strong) dispatch_queue_t callbackQueue;
@@ -145,9 +145,13 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
         _concurrentQueue = dispatch_queue_create("PINRemoteImageManagerConcurrentQueue", DISPATCH_QUEUE_CONCURRENT);
         _callbackQueue = dispatch_queue_create("PINRemoteImageManagerCallbackQueue", DISPATCH_QUEUE_CONCURRENT);
         _lock = [[NSLock alloc] init];
+        _lock.name = @"PINRemoteImageManager";
         _concurrentOperationQueue = [[NSOperationQueue alloc] init];
         _concurrentOperationQueue.name = @"PINRemoteImageManager Concurrent Operation Queue";
         _concurrentOperationQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
+        if ([[self class] isiOS8OrGreater]) {
+            _concurrentOperationQueue.qualityOfService = NSQualityOfServiceBackground;
+        }
         _urlSessionTaskQueue = [[NSOperationQueue alloc] init];
         _urlSessionTaskQueue.name = @"PINRemoteImageManager Concurrent URL Session Task Queue";
         _urlSessionTaskQueue.maxConcurrentOperationCount = 10;
@@ -163,7 +167,7 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
         _lowQualityBPSThreshold = 50000; // approximately edge speeds
         _shouldUpgradeLowQualityImages = NO;
         self.tasks = [[NSMutableDictionary alloc] init];
-        self.canceledTasks = [[NSMutableArray alloc] init];
+        self.canceledTasks = [[NSMutableSet alloc] init];
         self.taskQOS = [[NSMutableArray alloc] initWithCapacity:5];
     }
     return self;
@@ -347,7 +351,7 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
                        processor:(PINRemoteImageManagerImageProcessor)processor
                         progress:(PINRemoteImageManagerImageCompletion)progress
                       completion:(PINRemoteImageManagerImageCompletion)completion
-                       inputUUID:(NSUUID *)inputUUID
+                       inputUUID:(NSUUID *)UUID
 {
     NSAssert((processor != nil && processorKey.length > 0) || (processor == nil && processorKey == nil), @"processor must not be nil and processorKey length must be greater than zero OR processor must be nil and processorKey must be nil");
     
@@ -357,11 +361,9 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
     } else {
         taskClass = [PINRemoteImageDownloadTask class];
     }
-    
-    BOOL earlyCheck = (PINRemoteImageManagerDownloadOptionsSkipEarlyCheck & options)?NO:YES;
-    BOOL ignoreGIF = (PINRemoteImageManagerDownloadOptionsIgnoreGIFs & options)?YES:NO;
+
     if (url == nil) {
-        [self earlyReturn:earlyCheck ignoreGIF:ignoreGIF url:nil object:nil queue:_callbackQueue completion:completion];
+        [self earlyReturnWithOptions:options url:nil object:nil completion:completion];
         return nil;
     }
     
@@ -369,31 +371,29 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
     if ([url isKindOfClass:[NSString class]]) {
         url = [NSURL URLWithString:(NSString *)url];
     }
-    
-    NSUUID *UUID;
-    if (inputUUID) {
-        UUID = inputUUID;
-    } else {
+
+    if (UUID == nil) {
         UUID = [NSUUID UUID];
     }
-    
+
     NSString *key = [self cacheKeyForURL:url processorKey:processorKey];
     //Check to see if the image is in memory cache and we're on the main thread.
     //If so, special case this to avoid flashing the UI
     id object = [self.cache.memoryCache objectForKey:key];
     if (object) {
-        if ([self earlyReturn:earlyCheck ignoreGIF:ignoreGIF url:url object:object queue:_callbackQueue completion:completion]) {
+        if ([self earlyReturnWithOptions:options url:url object:object completion:completion]) {
             return nil;
         }
     }
     
     __weak typeof(self) weakSelf = self;
-    [_concurrentOperationQueue addOperationWithQueuePriority:priority block:^
+    [_concurrentOperationQueue pin_addOperationWithQueuePriority:priority block:^
      {
          typeof(self) strongSelf = weakSelf;
          [strongSelf lock];
              //check canceled tasks first
              if ([strongSelf.canceledTasks containsObject:UUID]) {
+                 [strongSelf unlock];
                  return;
              }
              [strongSelf.canceledTasks removeAllObjects];
@@ -417,13 +417,13 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
          [strongSelf unlock];
          
          if (taskExisted == NO) {
-             [strongSelf.concurrentOperationQueue addOperationWithQueuePriority:priority block:^
+             [strongSelf.concurrentOperationQueue pin_addOperationWithQueuePriority:priority block:^
               {
                   typeof(self) strongSelf = weakSelf;
                   [strongSelf.cache objectForKey:key block:^(PINCache *cache, NSString *key, id object)
                    {
                        typeof(self) strongSelf = weakSelf;
-                       [strongSelf.concurrentOperationQueue addOperationWithQueuePriority:priority block:^
+                       [strongSelf.concurrentOperationQueue pin_addOperationWithQueuePriority:priority block:^
                         {
                             typeof(self) strongSelf = weakSelf;
                             if (object) {
@@ -550,7 +550,7 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
                      {
                          typeof(self) strongSelf = weakSelf;
                          
-                         BOOL saveAsJPEG = (options & PINRemoteImageManagerSaveProcessedImageAsJPEG);
+                         BOOL saveAsJPEG = (options & PINRemoteImageManagerSaveProcessedImageAsJPEG) != 0;
                          NSData *diskData = nil;
                          if (saveAsJPEG) {
                              diskData = UIImageJPEGRepresentation(image, 1.0);
@@ -610,24 +610,27 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
     [self unlock];
 }
 
-- (BOOL)earlyReturn:(BOOL)earlyReturn ignoreGIF:(BOOL)ignoreGIF url:(NSURL *)url object:(id)object queue:(dispatch_queue_t)callbackQueue completion:(PINRemoteImageManagerImageCompletion)completion
+- (BOOL)earlyReturnWithOptions:(PINRemoteImageManagerDownloadOptions)options url:(NSURL *)url object:(id)object completion:(PINRemoteImageManagerImageCompletion)completion
 {
     UIImage *image = nil;
     FLAnimatedImage *animatedImage = nil;
     PINRemoteImageResultType resultType = PINRemoteImageResultTypeNone;
-    
+
+    BOOL allowEarlyReturn = !(PINRemoteImageManagerDownloadOptionsSkipEarlyCheck & options);
+    BOOL allowAnimated = !(PINRemoteImageManagerDownloadOptionsIgnoreGIFs & options);
+
     if (url != nil) {
         resultType = PINRemoteImageResultTypeMemoryCache;
         if ([object isKindOfClass:[UIImage class]]) {
             image = (UIImage *)object;
-        } else if (ignoreGIF == NO && [object isKindOfClass:[NSData class]] && [(NSData *)object isGIF]) {
+        } else if (allowAnimated && [object isKindOfClass:[NSData class]] && [(NSData *)object pin_isGIF]) {
             animatedImage = [FLAnimatedImage animatedImageWithGIFData:object];
         }
     }
     
     if (completion && ((image || animatedImage) || (url == nil))) {
         //If we're on the main thread, special case to call completion immediately
-        if (earlyReturn && [NSThread isMainThread]) {
+        if (allowEarlyReturn && [NSThread isMainThread]) {
             completion([PINRemoteImageManagerResult imageResultWithImage:image
                                                           animatedImage:animatedImage
                                                           requestLength:0
@@ -635,7 +638,7 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
                                                              resultType:resultType
                                                                    UUID:nil]);
         } else {
-            dispatch_async(_callbackQueue, ^{
+            dispatch_async(self.callbackQueue, ^{
                 completion([PINRemoteImageManagerResult imageResultWithImage:image
                                                               animatedImage:animatedImage
                                                               requestLength:0
@@ -660,18 +663,18 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
                  outImage:(UIImage **)outImage
          outAnimatedImage:(FLAnimatedImage **)outAnimatedImage
 {
-    BOOL ignoreGIF = (PINRemoteImageManagerDownloadOptionsIgnoreGIFs & options)?YES:NO;
+    BOOL ignoreGIF = (PINRemoteImageManagerDownloadOptionsIgnoreGIFs & options) != 0;
     FLAnimatedImage *animatedImage = nil;
     UIImage *image = nil;
     if ([object isKindOfClass:[UIImage class]]) {
         image = (UIImage *)object;
     } else if ([object isKindOfClass:[NSData class]]) {
         NSData *imageData = (NSData *)object;
-        if ([imageData isGIF] && ignoreGIF == NO) {
+        if ([imageData pin_isGIF] && ignoreGIF == NO) {
             animatedImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:imageData];
         } else {
-            BOOL skipDecode = (options & PINRemoteImageManagerDownloadOptionsSkipDecode);
-            image = [UIImage decodedImageWithData:imageData skipDecodeIfPossible:skipDecode];
+            BOOL skipDecode = (options & PINRemoteImageManagerDownloadOptionsSkipDecode) != 0;
+            image = [UIImage pin_decodedImageWithData:imageData skipDecodeIfPossible:skipDecode];
             //put in memory cache
             if (skipDecode == NO) {
                 NSUInteger cacheCost = [image size].width * [image size].height;
@@ -704,29 +707,29 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
                                     options:(PINRemoteImageManagerDownloadOptions)options
                                    priority:(PINRemoteImageManagerPriority)priority
 {
-    BOOL ignoreGIF = (PINRemoteImageManagerDownloadOptionsIgnoreGIFs & options)?YES:NO;
+    BOOL ignoreGIF = (PINRemoteImageManagerDownloadOptionsIgnoreGIFs & options) != 0;
     __weak typeof(self) weakSelf = self;
     return [self downloadDataWithURL:URL
                                  key:key
                             priority:priority
                           completion:^(NSData *data, NSError *error)
     {
-        [_concurrentOperationQueue addOperationWithQueuePriority:priority block:^
+        [_concurrentOperationQueue pin_addOperationWithQueuePriority:priority block:^
         {
             typeof(self) strongSelf = weakSelf;
             NSError *remoteImageError = error;
             NSUInteger cacheCost = 0;
             FLAnimatedImage *animatedImage = nil;
             UIImage *image = nil;
-            BOOL skipDecode = (options & PINRemoteImageManagerDownloadOptionsSkipDecode);
+            BOOL skipDecode = (options & PINRemoteImageManagerDownloadOptionsSkipDecode) != 0;
             
             if (remoteImageError == nil) {
-                if ([data isGIF] && ignoreGIF == NO) {
+                if ([data pin_isGIF] && ignoreGIF == NO) {
                     animatedImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:data];
                     //FLAnimatedImage handles its own caching of frames
                     cacheCost = [data length];
                 } else {
-                    image = [UIImage decodedImageWithData:data skipDecodeIfPossible:skipDecode];
+                    image = [UIImage pin_decodedImageWithData:data skipDecodeIfPossible:skipDecode];
                     cacheCost = [image size].width * [image size].height;
                 }
             }
@@ -882,26 +885,20 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
     }
     PINLog(@"Attempting to cancel UUID: %@", UUID);
     __weak typeof(self) weakSelf = self;
-    [_concurrentOperationQueue addOperationWithQueuePriority:PINRemoteImageManagerPriorityHigh block:^
+    [_concurrentOperationQueue pin_addOperationWithQueuePriority:PINRemoteImageManagerPriorityHigh block:^
      {
         typeof(self) strongSelf = weakSelf;
         //find the task associated with the UUID. This might be spead up by storing a mapping of UUIDs to tasks
         [strongSelf lock];
-            PINRemoteImageTask *taskToEvaluate = nil;
-            NSString *taskKey = nil;
-            for (NSString *key in [strongSelf.tasks allKeys]) {
-                PINRemoteImageTask *task = strongSelf.tasks[key];
-                for (NSUUID *blockUUID in [task.callbackBlocks allKeys]) {
-                    if ([blockUUID isEqual:UUID]) {
-                        taskToEvaluate = task;
-                        taskKey = key;
-                        break;
-                    }
+            __block PINRemoteImageTask *taskToEvaluate = nil;
+            __block NSString *taskKey = nil;
+            [strongSelf.tasks enumerateKeysAndObjectsUsingBlock:^(NSString *key, PINRemoteImageTask *task, BOOL *stop) {
+                if (task.callbackBlocks[UUID]) {
+                    taskToEvaluate = task;
+                    taskKey = key;
+                    *stop = YES;
                 }
-                if (taskKey) {
-                    break;
-                }
-            }
+            }];
         
             if (taskToEvaluate == nil) {
                 //maybe task hasn't been added to task list yet, add it to canceled tasks
@@ -1013,7 +1010,7 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
     [self unlock];
     
     [progressiveImage updateProgressiveImageWithData:data expectedNumberOfBytes:[dataTask countOfBytesExpectedToReceive]];
-    if (hasProgressBlocks && [self isiOS8OrGreater]) {
+    if (hasProgressBlocks && [[self class] isiOS8OrGreater]) {
         UIImage *progressImage = [progressiveImage currentImage];
         if (progressImage) {
             [self lock];
@@ -1129,18 +1126,29 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
     }
     
     __weak typeof(self) weakSelf = self;
-    [self.concurrentOperationQueue addOperationWithQueuePriority:PINRemoteImageManagerPriorityMedium block:^{
+    [self.concurrentOperationQueue pin_addOperationWithQueuePriority:PINRemoteImageManagerPriorityMedium block:^{
         __block NSInteger highestQualityDownloadedIdx = -1;
         typeof(self) strongSelf = weakSelf;
+        
+        //check for the highest quality image already in cache. It's possible that an image is in the process of being
+        //cached when this is being run. In which case two things could happen:
+        // -    If network conditions dictate that a lower quality image should be downloaded than the one that is currently
+        //      being cached, it will be downloaded in addition. This is not ideal behavior, worst case scenario and unlikely.
+        // -    If network conditions dictate that the same quality image should be downloaded as the one being cached, no
+        //      new image will be downloaded as either the caching will have finished by the time we actually request it or
+        //      the task will still exist and our callback will be attached. In this case, no detrimental behavior will have
+        //      occured.
         [urls enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(NSURL *url, NSUInteger idx, BOOL *stop) {
             typeof(self) strongSelf = weakSelf;
             BlockAssert([url isKindOfClass:[NSURL class]], @"url must be of type URL");
             NSString *key = [strongSelf cacheKeyForURL:url processorKey:nil];
-            id object = [strongSelf.cache.memoryCache objectForKey:key];
-            if (object == nil) {
-                object = [strongSelf.cache.diskCache fileURLForKey:key];
+            
+            //we don't actually need the object, just need to know it exists so that we can request it later
+            id objectOrFileURL = [strongSelf.cache.memoryCache objectForKey:key];
+            if (objectOrFileURL == nil) {
+                objectOrFileURL = [strongSelf.cache.diskCache fileURLForKey:key];
             }
-            if (object) {
+            if (objectOrFileURL) {
                 highestQualityDownloadedIdx = idx;
                 *stop = YES;
             }
@@ -1164,15 +1172,17 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
             desiredImageURLIdx = ceilf((currentBytesPerSecond - lowQualityQPSThreshold) / ((highQualityQPSThreshold - lowQualityQPSThreshold) / (float)(urls.count - 2)));
         }
         
-        NSURL *downloadURL;
+        NSUInteger downloadIdx;
         //if the highest quality already downloaded is less than what currentBPS would dictate and shouldUpgrade is
         //set, download the new higher quality image. If no image has been cached, download the image dictated by
         //current bps
         if ((highestQualityDownloadedIdx < desiredImageURLIdx && shouldUpgradeLowQualityImages) || highestQualityDownloadedIdx == -1) {
-            downloadURL = [urls objectAtIndex:desiredImageURLIdx];
+            downloadIdx = desiredImageURLIdx;
         } else {
-            downloadURL = [urls objectAtIndex:highestQualityDownloadedIdx];
+            downloadIdx = highestQualityDownloadedIdx;
         }
+        
+        NSURL *downloadURL = [urls objectAtIndex:downloadIdx];
         
         [strongSelf downloadImageWithURL:downloadURL
                                  options:options
@@ -1180,7 +1190,17 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
                             processorKey:nil
                                processor:nil
                                 progress:progress
-                              completion:completion
+                              completion:^(PINRemoteImageManagerResult *result) {
+                                  typeof(self) strongSelf = weakSelf;
+                                  //clean out any lower quality images from the cache
+                                  for (NSInteger idx = downloadIdx - 1; idx >= 0; idx--) {
+                                      [[strongSelf cache] removeObjectForKey:[strongSelf cacheKeyForURL:[urls objectAtIndex:idx] processorKey:nil]];
+                                  }
+                                  
+                                  if (completion) {
+                                      completion(result);
+                                  }
+                              }
                                inputUUID:UUID];
     }];
     return UUID;
@@ -1189,7 +1209,7 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
 #pragma mark - Helpers
 
 
-- (BOOL)isiOS8OrGreater
++ (BOOL)isiOS8OrGreater
 {
     static BOOL isiOS8OrGreater;
     static dispatch_once_t onceToken;
@@ -1215,10 +1235,15 @@ typedef void (^PINRemoteImageManagerDataCompletion)(NSData *data, NSError *error
 
 @implementation NSOperationQueue (PINRemoteImageManager)
 
-- (void)addOperationWithQueuePriority:(PINRemoteImageManagerPriority)priority block:(void (^)(void))block
+- (void)pin_addOperationWithQueuePriority:(PINRemoteImageManagerPriority)priority block:(void (^)(void))block
 {
     NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:block];
     operation.queuePriority = operationPriorityWithImageManagerPriority(priority);
+    if ([PINRemoteImageManager isiOS8OrGreater]) {
+        operation.qualityOfService = NSOperationQualityOfServiceBackground;
+    } else {
+        operation.threadPriority = 0.2;
+    }
     [self addOperation:operation];
 }
 

@@ -23,6 +23,7 @@
 {
     if (self = [super init]) {
         self.sessionManagerLock = [[NSLock alloc] init];
+        self.sessionManagerLock.name = @"PINURLSessionManager";
         self.operationQueue = [[NSOperationQueue alloc] init];
         [self.operationQueue setMaxConcurrentOperationCount:NSOperationQueueDefaultMaxConcurrentOperationCount];
         self.session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:self.operationQueue];
@@ -71,10 +72,10 @@
     [self.delegate didCompleteTask:task withError:error];
     [self lock];
         void (^completionHandler)(NSURLResponse *, NSError *) = self.completions[@(task.taskIdentifier)];
+        [self.completions removeObjectForKey:@(task.taskIdentifier)];
     [self unlock];
     if (completionHandler) {
         completionHandler(task.response, error);
-        [self.completions removeObjectForKey:@(task.taskIdentifier)];
     }
 }
 
